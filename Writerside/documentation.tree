@@ -2,8 +2,8 @@
 <!DOCTYPE instance-profile
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
-<instance-profile id="hi" name="PBL3 Documentation"
-                 start-page="Documentation.md">
+<instance-profile id="documentation" name="PBL3 Documentation"
+                  start-page="Documentation.md">
 
     <toc-element topic="Documentation.md"/>
 </instance-profile>
