@@ -1,8 +1,7 @@
 # ProjectProposal
 
-Team’s vision
+### Team’s vision
 
-Objectives
+### Objectives
 
-Overview of the chosen problem area
-within smart cities
+### Overview of the chosen problem area within smart cities
