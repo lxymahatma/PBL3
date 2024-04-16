@@ -6,4 +6,6 @@
                   start-page="Documentation.md">
 
     <toc-element topic="Documentation.md"/>
+    <toc-element topic="ProjectProposal.md"/>
+    <toc-element topic="Members.md"/>
 </instance-profile>
