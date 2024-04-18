@@ -6,4 +6,4 @@
 
 ### Overview of the chosen problem area within smart citiessss
 
-![education image](/education_img.jpg "education")
+![education image](Writerside/topics/education_img.jpg "education")
