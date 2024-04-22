@@ -4,5 +4,6 @@
 
 ### Objectives
 
-### Overview of the chosen problem area within smart citiessss
+### Overview of the chosen problem area within smart cities
 
+![education image](education_img.jpg)
