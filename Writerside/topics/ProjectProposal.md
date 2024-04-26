@@ -1,7 +1,7 @@
 # ProjectProposal
 
 ### Team’s vision
-jjjjk
+jjjjkw
 ### Objectives
 
 ### Overview of the chosen problem area within smart cities
