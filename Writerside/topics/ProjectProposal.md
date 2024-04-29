@@ -19,14 +19,19 @@ to make more informed and accurate decisions regarding their course choices.
 
 ## Methodology
 
-Our main application functionality will be to provide course recommendations to users. To achieve this goal, we plan to utilize NLP
-technology to interact with users. The production of the project will be carried out in a few stages. We have finished defining the scope
-and goals of the system, as well as identifying the user types and functional requirements. The next step is to gather all the course
-materials that will be utilized within the system and extract important information from the course syllabus to create a course database. To
-extract keywords, we will be using NLP API by ChatGPT. Next we will decide what method to use to filter recommended courses based on user
-needs. In the subsequent step, we will work on implementing the system to the application interface. Once that's done, we'll test the system
-and review to make necessary adjustments to the application. Moving on, we'll evaluate the results of our tests using common indicators to
-determine the accuracy. We can also conduct usability testing with real users and collect feedback on their satisfaction.
+Our main application will be created using C# and Avalonia, because Avalonia provides the cross-platform compatibility.
+The functionality will be to provide course recommendations to users.
+To achieve this goal, we plan to utilize NLP technology to interact with users.
+The production of the project will be carried out in a few stages.
+We have finished defining the scope and goals of the system, as well as identifying the user types and functional requirements.
+The next step is to gather all the course materials that will be utilized within the system and extract important information from the
+course syllabus to create a course database.
+To extract keywords, we will be using NLP API by ChatGPT.
+Next we will decide what method to use to filter recommended courses based on user needs.
+In the subsequent step, we will work on implementing the system to the application interface.
+Once that's done, we'll test the system and review to make necessary adjustments to the application.
+Moving on, we'll evaluate the results of our tests using common indicators to determine the accuracy.
+We can also conduct usability testing with real users and collect feedback on their satisfaction.
 
 ## Features
 
@@ -75,3 +80,8 @@ suggestions to users, focusing specifically on ISSE courses. However, there are 
    development.
 
 Despite these challenges, our project aims to address these limitations through algorithmic approaches and user-centered design principles.
+
+## References
+
+[Avalonia](https://avaloniaui.net/)
+[OpenAI API Dotnet](https://github.com/OkGoDoIt/OpenAI-API-dotnet)
