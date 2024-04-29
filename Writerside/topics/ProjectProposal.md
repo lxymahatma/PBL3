@@ -85,3 +85,4 @@ Despite these challenges, our project aims to address these limitations through 
 
 * [Avalonia](https://avaloniaui.net/)
 * [OpenAI API Dotnet](https://github.com/OkGoDoIt/OpenAI-API-dotnet)
+* [openai-cookbook](https://github.com/openai/openai-cookbook/blob/main/examples/Question_answering_using_embeddings.ipynb)
