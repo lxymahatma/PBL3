@@ -11,9 +11,26 @@ This often leads to confusion and errors in course selection, potentially affect
 
 ## Team’s vision and Objective
 
+Our proposed solution is to develop an application that utilizes Natural Language Processing (NLP) to recommend courses to students based on
+their specific queries. This application aims to streamline the course selection process by providing personalized course recommendations.
+These recommendations will consider various factors such as the student's past courses, prerequisites of potential future courses, and
+individual interests. Our goal is to mitigate the problems associated with the current manual and often tedious process, enabling students
+to make more informed and accurate decisions regarding their course choices.
+
 ## Methodology
 
+Our main application functionality will be to provide course recommendations to users. To achieve this goal, we plan to utilize NLP
+technology to interact with users. The production of the project will be carried out in a few stages. We have finished defining the scope
+and goals of the system, as well as identifying the user types and functional requirements. The next step is to gather all the course
+materials that will be utilized within the system and extract important information from the course syllabus to create a course database. To
+extract keywords, we will be using NLP API by ChatGPT. Next we will decide what method to use to filter recommended courses based on user
+needs. In the subsequent step, we will work on implementing the system to the application interface. Once that's done, we'll test the system
+and review to make necessary adjustments to the application. Moving on, we'll evaluate the results of our tests using common indicators to
+determine the accuracy. We can also conduct usability testing with real users and collect feedback on their satisfaction.
+
 ## Features
+
+![Diagram](diagram.png)
 
 ### Natural Language Processing:
 
