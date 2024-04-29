@@ -18,19 +18,15 @@ By users utilizing other features as well, we aim to save time for students sear
 
 ## Features
 1. **Natural Language Processing**
-
 This feature integrates OpenAI's ChatGPT technology to interpret and process user queries that are written in natural language. It is designed to be intuitive, enabling users to engage in an interaction where they can ask questions regarding their academic needs in their own words. The system dynamically understands and processes queries, providing responses. It is capable of a range of inputs from simple queries about course details to complex queries involving course sequencing and prerequisites.
 
-1. **Course Recommendation System:**
-
+2. **Course Recommendation System:**
 The system can analyze the content of user’s queries and cross-reference them with the database of courses offered in ISSE. It considers various factors such as the user’s course prerequisites, past courses, and credit requirements.
 
-1. **DigitalCourse Booklet:**
-
+3. **DigitalCourse Booklet:**
 The paper-based course booklet is accessible via the application. ****The digital booklet will be updated to reflect changes and new course additions to ensure users always have access to the most current information.
 
-1. **Filter-Based Search Options:**
-
+4. **Filter-Based Search Options:**
 For users who prefer a more traditional search approach, this feature provides a filtering system that allows users to sort and view courses based on specific criteria such as course level, department or semester. This functionality enables users to quickly narrow down course options and customize their search process according to their unique preferences and academic needs.
 
 ## Limitations
