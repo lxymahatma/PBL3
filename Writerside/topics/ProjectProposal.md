@@ -26,7 +26,8 @@ The production of the project will be carried out in a few stages.
 We have finished defining the scope and goals of the system, as well as identifying the user types and functional requirements.
 The next step is to gather all the course materials that will be utilized within the system and extract important information from the
 course syllabus to create a course database.
-To extract keywords, we will use the `OpenAI API Dotnet` Nuget package to use NLP API by ChatGPT.
+
+To extract keywords, we will use the `OpenAI API Dotnet` nuget package to use NLP API by ChatGPT.
 Next, we will decide what method to use to filter recommended courses based on user needs.
 In the subsequent step, we will work on implementing the system to the application interface.
 Once that's done, we'll test the system and review to make necessary adjustments to the application.
@@ -69,11 +70,11 @@ preferences and academic needs.
 Our proposed course recommendation application implementing Natural Language Processing (NLP) aims to provide personalized course
 suggestions to users, focusing specifically on ISSE courses. However, there are several limitations to it.
 
-1. NLP may struggle with ambiguous user queries and understanding user intent. For instance, challenges may arise in handling context,
-   nuance, and specific knowledge, impacting the relevance of course suggestions.
+1. NLP may struggle with ambiguous user queries and understanding user intent.
+   For instance, challenges may arise in handling context, nuance, and specific knowledge, impacting the relevance of course suggestions.
 2. Difficulties with synonyms and new terms may also result in inaccurate recommendations.
-3. Since the system's effectiveness heavily relies on the quality and diversity of training data, there is a potential that it might lead to
-   biased or incomplete recommendations.
+3. Since the system's effectiveness heavily relies on the API, we don't have direct access to the model, so there is a potential that it
+   might lead to biased or incomplete recommendations.
 4. There is difficulty assessing the effectiveness of course recommendations due to various factors influencing user satisfaction and
    learning outcomes.
 5. Deployment may initially be limited to Windows, macOS, and Linux, with potential adaptation for Android platforms with further
