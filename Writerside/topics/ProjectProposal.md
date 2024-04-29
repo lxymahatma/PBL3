@@ -36,7 +36,7 @@ We can also conduct usability testing with real users and collect feedback on th
 
 ## Features
 
-![Diagram](diagram.png){border-effect="line"}
+![Diagram](diagram.png){border-effect="line" preview-src="diagram_preview.png"}
 
 ### Natural Language Processing:
 
