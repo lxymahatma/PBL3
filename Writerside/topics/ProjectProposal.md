@@ -83,5 +83,5 @@ Despite these challenges, our project aims to address these limitations through 
 
 ## References
 
-[Avalonia](https://avaloniaui.net/)
-[OpenAI API Dotnet](https://github.com/OkGoDoIt/OpenAI-API-dotnet)
+* [Avalonia](https://avaloniaui.net/)
+* [OpenAI API Dotnet](https://github.com/OkGoDoIt/OpenAI-API-dotnet)
