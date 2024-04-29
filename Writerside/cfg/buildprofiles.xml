@@ -7,7 +7,7 @@
         <header-logo>icon.png</header-logo>
         <download-page>https://github.com/lxymahatma/PBL3</download-page>
         <download-title>Download</download-title>
-        <showDownloadButton>true</showDownloadButton>
+        <showDownloadButton>false</showDownloadButton>
     </variables>
 
     <footer>
