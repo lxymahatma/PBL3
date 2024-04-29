@@ -26,8 +26,8 @@ The production of the project will be carried out in a few stages.
 We have finished defining the scope and goals of the system, as well as identifying the user types and functional requirements.
 The next step is to gather all the course materials that will be utilized within the system and extract important information from the
 course syllabus to create a course database.
-To extract keywords, we will be using NLP API by ChatGPT.
-Next we will decide what method to use to filter recommended courses based on user needs.
+To extract keywords, we will use the `OpenAI API Dotnet` Nuget package to use NLP API by ChatGPT.
+Next, we will decide what method to use to filter recommended courses based on user needs.
 In the subsequent step, we will work on implementing the system to the application interface.
 Once that's done, we'll test the system and review to make necessary adjustments to the application.
 Moving on, we'll evaluate the results of our tests using common indicators to determine the accuracy.
