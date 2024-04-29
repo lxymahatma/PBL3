@@ -1,3 +1,4 @@
-# PBL3 Project Documentation
+# PBL3 Group A Project Documentation
 
-**This is the PBL3 Group A Project Documentation**
+* [Project Proposal](ProjectProposal.md)
+* [Members](Members.md)
