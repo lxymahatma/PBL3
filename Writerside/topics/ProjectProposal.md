@@ -18,21 +18,30 @@ By users utilizing other features as well, we aim to save time for students sear
 
 ## Features
 1. **Natural Language Processing**
-This feature integrates OpenAI's ChatGPT technology to interpret and process user queries that are written in natural language. It is designed to be intuitive, enabling users to engage in an interaction where they can ask questions regarding their academic needs in their own words. The system dynamically understands and processes queries, providing responses. It is capable of a range of inputs from simple queries about course details to complex queries involving course sequencing and prerequisites.
+This feature integrates OpenAI's ChatGPT technology to interpret and process user queries that are written in natural language. 
+It is designed to be intuitive, enabling users to engage in an interaction where they can ask questions regarding their academic needs in their own words. 
+The system dynamically understands and processes queries, providing responses. 
+It is capable of a range of inputs from simple queries about course details to complex queries involving course sequencing and prerequisites.
 
 2. **Course Recommendation System:**
-The system can analyze the content of user’s queries and cross-reference them with the database of courses offered in ISSE. It considers various factors such as the user’s course prerequisites, past courses, and credit requirements.
+The system can analyze the content of user’s queries and cross-reference them with the database of courses offered in ISSE. 
+It considers various factors such as the user’s course prerequisites, past courses, and credit requirements.
 
 3. **DigitalCourse Booklet:**
-The paper-based course booklet is accessible via the application. ****The digital booklet will be updated to reflect changes and new course additions to ensure users always have access to the most current information.
+The paper-based course booklet is accessible via the application. 
+The digital booklet will be updated to reflect changes and new course additions to ensure users always have access to the most current information.
 
 4. **Filter-Based Search Options:**
-For users who prefer a more traditional search approach, this feature provides a filtering system that allows users to sort and view courses based on specific criteria such as course level, department or semester. This functionality enables users to quickly narrow down course options and customize their search process according to their unique preferences and academic needs.
+For users who prefer a more traditional search approach, this feature provides a filtering system that allows users to sort and view courses based on specific criteria such as course level, department or semester. 
+This functionality enables users to quickly narrow down course options and customize their search process according to their unique preferences and academic needs.
 
 ## Limitations
 Our proposed course recommendation application implementing Natural Language Processing (NLP) aims to provide personalized course suggestions to users, focusing specifically on ISSE courses. However, there are several limitations to it. 
-Firstly, NLP may struggle with ambiguous user queries and understanding user intent. For instance, challenges may arise in handling context, nuance, and specific knowledge, impacting the relevance of course suggestions. Moreover, difficulties with synonyms and new terms may also result in inaccurate recommendations. 
-Furthermore, since the system's effectiveness heavily relies on the quality and diversity of training data, there is a potential that it might lead to biased or incomplete recommendations. 
-In addition, there is difficulty assessing the effectiveness of course recommendations due to various factors influencing user satisfaction and learning outcomes. 
-Finally, deployment may initially be limited to Windows, macOS, and Linux, with potential adaptation for Android platforms with further development. 
+1. NLP may struggle with ambiguous user queries and understanding user intent. For instance, challenges may arise in handling context, nuance, and specific knowledge, impacting the relevance of course suggestions. 
+2. Difficulties with synonyms and new terms may also result in inaccurate recommendations.  
+3. Since the system's effectiveness heavily relies on the quality and diversity of training data, there is a potential that it might lead to biased or incomplete recommendations.  
+4. There is difficulty assessing the effectiveness of course recommendations due to various factors influencing user satisfaction and learning outcomes. 
+5. Deployment may initially be limited to Windows, macOS, and Linux, with potential adaptation for Android platforms with further development.
+
+
 Despite these challenges, our project aims to address these limitations through algorithmic approaches and user-centered design principles.
