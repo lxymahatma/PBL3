@@ -5,9 +5,11 @@
     <variables>
         <custom-favicons>icon.png</custom-favicons>
         <header-logo>icon.png</header-logo>
-        <download-page>https://github.com/lxymahatma/PBL3</download-page>
+        <download-page>https://github.com/lxymahatma/PBL3/releases/latest</download-page>
         <download-title>Download</download-title>
         <showDownloadButton>false</showDownloadButton>
+        <browser-edits-url>https://github.com/lxymahatma/PBL3</browser-edits-url>
+        <product-web-url>https://github.com/lxymahatma/PBL3</product-web-url>
     </variables>
 
     <footer>
