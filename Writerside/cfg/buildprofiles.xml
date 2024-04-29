@@ -10,6 +10,11 @@
         <showDownloadButton>false</showDownloadButton>
         <browser-edits-url>https://github.com/lxymahatma/PBL3</browser-edits-url>
         <product-web-url>https://github.com/lxymahatma/PBL3</product-web-url>
+
+        <algolia-id>UMVP0X4PDX</algolia-id>
+        <algolia-index>PBL3</algolia-index>
+        <algolia-api-key>2096f1ed085f1bd8d8300ca078a2102b</algolia-api-key>
+        <web-root>https://lxymahatma.github.io/PBL3</web-root>
     </variables>
 
     <footer>
