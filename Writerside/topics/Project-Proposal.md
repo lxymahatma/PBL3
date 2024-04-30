@@ -1,4 +1,4 @@
-# ProjectProposal
+# Project Proposal
 
 ## Overview of the chosen problem area within smart cities
 
