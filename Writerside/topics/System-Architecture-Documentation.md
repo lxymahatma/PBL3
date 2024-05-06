@@ -1,3 +1,1 @@
 # System Architecture Documentation
-
-Start typing here...

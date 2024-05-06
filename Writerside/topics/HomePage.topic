@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="HomePage"
+       title="PBL3 Group A Project Documentation"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <section-starting-page>
+        <title>Documentation HomePage</title>
+        <description>
+            This is the project documentation homepage for Group A.
+        </description>
+
+        <spotlight>
+            <a href="Project-Proposal.md" type="academy"/>
+            <a href="Requirements-Specification-Document.md" type="documents"/>
+        </spotlight>
+
+        <primary>
+            <title>Project Overview</title>
+            <a href="Project-Proposal.md" summary="Project Proposal for our application"/>
+            <a href="Requirements-Specification-Document.md"/>
+            <a href="System-Design-Diagrams.md"/>
+            <a href="System-Architecture-Documentation.md"/>
+        </primary>
+        <secondary>
+            <title>Working Set</title>
+            <a href="Project-Proposal.md"/>
+            <a href="Requirements-Specification-Document.md"/>
+        </secondary>
+
+        <misc>
+            <links>
+                <group>
+                    <title>About Project</title>
+                    <a href="Members.md"/>
+                </group>
+            </links>
+        </misc>
+    </section-starting-page>
+
+</topic>

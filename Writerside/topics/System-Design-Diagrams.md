@@ -1,3 +1,1 @@
 # System Design Diagrams
-
-Start typing here...

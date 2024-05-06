@@ -3,9 +3,9 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="documentation" name="PBL3 Documentation"
-                  start-page="Documentation.md">
+                  start-page="HomePage.topic">
 
-    <toc-element topic="Documentation.md"/>
+    <toc-element topic="HomePage.topic"/>
     <toc-element topic="Project-Proposal.md"/>
     <toc-element topic="Requirements-Specification-Document.md"/>
     <toc-element topic="System-Design-Diagrams.md"/>
