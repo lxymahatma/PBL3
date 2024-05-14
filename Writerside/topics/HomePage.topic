@@ -34,6 +34,7 @@
             <links>
                 <group>
                     <title>About Project</title>
+                    <a href="Glossary.md"/>
                     <a href="Members.md"/>
                 </group>
             </links>
