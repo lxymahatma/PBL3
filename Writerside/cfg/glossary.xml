@@ -2,4 +2,6 @@
 <!DOCTYPE terms SYSTEM "https://resources.jetbrains.com/writerside/1.0/glossary.dtd">
 <terms>
     <term name="NLP">Natural Language Processing</term>
+    <term name="API">Application Programming Interface</term>
+    <term name="UI">User Interface</term>
 </terms>
