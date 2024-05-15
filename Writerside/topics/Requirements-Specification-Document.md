@@ -3,6 +3,12 @@
 
 ## Preface
 
+### Version History
+
+| Version | Date      | Description |
+|---------|-----------|-------------|
+| 1.0     | 2024-5-20 | Initial     |
+
 This document outlines the expected readership and provides a version history of the requirements specification for the Course
 Recommendation System. It summarizes the rationale behind each version.
 
@@ -14,7 +20,7 @@ to offer a seamless course selection process, supporting students in meeting the
 
 ## Glossary
 
-See [Glossary](Glossary.md "Glossary for the project documentations") for more detail
+See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requirement Specification Document") for more detail.
 
 ## User Requirements Definition
 
