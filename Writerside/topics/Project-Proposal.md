@@ -1,3 +1,4 @@
+<show-structure for="chapter" depth="2"/>
 # Project Proposal
 
 ## Overview of the chosen problem area within smart cities

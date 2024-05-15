@@ -1,3 +1,4 @@
+<show-structure for="chapter" depth="2"/>
 # Requirements Specification Document
 
 ## Preface
