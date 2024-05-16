@@ -114,11 +114,15 @@ The system will follow a client-server architecture with the following main comp
 4. Filtered results based on user preferences are presented in the interface.
 5. Users can further explore courses through visual pathways and integrated scheduling.
 
+![DataFlowDiagram.png](DataFlowDiagram.png)
+
 ### 5.2 User Scenario Example
 
 * A second-year student is looking for a programming-related course without scheduling conflicts. They use the system to input: “I need a
   programming course with no clashes in my schedule.”
 * The system recommends suitable courses, showing their prerequisites and where they fit into the student's academic calendar.
+
+![UserScenarioDiagram.png](UserScenarioDiagram.png)
 
 ## 6. Verification and Validation
 
