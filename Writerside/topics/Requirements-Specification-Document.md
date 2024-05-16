@@ -109,7 +109,7 @@ The system will follow a client-server architecture with the following main comp
 ### 5.1 Data Flow
 
 1. The user enters a course query in natural language.
-2. The query is processed by the NLP model to extract relevant terms.
+2. The query is processed by the NLP module to extract relevant terms.
 3. The system matches these terms with the course database.
 4. Filtered results based on user preferences are presented in the interface.
 5. Users can further explore courses through visual pathways and integrated scheduling.
