@@ -15,7 +15,7 @@ Recommendation System. It summarizes the rationale behind each version.
 
 ### Document Conventions
 
-* The keywords "SHALL", "SHALL NOT", "**shouldl**", "**shouldl** NOT", in this document are to be interpreted as described in RFC 2119.
+* The keywords "SHALL", "SHALL NOT", "should", "should NOT", in this document are to be interpreted as described in RFC 2119.
 
 * Functional requirements will be prefixed with "FR". Non-functional requirements will be prefixed with "NFR".
 
@@ -89,47 +89,45 @@ The system will follow a client-server architecture with the following main comp
 
 #### Course Recommendation
 
-* FR1: The system ****shouldl**** allow students to input queries in natural language to get course recommendations.
-* FR2: Based on the input, the system ****shouldl**** use NLP to analyze and fetch relevant course information from the university’s course
+* FR1: The system **should** allow students to input queries in natural language to get course recommendations.
+* FR2: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the university’s course
   catalog.
 
 #### User Interface
 
-* FR3: The system ****shall**** offer an easy-to-use interface with options to filter courses based on criteria like difficulty and
-  department.
-* FR4: The system ****shall**** provide visual course pathways showing prerequisites and recommended sequences.
+* FR3: The system **shall** offer an easy-to-use interface with options to filter courses based on criteria like difficulty and department.
+* FR4: The system **shall** provide visual course pathways showing prerequisites and recommended sequences.
 
 #### Data Utilization and Privacy
 
-* FR5: The system ****shall**** ensure robust data protection mechanisms to prevent misuse of personal data.
+* FR5: The system **shall** ensure robust data protection mechanisms to prevent misuse of personal data.
 
 #### Additional Features
 
-* FR7: The system ****shall**** integrate with the academic calendar for scheduling.
-* FR8: The system ****shall**** include a feedback system for students to rate courses after completion.
-* FR11: Universities **shall** have secure access to a data dashboard to view and analyze aggregated course data.
+* FR7: The system **shall** integrate with the academic calendar for scheduling.
+* FR8: The system **shall** include a feedback system for students to rate courses after completion.
 
 ### Non Functional Requirements
 
 #### Performance
 
-* NFR1: The system ****shouldl**** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
+* NFR1: The system **should** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
 
 #### Usability
 
-* NFR2: The system ****shouldl**** be intuitive, allowing users with minimal training to perform basic operations.
+* NFR2: The system **should** be intuitive, allowing users with minimal training to perform basic operations.
 
 #### Reliability
 
-* NFR3: The system ****shouldl**** be operational 99% of the time, with minimal downtime for maintenance.
+* NFR3: The system **should** be operational 99% of the time, with minimal downtime for maintenance.
 
 #### Scalability
 
-* NFR4: The system ****shouldl**** handle increasing amounts of data and concurrent users as the student population grows.
+* NFR4: The system **should** handle increasing amounts of data and concurrent users as the student population grows.
 
 #### Security
 
-* NFR5: The system ****shouldl****F implement standard security measures including data encryption and user authentication.
+* NFR5: The system **should**F implement standard security measures including data encryption and user authentication.
 
 ## Data Flow and User Scenarios
 
@@ -140,8 +138,6 @@ The system will follow a client-server architecture with the following main comp
 3. The system matches these terms with the course database.
 4. Filtered results based on user preferences are presented in the interface.
 5. Users can further explore courses through visual pathways and integrated scheduling.
-6. Users log in to submit personalized queries and feedback.
-7. University officials access the dashboard to analyze course data and trends.
 
 ![DataFlowDiagram.png](DataFlowDiagram.png)
 
