@@ -28,6 +28,17 @@ The Course Recommendation System is designed to enhance the educational experien
 recommendations using Natural Language Processing (NLP). This system will integrate with existing university databases and scheduling tools
 to offer a seamless course selection process, supporting students in meeting their academic goals.
 
+### 1.1 Use case
+
+1. Submit course feedback
+2. View academic calendar
+3. View course pathways
+4. Filter courses
+5. View personal information
+6. Obtain course recommendations from query
+
+![UseCaseDiagram.jpg](UseCaseDiagram.jpg)
+
 ## 2. General Description
 
 ### 2.1 System Overview
