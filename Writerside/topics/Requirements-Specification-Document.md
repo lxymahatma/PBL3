@@ -24,11 +24,19 @@ See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requ
 
 ## 1. Introduction
 
-The Course Recommendation System is designed to enhance the educational experience by providing students with personalized course
-recommendations using Natural Language Processing (NLP). This system will integrate with existing university databases and scheduling tools
-to offer a seamless course selection process, supporting students in meeting their academic goals.
+### 1.1 System Overview
 
-### 1.1 Use cases
+* The course recommendation system utilizes NLP to recommend university courses based on student queries.
+* This system will integrate with existing university databases and scheduling tools
+  to offer a seamless course selection process, supporting students in meeting their academic goals.
+* It provides an interactive digital course booklet and supports filter-based search options for course selection.
+
+### 1.2 Goals and Objectives
+
+* To provide accurate course recommendations to students based on their academic needs and preferences.
+* To provide a user-friendly interface with easy navigation and detailed course descriptions.
+
+### 1.3 Use cases
 
 1. Submit course feedback
 2. View academic calendar
@@ -39,27 +47,15 @@ to offer a seamless course selection process, supporting students in meeting the
 
 ![UseCaseDiagram.jpg](UseCaseDiagram.jpg)
 
-## 2. General Description
+## 2. User Requirements
 
-### 2.1 System Overview
+### 2.1 Functional Requirements
 
-* The course recommendation system utilizes NLP to recommend university courses based on student queries.
-* It provides an interactive digital course booklet and supports filter-based search options for course selection.
+### 2.2 Non-Functional Requirements
 
-### 2.2 Goals and Objectives
+## 3. System Architecture
 
-* To provide accurate course recommendations to students based on their academic needs and preferences.
-* To provide a user-friendly interface with easy navigation and detailed course descriptions.
-
-## 3. User Requirements
-
-### 3.1 Functional Requirements
-
-### 3.2 Non-Functional Requirements
-
-## 4. System Architecture
-
-### 4.1 Overview
+### 3.1 Overview
 
 The system will follow a client-server architecture with the following main components:
 
@@ -67,60 +63,60 @@ The system will follow a client-server architecture with the following main comp
 * Server Application: Backend services that process data and serve the course recommendations.
 * Database: To store course information, user data, and interaction logs.
 
-### 4.2 Detailed Design
+### 3.2 Detailed Design
 
 * Client Application: Built using Avalonia UI and C, providing cross-platform support.
 * Server Application: Utilizes OpenAI's ChatGPT for NLP tasks
 * Database: A database system to store structured data securely.
 
-## 5. System Requirements
+## 4. System Requirements
 
-### 5.1 Functional Requirements
+### 4.1 Functional Requirements
 
-#### 5.1.1 Course Recommendation
+#### 4.1.1 Course Recommendation
 
 * FR1: The system should allow students to input queries in natural language to get course recommendations.
 * FR2: Based on the input, the system should use NLP to analyze and fetch relevant course information from the university’s course catalog.
 
-#### 5.1.2 User Interface
+#### 4.1.2 User Interface
 
 * FR3: The system shall offer an easy-to-use interface with options to filter courses based on criteria like difficulty and department.
 * FR4: The system shall provide visual course pathways showing prerequisites and recommended sequences.
 
-#### 5.1.3 Data Utilization and Privacy
+#### 4.1.3 Data Utilization and Privacy
 
 * FR5: The system shall ensure robust data protection mechanisms to prevent misuse of personal data.
 
-#### 5.1.4 Additional Features
+#### 4.1.4 Additional Features
 
 * FR7: The system shall integrate with the academic calendar for scheduling.
 * FR8: The system shall include a feedback system for students to rate courses after completion.
 
-### 5.2 Non Functional Requirements
+### 4.2 Non Functional Requirements
 
-#### 5.2.1 Performance
+#### 4.2.1 Performance
 
 * NFR1: The system should ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
 
-#### 5.2.2 Usability
+#### 4.2.2 Usability
 
 * NFR2: The system should be intuitive, allowing users with minimal training to perform basic operations.
 
-#### 5.2.3 Reliability
+#### 4.2.3 Reliability
 
 * NFR3: The system should be operational 99% of the time, with minimal downtime for maintenance.
 
-#### 5.2.4 Scalability
+#### 4.2.4 Scalability
 
 * NFR4: The system should handle increasing amounts of data and concurrent users as the student population grows.
 
-#### 5.2.5 Security
+#### 4.2.5 Security
 
 * NFR5: The system should implement standard security measures including data encryption and user authentication.
 
-## 6. Data Flow and User Scenarios
+## 5. Data Flow and User Scenarios
 
-### 6.1 Data Flow
+### 5.1 Data Flow
 
 1. The user enters a course query in natural language.
 2. The query is processed by the NLP module to extract relevant terms.
@@ -130,7 +126,7 @@ The system will follow a client-server architecture with the following main comp
 
 ![DataFlowDiagram.png](DataFlowDiagram.png)
 
-### 6.2 User Scenario Example
+### 5.2 User Scenario Example
 
 * A second-year student is looking for a programming-related course without scheduling conflicts. They use the system to input: “I need a
   programming course with no clashes in my schedule.”
@@ -138,13 +134,13 @@ The system will follow a client-server architecture with the following main comp
 
 ![UserScenarioDiagram.png](UserScenarioDiagram.png)
 
-## 7. Verification and Validation
+## 6. Verification and Validation
 
 * Test 1: Ensure that the course recommendation matches the user query in terms of relevance and accuracy.
 * Test 2: Verify that the user interface is user-friendly and meets the usability requirements.
 * Test 3: Validate that user data is handled securely and in compliance with privacy standards.
 
-## 8. Appendices
+## 7. Appendices
 
 * Appendix A: API Documentation for third-party services used.
 * Appendix B: User manual for system interaction.
