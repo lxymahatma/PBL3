@@ -22,21 +22,21 @@ Recommendation System. It summarizes the rationale behind each version.
 
 See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requirement Specification Document") for more detail.
 
-## 1. Introduction
+## Introduction
 
-### 1.1 System Overview
+### System Overview
 
 * The course recommendation system utilizes NLP to recommend university courses based on student queries.
 * This system will integrate with existing university databases and scheduling tools
   to offer a seamless course selection process, supporting students in meeting their academic goals.
 * It provides an interactive digital course booklet and supports filter-based search options for course selection.
 
-### 1.2 Goals and Objectives
+### Goals and Objectives
 
 * To provide accurate course recommendations to students based on their academic needs and preferences.
 * To provide a user-friendly interface with easy navigation and detailed course descriptions.
 
-### 1.3 Use cases
+### Use cases
 
 1. Submit course feedback
 2. View academic calendar
@@ -47,15 +47,15 @@ See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requ
 
 ![UseCaseDiagram.jpg](UseCaseDiagram.jpg)
 
-## 2. User Requirements
+## User Requirements
 
-### 2.1 Functional Requirements
+### Functional Requirements {id="functional-requirements_1"}
 
-### 2.2 Non-Functional Requirements
+### Non-Functional Requirements {id="non-functional-requirements_1"}
 
-## 3. System Architecture
+## System Architecture
 
-### 3.1 Overview
+### Overview
 
 The system will follow a client-server architecture with the following main components:
 
@@ -63,60 +63,60 @@ The system will follow a client-server architecture with the following main comp
 * Server Application: Backend services that process data and serve the course recommendations.
 * Database: To store course information, user data, and interaction logs.
 
-### 3.2 Detailed Design
+### Detailed Design
 
 * Client Application: Built using Avalonia UI and C, providing cross-platform support.
 * Server Application: Utilizes OpenAI's ChatGPT for NLP tasks
 * Database: A database system to store structured data securely.
 
-## 4. System Requirements
+## System Requirements
 
-### 4.1 Functional Requirements
+### Functional Requirements
 
-#### 4.1.1 Course Recommendation
+#### Course Recommendation
 
 * FR1: The system should allow students to input queries in natural language to get course recommendations.
 * FR2: Based on the input, the system should use NLP to analyze and fetch relevant course information from the university’s course catalog.
 
-#### 4.1.2 User Interface
+#### User Interface
 
 * FR3: The system shall offer an easy-to-use interface with options to filter courses based on criteria like difficulty and department.
 * FR4: The system shall provide visual course pathways showing prerequisites and recommended sequences.
 
-#### 4.1.3 Data Utilization and Privacy
+#### Data Utilization and Privacy
 
 * FR5: The system shall ensure robust data protection mechanisms to prevent misuse of personal data.
 
-#### 4.1.4 Additional Features
+#### Additional Features
 
 * FR7: The system shall integrate with the academic calendar for scheduling.
 * FR8: The system shall include a feedback system for students to rate courses after completion.
 
-### 4.2 Non Functional Requirements
+### Non Functional Requirements
 
-#### 4.2.1 Performance
+#### Performance
 
 * NFR1: The system should ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
 
-#### 4.2.2 Usability
+#### Usability
 
 * NFR2: The system should be intuitive, allowing users with minimal training to perform basic operations.
 
-#### 4.2.3 Reliability
+#### Reliability
 
 * NFR3: The system should be operational 99% of the time, with minimal downtime for maintenance.
 
-#### 4.2.4 Scalability
+#### Scalability
 
 * NFR4: The system should handle increasing amounts of data and concurrent users as the student population grows.
 
-#### 4.2.5 Security
+#### Security
 
 * NFR5: The system should implement standard security measures including data encryption and user authentication.
 
-## 5. Data Flow and User Scenarios
+## Data Flow and User Scenarios
 
-### 5.1 Data Flow
+### Data Flow
 
 1. The user enters a course query in natural language.
 2. The query is processed by the NLP module to extract relevant terms.
@@ -126,7 +126,7 @@ The system will follow a client-server architecture with the following main comp
 
 ![DataFlowDiagram.png](DataFlowDiagram.png)
 
-### 5.2 User Scenario Example
+### User Scenario Example
 
 * A second-year student is looking for a programming-related course without scheduling conflicts. They use the system to input: “I need a
   programming course with no clashes in my schedule.”
@@ -134,13 +134,13 @@ The system will follow a client-server architecture with the following main comp
 
 ![UserScenarioDiagram.png](UserScenarioDiagram.png)
 
-## 6. Verification and Validation
+## Verification and Validation
 
 * Test 1: Ensure that the course recommendation matches the user query in terms of relevance and accuracy.
 * Test 2: Verify that the user interface is user-friendly and meets the usability requirements.
 * Test 3: Validate that user data is handled securely and in compliance with privacy standards.
 
-## 7. Appendices
+## Appendices
 
 * Appendix A: API Documentation for third-party services used.
 * Appendix B: User manual for system interaction.
