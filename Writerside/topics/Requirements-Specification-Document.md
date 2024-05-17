@@ -58,7 +58,7 @@ See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requ
 
 ### Functional Requirements {id="functional-requirements_1"}
 
-## User Authentication and Security
+#### User Authentication and Security
 
 * FR9: The system **shall** provide a secure registration process for new users.
 * FR10: Users **shall** register using their email, password, and basic profile information.
@@ -66,6 +66,26 @@ See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requ
 * FR12: The system **shall** provide a password recovery mechanism for users to reset forgotten passwords via email.
 
 ### Non-Functional Requirements {id="non-functional-requirements_1"}
+
+#### Performance
+
+* NFR1: The system **should** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
+
+#### Usability
+
+* NFR2: The system **should** be intuitive, allowing users with minimal training to perform basic operations.
+
+#### Reliability
+
+* NFR3: The system **should** be operational 99% of the time, with minimal downtime for maintenance.
+
+#### Scalability
+
+* NFR4: The system **should** handle increasing amounts of data and concurrent users as the student population grows.
+
+#### Security
+
+* NFR5: The system **should** implement standard security measures including data encryption and user authentication.
 
 ## System Architecture
 
@@ -107,28 +127,6 @@ The system will follow a client-server architecture with the following main comp
 * FR7: The system **shall** integrate with the academic calendar for scheduling.
 * FR8: The system **shall** include a feedback system for students to rate courses after completion.
 
-### Non Functional Requirements
-
-#### Performance
-
-* NFR1: The system **should** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
-
-#### Usability
-
-* NFR2: The system **should** be intuitive, allowing users with minimal training to perform basic operations.
-
-#### Reliability
-
-* NFR3: The system **should** be operational 99% of the time, with minimal downtime for maintenance.
-
-#### Scalability
-
-* NFR4: The system **should** handle increasing amounts of data and concurrent users as the student population grows.
-
-#### Security
-
-* NFR5: The system **should**F implement standard security measures including data encryption and user authentication.
-
 ## Data Flow and User Scenarios
 
 ### Data Flow
@@ -146,9 +144,10 @@ The system will follow a client-server architecture with the following main comp
 * A second-year student is looking for a programming-related course without scheduling conflicts. They use the system to input: “I need a
   programming course with no clashes in my schedule.”
 * The system recommends suitable courses, showing their prerequisites and where they fit into the student's academic calendar.
+
+  ![UserScenarioDiagram.png](UserScenarioDiagram.png)
 * A university official logs in to the system and reviews course feedback and ratings to identify areas for improvement in the programming
   curriculum.
-  ![UserScenarioDiagram.png](UserScenarioDiagram.png)
 
 ## Verification and Validation
 
