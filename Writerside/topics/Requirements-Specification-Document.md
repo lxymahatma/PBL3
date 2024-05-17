@@ -1,4 +1,4 @@
-<show-structure for="chapter" depth="2"/>
+<show-structure for="chapter" depth="3"/>
 # Requirements Specification Document
 
 ## Preface
@@ -28,7 +28,7 @@ The Course Recommendation System is designed to enhance the educational experien
 recommendations using Natural Language Processing (NLP). This system will integrate with existing university databases and scheduling tools
 to offer a seamless course selection process, supporting students in meeting their academic goals.
 
-### 1.1 Use case
+### 1.1 Use cases
 
 1. Submit course feedback
 2. View academic calendar
@@ -53,44 +53,44 @@ to offer a seamless course selection process, supporting students in meeting the
 
 ### 3.1 Functional Requirements
 
-3.1.1 Course Recommendation
+#### 3.1.1 Course Recommendation
 
 * FR1: The system should allow students to input queries in natural language to get course recommendations.
 * FR2: Based on the input, the system should use NLP to analyze and fetch relevant course information from the university’s course catalog.
 
-3.1.2 User Interface
+#### 3.1.2 User Interface
 
 * FR3: The system shall offer an easy-to-use interface with options to filter courses based on criteria like difficulty and department.
 * FR4: The system shall provide visual course pathways showing prerequisites and recommended sequences.
 
-3.1.3 Data Utilization and Privacy
+#### 3.1.3 Data Utilization and Privacy
 
 * FR5: The system shall ensure robust data protection mechanisms to prevent misuse of personal data.
 
-3.1.4 Additional Features
+#### 3.1.4 Additional Features
 
 * FR7: The system shall integrate with the academic calendar for scheduling.
 * FR8: The system shall include a feedback system for students to rate courses after completion.
 
 ### 3.2 Non-Functional Requirements
 
-3.2.1 Performance
+#### 3.2.1 Performance
 
 * NFR1: The system should ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
 
-3.2.2 Usability
+#### 3.2.2 Usability
 
 * NFR2: The system should be intuitive, allowing users with minimal training to perform basic operations.
 
-3.2.3 Reliability
+#### 3.2.3 Reliability
 
 * NFR3: The system should be operational 99% of the time, with minimal downtime for maintenance.
 
-3.2.4 Scalability
+#### 3.2.4 Scalability
 
 * NFR4: The system should handle increasing amounts of data and concurrent users as the student population grows.
 
-3.2.5 Security
+#### 3.2.5 Security
 
 * NFR5: The system should implement standard security measures including data encryption and user authentication.
 
