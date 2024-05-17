@@ -52,7 +52,7 @@ See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requ
 7. Register and log into the system
 8. University officials access and analyze course data
 
-![UseCaseDiagram.jpg](UseCaseDiagram.jpg)
+![UseCase_Diagram0.png](UseCase_Diagram0.png)
 
 ## User Requirements
 
