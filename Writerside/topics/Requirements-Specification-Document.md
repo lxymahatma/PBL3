@@ -45,7 +45,9 @@ to offer a seamless course selection process, supporting students in meeting the
 
 * The course recommendation system utilizes NLP to recommend university courses based on student queries.
 * It provides an interactive digital course booklet and supports filter-based search options for course selection.
-  2.2 Goals and Objectives
+
+### 2.2 Goals and Objectives
+
 * To provide accurate course recommendations to students based on their academic needs and preferences.
 * To provide a user-friendly interface with easy navigation and detailed course descriptions.
 
