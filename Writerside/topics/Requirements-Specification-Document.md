@@ -18,7 +18,7 @@ Recommendation System. It summarizes the rationale behind each version.
 * The keywords **"SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT"**, in this document are to be interpreted as described
   in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 
-* Functional requirements will be prefixed with "FR". Non-functional requirements will be prefixed with "NFR".
+* Functional requirements will be prefixed with **"FR"**. Non-functional requirements will be prefixed with **"NFR"**.
 
 ## Glossary
 
