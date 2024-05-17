@@ -12,6 +12,12 @@
 This document outlines the expected readership and provides a version history of the requirements specification for the Course
 Recommendation System. It summarizes the rationale behind each version.
 
+### Document Conventions
+
+* The key words “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, in this document are to be interpreted as described in RFC 2119.
+
+* Functional requirements will be prefixed with “FR“. Non-functional requirements will be prefixed with “NFR“.
+
 ## Glossary
 
 See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requirement Specification Document") for more detail.
