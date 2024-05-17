@@ -51,61 +51,11 @@ to offer a seamless course selection process, supporting students in meeting the
 * To provide accurate course recommendations to students based on their academic needs and preferences.
 * To provide a user-friendly interface with easy navigation and detailed course descriptions.
 
-## 3. Specific Requirements
+## 3. User Requirements
 
 ### 3.1 Functional Requirements
 
-#### 3.1.1 Course Recommendation
-
-* FR1: The system should allow students to input queries in natural language to get course recommendations.
-* FR2: Based on the input, the system should use NLP to analyze and fetch relevant course information from the university’s course catalog.
-
-#### 3.1.2 User Interface
-
-* FR3: The system shall offer an easy-to-use interface with options to filter courses based on criteria like difficulty and department.
-* FR4: The system shall provide visual course pathways showing prerequisites and recommended sequences.
-
-#### 3.1.3 Data Utilization and Privacy
-
-* FR5: The system shall ensure robust data protection mechanisms to prevent misuse of personal data.
-
-#### 3.1.4 Additional Features
-
-* FR7: The system shall integrate with the academic calendar for scheduling.
-* FR8: The system shall include a feedback system for students to rate courses after completion.
-
 ### 3.2 Non-Functional Requirements
-
-#### 3.2.1 Performance
-
-* NFR1: The system should ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
-
-#### 3.2.2 Usability
-
-* NFR2: The system should be intuitive, allowing users with minimal training to perform basic operations.
-
-#### 3.2.3 Reliability
-
-* NFR3: The system should be operational 99% of the time, with minimal downtime for maintenance.
-
-#### 3.2.4 Scalability
-
-* NFR4: The system should handle increasing amounts of data and concurrent users as the student population grows.
-
-#### 3.2.5 Security
-
-* NFR5: The system should implement standard security measures including data encryption and user authentication.
-
-### Functional Requirements:
-
-* The system must accept natural language input from users.
-* It should provide accurate course recommendations.
-* The interface must allow users to filter courses based on multiple criteria.
-
-### Non-Functional Requirements:
-
-* The system should be user-friendly, with minimal response time.
-* It must ensure data security, particularly concerning students' personal information.
 
 ## 4. System Architecture
 
@@ -123,9 +73,54 @@ The system will follow a client-server architecture with the following main comp
 * Server Application: Utilizes OpenAI's ChatGPT for NLP tasks
 * Database: A database system to store structured data securely.
 
-## 5. Data Flow and User Scenarios
+## 5. System Requirements
 
-### 5.1 Data Flow
+### 5.1 Functional Requirements
+
+#### 5.1.1 Course Recommendation
+
+* FR1: The system should allow students to input queries in natural language to get course recommendations.
+* FR2: Based on the input, the system should use NLP to analyze and fetch relevant course information from the university’s course catalog.
+
+#### 5.1.2 User Interface
+
+* FR3: The system shall offer an easy-to-use interface with options to filter courses based on criteria like difficulty and department.
+* FR4: The system shall provide visual course pathways showing prerequisites and recommended sequences.
+
+#### 5.1.3 Data Utilization and Privacy
+
+* FR5: The system shall ensure robust data protection mechanisms to prevent misuse of personal data.
+
+#### 5.1.4 Additional Features
+
+* FR7: The system shall integrate with the academic calendar for scheduling.
+* FR8: The system shall include a feedback system for students to rate courses after completion.
+
+### 5.2 Non Functional Requirements
+
+#### 5.2.1 Performance
+
+* NFR1: The system should ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
+
+#### 5.2.2 Usability
+
+* NFR2: The system should be intuitive, allowing users with minimal training to perform basic operations.
+
+#### 5.2.3 Reliability
+
+* NFR3: The system should be operational 99% of the time, with minimal downtime for maintenance.
+
+#### 5.2.4 Scalability
+
+* NFR4: The system should handle increasing amounts of data and concurrent users as the student population grows.
+
+#### 5.2.5 Security
+
+* NFR5: The system should implement standard security measures including data encryption and user authentication.
+
+## 6. Data Flow and User Scenarios
+
+### 6.1 Data Flow
 
 1. The user enters a course query in natural language.
 2. The query is processed by the NLP module to extract relevant terms.
@@ -135,7 +130,7 @@ The system will follow a client-server architecture with the following main comp
 
 ![DataFlowDiagram.png](DataFlowDiagram.png)
 
-### 5.2 User Scenario Example
+### 6.2 User Scenario Example
 
 * A second-year student is looking for a programming-related course without scheduling conflicts. They use the system to input: “I need a
   programming course with no clashes in my schedule.”
@@ -143,13 +138,13 @@ The system will follow a client-server architecture with the following main comp
 
 ![UserScenarioDiagram.png](UserScenarioDiagram.png)
 
-## 6. Verification and Validation
+## 7. Verification and Validation
 
 * Test 1: Ensure that the course recommendation matches the user query in terms of relevance and accuracy.
 * Test 2: Verify that the user interface is user-friendly and meets the usability requirements.
 * Test 3: Validate that user data is handled securely and in compliance with privacy standards.
 
-## 7. Appendices
+## 8. Appendices
 
 * Appendix A: API Documentation for third-party services used.
 * Appendix B: User manual for system interaction.
