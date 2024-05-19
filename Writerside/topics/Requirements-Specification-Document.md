@@ -17,7 +17,14 @@ Recommendation System. It summarizes the rationale behind each version.
 
 * The keywords **"SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT"**, in this document are to be interpreted as described
   in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
-* Functional requirements will be prefixed with **"FR"**. Non-functional requirements will be prefixed with **"NFR"**.
+* Functional requirements will be prefixed with **"FR"**. Non-functional requirements will be prefixed with **"NFR"**. Use case will be
+  prefixed with **"UC"**.
+
+### Audience
+
+* Developers: For understanding the detailed technical requirements.
+* Project Managers: To align project trajectory defined in the specifications.
+* Stakeholders: To verify the system meets their expectations and needs.
 
 ## Glossary
 
@@ -43,14 +50,14 @@ See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requ
 
 ### Use cases
 
-1. Submit course feedback
-2. View academic calendar
-3. View course pathways
-4. Filter courses
-5. View personal information
-6. Obtain course recommendations from query
-7. Register and log into the system
-8. University officials access and analyze course data
+* **UC1**: Submit course feedback
+* **UC2**: View academic calendar
+* **UC3**: View course pathways
+* **UC4**: Filter courses
+* **UC5**: View personal information
+* **UC6**: Obtain course recommendations from query
+* **UC7**: Register and log into the system
+* **UC8**: University officials access and analyze course data
 
 ![UseCase_Diagram0.png](UseCase_Diagram0.png)
 
@@ -60,32 +67,36 @@ See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requ
 
 #### User Authentication and Security
 
-* FR9: The system **shall** provide a secure registration process for new users.
-* FR10: Users **shall** register using their email, password, and basic profile information.
-* FR11: The system **shall** support secure login with email and password
-* FR12: The system **shall** provide a password recovery mechanism for users to reset forgotten passwords via email.
+* **FR9**: The system **shall** provide a secure registration process for new users.
+* **FR10**: Users **shall** register using their email, password, and basic profile information.
+* **FR11**: The system **shall** support secure login with email and password
+* **FR12**: The system **shall** provide a password recovery mechanism for users to reset forgotten passwords via email.
 
 ### Non-Functional Requirements {id="non-functional-requirements_1"}
 
 #### Performance
 
-* NFR1: The system **should** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
+* **NFR1**: The system **should** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
 
 #### Usability
 
-* NFR2: The system **should** be intuitive, allowing users with minimal training to perform basic operations.
+* **NFR2**: The system **should** be intuitive, allowing users with minimal training to perform basic operations.
 
 #### Reliability
 
-* NFR3: The system **should** be operational 99% of the time, with minimal downtime for maintenance.
+* **NFR3**: The system **should** be operational 99% of the time, with minimal downtime for maintenance.
 
 #### Scalability
 
-* NFR4: The system **should** handle increasing amounts of data and concurrent users as the student population grows.
+* **NFR4**: The system **should** handle increasing amounts of data and concurrent users as the student population grows.
 
 #### Security
 
-* NFR5: The system **should** implement standard security measures including data encryption and user authentication.
+* **NFR5**: The system **should** implement standard security measures including data encryption and user authentication.
+
+#### Maintainability
+
+* **NFR6**: The system should be designed for easy maintenance and future upgrades without significant downtime.
 
 ## System Architecture
 
@@ -109,23 +120,24 @@ The system will follow a client-server architecture with the following main comp
 
 #### Course Recommendation
 
-* FR1: The system **should** allow students to input queries in natural language to get course recommendations.
-* FR2: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the university’s course
+* **FR1**: The system **should** allow students to input queries in natural language to get course recommendations.
+* **FR2**: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the university’s course
   catalog.
 
 #### User Interface
 
-* FR3: The system **shall** offer an easy-to-use interface with options to filter courses based on criteria like difficulty and department.
-* FR4: The system **shall** provide visual course pathways showing prerequisites and recommended sequences.
+* **FR3**: The system **shall** offer an easy-to-use interface with options to filter courses based on criteria like difficulty and
+  department.
+* **FR4**: The system **shall** provide visual course pathways showing prerequisites and recommended sequences.
 
 #### Data Utilization and Privacy
 
-* FR5: The system **shall** ensure robust data protection mechanisms to prevent misuse of personal data.
+* **FR5**: The system **shall** ensure robust data protection mechanisms to prevent misuse of personal data.
 
 #### Additional Features
 
-* FR7: The system **shall** integrate with the academic calendar for scheduling.
-* FR8: The system **shall** include a feedback system for students to rate courses after completion.
+* **FR7**: The system **shall** integrate with the academic calendar for scheduling.
+* **FR8**: The system **shall** include a feedback system for students to rate courses after completion.
 
 ## Data Flow and User Scenarios
 
@@ -151,14 +163,14 @@ The system will follow a client-server architecture with the following main comp
 
 ## Verification and Validation
 
-* Test 1: Ensure that the course recommendation matches the user query in terms of relevance and accuracy.
-* Test 2: Verify that the user interface is user-friendly and meets the usability requirements.
-* Test 3: Validate that user data is handled securely and in compliance with privacy standards.
-* Test 4: Confirm that the user registration and login processes are secure and function as expected.
-* Test 5: Ensure that university officials can access the data dashboard and that the displayed information is accurate and up-to-date.
+* **Test 1**: Ensure that the course recommendation matches the user query in terms of relevance and accuracy.
+* **Test 2**: Verify that the user interface is user-friendly and meets the usability requirements.
+* **Test 3**: Validate that user data is handled securely and in compliance with privacy standards.
+* **Test 4**: Confirm that the user registration and login processes are secure and function as expected.
+* **Test 5**: Ensure that university officials can access the data dashboard and that the displayed information is accurate and up-to-date.
 
 ## Appendices
 
-* Appendix A: API Documentation for third-party services used.
-* Appendix B: User manual for system interaction.
+* **Appendix A**: API Documentation for third-party services used.
+* **Appendix B**: User manual for system interaction.
 
