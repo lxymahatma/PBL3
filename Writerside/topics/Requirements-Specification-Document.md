@@ -18,13 +18,13 @@ Recommendation System. It summarizes the rationale behind each version.
 * The keywords **"SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT"**, in this document are to be interpreted as described
   in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 * Functional requirements will be prefixed with **"FR"**. Non-functional requirements will be prefixed with **"NFR"**. Use case will be
-  prefixed with **"UC"**.
+  prefixed with **"UC"**. Data Flow will be prefixed with **"DF"**.
 
 ### Audience
 
-* Developers: For understanding the detailed technical requirements.
-* Project Managers: To align project trajectory defined in the specifications.
-* Stakeholders: To verify the system meets their expectations and needs.
+* **Developers:** For understanding the detailed technical requirements.
+* **Project Managers:** To align project trajectory defined in the specifications.
+* **Stakeholders:** To verify the system meets their expectations and needs.
 
 ## Glossary
 
@@ -117,17 +117,17 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 ### Overview
 
-The system will follow a client-server architecture with the following main components:
+#### The system will follow a client-server architecture with the following main components:
 
-* Client Application: A frontend interface where students can interact with the system.
-* Server Application: Backend services that process data and serve the course recommendations.
-* Database: To store course information, user data, and interaction logs.
+* **Client Application:** A frontend interface where students can interact with the system.
+* **Server Application:** Backend services that process data and serve the course recommendations.
+* **Database:** To store course information, user data, and interaction logs.
 
 ### Detailed Design
 
-* Client Application: Built using Avalonia UI and C#, providing cross-platform support.
-* Server Application: Utilizes OpenAI's ChatGPT for NLP tasks
-* Database: A database system to store structured data securely.
+* **Client Application:** Built using Avalonia UI and C#, providing cross-platform support.
+* **Server Application:** Utilizes OpenAI's ChatGPT for NLP tasks
+* **Database:** A database system to store structured data securely.
 
 ## System Requirements
 
@@ -190,23 +190,24 @@ The system will follow a client-server architecture with the following main comp
 
 ### Data Flow
 
-1. The user enters a course query in natural language.
-2. The query is processed by the NLP module to extract relevant terms.
-3. The system matches these terms with the course database.
-4. Filtered results based on user preferences are presented in the interface.
-5. Users can further explore courses through visual pathways and integrated scheduling.
+* **DF1:** The user enters a course query in natural language.
+* **DF2:** The query is processed by the NLP module to extract relevant terms.
+* **DF3:** The system matches these terms with the course database.
+* **DF4:** Filtered results based on user preferences are presented in the interface.
+* **DF5:** Users can further explore courses through visual pathways and integrated scheduling.
 
 ![DataFlowDiagram.png](DataFlowDiagram.png)
 
 ### User Scenario Example
 
-* A second-year student is looking for a programming-related course without scheduling conflicts. They use the system to input: “I need a
-  programming course with no clashes in my schedule.”
-* The system recommends suitable courses, showing their prerequisites and where they fit into the student's academic calendar.
+1. A second-year student is looking for a programming-related course without scheduling conflicts. They use the system to input: “I need a
+   programming course with no clashes in my schedule.” The system recommends suitable courses, showing their prerequisites and where they
+   fit into the student's academic calendar.
 
-  ![UserScenarioDiagram.png](UserScenarioDiagram.png)
-* A university official logs in to the system and reviews course feedback and ratings to identify areas for improvement in the programming
-  curriculum.
+![UserScenarioDiagram.png](UserScenarioDiagram.png)
+
+2. A university official logs in to the system and reviews course feedback and ratings to identify areas for improvement in the programming
+   curriculum.
 
 ## Verification and Validation
 
