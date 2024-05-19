@@ -1,6 +1,6 @@
 # Glossary
 
-## Project Proposal
+## General Glossary
 
 | Term                              | Abbreviation | Definition                                                                                                       |
 |-----------------------------------|--------------|------------------------------------------------------------------------------------------------------------------|
@@ -8,10 +8,9 @@
 | Application Programming Interface | API          | A set of routines, protocols, and tools for building software applications.                                      |
 | User Interface                    | UI           | The means by which the user and a computer system interact, in particular the use of input devices and software. |
 
+## Project Proposal
+
 ## Requirement Specification Document
 
-| Term                              | Abbreviation | Definition                                                                  |
-|-----------------------------------|--------------|-----------------------------------------------------------------------------|
-| Application Programming Interface | API          | A set of routines, protocols, and tools for building software applications. |
 
 

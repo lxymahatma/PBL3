@@ -89,7 +89,8 @@ Despite these challenges, our project aims to address these limitations through 
 
 ## Glossary
 
-See [Glossary](Glossary.md#project-proposal "Glossary for Project Proposal Document") for more detail.
+See [General Glossary](Glossary.md#general-glossary "General Glossary for the whole project document")
+and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary for Project Proposal Document") for more detail.
 
 ## References
 

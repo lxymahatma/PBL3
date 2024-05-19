@@ -28,7 +28,8 @@ Recommendation System. It summarizes the rationale behind each version.
 
 ## Glossary
 
-See [Glossary](Glossary.md#requirement-specification-document "Glossary for Requirement Specification Document") for more detail.
+See [General Glossary](Glossary.md#general-glossary "General Glossary for the whole project document")
+and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary for Requirement Specification Document") for more detail.
 
 ## Introduction
 
@@ -110,7 +111,7 @@ The system will follow a client-server architecture with the following main comp
 
 ### Detailed Design
 
-* Client Application: Built using Avalonia UI and C, providing cross-platform support.
+* Client Application: Built using Avalonia UI and C#, providing cross-platform support.
 * Server Application: Utilizes OpenAI's ChatGPT for NLP tasks
 * Database: A database system to store structured data securely.
 
