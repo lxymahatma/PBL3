@@ -198,27 +198,16 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 ![DataFlowDiagram.png](DataFlowDiagram.png)
 
-### User Scenario Example
-
-1. A second-year student is looking for a programming-related course without scheduling conflicts. They use the system to input: “I need a
-   programming course with no clashes in my schedule.” The system recommends suitable courses, showing their prerequisites and where they
-   fit into the student's academic calendar.
-
-![UserScenarioDiagram.png](UserScenarioDiagram.png)
-
-2. A university official logs in to the system and reviews course feedback and ratings to identify areas for improvement in the programming
-   curriculum.
-
 ## Verification and Validation
 
-* **Test 1**: Ensure that the course recommendation matches the user query in terms of relevance and accuracy.
-* **Test 2**: Verify that the user interface is user-friendly and meets the usability requirements.
-* **Test 3**: Validate that user data is handled securely and in compliance with privacy standards.
-* **Test 4**: Confirm that the user registration and login processes are secure and function as expected.
-* **Test 5**: Ensure that university officials can access the data dashboard and that the displayed information is accurate and up-to-date.
+* **Test 1:** Ensure that the course recommendation matches the user query in terms of relevance and accuracy.
+* **Test 2:** Verify that the user interface is user-friendly and meets the usability requirements.
+* **Test 3:** Validate that user data is handled securely and in compliance with privacy standards.
+* **Test 4:** Confirm that the user registration and login processes are secure and function as expected.
+* **Test 5:** Ensure that university officials can access the data dashboard and that the displayed information is accurate and up-to-date.
 
 ## Appendices
 
-* **Appendix A**: API Documentation for third-party services used.
-* **Appendix B**: User manual for system interaction.
+* **Appendix A:** API Documentation for third-party services used.
+* **Appendix B:** User manual for system interaction.
 
