@@ -73,36 +73,44 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 * **FR11**: The system **shall** support secure login with email and password
 * **FR12**: The system **shall** provide a password recovery mechanism for users to reset forgotten passwords via email.
 
+#### Community Forums
+
+* **FR13:** The system **should** provide a community forum or discussion board where users can discuss courses, share study tips, and
+  collaborate.
+
 ### Non-Functional Requirements {id="non-functional-requirements_1"}
 
 #### User Interface Clarity
 
-* **NFR9:** The system should present a clear and uncluttered user interface, ensuring that all textual and graphical elements are easily
+* **NFR9:** The system **should** present a clear and uncluttered user interface, ensuring that all textual and graphical elements are
+  easily
   understandable by users without prior training.
 
 #### Consistent Navigation
 
-* **NFR10:** he system should offer consistent navigation menus and icons throughout the application to prevent user confusion and to
+* **NFR10:** he system **should** offer consistent navigation menus and icons throughout the application to prevent user confusion and to
   facilitate easy learning of the interface.
 
 #### Interactive Performance
 
-* **NFR11:** The system should ensure that all user interactions, such as button clicks and form submissions, receive immediate feedback,
+* **NFR11:** The system **should** ensure that all user interactions, such as button clicks and form submissions, receive immediate
+  feedback,
   with actions being acknowledged or completed within 1 second under typical usage conditions.
 
 #### Secure User Data Input
 
-* **NFR12:** The system should ensure that all user input is validated and sanitized to prevent common vulnerabilities such as SQL
+* **NFR12:** The system **should** ensure that all user input is validated and sanitized to prevent common vulnerabilities such as SQL
   injection, cross-site scripting (XSS), and other forms of input-based attacks.
 
 #### Privacy of User Data
 
-* **NFR13:** The system should clearly inform users about how their data is used and obtain their consent where necessary, complying with
+* **NFR13:** The system **should** clearly inform users about how their data is used and obtain their consent where necessary, complying
+  with
   privacy regulations.
 
 #### User Feedback Mechanism
 
-* **NFR14:** The system should maintain stable user sessions with automatic recovery of the session state after brief disconnections or
+* **NFR14:** The system **should** maintain stable user sessions with automatic recovery of the session state after brief disconnections or
   interruptions.
 
 ## System Architecture
@@ -127,8 +135,9 @@ The system will follow a client-server architecture with the following main comp
 
 #### Course Recommendation
 
-* **FR1**: The system **should** allow students to input queries in natural language to get course recommendations.
-* **FR2**: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the university’s course
+* **FR1**: The system ****should**** allow students to input queries in natural language to get course recommendations.
+* **FR2**: Based on the input, the system ****should**** use NLP to analyze and fetch relevant course information from the university’s
+  course
   catalog.
 
 #### User Interface
@@ -150,32 +159,32 @@ The system will follow a client-server architecture with the following main comp
 
 #### Performance
 
-* **NFR1**: The system **should** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
+* **NFR1**: The system ****should**** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
 
 #### Usability
 
-* **NFR2**: The system **should** be intuitive, allowing users with minimal training to perform basic operations.
+* **NFR2**: The system ****should**** be intuitive, allowing users with minimal training to perform basic operations.
 
 #### Reliability
 
-* **NFR3**: The system **should** be operational 99% of the time, with minimal downtime for maintenance.
+* **NFR3**: The system ****should**** be operational 99% of the time, with minimal downtime for maintenance.
 
 #### Scalability
 
-* **NFR4**: The system **should** handle increasing amounts of data and concurrent users as the student population grows.
+* **NFR4**: The system ****should**** handle increasing amounts of data and concurrent users as the student population grows.
 
 #### Security
 
-* **NFR5**: The system **should** implement standard security measures including data encryption and user authentication.
+* **NFR5**: The system ****should**** implement standard security measures including data encryption and user authentication.
 
 #### Maintainability
 
-* **NFR6**: The system should be designed for easy maintenance and future upgrades without significant downtime.
+* **NFR6**: The system **should** be designed for easy maintenance and future upgrades without significant downtime.
 
 #### Fault Tolerance
 
-* **NFR7**: The system should handle at least 100 users concurrently without significant degradation in performance.
-* **NFR8**: The system should be capable of recovering from common errors without total system failure and with minimal downtime.
+* **NFR7**: The system **should** handle at least 100 users concurrently without significant degradation in performance.
+* **NFR8**: The system **should** be capable of recovering from common errors without total system failure and with minimal downtime.
 
 ## Data Flow and User Scenarios
 
