@@ -2,7 +2,7 @@
 
 # Requirements Specification Document
 
-## Preface
+## 1. Preface
 
 This document outlines the expected readership and provides a version history of the requirements specification for the Course
 Recommendation System. It summarizes the rationale behind each version.
@@ -28,12 +28,12 @@ Recommendation System. It summarizes the rationale behind each version.
 * **Project Managers**: To align project trajectory defined in the specifications.
 * **Stakeholders**: To verify the system meets their expectations and needs.
 
-## Glossary
+## 2. Glossary
 
 See [General Glossary](Glossary.md#general-glossary "General Glossary for the whole project document")
 and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary for Requirement Specification Document") for more detail.
 
-## Introduction
+## 3. Introduction
 
 ### System Overview
 
@@ -69,7 +69,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 | U10    | Submit Course Feedback                  | Sumbit course feedback in the system.                  |
 | U11    | Access and Analyze User Data            | University officials can access and analyze user data. |
 
-## User Requirements
+## 4. User Requirements
 
 #### Functional Requirements
 
@@ -164,7 +164,7 @@ comprehensive documentation, including architecture diagrams, API documentation,
 : The system handles at least 100 users concurrently without significant performance degradation. It is
 capable of recovering from common errors without total system failure and with minimal downtime.
 
-## System Requirements
+## 5. System Requirements
 
 ### Functional Requirements {id="functional-requirements_1"}
 
@@ -503,7 +503,7 @@ capable of recovering from common errors without total system failure and with m
 * **NFR-13.1**: The system **should** handle at least 100 users concurrently without significant degradation in performance.
 * **NFR-13.2**: The system **should** be capable of recovering from common errors without total system failure and with minimal downtime.
 
-## System Architecture
+## 6. System Architecture
 
 ### Overview
 
@@ -519,7 +519,7 @@ capable of recovering from common errors without total system failure and with m
 * **Server Application**: Utilizes OpenAI's ChatGPT for NLP tasks
 * **Database**: A database system to store structured data securely.
 
-## Data Flow and User Scenarios
+## 7. Data Flow and User Scenarios
 
 ### Data Flow
 
@@ -531,7 +531,7 @@ capable of recovering from common errors without total system failure and with m
 
 ![DataFlowDiagram](DataFlowDiagram.png)
 
-## Verification and Validation
+## 8. Verification and Validation
 
 * **Test 1**: Ensure that the course recommendation matches the user query in terms of relevance and accuracy.
 * **Test 2**: Verify that the user interface is user-friendly and meets the usability requirements.
@@ -539,7 +539,7 @@ capable of recovering from common errors without total system failure and with m
 * **Test 4**: Confirm that the user registration and login processes are secure and function as expected.
 * **Test 5**: Ensure that university officials can access the data dashboard and that the displayed information is accurate and up-to-date.
 
-## Appendices
+## 9. Appendices
 
 * **Appendix A**: API Documentation for third-party services used.
 * **Appendix B**: User manual for system interaction.
