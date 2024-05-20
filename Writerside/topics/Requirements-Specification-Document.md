@@ -71,139 +71,139 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 #### FR-1 - User Authentication and Security
 
-* **FR-1.1**: The system ****should**** provide intuitive controls to initiate the signup process.
+* **FR-1.1**: The system **should** provide intuitive controls to initiate the signup process.
 * **FR-1.2**: The system **shall** provide a secure registration process for
   new users.
 * **FR-1.3**: The system **shall** support secure login with email and password
 * **FR-1.4**: The system **shall** provide a password recovery mechanism for users to reset forgotten passwords via email.
 * **FR-1.5**: Users **shall** register using their email, password, and basic profile information.
-* **FR-1.6**: The system ****should**** collect citizens consent to our terms of use.
+* **FR-1.6**: The system **should** collect citizens consent to our terms of use.
 
 #### FR-2 - Reset Password
 
-* **FR-2.1**: The system ****should**** provide a “Forgot Password” link on the login page for users who have forgotten their passwords.
-* **FR-2.2**: When users click on the “Forgot Password” link, they ****should**** be directed to a password recovery page.
-* **FR-2.3**: Users ****should**** be prompted to enter their email address or username associated with their account.
-* **FR-2.4**: After entering their required user information, the system ****should**** send a password reset link to the user’s registered
+* **FR-2.1**: The system **should** provide a “Forgot Password” link on the login page for users who have forgotten their passwords.
+* **FR-2.2**: When users click on the “Forgot Password” link, they **should** be directed to a password recovery page.
+* **FR-2.3**: Users **should** be prompted to enter their email address or username associated with their account.
+* **FR-2.4**: After entering their required user information, the system **should** send a password reset link to the user’s registered
   email address.
-* **FR-2.5**: The password reset link sent to the user’s email ****should**** be unique and valid for one hour.
-* **FR-2.6**: Clicking on the password reset link ****should**** redirect the user to a page where they can create a new password.
-* **FR-2.7**: After successfully resetting their password, users ****should**** receive a confirmation message.
-* **FR-2.8**: Users ****should**** be redirected to the login page.
+* **FR-2.5**: The password reset link sent to the user’s email **should** be unique and valid for one hour.
+* **FR-2.6**: Clicking on the password reset link **should** redirect the user to a page where they can create a new password.
+* **FR-2.7**: After successfully resetting their password, users **should** receive a confirmation message.
+* **FR-2.8**: Users **should** be redirected to the login page.
 
 #### FR-3 - Delete Account
 
-* **FR-3.1**: User ****should**** be logged in for their account to be deleted.
-* **FR-3.2**: User ****should**** be prompted to enter their password.
-* **FR-3.3**: User ****should**** be prompted with confirmation where user can either delete and cancel the account deletion.
-* **FR-3.4**: Account ****should**** be removed from the system once deletion process is done within 2 minutes.
+* **FR-3.1**: User **should** be logged in for their account to be deleted.
+* **FR-3.2**: User **should** be prompted to enter their password.
+* **FR-3.3**: User **should** be prompted with confirmation where user can either delete and cancel the account deletion.
+* **FR-3.4**: Account **should** be removed from the system once deletion process is done within 2 minutes.
 
 #### FR-4 - Community Forums
 
-* **FR-4.1**: The system ****should**** provide a community forum or discussion board where users can discuss courses, share study tips, and
+* **FR-4.1**: The system **should** provide a community forum or discussion board where users can discuss courses, share study tips, and
   collaborate.
-* **FR-4.2**: The system ****should**** allow users to create new discussion threads within the forum.
-* **FR-4.3**: The system ****should**** allow useres to enter a title and description for the new thread.
-* **FR-4.4**: The system ****should**** have options to format the text and add links or images.
-* **FR-4.5**: The system ****should**** allow users to be able to tag their thread with relevant course codes or topics for easy navigation.
-* **FR-4.6**: The system ****should**** enable users to reply to existing discussion threads.
-* **FR-4.7**: Users ****should**** be able to post replies to any thread.
-* **FR-4.8**: The system ****should**** allow replies to include text, links, and images.
-* **FR-4.9**: The system ****should**** allow users to edit their own posts and threads.
-* **FR-4.10**: There ****should**** be a 30 minutes time limit after posting within which edits can be made.
-* **FR-4.11**: Edited posts ****should**** display an "edited" label with the edit timestamp.
-* **FR-4.12**: The system ****should**** implement moderation tools to manage the content and enforce forum rules.
-* **FR-4.13**: Moderators ****should**** be able to delete or edit any post or thread.
-* **FR-4.14**: Moderators ****should**** be able to ban users who violate forum rules.
-* **FR-4.15**: The system ****should**** support reporting posts to moderators for review.
-* **FR-4.16**: The system ****should**** allow users to rate posts and mark answers as helpful.
-* **FR-4.17**: Users ****should**** be able to upvote or downvote posts.
-* **FR-4.18**: The total score of each post ****should**** be visible next to it.
+* **FR-4.2**: The system **should** allow users to create new discussion threads within the forum.
+* **FR-4.3**: The system **should** allow useres to enter a title and description for the new thread.
+* **FR-4.4**: The system **should** have options to format the text and add links or images.
+* **FR-4.5**: The system **should** allow users to be able to tag their thread with relevant course codes or topics for easy navigation.
+* **FR-4.6**: The system **should** enable users to reply to existing discussion threads.
+* **FR-4.7**: Users **should** be able to post replies to any thread.
+* **FR-4.8**: The system **should** allow replies to include text, links, and images.
+* **FR-4.9**: The system **should** allow users to edit their own posts and threads.
+* **FR-4.10**: There **should** be a 30 minutes time limit after posting within which edits can be made.
+* **FR-4.11**: Edited posts **should** display an "edited" label with the edit timestamp.
+* **FR-4.12**: The system **should** implement moderation tools to manage the content and enforce forum rules.
+* **FR-4.13**: Moderators **should** be able to delete or edit any post or thread.
+* **FR-4.14**: Moderators **should** be able to ban users who violate forum rules.
+* **FR-4.15**: The system **should** support reporting posts to moderators for review.
+* **FR-4.16**: The system **should** allow users to rate posts and mark answers as helpful.
+* **FR-4.17**: Users **should** be able to upvote or downvote posts.
+* **FR-4.18**: The total score of each post **should** be visible next to it.
 
 ### Non-Functional Requirements {id="non-functional-requirements_1"}
 
 #### NFR-1 - User Interface Clarity
 
-* **NFR-1.1**: The system ****should**** present a clear and uncluttered user interface, ensuring that all textual and graphical elements
+* **NFR-1.1**: The system **should** present a clear and uncluttered user interface, ensuring that all textual and graphical elements
   are
   easily understandable by users without prior training.
-* **NFR-1.2**: The system ****should**** use a consistent layout and design scheme across all pages and views.
-* **NFR-1.3**: All screens ****should**** follow the same color scheme and typography.
-* **NFR-1.4**: Interactive elements (like buttons, text fields, dropdown menus) ****should**** have a consistent look and feel.
-* **NFR-1.5**: Spacing, alignment, and positioning of elements ****should**** be uniform across similar types of interfaces.
-* **NFR-1.6**: The system ****should**** provide adequate feedback to user actions within a reasonable timeframe.
-* **NFR-1.7**: Visual cues (like highlighting, animations, or progress indicators) ****should**** be used to show that an action is being
+* **NFR-1.2**: The system **should** use a consistent layout and design scheme across all pages and views.
+* **NFR-1.3**: All screens **should** follow the same color scheme and typography.
+* **NFR-1.4**: Interactive elements (like buttons, text fields, dropdown menus) **should** have a consistent look and feel.
+* **NFR-1.5**: Spacing, alignment, and positioning of elements **should** be uniform across similar types of interfaces.
+* **NFR-1.6**: The system **should** provide adequate feedback to user actions within a reasonable timeframe.
+* **NFR-1.7**: Visual cues (like highlighting, animations, or progress indicators) **should** be used to show that an action is being
   processed.
-* **NFR-1.8**: Success, warning, or error messages ****should**** be clearly displayed following user actions to indicate the result.
-* **NFR-1.9**: The system ****should**** aim for response times that keep the user experience fluid and responsive under 1 second for
+* **NFR-1.8**: Success, warning, or error messages **should** be clearly displayed following user actions to indicate the result.
+* **NFR-1.9**: The system **should** aim for response times that keep the user experience fluid and responsive under 1 second for
   immediate
   actions and under 10 seconds for complex operations.
 
 #### NFR-2 - Consistent Navigation
 
 <<<<<<< HEAD
-* **NFR-2.1**: The system ****should**** offer consistent navigation menus and icons throughout the application to prevent user confusion and to
+* **NFR-2.1**: The system **should** offer consistent navigation menus and icons throughout the application to prevent user confusion and to
 =======
-* **NFR10**: the system ****should**** offer consistent navigation menus and icons throughout the application to prevent user confusion and to
+* **NFR10**: the system **should** offer consistent navigation menus and icons throughout the application to prevent user confusion and to
 >>>>>>> origin/main
   facilitate easy learning of the interface.
-* **NFR-2.2**: The system ****should**** use a standardized layout for primary navigation menus.
-* **NFR-2.3**: The primary navigation menu ****should**** be positioned in a common area (such as the top bar, sidebar, or bottom bar) across
+* **NFR-2.2**: The system **should** use a standardized layout for primary navigation menus.
+* **NFR-2.3**: The primary navigation menu **should** be positioned in a common area (such as the top bar, sidebar, or bottom bar) across
   all
   pages.
-* **NFR-2.4**: The layout ****should**** support scalability, accommodating additional items without disrupting the overall design.
-* **NFR-2.5**: The system ****should**** offer clear visual cues to indicate the user’s current location within the application.
-* **NFR-2.6**: The current section or page ****should**** be highlighted or distinguished in the navigation menu.
-* **NFR-2.7**: Tabs, buttons, or links representing the current area ****should**** be styled differently from inactive elements.
-* **NFR-2.8**: In hierarchical or nested navigation, parent sections ****should**** also be visually indicated when a child is selected.
+* **NFR-2.4**: The layout **should** support scalability, accommodating additional items without disrupting the overall design.
+* **NFR-2.5**: The system **should** offer clear visual cues to indicate the user’s current location within the application.
+* **NFR-2.6**: The current section or page **should** be highlighted or distinguished in the navigation menu.
+* **NFR-2.7**: Tabs, buttons, or links representing the current area **should** be styled differently from inactive elements.
+* **NFR-2.8**: In hierarchical or nested navigation, parent sections **should** also be visually indicated when a child is selected.
 
-* **NFR-2.9**: The system ****should**** avoid deep navigation hierarchies, ensuring that users can reach any part of the application within
+* **NFR-2.9**: The system **should** avoid deep navigation hierarchies, ensuring that users can reach any part of the application within
   a
   few
   clicks.
-* **NFR-2.10**: Users ****should**** be able to reach important features and information within three clicks from the homepage or main menu.
+* **NFR-2.10**: Users **should** be able to reach important features and information within three clicks from the homepage or main menu.
 
 #### NFR-3 - Interactive Performance
 
-* **NFR-3.1**: The system ****should**** ensure that all user interactions, such as button clicks and form submissions, receive immediate
+* **NFR-3.1**: The system **should** ensure that all user interactions, such as button clicks and form submissions, receive immediate
   feedback,
   with actions being acknowledged or completed within 1 second under typical usage conditions.
-* **NFR-3.2**: The system ****should**** use visual indicators such as progress bars, spinners, or animation to inform users about ongoing
+* **NFR-3.2**: The system **should** use visual indicators such as progress bars, spinners, or animation to inform users about ongoing
   processes
   that take longer than 1 second.
-* **NFR-3.3**: These indicators ****should**** remain on screen until the action is completed or an error message is displayed.
-* **NFR-3.4**: The indicators ****should**** be placed prominently so that they are easily noticeable by users.
-* **NFR-3.5**: The system ****should**** ensure that the interface remains responsive and usable even when background tasks or calculations
+* **NFR-3.3**: These indicators **should** remain on screen until the action is completed or an error message is displayed.
+* **NFR-3.4**: The indicators **should** be placed prominently so that they are easily noticeable by users.
+* **NFR-3.5**: The system **should** ensure that the interface remains responsive and usable even when background tasks or calculations
   are
   being performed.
-* **NFR-3.6**: The UI ****should**** not freeze or become unresponsive during any operation.
-* **NFR-3.7**: Any input from the user during background processing ****should**** be handled correctly without data loss or corruption.
-* **NFR-3.8**: The system ****should**** optimize screen refresh and rendering times to ensure smooth updates and transitions.
-* **NFR-3.9**: Any visual changes in the UI ****should**** appear seamless and without noticeable lag or jerkiness.
-* **NFR-3.10**: The system ****should**** provide immediate error notifications for issues related to user actions to minimize user
+* **NFR-3.6**: The UI **should** not freeze or become unresponsive during any operation.
+* **NFR-3.7**: Any input from the user during background processing **should** be handled correctly without data loss or corruption.
+* **NFR-3.8**: The system **should** optimize screen refresh and rendering times to ensure smooth updates and transitions.
+* **NFR-3.9**: Any visual changes in the UI **should** appear seamless and without noticeable lag or jerkiness.
+* **NFR-3.10**: The system **should** provide immediate error notifications for issues related to user actions to minimize user
   confusion
   and
   frustration.
-* **NFR-3.11**: These messages ****should**** be descriptive enough to inform the user of the nature of the problem and suggest potential
+* **NFR-3.11**: These messages **should** be descriptive enough to inform the user of the nature of the problem and suggest potential
   solutions.
-* **NFR-3.12**: The design and placement of error messages ****should**** ensure that they are highly visible without disrupting the user's
+* **NFR-3.12**: The design and placement of error messages **should** ensure that they are highly visible without disrupting the user's
   workflow.
-* **NFR-3.13**: The system ****should**** minimize the latency experienced by users during typical interaction patterns to enhance the
+* **NFR-3.13**: The system **should** minimize the latency experienced by users during typical interaction patterns to enhance the
   overall
   responsiveness.
-* **NFR-3.14**: The system ****should**** aim for a latency of less than 100 milliseconds for simple interactions under typical conditions.
-* **NFR-3.15**: Complex operations that require more processing time ****should**** still be optimized to complete as quickly as possible,
+* **NFR-3.14**: The system **should** aim for a latency of less than 100 milliseconds for simple interactions under typical conditions.
+* **NFR-3.15**: Complex operations that require more processing time **should** still be optimized to complete as quickly as possible,
   with
   intermediate feedback provided.
-* **NFR-3.16**: The system ****should**** handle sudden spikes in usage or load without complete failure.
+* **NFR-3.16**: The system **should** handle sudden spikes in usage or load without complete failure.
 * **NFR-3.17**: Under high load, the system may degrade non-critical features while keeping essential functions responsive.
-* **NFR-3.18**: Users ****should**** be notified appropriately if the performance is impacted significantly, with clear messages indicating
+* **NFR-3.18**: Users **should** be notified appropriately if the performance is impacted significantly, with clear messages indicating
   any
   temporary limitations.
 
 #### NFR-4 - Secure User Data Input
 
-* **NFR-4.1**: The system ****should**** ensure that all user input is validated and sanitized to prevent common vulnerabilities such as SQL
+* **NFR-4.1**: The system **should** ensure that all user input is validated and sanitized to prevent common vulnerabilities such as SQL
   injection, cross-site scripting (XSS), and other forms of input-based attacks.
 * **NFR-4.2**: The system **should** implement server-side validation of all user input to prevent injection and other input-based
   vulnerabilities.
@@ -221,7 +221,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 #### NFR-5 - Privacy of User Data
 
-* **NFR-5.1**: The system ****should**** clearly inform users about how their data is used and obtain their consent where necessary,
+* **NFR-5.1**: The system **should** clearly inform users about how their data is used and obtain their consent where necessary,
   complying
   with privacy regulations.
 * **NFR-5.2**: The system **should** allow users to access, review, and update their personal data at any time.
@@ -245,7 +245,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 #### NFR-6 - User Feedback Mechanism
 
-* **NFR-6.1**: The system ****should**** maintain stable user sessions with automatic recovery of the session state after brief
+* **NFR-6.1**: The system **should** maintain stable user sessions with automatic recovery of the session state after brief
   disconnections
   or interruptions.
 * **NFR-6.2**: The system **should** include a simple and intuitive interface for users to submit feedback, bug reports, and feature
@@ -287,8 +287,8 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 #### FR-5 - Course Recommendation
 
-* **FR-5.1**: The system ******should****** allow students to input queries in natural language to get course recommendations.
-* **FR-5.2**: Based on the input, the system ******should****** use NLP to analyze and fetch relevant course information from the
+* **FR-5.1**: The system **should** allow students to input queries in natural language to get course recommendations.
+* **FR-5.2**: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the
   university’s
   course catalog.
 * **FR-5.3**: Based on the analysis, the system **should** search the university's course catalog database to find courses that match the
@@ -386,7 +386,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 #### NFR-7 - Performance
 
-* **NFR-7.1**: The system ******should****** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for
+* **NFR-7.1**: The system **should** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for
   results.
 * **NFR-7.2**: The system **should** process and return results for at least 95% of user queries within 2 seconds under normal operating
   conditions.
@@ -396,28 +396,59 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 #### NFR-8 - Usability
 
-* **NFR2**: The system ******should****** be intuitive, allowing users with minimal training to perform basic operations.
+* **NFR-8.1**: The system **should** be intuitive, allowing users with minimal training to perform basic operations.
+* **NFR-8.1**: The user interface should follow standard design principles that promote intuitive navigation and interaction.
+* **NFR-8.1**: The system should use familiar interface elements like buttons, icons, and menus that are consistent with widely accepted
+  user interface design standards.
+* **NFR-8.1**: The system should employ a consistent layout and design scheme across all pages and views to maintain a predictable
+  environment for users.
+* **NFR-8.1**: Essential tasks such as logging in, searching for courses, applying filters, and viewing course details should be
+  straightforward and easily accessible.
+* **NFR-8.1**: The system should provide clear, concise labels for all actions and options to prevent ambiguity.
+* **NFR-8.1**: The system should ensure that the most frequently used features are prominently placed and easy to access without unnecessary
+  navigation.
+* **NFR-8.1**: The system should provide immediate, clear feedback in response to user actions to reinforce understanding and prevent
+  confusion.
+* **NFR-8.1**: The system should use visual cues like highlighting, animations, or informative modals to indicate when actions are taken or
+  needed.
+* **NFR-8.1**: The system should display success and error messages in a clear and helpful manner, guiding users on how to proceed or
+  correct mistakes.
 
-#### Reliability
+#### NFR-9 - Reliability
 
-* **NFR3**: The system ******should****** be operational 99% of the time, with minimal downtime for maintenance.
+* **NFR-9.1**: The system **should** be operational 99% of the time, with minimal downtime for maintenance.
+* **NFR-9.2**: The system should achieve at least 99% uptime, calculated monthly, excluding planned maintenance windows. This corresponds to
+  a maximum downtime of around 7.2 hours per month or approximately 14.4 minutes per day.
+* **NFR-9.3**: Planned maintenance should be scheduled during off-peak hours to minimize impact on users.
+* **NFR-9.4**: Notify users well in advance of scheduled maintenance times, ideally through multiple channels such as email, system
+  notifications, or a message on the login screen.
+* **NFR-9.5**: Regularly backup system data to prevent loss and enable quick recovery in case of a failure.
 
-#### Scalability
+#### NFR-10 - Scalability
 
-* **NFR4**: The system ******should****** handle increasing amounts of data and concurrent users as the student population grows.
+* **NFR-10.1**: The system **should** handle increasing amounts of data and concurrent users as the student population grows.
+* **NFR-10.2**: The database should be scalable to handle increasing volumes of data efficiently.
+* **NFR-10.3**: The user interface should remain responsive and efficient, even with large numbers of users and substantial data volumes.
+* **NFR-10.4**: The system should test the user interface under load to ensure it remains usable and responsive, making adjustments as
+  needed based on user feedback and performance metrics.
 
-#### Security
+#### NFR-11 - Security
 
-* **NFR5**: The system ******should****** implement standard security measures including data encryption and user authentication.
+* **NFR-11.1**: The system **should** implement standard security measures including data encryption and user authentication.
+* **NFR-11.1**: The system should enforce a strong password policy that requires a minimum length of 8 characters and a mix of uppercase,
+  lowercase, numbers, and special characters.
+* **NFR-11.1**: The system should use secure session management practices to prevent session hijacking and fixation attacks.
 
-#### Maintainability
+#### NFR-12 Maintainability
 
-* **NFR6**: The system ****should**** be designed for easy maintenance and future upgrades without significant downtime.
+* **NFR12.1**: The system **should** be designed for easy maintenance and future upgrades without significant downtime.
+* **NFR12.1**: The system should maintain comprehensive documentation for the system, including architecture diagrams, API documentation,
+  and maintenance manuals.
 
-#### Fault Tolerance
+#### NFR-13 Fault Tolerance
 
-* **NFR7**: The system ****should**** handle at least 100 users concurrently without significant degradation in performance.
-* **NFR8**: The system ****should**** be capable of recovering from common errors without total system failure and with minimal downtime.
+* **NFR-13.1**: The system **should** handle at least 100 users concurrently without significant degradation in performance.
+* **NFR-13.2**: The system **should** be capable of recovering from common errors without total system failure and with minimal downtime.
 
 ## Data Flow and User Scenarios
 
