@@ -4,14 +4,14 @@
 
 ## Preface
 
+This document outlines the expected readership and provides a version history of the requirements specification for the Course
+Recommendation System. It summarizes the rationale behind each version.
+
 ### Version History
 
 | Version | Date      | Description |
 |---------|-----------|-------------|
 | 1.0     | 2024-5-20 | Initial     |
-
-This document outlines the expected readership and provides a version history of the requirements specification for the Course
-Recommendation System. It summarizes the rationale behind each version.
 
 ### Document Conventions
 
