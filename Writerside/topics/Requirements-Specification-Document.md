@@ -17,8 +17,10 @@ Recommendation System. It summarizes the rationale behind each version.
 
 * The keywords **"SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT"**, in this document are to be interpreted as described
   in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
-* Functional requirements will be prefixed with **"FR"**. Non-functional requirements will be prefixed with **"NFR"**. Use case will be
-  prefixed with **"U"**. Data Flow will be prefixed with **"DF"**.
+* Functional requirements will be prefixed with **"FR"**.
+* Non-functional requirements will be prefixed with **"NFR"**.
+* Use case will be prefixed with **"U"**.
+* Data Flow will be prefixed with **"DF"**.
 
 ### Audience
 
