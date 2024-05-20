@@ -397,29 +397,32 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 #### NFR-8 - Usability
 
 * **NFR-8.1**: The system **should** be intuitive, allowing users with minimal training to perform basic operations.
-* **NFR-8.1**: The user interface should follow standard design principles that promote intuitive navigation and interaction.
-* **NFR-8.1**: The system should use familiar interface elements like buttons, icons, and menus that are consistent with widely accepted
+* **NFR-8.1**: The user interface **should** follow standard design principles that promote intuitive navigation and interaction.
+* **NFR-8.1**: The system **should** use familiar interface elements like buttons, icons, and menus that are consistent with widely accepted
   user interface design standards.
-* **NFR-8.1**: The system should employ a consistent layout and design scheme across all pages and views to maintain a predictable
+* **NFR-8.1**: The system **should** employ a consistent layout and design scheme across all pages and views to maintain a predictable
   environment for users.
-* **NFR-8.1**: Essential tasks such as logging in, searching for courses, applying filters, and viewing course details should be
+* **NFR-8.1**: Essential tasks such as logging in, searching for courses, applying filters, and viewing course details **should** be
   straightforward and easily accessible.
-* **NFR-8.1**: The system should provide clear, concise labels for all actions and options to prevent ambiguity.
-* **NFR-8.1**: The system should ensure that the most frequently used features are prominently placed and easy to access without unnecessary
+* **NFR-8.1**: The system **should** provide clear, concise labels for all actions and options to prevent ambiguity.
+* **NFR-8.1**: The system **should** ensure that the most frequently used features are prominently placed and easy to access without
+  unnecessary
   navigation.
-* **NFR-8.1**: The system should provide immediate, clear feedback in response to user actions to reinforce understanding and prevent
+* **NFR-8.1**: The system **should** provide immediate, clear feedback in response to user actions to reinforce understanding and prevent
   confusion.
-* **NFR-8.1**: The system should use visual cues like highlighting, animations, or informative modals to indicate when actions are taken or
+* **NFR-8.1**: The system **should** use visual cues like highlighting, animations, or informative modals to indicate when actions are taken
+  or
   needed.
-* **NFR-8.1**: The system should display success and error messages in a clear and helpful manner, guiding users on how to proceed or
+* **NFR-8.1**: The system **should** display success and error messages in a clear and helpful manner, guiding users on how to proceed or
   correct mistakes.
 
 #### NFR-9 - Reliability
 
 * **NFR-9.1**: The system **should** be operational 99% of the time, with minimal downtime for maintenance.
-* **NFR-9.2**: The system should achieve at least 99% uptime, calculated monthly, excluding planned maintenance windows. This corresponds to
+* **NFR-9.2**: The system **should** achieve at least 99% uptime, calculated monthly, excluding planned maintenance windows. This
+  corresponds to
   a maximum downtime of around 7.2 hours per month or approximately 14.4 minutes per day.
-* **NFR-9.3**: Planned maintenance should be scheduled during off-peak hours to minimize impact on users.
+* **NFR-9.3**: Planned maintenance **should** be scheduled during off-peak hours to minimize impact on users.
 * **NFR-9.4**: Notify users well in advance of scheduled maintenance times, ideally through multiple channels such as email, system
   notifications, or a message on the login screen.
 * **NFR-9.5**: Regularly backup system data to prevent loss and enable quick recovery in case of a failure.
@@ -427,22 +430,25 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 #### NFR-10 - Scalability
 
 * **NFR-10.1**: The system **should** handle increasing amounts of data and concurrent users as the student population grows.
-* **NFR-10.2**: The database should be scalable to handle increasing volumes of data efficiently.
-* **NFR-10.3**: The user interface should remain responsive and efficient, even with large numbers of users and substantial data volumes.
-* **NFR-10.4**: The system should test the user interface under load to ensure it remains usable and responsive, making adjustments as
+* **NFR-10.2**: The database **should** be scalable to handle increasing volumes of data efficiently.
+* **NFR-10.3**: The user interface **should** remain responsive and efficient, even with large numbers of users and substantial data
+  volumes.
+* **NFR-10.4**: The system **should** test the user interface under load to ensure it remains usable and responsive, making adjustments as
   needed based on user feedback and performance metrics.
 
 #### NFR-11 - Security
 
 * **NFR-11.1**: The system **should** implement standard security measures including data encryption and user authentication.
-* **NFR-11.1**: The system should enforce a strong password policy that requires a minimum length of 8 characters and a mix of uppercase,
+* **NFR-11.1**: The system **should** enforce a strong password policy that requires a minimum length of 8 characters and a mix of
+  uppercase,
   lowercase, numbers, and special characters.
-* **NFR-11.1**: The system should use secure session management practices to prevent session hijacking and fixation attacks.
+* **NFR-11.1**: The system **should** use secure session management practices to prevent session hijacking and fixation attacks.
 
 #### NFR-12 Maintainability
 
 * **NFR12.1**: The system **should** be designed for easy maintenance and future upgrades without significant downtime.
-* **NFR12.1**: The system should maintain comprehensive documentation for the system, including architecture diagrams, API documentation,
+* **NFR12.1**: The system **should** maintain comprehensive documentation for the system, including architecture diagrams, API
+  documentation,
   and maintenance manuals.
 
 #### NFR-13 Fault Tolerance
