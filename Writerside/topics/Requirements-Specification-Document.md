@@ -71,10 +71,11 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 ## User Requirements
 
-#### Funtional Requirements
+#### Functional Requirements
 
-* **FR-1: User Authentication and Security** - Users can securely register, log in, and manage their accounts using email and password. The
-  system provides intuitive controls for signing up, logging in, and offers a secure password recovery mechanism.
+**FR-1: User Authentication and Security**
+: Users can securely register, log in, and manage their accounts using email and password. The
+system provides intuitive controls for signing up, logging in, and offers a secure password recovery mechanism.
 
 * **FR-2: Reset Password** - Users can reset their forgotten passwords using a secure process that involves receiving a unique, time-limited
   password reset link via email.
