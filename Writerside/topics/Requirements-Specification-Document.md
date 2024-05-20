@@ -65,7 +65,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 | U8     | Filter Courses                          | Filter course based on chosen property.                |
 | U9     | Obtain Course Recommendation from Query | Gain course recommendations from query.                |
 | U10    | Submit Course Feedback                  | Sumbit course feedback in the system.                  |
-| U11    | Access and analyze user data            | University officials can access and analyze user data. |
+| U11    | Access and Analyze User Data            | University officials can access and analyze user data. |
 
 ## User Requirements
 
