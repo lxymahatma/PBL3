@@ -53,17 +53,19 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 ![UseCaseDiagram](UseCaseDiagram.png)
 
-* **U1**: Submit course feedback
-* **U2**: View academic calendar
-* **U3**: View course pathways
-* **U4**: Filter courses
-* **U5**: View personal information
-* **U6**: Obtain course recommendations from query
-* **U7**: Register and log into the system
-* **U8**: University officials access and analyze course data
-* **U9**: Register an account on the system
-* **U10**: Reset and recover account password
-* **U11**: Delete account from the system
+| Number | Name                                              | Description                                            |
+|--------|---------------------------------------------------|--------------------------------------------------------|
+| U1     | Register Account                                  | Register an account on the system.                     |
+| U2     | Log In                                            | Log into the system.                                   |
+| U3     | View and Edit Account Information                 | View and edit account information.                     |
+| U4     | Reset Account Password                            | Reset and recover account password.                    |
+| U5     | Delete Account                                    | Delete account from the system.                        |
+| U6     | View Academic Calendar                            | View school's academic calendar.                       |
+| U7     | View and Bookmark Course Pathways                 | View and bookmark wanted course.                       |
+| U8     | Filter Courses                                    | Filter course based on chosen property.                |
+| U9     | Obtain Course Recommendation from Query           | Gain course recommendations from query.                |
+| U10    | Submit Course Feedback                            | Sumbit course feedback in the system.                  |
+| U11    | University Officials access and analyze user data | University officials can access and analyze user data. |
 
 ## User Requirements
 
