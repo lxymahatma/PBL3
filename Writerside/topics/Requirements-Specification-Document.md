@@ -532,8 +532,4 @@ capable of recovering from common errors without total system failure and with m
 * **Test 4**: Confirm that the user registration and login processes are secure and function as expected.
 * **Test 5**: Ensure that university officials can access the data dashboard and that the displayed information is accurate and up-to-date.
 
-## 9. Appendices
-
-* **Appendix A**: API Documentation for third-party services used.
-* **Appendix B**: User manual for system interaction.
 
