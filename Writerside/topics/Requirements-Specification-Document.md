@@ -69,6 +69,80 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 ## User Requirements
 
+#### Funtional Requirements
+
+* **FR-1: User Authentication and Security** - Users can securely register, log in, and manage their accounts using email and password. The
+  system provides intuitive controls for signing up, logging in, and offers a secure password recovery mechanism.
+
+* **FR-2: Reset Password** - Users can reset their forgotten passwords using a secure process that involves receiving a unique, time-limited
+  password reset link via email.
+
+* **FR-3: Delete Account** - Users can delete their accounts securely after logging in and confirming their password. The deletion process
+  is straightforward and includes a confirmation step.
+
+* **FR-4: Community Forums** - Users can engage in community forums to discuss courses, share study tips, and collaborate with others. They
+  can create threads, post replies, and use moderation tools to maintain forum rules.
+
+* **FR-5: Course Recommendation** - The system provides course recommendations based on user queries using natural language processing. It
+  allows users to filter courses by various criteria and save or bookmark courses for later review.
+
+* **FR-6: User Interface** - The system offers an easy-to-use interface with visual course pathways and filter options. It provides dynamic
+  updates and clear navigation to enhance the user experience.
+
+* **FR-7: Data Utilization and Privacy** - The system ensures robust data protection with mechanisms to monitor and log access to personal
+  data. It supports anonymization and encryption to protect user information and offers a compliant data deletion process.
+
+* **FR-8: Additional Features** - The system integrates with the academic calendar for scheduling, includes a feedback system for course
+  ratings, and prevents scheduling conflicts. It ensures that course recommendations and scheduling align with academic dates.
+
+#### Non-Functional Requirements
+
+* **NFR-1: User Interface Clarity** - The system presents a clear and uncluttered user interface, ensuring all textual and graphical
+  elements are easily understandable. It uses a consistent layout and design scheme across all pages and views, with interactive elements
+  having a consistent look and feel.
+
+* **NFR-2: Consistent Navigation** - The system provides consistent navigation menus and icons throughout the application to facilitate easy
+  learning of the interface. It offers clear visual cues to indicate the user's current location within the application and supports
+  scalability in its layout.
+
+* **NFR-3: Interactive Performance** - The system ensures that all user interactions receive immediate feedback. It uses visual indicators
+  such as progress bars and animations to inform users about ongoing processes and maintains a responsive interface even during background
+  tasks.
+
+* **NFR-4: Secure User Data Input** - The system ensures all user input is validated and sanitized to prevent common vulnerabilities like
+  SQL injection and XSS. It uses server-side validation and implements input length restrictions to prevent security breaches.
+
+* **NFR-5: Privacy of User Data** - The system clearly informs users about how their data is used and obtains their consent where necessary.
+  It allows users to access, review, and update their personal data, supports the right to be forgotten, and ensures data is anonymized
+  where possible.
+
+* **NFR-6: User Feedback Mechanism** - The system includes a user feedback mechanism allowing users to submit feedback, bug reports, and
+  feature suggestions. It tracks key metrics such as usage frequency and error rates, ensuring privacy and consent considerations in data
+  collection.
+
+* **NFR-7: Performance** - The system aims for quick responses to user queries, with a target latency of less than 2 seconds for most
+  interactions. It maintains performance standards under varying loads and provides feedback when processing takes longer than expected.
+
+* **NFR-8: Usability** - The system is designed to be intuitive, allowing users with minimal training to perform basic operations. It uses
+  familiar interface elements and ensures that the most frequently used features are prominently placed and easy to access.
+
+* **NFR-9: Reliability** - The system is operational 99% of the time, with minimal downtime for maintenance. It achieves at least 99%
+  uptime, excluding planned maintenance windows, and regularly backs up system data to enable quick recovery in case of failure.
+
+* **NFR-10: Scalability** - The system handles increasing amounts of data and concurrent users efficiently. The user interface remains
+  responsive and efficient, even with large numbers of users and substantial data volumes.
+
+* **NFR-11: Security** - The system implements standard security measures including data encryption and user authentication. It enforces a
+  strong password policy and uses secure session management practices to prevent attacks.
+
+* **NFR-12: Maintainability** - The system is designed for easy maintenance and future upgrades without significant downtime. It maintains
+  comprehensive documentation, including architecture diagrams, API documentation, and maintenance manuals.
+
+* **NFR-13: Fault Tolerance** - The system handles at least 100 users concurrently without significant performance degradation. It is
+  capable of recovering from common errors without total system failure and with minimal downtime.
+
+## System Requirements
+
 ### Functional Requirements {id="functional-requirements_1"}
 
 #### FR-1 - User Authentication and Security
@@ -121,6 +195,97 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 * **FR-4.16**: The system **should** allow users to rate posts and mark answers as helpful.
 * **FR-4.17**: Users **should** be able to upvote or downvote posts.
 * **FR-4.18**: The total score of each post **should** be visible next to it.
+
+#### FR-5 - Course Recommendation
+
+* **FR-5.1**: The system **should** allow students to input queries in natural language to get course recommendations.
+* **FR-5.2**: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the
+  university’s
+  course catalog.
+* **FR-5.3**: Based on the analysis, the system **should** search the university's course catalog database to find courses that match the
+  analyzed criteria.
+* **FR-5.4**: The system **should** prioritize course recommendations based on relevance to the user's query, course popularity, and any
+  prerequisites or academic requirements.
+* **FR-5.5**: The recommendations **should** include essential information about each course, such as the course name, description, credits,
+  and
+  any prerequisites or corequisites.
+* **FR-5.6**: The system **should** allow students to filter the recommended courses based on various criteria such as department, course
+  level,
+  and availability.
+* **FR-5.7**: The system **should** offer filter options such as department and course level.
+* **FR-5.8**: Users **should** be able to apply multiple filters simultaneously to refine the list of course recommendations.
+* **FR-5.9**: After applying filters, the system **should** update the list of recommendations to only include courses that meet the
+  selected
+  criteria.
+* **FR-5.10**: The filter interface **should** be user-friendly, and each filter **should** have a clear label indicating its purpose.
+* **FR-5.11**: For each recommended course, the system **should** display key information including the course title, description, number of
+  credits, prerequisites, and the instructor’s name.
+* **FR-5.12**: The system **should** provide a link or a way for students to access the full course description and syllabus if they wish to
+  explore the course in more detail.
+* **FR-5.13**: Information presented **should** be up-to-date, accurate, and pulled from the university’s official course catalog or
+  database.
+* **FR-5.14**: The interface **should** be clear and organized, making it easy for users to find and browse different pieces of course
+  information.
+* **FR-5.15**: The system **should** allow students to save or bookmark courses from the recommendations for later review or registration.
+* **FR-5.16**: Students **should** be able to easily save or bookmark courses from the recommendation list with a simple click or tap.
+* **FR-5.17**: The system **should** provide a section where students can view and manage their saved or bookmarked courses.
+* **FR-5.18**: Users **should** be able to remove courses from their saved list or add additional courses at any time.
+* **FR-5.19**: The saved courses **should** be persistent, remaining available across different sessions when the user logs back into the
+  system.
+
+#### FR-6 - User Interface
+
+* **FR-6.1**: The system **shall** offer an easy-to-use interface with options to filter courses based on criteria like difficulty and
+  department.
+* **FR-6.2**: The system **shall** provide visual course pathways showing prerequisites and recommended sequences.
+* **FR-6.3**: The system **should** present a clean and organized interface with clearly labeled options for filtering courses.
+* **FR-6.4**: Users **should** be able to apply multiple filters at once to refine their search for courses.
+* **FR-6.5**: The system **should** dynamically update the list of courses displayed based on the selected filters without significant
+  delay.
+* **FR-6.6**: Instructions or tooltips **should** be provided to guide new users on how to use the filtering options effectively.
+* **FR-6.7**: The system **should** display graphical representations of course pathways, including nodes for courses and directed edges
+  showing the flow from prerequisites to subsequent courses.
+* **FR-6.8**: The pathways **should** include all necessary information such as course codes, titles, and the type of prerequisite (e.g.,
+  required or recommended).
+* **FR-6.9**: Users **should** be able to interact with the visual pathways, such as zooming in/out and clicking on courses to get more
+  detailed information.
+* **FR-6.10**: Where courses have multiple prerequisites or lead to multiple subsequent courses, the pathways **should** be laid out in a
+  manner that minimizes overlap and confusion.
+
+#### FR-7 - Data Utilization and Privacy
+
+* **FR-7.1**: The system **shall** ensure robust data protection mechanisms to prevent misuse of personal data.
+* **FR-7.2**: Only authorized users **should** have access to sensitive data.
+* **FR-7.3**: The system **should** include mechanisms for monitoring and logging access to personal data to detect and respond to
+  unauthorized access attempts.
+* **FR-7.4**: Logs **should** capture detailed information including the date, time, user ID, action performed, and the data accessed.
+* **FR-7.5**: The system **should** have real-time alerts and automated responses to suspicious activities or breach attempts.
+* **FR-7.6**: Personal data **should** be anonymized where possible, especially in reporting and analytics.
+* **FR-7.7**: Data used for analysis, testing, or other secondary purposes **should** be stripped of identifiable information unless
+  absolutely necessary.
+* **FR-7.8**: Personal data **should** not be retained longer than necessary and **should** be securely deleted after the retention period
+  expires.
+* **FR-7.9**: Users **should** have the ability to request deletion of their data, and the system **should** process such requests in
+  compliance with the right to be forgotten.
+
+#### FR-8 - Additional Features
+
+* **FR-8.1**: The system **shall** integrate with the academic calendar for scheduling.
+* **FR-8.2**: The system **should** automatically adjust available courses based on the current term as indicated by the academic calendar.
+* **FR-8.3**: The system **should** be able to fetch and display key dates from the academic calendar, such as semester start and end dates,
+  registration deadlines, and holiday breaks.
+* **FR-8.4**: The scheduling feature **should** allow students to align their course selections with the academic calendar to avoid
+  conflicts.
+* **FR-8.5**: The system **should** prevent scheduling courses that overlap with other courses.
+* **FR-8.6**: The system **shall** include a feedback system for students to rate courses after completion.
+* **FR-8.7**: The system **should** allow students to rate courses on a predefined scale from 1 to 5 after they have completed the course.
+* **FR-8.8**: Students **should** be prompted to rate the course at the end of the term or after their final grades are posted.
+* **FR-8.9**: Students **should** have the option to leave a written review along with their rating.
+* **FR-8.10**: All feedback **should** be moderated to ensure it is appropriate and useful before being made publicly available.
+* **FR-8.11**: The system **should** include a basic moderation feature to filter out inappropriate language and spam.
+* **FR-8.12**: The system **should** aggregate ratings and display them as part of the course information in future recommendations.
+* **FR-8.13**: Average ratings and sample reviews **should** be easily viewable to help other students make informed decisions.
+* **FR-8.14**: The feedback system **should** be designed to ensure the anonymity of students to encourage honest and unbiased reviews.
 
 ### Non-Functional Requirements {id="non-functional-requirements_1"}
 
@@ -246,103 +411,6 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 * **NFR-6.9**: The system **should** track key metrics such as usage frequency, error rates, completion times, and user pathways.
 * **NFR-6.10**: Privacy and consent considerations must be respected in the collection and use of interaction data, ensuring data is
   anonymized where necessary.
-
-## System Requirements
-
-### Functional Requirements
-
-#### FR-5 - Course Recommendation
-
-* **FR-5.1**: The system **should** allow students to input queries in natural language to get course recommendations.
-* **FR-5.2**: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the
-  university’s
-  course catalog.
-* **FR-5.3**: Based on the analysis, the system **should** search the university's course catalog database to find courses that match the
-  analyzed criteria.
-* **FR-5.4**: The system **should** prioritize course recommendations based on relevance to the user's query, course popularity, and any
-  prerequisites or academic requirements.
-* **FR-5.5**: The recommendations **should** include essential information about each course, such as the course name, description, credits,
-  and
-  any prerequisites or corequisites.
-* **FR-5.6**: The system **should** allow students to filter the recommended courses based on various criteria such as department, course
-  level,
-  and availability.
-* **FR-5.7**: The system **should** offer filter options such as department and course level.
-* **FR-5.8**: Users **should** be able to apply multiple filters simultaneously to refine the list of course recommendations.
-* **FR-5.9**: After applying filters, the system **should** update the list of recommendations to only include courses that meet the
-  selected
-  criteria.
-* **FR-5.10**: The filter interface **should** be user-friendly, and each filter **should** have a clear label indicating its purpose.
-* **FR-5.11**: For each recommended course, the system **should** display key information including the course title, description, number of
-  credits, prerequisites, and the instructor’s name.
-* **FR-5.12**: The system **should** provide a link or a way for students to access the full course description and syllabus if they wish to
-  explore the course in more detail.
-* **FR-5.13**: Information presented **should** be up-to-date, accurate, and pulled from the university’s official course catalog or
-  database.
-* **FR-5.14**: The interface **should** be clear and organized, making it easy for users to find and browse different pieces of course
-  information.
-* **FR-5.15**: The system **should** allow students to save or bookmark courses from the recommendations for later review or registration.
-* **FR-5.16**: Students **should** be able to easily save or bookmark courses from the recommendation list with a simple click or tap.
-* **FR-5.17**: The system **should** provide a section where students can view and manage their saved or bookmarked courses.
-* **FR-5.18**: Users **should** be able to remove courses from their saved list or add additional courses at any time.
-* **FR-5.19**: The saved courses **should** be persistent, remaining available across different sessions when the user logs back into the
-  system.
-
-#### FR-6 - User Interface
-
-* **FR-6.1**: The system **shall** offer an easy-to-use interface with options to filter courses based on criteria like difficulty and
-  department.
-* **FR-6.2**: The system **shall** provide visual course pathways showing prerequisites and recommended sequences.
-* **FR-6.3**: The system **should** present a clean and organized interface with clearly labeled options for filtering courses.
-* **FR-6.4**: Users **should** be able to apply multiple filters at once to refine their search for courses.
-* **FR-6.5**: The system **should** dynamically update the list of courses displayed based on the selected filters without significant
-  delay.
-* **FR-6.6**: Instructions or tooltips **should** be provided to guide new users on how to use the filtering options effectively.
-* **FR-6.7**: The system **should** display graphical representations of course pathways, including nodes for courses and directed edges
-  showing the flow from prerequisites to subsequent courses.
-* **FR-6.8**: The pathways **should** include all necessary information such as course codes, titles, and the type of prerequisite (e.g.,
-  required or recommended).
-* **FR-6.9**: Users **should** be able to interact with the visual pathways, such as zooming in/out and clicking on courses to get more
-  detailed information.
-* **FR-6.10**: Where courses have multiple prerequisites or lead to multiple subsequent courses, the pathways **should** be laid out in a
-  manner that minimizes overlap and confusion.
-
-#### FR-7 - Data Utilization and Privacy
-
-* **FR-7.1**: The system **shall** ensure robust data protection mechanisms to prevent misuse of personal data.
-* **FR-7.2**: Only authorized users **should** have access to sensitive data.
-* **FR-7.3**: The system **should** include mechanisms for monitoring and logging access to personal data to detect and respond to
-  unauthorized access attempts.
-* **FR-7.4**: Logs **should** capture detailed information including the date, time, user ID, action performed, and the data accessed.
-* **FR-7.5**: The system **should** have real-time alerts and automated responses to suspicious activities or breach attempts.
-* **FR-7.6**: Personal data **should** be anonymized where possible, especially in reporting and analytics.
-* **FR-7.7**: Data used for analysis, testing, or other secondary purposes **should** be stripped of identifiable information unless
-  absolutely necessary.
-* **FR-7.8**: Personal data **should** not be retained longer than necessary and **should** be securely deleted after the retention period
-  expires.
-* **FR-7.9**: Users **should** have the ability to request deletion of their data, and the system **should** process such requests in
-  compliance with the right to be forgotten.
-
-#### FR-8 - Additional Features
-
-* **FR-8.1**: The system **shall** integrate with the academic calendar for scheduling.
-* **FR-8.2**: The system **should** automatically adjust available courses based on the current term as indicated by the academic calendar.
-* **FR-8.3**: The system **should** be able to fetch and display key dates from the academic calendar, such as semester start and end dates,
-  registration deadlines, and holiday breaks.
-* **FR-8.4**: The scheduling feature **should** allow students to align their course selections with the academic calendar to avoid
-  conflicts.
-* **FR-8.5**: The system **should** prevent scheduling courses that overlap with other courses.
-* **FR-8.6**: The system **shall** include a feedback system for students to rate courses after completion.
-* **FR-8.7**: The system **should** allow students to rate courses on a predefined scale from 1 to 5 after they have completed the course.
-* **FR-8.8**: Students **should** be prompted to rate the course at the end of the term or after their final grades are posted.
-* **FR-8.9**: Students **should** have the option to leave a written review along with their rating.
-* **FR-8.10**: All feedback **should** be moderated to ensure it is appropriate and useful before being made publicly available.
-* **FR-8.11**: The system **should** include a basic moderation feature to filter out inappropriate language and spam.
-* **FR-8.12**: The system **should** aggregate ratings and display them as part of the course information in future recommendations.
-* **FR-8.13**: Average ratings and sample reviews **should** be easily viewable to help other students make informed decisions.
-* **FR-8.14**: The feedback system **should** be designed to ensure the anonymity of students to encourage honest and unbiased reviews.
-
-### Non-Functional Requirements
 
 #### NFR-7 - Performance
 
