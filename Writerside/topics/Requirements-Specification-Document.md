@@ -37,7 +37,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 ### System Overview
 
-* The course recommendation system utilizes NLP to recommend university courses based on student queries.
+* The course recommendation system utilizes <tooltip term="NLP">NLP</tooltip> to recommend university courses based on student queries.
 * This system will integrate with existing university databases and scheduling tools
   to offer a seamless course selection process, supporting students in meeting their academic goals.
 * It provides an interactive digital course booklet and supports filter-based search options for course selection.
@@ -74,95 +74,91 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 #### Functional Requirements {id="user-requirements-functional"}
 
 **FR-1: User Authentication and Security**
-: Users can securely register, log in, and manage their accounts using email and password. The
-system provides intuitive controls for signing up, logging in, and offers a secure password recovery mechanism.
+: Users can securely register, log in, and manage their accounts using email and password. The system provides intuitive controls for
+signing up, logging in, and offers a secure password recovery mechanism.
 
 **FR-2: Reset Password**
-: Users can reset their forgotten passwords using a secure process that involves receiving a unique, time-limited
-password reset link via email.
+: Users can reset their forgotten passwords using a secure process that involves receiving a unique, time-limited password reset link via
+email.
 
 **FR-3: Delete Account**
-: Users can delete their accounts securely after logging in and confirming their password. The deletion process
-is straightforward and includes a confirmation step.
+: Users can delete their accounts securely after logging in and confirming their password. The deletion process is straightforward and
+includes a confirmation step.
 
 **FR-4: Community Forums**
-: Users can engage in community forums to discuss courses, share study tips, and collaborate with others. They
-can create threads, post replies, and use moderation tools to maintain forum rules.
+: Users can engage in community forums to discuss courses, share study tips, and collaborate with others. They can create threads, post
+replies, and use moderation tools to maintain forum rules.
 
 **FR-5: Course Recommendation**
-: The system provides course recommendations based on user queries using natural language processing. It
-allows users to filter courses by various criteria and save or bookmark courses for later review.
+: The system provides course recommendations based on user queries using natural language processing. It allows users to filter courses by
+various criteria and save or bookmark courses for later review.
 
 **FR-6: User Interface**
-: The system offers an easy-to-use interface with visual course pathways and filter options. It provides dynamic
-updates and clear navigation to enhance the user experience.
+: The system offers an easy-to-use interface with visual course pathways and filter options. It provides dynamic updates and clear
+navigation to enhance the user experience.
 
 **FR-7: Data Utilization and Privacy**
-: The system ensures robust data protection with mechanisms to monitor and log access to personal
-data. It supports anonymization and encryption to protect user information and offers a compliant data deletion process.
+: The system ensures robust data protection with mechanisms to monitor and log access to personal data. It supports anonymization and
+encryption to protect user information and offers a compliant data deletion process.
 
 **FR-8: Additional Features**
-: The system integrates with the academic calendar for scheduling, includes a feedback system for course
-ratings, and prevents scheduling conflicts. It ensures that course recommendations and scheduling align with academic dates.
+: The system integrates with the academic calendar for scheduling, includes a feedback system for course ratings, and prevents scheduling
+conflicts. It ensures that course recommendations and scheduling align with academic dates.
 
 #### Non-Functional Requirements {id="user-requirements-non-functional"}
 
 **NFR-1: User Interface Clarity**
-: The system presents a clear and uncluttered user interface, ensuring all textual and graphical
-elements are easily understandable. It uses a consistent layout and design scheme across all pages and views, with interactive elements
+: The system presents a clear and uncluttered user interface, ensuring all textual and graphical elements are easily understandable. It uses
+a consistent layout and design scheme across all pages and views, with interactive elements
 having a consistent look and feel.
 
 **NFR-2: Consistent Navigation**
-: The system provides consistent navigation menus and icons throughout the application to facilitate easy
-learning of the interface. It offers clear visual cues to indicate the user's current location within the application and supports
-scalability in its layout.
+: The system provides consistent navigation menus and icons throughout the application to facilitate easy learning of the interface. It
+offers clear visual cues to indicate the user's current location within the application and supports scalability in its layout.
 
 **NFR-3: Interactive Performance**
-: The system ensures that all user interactions receive immediate feedback. It uses visual indicators
-such as progress bars and animations to inform users about ongoing processes and maintains a responsive interface even during background
-tasks.
+: The system ensures that all user interactions receive immediate feedback. It uses visual indicators such as progress bars and animations
+to inform users about ongoing processes and maintains a responsive interface even during background tasks.
 
 **NFR-4: Secure User Data Input**
-: The system ensures all user input is validated and sanitized to prevent common vulnerabilities like
-SQL injection and XSS. It uses server-side validation and implements input length restrictions to prevent security breaches.
+: The system ensures all user input is validated and sanitized to prevent common vulnerabilities like SQL injection and XSS. It uses
+server-side validation and implements input length restrictions to prevent security breaches.
 
 **NFR-5: Privacy of User Data**
-: The system clearly informs users about how their data is used and obtains their consent where necessary.
-It allows users to access, review, and update their personal data, supports the right to be forgotten, and ensures data is anonymized
-where possible.
+: The system clearly informs users about how their data is used and obtains their consent where necessary. It allows users to access,
+review, and update their personal data, supports the right to be forgotten, and ensures data is anonymized where possible.
 
 **NFR-6: User Feedback Mechanism**
-: The system includes a user feedback mechanism allowing users to submit feedback, bug reports, and
-feature suggestions. It tracks key metrics such as usage frequency and error rates, ensuring privacy and consent considerations in data
-collection.
+: The system includes a user feedback mechanism allowing users to submit feedback, bug reports, and feature suggestions. It tracks key
+metrics such as usage frequency and error rates, ensuring privacy and consent considerations in data collection.
 
 **NFR-7: Performance**
-: The system aims for quick responses to user queries, with a target latency of less than 2 seconds for most
-interactions. It maintains performance standards under varying loads and provides feedback when processing takes longer than expected.
+: The system aims for quick responses to user queries, with a target latency of less than 2 seconds for most interactions. It maintains
+performance standards under varying loads and provides feedback when processing takes longer than expected.
 
 **NFR-8: Usability**
-: The system is designed to be intuitive, allowing users with minimal training to perform basic operations. It uses
-familiar interface elements and ensures that the most frequently used features are prominently placed and easy to access.
+: The system is designed to be intuitive, allowing users with minimal training to perform basic operations. It uses familiar interface
+elements and ensures that the most frequently used features are prominently placed and easy to access.
 
 **NFR-9: Reliability**
-: The system is operational 99% of the time, with minimal downtime for maintenance. It achieves at least 99%
-uptime, excluding planned maintenance windows, and regularly backs up system data to enable quick recovery in case of failure.
+: The system is operational 99% of the time, with minimal downtime for maintenance. It achieves at least 99% uptime, excluding planned
+maintenance windows, and regularly backs up system data to enable quick recovery in case of failure.
 
 **NFR-10: Scalability**
-: The system handles increasing amounts of data and concurrent users efficiently. The user interface remains
-responsive and efficient, even with large numbers of users and substantial data volumes.
+: The system handles increasing amounts of data and concurrent users efficiently. The user interface remains responsive and efficient, even
+with large numbers of users and substantial data volumes.
 
 **NFR-11: Security**
-: The system implements standard security measures including data encryption and user authentication. It enforces a
-strong password policy and uses secure session management practices to prevent attacks.
+: The system implements standard security measures including data encryption and user authentication. It enforces a strong password policy
+and uses secure session management practices to prevent attacks.
 
 **NFR-12: Maintainability**
-: The system is designed for easy maintenance and future upgrades without significant downtime. It maintains
-comprehensive documentation, including architecture diagrams, API documentation, and maintenance manuals.
+: The system is designed for easy maintenance and future upgrades without significant downtime. It maintains comprehensive documentation,
+including architecture diagrams, <tooltip term="API">API</tooltip> documentation, and maintenance manuals.
 
 **NFR-13: Fault Tolerance**
-: The system handles at least 100 users concurrently without significant performance degradation. It is
-capable of recovering from common errors without total system failure and with minimal downtime.
+: The system handles at least 100 users concurrently without significant performance degradation. It is capable of recovering from common
+errors without total system failure and with minimal downtime.
 
 ## 5. System Requirements
 
@@ -221,8 +217,8 @@ capable of recovering from common errors without total system failure and with m
 #### FR-5 - Course Recommendation
 
 * **FR-5.1**: The system **should** allow students to input queries in natural language to get course recommendations.
-* **FR-5.2**: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the university’s
-  course catalog.
+* **FR-5.2**: Based on the input, the system **should** use <tooltip term="NLP">NLP</tooltip> to analyze and fetch relevant course
+  information from the university’s course catalog.
 * **FR-5.3**: Based on the analysis, the system **should** search the university's course catalog database to find courses that match the
   analyzed criteria.
 * **FR-5.4**: The system **should** prioritize course recommendations based on relevance to the user's query, course popularity, and any
@@ -348,10 +344,10 @@ capable of recovering from common errors without total system failure and with m
 * **NFR-3.4**: The indicators **should** be placed prominently so that they are easily noticeable by users.
 * **NFR-3.5**: The system **should** ensure that the interface remains responsive and usable even when background tasks or calculations
   are being performed.
-* **NFR-3.6**: The UI **should** not freeze or become unresponsive during any operation.
+* **NFR-3.6**: The <tooltip term="UI">UI</tooltip> **should** not freeze or become unresponsive during any operation.
 * **NFR-3.7**: Any input from the user during background processing **should** be handled correctly without data loss or corruption.
 * **NFR-3.8**: The system **should** optimize screen refresh and rendering times to ensure smooth updates and transitions.
-* **NFR-3.9**: Any visual changes in the UI **should** appear seamless and without noticeable lag or jerkiness.
+* **NFR-3.9**: Any visual changes in the <tooltip term="UI">UI</tooltip> **should** appear seamless and without noticeable lag or jerkiness.
 * **NFR-3.10**: The system **should** provide immediate error notifications for issues related to user actions to minimize user
   confusion and frustration.
 * **NFR-3.11**: These messages **should** be descriptive enough to inform the user of the nature of the problem and suggest potential
@@ -411,8 +407,8 @@ capable of recovering from common errors without total system failure and with m
 
 #### NFR-6 - User Feedback Mechanism
 
-* **NFR-6.1**: The system **should** maintain stable user sessions with automatic recovery of the session state after brief
-  disconnections or interruptions.
+* **NFR-6.1**: The system **should** maintain stable user sessions with automatic recovery of the session state after brief disconnections
+  or interruptions.
 * **NFR-6.2**: The system **should** include a simple and intuitive interface for users to submit feedback, bug reports, and feature
   suggestions.
 * **NFR-6.3**: Feedback forms **should** allow users to describe their experience, categorize the type of feedback, and, if necessary,
@@ -431,8 +427,7 @@ capable of recovering from common errors without total system failure and with m
 
 #### NFR-7 - Performance
 
-* **NFR-7.1**: The system **should** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for
-  results.
+* **NFR-7.1**: The system **should** ensure quick responses to user queries, aiming for a latency of less than 2 seconds for results.
 * **NFR-7.2**: The system **should** process and return results for at least 95% of user queries within 2 seconds under normal operating
   conditions.
 * **NFR-7.3**: The system **should** maintain performance standards under varying loads, with scalability solutions in place to handle peak
@@ -488,8 +483,8 @@ capable of recovering from common errors without total system failure and with m
 #### NFR-12 Maintainability
 
 * **NFR12.1**: The system **should** be designed for easy maintenance and future upgrades without significant downtime.
-* **NFR12.2**: The system **should** maintain comprehensive documentation for the system, including architecture diagrams, API
-  documentation, and maintenance manuals.
+* **NFR12.2**: The system **should** maintain comprehensive documentation for the system, including architecture
+  diagrams, <tooltip term="API">API</tooltip> documentation, and maintenance manuals.
 
 #### NFR-13 Fault Tolerance
 
@@ -508,8 +503,8 @@ capable of recovering from common errors without total system failure and with m
 
 ### Detailed Design
 
-* **Client Application**: Built using Avalonia UI and C#, providing cross-platform support.
-* **Server Application**: Utilizes OpenAI's ChatGPT for NLP tasks
+* **Client Application**: Built using Avalonia <tooltip term="UI">UI</tooltip> and C#, providing cross-platform support.
+* **Server Application**: Utilizes OpenAI's ChatGPT for <tooltip term="NLP">NLP</tooltip> tasks
 * **Database**: A database system to store structured data securely.
 
 ## 7. Data Flow and User Scenarios
@@ -517,7 +512,7 @@ capable of recovering from common errors without total system failure and with m
 ### Data Flow
 
 * **DF1**: The user enters a course query in natural language.
-* **DF2**: The query is processed by the NLP module to extract relevant terms.
+* **DF2**: The query is processed by the <tooltip term="NLP">NLP</tooltip> module to extract relevant terms.
 * **DF3**: The system matches these terms with the course database.
 * **DF4**: Filtered results based on user preferences are presented in the interface.
 * **DF5**: Users can further explore courses through visual pathways and integrated scheduling.

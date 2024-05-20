@@ -78,8 +78,8 @@ suggestions to users, focusing specifically on ISSE courses. However, there are 
 1. <tooltip term="NLP">NLP</tooltip> may struggle with ambiguous user queries and understanding user intent.
    For instance, challenges may arise in handling context, nuance, and specific knowledge, impacting the relevance of course suggestions.
 2. Difficulties with synonyms and new terms may also result in inaccurate recommendations.
-3. Since the system's effectiveness heavily relies on the API, we don't have direct access to the model, so there is a potential that it
-   might lead to biased or incomplete recommendations.
+3. Since the system's effectiveness heavily relies on the <tooltip term="API">API</tooltip>, we don't have direct access to the model, so
+   there is a potential that it might lead to biased or incomplete recommendations.
 4. There is difficulty assessing the effectiveness of course recommendations due to various factors influencing user satisfaction and
    learning outcomes.
 5. Deployment may initially be limited to Windows, macOS, and Linux, with potential adaptation for Android platforms with further
