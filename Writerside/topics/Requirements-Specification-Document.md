@@ -77,26 +77,33 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 : Users can securely register, log in, and manage their accounts using email and password. The
 system provides intuitive controls for signing up, logging in, and offers a secure password recovery mechanism.
 
-* **FR-2: Reset Password** - Users can reset their forgotten passwords using a secure process that involves receiving a unique, time-limited
-  password reset link via email.
+**FR-2: Reset Password**
+: Users can reset their forgotten passwords using a secure process that involves receiving a unique, time-limited
+password reset link via email.
 
-* **FR-3: Delete Account** - Users can delete their accounts securely after logging in and confirming their password. The deletion process
-  is straightforward and includes a confirmation step.
+**FR-3: Delete Account**
+: Users can delete their accounts securely after logging in and confirming their password. The deletion process
+is straightforward and includes a confirmation step.
 
-* **FR-4: Community Forums** - Users can engage in community forums to discuss courses, share study tips, and collaborate with others. They
-  can create threads, post replies, and use moderation tools to maintain forum rules.
+**FR-4: Community Forums**
+: Users can engage in community forums to discuss courses, share study tips, and collaborate with others. They
+can create threads, post replies, and use moderation tools to maintain forum rules.
 
-* **FR-5: Course Recommendation** - The system provides course recommendations based on user queries using natural language processing. It
-  allows users to filter courses by various criteria and save or bookmark courses for later review.
+**FR-5: Course Recommendation**
+: The system provides course recommendations based on user queries using natural language processing. It
+allows users to filter courses by various criteria and save or bookmark courses for later review.
 
-* **FR-6: User Interface** - The system offers an easy-to-use interface with visual course pathways and filter options. It provides dynamic
-  updates and clear navigation to enhance the user experience.
+**FR-6: User Interface**
+: The system offers an easy-to-use interface with visual course pathways and filter options. It provides dynamic
+updates and clear navigation to enhance the user experience.
 
-* **FR-7: Data Utilization and Privacy** - The system ensures robust data protection with mechanisms to monitor and log access to personal
-  data. It supports anonymization and encryption to protect user information and offers a compliant data deletion process.
+**FR-7: Data Utilization and Privacy**
+: The system ensures robust data protection with mechanisms to monitor and log access to personal
+data. It supports anonymization and encryption to protect user information and offers a compliant data deletion process.
 
-* **FR-8: Additional Features** - The system integrates with the academic calendar for scheduling, includes a feedback system for course
-  ratings, and prevents scheduling conflicts. It ensures that course recommendations and scheduling align with academic dates.
+**FR-8: Additional Features**
+: The system integrates with the academic calendar for scheduling, includes a feedback system for course
+ratings, and prevents scheduling conflicts. It ensures that course recommendations and scheduling align with academic dates.
 
 #### Non-Functional Requirements
 
