@@ -51,7 +51,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 ### Use cases
 
-![UseCase_Diagram0.png](UseCase_Diagram0.png)
+![UseCaseDiagram](UseCaseDiagram.png)
 
 * **U1**: Submit course feedback
 * **U2**: View academic calendar
@@ -245,22 +245,6 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 * **NFR-6.10**: Privacy and consent considerations must be respected in the collection and use of interaction data, ensuring data is
   anonymized where necessary.
 
-## System Architecture
-
-### Overview
-
-#### The system will follow a client-server architecture with the following main components:
-
-* **Client Application**: A frontend interface where students can interact with the system.
-* **Server Application**: Backend services that process data and serve the course recommendations.
-* **Database**: To store course information, user data, and interaction logs.
-
-### Detailed Design
-
-* **Client Application**: Built using Avalonia UI and C#, providing cross-platform support.
-* **Server Application**: Utilizes OpenAI's ChatGPT for NLP tasks
-* **Database**: A database system to store structured data securely.
-
 ## System Requirements
 
 ### Functional Requirements
@@ -425,6 +409,22 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 * **NFR-13.1**: The system **should** handle at least 100 users concurrently without significant degradation in performance.
 * **NFR-13.2**: The system **should** be capable of recovering from common errors without total system failure and with minimal downtime.
 
+## System Architecture
+
+### Overview
+
+**The system will follow a client-server architecture with the following main components:**
+
+* **Client Application**: A frontend interface where students can interact with the system.
+* **Server Application**: Backend services that process data and serve the course recommendations.
+* **Database**: To store course information, user data, and interaction logs.
+
+### Detailed Design
+
+* **Client Application**: Built using Avalonia UI and C#, providing cross-platform support.
+* **Server Application**: Utilizes OpenAI's ChatGPT for NLP tasks
+* **Database**: A database system to store structured data securely.
+
 ## Data Flow and User Scenarios
 
 ### Data Flow
@@ -435,7 +435,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 * **DF4**: Filtered results based on user preferences are presented in the interface.
 * **DF5**: Users can further explore courses through visual pathways and integrated scheduling.
 
-![DataFlowDiagram.png](DataFlowDiagram.png)
+![DataFlowDiagram](DataFlowDiagram.png)
 
 ## Verification and Validation
 
