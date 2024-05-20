@@ -397,23 +397,23 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 #### NFR-8 - Usability
 
 * **NFR-8.1**: The system **should** be intuitive, allowing users with minimal training to perform basic operations.
-* **NFR-8.1**: The user interface **should** follow standard design principles that promote intuitive navigation and interaction.
-* **NFR-8.1**: The system **should** use familiar interface elements like buttons, icons, and menus that are consistent with widely accepted
+* **NFR-8.2**: The user interface **should** follow standard design principles that promote intuitive navigation and interaction.
+* **NFR-8.3**: The system **should** use familiar interface elements like buttons, icons, and menus that are consistent with widely accepted
   user interface design standards.
-* **NFR-8.1**: The system **should** employ a consistent layout and design scheme across all pages and views to maintain a predictable
+* **NFR-8.4**: The system **should** employ a consistent layout and design scheme across all pages and views to maintain a predictable
   environment for users.
-* **NFR-8.1**: Essential tasks such as logging in, searching for courses, applying filters, and viewing course details **should** be
+* **NFR-8.5**: Essential tasks such as logging in, searching for courses, applying filters, and viewing course details **should** be
   straightforward and easily accessible.
-* **NFR-8.1**: The system **should** provide clear, concise labels for all actions and options to prevent ambiguity.
-* **NFR-8.1**: The system **should** ensure that the most frequently used features are prominently placed and easy to access without
+* **NFR-8.6**: The system **should** provide clear, concise labels for all actions and options to prevent ambiguity.
+* **NFR-8.7**: The system **should** ensure that the most frequently used features are prominently placed and easy to access without
   unnecessary
   navigation.
-* **NFR-8.1**: The system **should** provide immediate, clear feedback in response to user actions to reinforce understanding and prevent
+* **NFR-8.8**: The system **should** provide immediate, clear feedback in response to user actions to reinforce understanding and prevent
   confusion.
-* **NFR-8.1**: The system **should** use visual cues like highlighting, animations, or informative modals to indicate when actions are taken
+* **NFR-8.9**: The system **should** use visual cues like highlighting, animations, or informative modals to indicate when actions are taken
   or
   needed.
-* **NFR-8.1**: The system **should** display success and error messages in a clear and helpful manner, guiding users on how to proceed or
+* **NFR-8.10**: The system **should** display success and error messages in a clear and helpful manner, guiding users on how to proceed or
   correct mistakes.
 
 #### NFR-9 - Reliability
@@ -439,15 +439,15 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 #### NFR-11 - Security
 
 * **NFR-11.1**: The system **should** implement standard security measures including data encryption and user authentication.
-* **NFR-11.1**: The system **should** enforce a strong password policy that requires a minimum length of 8 characters and a mix of
+* **NFR-11.2**: The system **should** enforce a strong password policy that requires a minimum length of 8 characters and a mix of
   uppercase,
   lowercase, numbers, and special characters.
-* **NFR-11.1**: The system **should** use secure session management practices to prevent session hijacking and fixation attacks.
+* **NFR-11.3**: The system **should** use secure session management practices to prevent session hijacking and fixation attacks.
 
 #### NFR-12 Maintainability
 
 * **NFR12.1**: The system **should** be designed for easy maintenance and future upgrades without significant downtime.
-* **NFR12.1**: The system **should** maintain comprehensive documentation for the system, including architecture diagrams, API
+* **NFR12.2**: The system **should** maintain comprehensive documentation for the system, including architecture diagrams, API
   documentation,
   and maintenance manuals.
 
