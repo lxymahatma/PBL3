@@ -432,7 +432,7 @@ capable of recovering from common errors without total system failure and with m
   annoyance.
 * **NFR-6.8**: Surveys **should** be concise, relevant, and designed to capture clear, actionable insights.
 * **NFR-6.9**: The system **should** track key metrics such as usage frequency, error rates, completion times, and user pathways.
-* **NFR-6.10**: Privacy and consent considerations must be respected in the collection and use of interaction data, ensuring data is
+* **NFR-6.10**: Privacy and consent considerations **should** be respected in the collection and use of interaction data, ensuring data is
   anonymized where necessary.
 
 #### NFR-7 - Performance
@@ -471,9 +471,10 @@ capable of recovering from common errors without total system failure and with m
 * **NFR-9.2**: The system **should** achieve at least 99% uptime, calculated monthly, excluding planned maintenance windows. This
   corresponds to a maximum downtime of around 7.2 hours per month or approximately 14.4 minutes per day.
 * **NFR-9.3**: Planned maintenance **should** be scheduled during off-peak hours to minimize impact on users.
-* **NFR-9.4**: Notify users well in advance of scheduled maintenance times, ideally through multiple channels such as email, system
+* **NFR-9.4**: The system **should** notify users well in advance of scheduled maintenance times, ideally through multiple channels such as
+  email, system
   notifications, or a message on the login screen.
-* **NFR-9.5**: Regularly backup system data to prevent loss and enable quick recovery in case of a failure.
+* **NFR-9.5**: The system **should** regularly backup system data to prevent loss and enable quick recovery in case of a failure.
 
 #### NFR-10 - Scalability
 
