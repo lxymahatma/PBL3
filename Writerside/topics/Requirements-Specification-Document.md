@@ -66,12 +66,12 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 | U7     | View and Bookmark Course Pathways       | View and bookmark wanted course.                       |
 | U8     | Filter Courses                          | Filter course based on chosen property.                |
 | U9     | Obtain Course Recommendation from Query | Gain course recommendations from query.                |
-| U10    | Submit Course Feedback                  | Sumbit course feedback in the system.                  |
+| U10    | Submit Course Feedback                  | Submit course feedback in the system.                  |
 | U11    | Access and Analyze User Data            | University officials can access and analyze user data. |
 
 ## 4. User Requirements
 
-#### Functional Requirements
+#### Functional Requirements {id="user-requirements-functional"}
 
 **FR-1: User Authentication and Security**
 : Users can securely register, log in, and manage their accounts using email and password. The
@@ -105,7 +105,7 @@ data. It supports anonymization and encryption to protect user information and o
 : The system integrates with the academic calendar for scheduling, includes a feedback system for course
 ratings, and prevents scheduling conflicts. It ensures that course recommendations and scheduling align with academic dates.
 
-#### Non-Functional Requirements
+#### Non-Functional Requirements {id="user-requirements-non-functional"}
 
 **NFR-1: User Interface Clarity**
 : The system presents a clear and uncluttered user interface, ensuring all textual and graphical
@@ -166,13 +166,12 @@ capable of recovering from common errors without total system failure and with m
 
 ## 5. System Requirements
 
-### Functional Requirements {id="functional-requirements_1"}
+### Functional Requirements {id="system-requirements-functional"}
 
 #### FR-1 - User Authentication and Security
 
 * **FR-1.1**: The system **should** provide intuitive controls to initiate the signup process.
-* **FR-1.2**: The system **shall** provide a secure registration process for
-  new users.
+* **FR-1.2**: The system **shall** provide a secure registration process for new users.
 * **FR-1.3**: The system **shall** support secure login with email and password
 * **FR-1.4**: The system **shall** provide a password recovery mechanism for users to reset forgotten passwords via email.
 * **FR-1.5**: Users **shall** register using their email, password, and basic profile information.
@@ -202,7 +201,7 @@ capable of recovering from common errors without total system failure and with m
 * **FR-4.1**: The system **should** provide a community forum or discussion board where users can discuss courses, share study tips, and
   collaborate.
 * **FR-4.2**: The system **should** allow users to create new discussion threads within the forum.
-* **FR-4.3**: The system **should** allow useres to enter a title and description for the new thread.
+* **FR-4.3**: The system **should** allow users to enter a title and description for the new thread.
 * **FR-4.4**: The system **should** have options to format the text and add links or images.
 * **FR-4.5**: The system **should** allow users to be able to tag their thread with relevant course codes or topics for easy navigation.
 * **FR-4.6**: The system **should** enable users to reply to existing discussion threads.
@@ -222,24 +221,20 @@ capable of recovering from common errors without total system failure and with m
 #### FR-5 - Course Recommendation
 
 * **FR-5.1**: The system **should** allow students to input queries in natural language to get course recommendations.
-* **FR-5.2**: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the
-  university’s
+* **FR-5.2**: Based on the input, the system **should** use NLP to analyze and fetch relevant course information from the university’s
   course catalog.
 * **FR-5.3**: Based on the analysis, the system **should** search the university's course catalog database to find courses that match the
   analyzed criteria.
 * **FR-5.4**: The system **should** prioritize course recommendations based on relevance to the user's query, course popularity, and any
   prerequisites or academic requirements.
 * **FR-5.5**: The recommendations **should** include essential information about each course, such as the course name, description, credits,
-  and
-  any prerequisites or corequisites.
+  and any prerequisites.
 * **FR-5.6**: The system **should** allow students to filter the recommended courses based on various criteria such as department, course
-  level,
-  and availability.
+  level, and availability.
 * **FR-5.7**: The system **should** offer filter options such as department and course level.
 * **FR-5.8**: Users **should** be able to apply multiple filters simultaneously to refine the list of course recommendations.
 * **FR-5.9**: After applying filters, the system **should** update the list of recommendations to only include courses that meet the
-  selected
-  criteria.
+  selected criteria.
 * **FR-5.10**: The filter interface **should** be user-friendly, and each filter **should** have a clear label indicating its purpose.
 * **FR-5.11**: For each recommended course, the system **should** display key information including the course title, description, number of
   credits, prerequisites, and the instructor’s name.
@@ -310,7 +305,7 @@ capable of recovering from common errors without total system failure and with m
 * **FR-8.13**: Average ratings and sample reviews **should** be easily viewable to help other students make informed decisions.
 * **FR-8.14**: The feedback system **should** be designed to ensure the anonymity of students to encourage honest and unbiased reviews.
 
-### Non-Functional Requirements {id="non-functional-requirements_1"}
+### Non-Functional Requirements {id="system-requirements-non-functional"}
 
 #### NFR-1 - User Interface Clarity
 
@@ -339,7 +334,6 @@ capable of recovering from common errors without total system failure and with m
 * **NFR-2.6**: The current section or page **should** be highlighted or distinguished in the navigation menu.
 * **NFR-2.7**: Tabs, buttons, or links representing the current area **should** be styled differently from inactive elements.
 * **NFR-2.8**: In hierarchical or nested navigation, parent sections **should** also be visually indicated when a child is selected.
-
 * **NFR-2.9**: The system **should** avoid deep navigation hierarchies, ensuring that users can reach any part of the application within
   a few clicks.
 * **NFR-2.10**: Users **should** be able to reach important features and information within three clicks from the homepage or main menu.
@@ -472,8 +466,7 @@ capable of recovering from common errors without total system failure and with m
   corresponds to a maximum downtime of around 7.2 hours per month or approximately 14.4 minutes per day.
 * **NFR-9.3**: Planned maintenance **should** be scheduled during off-peak hours to minimize impact on users.
 * **NFR-9.4**: The system **should** notify users well in advance of scheduled maintenance times, ideally through multiple channels such as
-  email, system
-  notifications, or a message on the login screen.
+  email, system notifications, or a message on the login screen.
 * **NFR-9.5**: The system **should** regularly backup system data to prevent loss and enable quick recovery in case of a failure.
 
 #### NFR-10 - Scalability
