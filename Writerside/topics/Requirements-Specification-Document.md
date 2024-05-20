@@ -107,49 +107,62 @@ ratings, and prevents scheduling conflicts. It ensures that course recommendatio
 
 #### Non-Functional Requirements
 
-* **NFR-1: User Interface Clarity** - The system presents a clear and uncluttered user interface, ensuring all textual and graphical
-  elements are easily understandable. It uses a consistent layout and design scheme across all pages and views, with interactive elements
-  having a consistent look and feel.
+**NFR-1: User Interface Clarity**
+: The system presents a clear and uncluttered user interface, ensuring all textual and graphical
+elements are easily understandable. It uses a consistent layout and design scheme across all pages and views, with interactive elements
+having a consistent look and feel.
 
-* **NFR-2: Consistent Navigation** - The system provides consistent navigation menus and icons throughout the application to facilitate easy
-  learning of the interface. It offers clear visual cues to indicate the user's current location within the application and supports
-  scalability in its layout.
+**NFR-2: Consistent Navigation**
+: The system provides consistent navigation menus and icons throughout the application to facilitate easy
+learning of the interface. It offers clear visual cues to indicate the user's current location within the application and supports
+scalability in its layout.
 
-* **NFR-3: Interactive Performance** - The system ensures that all user interactions receive immediate feedback. It uses visual indicators
-  such as progress bars and animations to inform users about ongoing processes and maintains a responsive interface even during background
-  tasks.
+**NFR-3: Interactive Performance**
+: The system ensures that all user interactions receive immediate feedback. It uses visual indicators
+such as progress bars and animations to inform users about ongoing processes and maintains a responsive interface even during background
+tasks.
 
-* **NFR-4: Secure User Data Input** - The system ensures all user input is validated and sanitized to prevent common vulnerabilities like
-  SQL injection and XSS. It uses server-side validation and implements input length restrictions to prevent security breaches.
+**NFR-4: Secure User Data Input**
+: The system ensures all user input is validated and sanitized to prevent common vulnerabilities like
+SQL injection and XSS. It uses server-side validation and implements input length restrictions to prevent security breaches.
 
-* **NFR-5: Privacy of User Data** - The system clearly informs users about how their data is used and obtains their consent where necessary.
-  It allows users to access, review, and update their personal data, supports the right to be forgotten, and ensures data is anonymized
-  where possible.
+**NFR-5: Privacy of User Data**
+: The system clearly informs users about how their data is used and obtains their consent where necessary.
+It allows users to access, review, and update their personal data, supports the right to be forgotten, and ensures data is anonymized
+where possible.
 
-* **NFR-6: User Feedback Mechanism** - The system includes a user feedback mechanism allowing users to submit feedback, bug reports, and
-  feature suggestions. It tracks key metrics such as usage frequency and error rates, ensuring privacy and consent considerations in data
-  collection.
+**NFR-6: User Feedback Mechanism**
+: The system includes a user feedback mechanism allowing users to submit feedback, bug reports, and
+feature suggestions. It tracks key metrics such as usage frequency and error rates, ensuring privacy and consent considerations in data
+collection.
 
-* **NFR-7: Performance** - The system aims for quick responses to user queries, with a target latency of less than 2 seconds for most
-  interactions. It maintains performance standards under varying loads and provides feedback when processing takes longer than expected.
+**NFR-7: Performance**
+: The system aims for quick responses to user queries, with a target latency of less than 2 seconds for most
+interactions. It maintains performance standards under varying loads and provides feedback when processing takes longer than expected.
 
-* **NFR-8: Usability** - The system is designed to be intuitive, allowing users with minimal training to perform basic operations. It uses
-  familiar interface elements and ensures that the most frequently used features are prominently placed and easy to access.
+**NFR-8: Usability**
+: The system is designed to be intuitive, allowing users with minimal training to perform basic operations. It uses
+familiar interface elements and ensures that the most frequently used features are prominently placed and easy to access.
 
-* **NFR-9: Reliability** - The system is operational 99% of the time, with minimal downtime for maintenance. It achieves at least 99%
-  uptime, excluding planned maintenance windows, and regularly backs up system data to enable quick recovery in case of failure.
+**NFR-9: Reliability**
+: The system is operational 99% of the time, with minimal downtime for maintenance. It achieves at least 99%
+uptime, excluding planned maintenance windows, and regularly backs up system data to enable quick recovery in case of failure.
 
-* **NFR-10: Scalability** - The system handles increasing amounts of data and concurrent users efficiently. The user interface remains
-  responsive and efficient, even with large numbers of users and substantial data volumes.
+**NFR-10: Scalability**
+: The system handles increasing amounts of data and concurrent users efficiently. The user interface remains
+responsive and efficient, even with large numbers of users and substantial data volumes.
 
-* **NFR-11: Security** - The system implements standard security measures including data encryption and user authentication. It enforces a
-  strong password policy and uses secure session management practices to prevent attacks.
+**NFR-11: Security**
+: The system implements standard security measures including data encryption and user authentication. It enforces a
+strong password policy and uses secure session management practices to prevent attacks.
 
-* **NFR-12: Maintainability** - The system is designed for easy maintenance and future upgrades without significant downtime. It maintains
-  comprehensive documentation, including architecture diagrams, API documentation, and maintenance manuals.
+**NFR-12: Maintainability**
+: The system is designed for easy maintenance and future upgrades without significant downtime. It maintains
+comprehensive documentation, including architecture diagrams, API documentation, and maintenance manuals.
 
-* **NFR-13: Fault Tolerance** - The system handles at least 100 users concurrently without significant performance degradation. It is
-  capable of recovering from common errors without total system failure and with minimal downtime.
+**NFR-13: Fault Tolerance**
+: The system handles at least 100 users concurrently without significant performance degradation. It is
+capable of recovering from common errors without total system failure and with minimal downtime.
 
 ## System Requirements
 
