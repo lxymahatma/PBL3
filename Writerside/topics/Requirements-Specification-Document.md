@@ -88,7 +88,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 
 #### Consistent Navigation
 
-* **NFR10:** he system **should** offer consistent navigation menus and icons throughout the application to prevent user confusion and to
+* **NFR10:** the system **should** offer consistent navigation menus and icons throughout the application to prevent user confusion and to
   facilitate easy learning of the interface.
 
 #### Interactive Performance
@@ -155,7 +155,7 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 * **FR7**: The system **shall** integrate with the academic calendar for scheduling.
 * **FR8**: The system **shall** include a feedback system for students to rate courses after completion.
 
-### Non-Functioanl Requirements
+### Non-Functional Requirements
 
 #### Performance
 
