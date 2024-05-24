@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Microsoft.Extensions.Logging;
 using OpenAI_API;
 using PBL3.Contracts;
 
@@ -8,4 +9,7 @@ public sealed class OpenAIService : IOpenAIService
 {
     [UsedImplicitly]
     public OpenAIAPI? OpenAIAPI { get; init; }
+    
+    [UsedImplicitly]
+    public ILogger? Logger { get; init; }
 }
