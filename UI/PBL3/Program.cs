@@ -2,6 +2,9 @@
 using System.Threading;
 using Avalonia;
 using Serilog;
+#if !DEBUG
+using PBL3.Models;
+#endif
 
 namespace PBL3;
 
@@ -37,8 +40,7 @@ internal static class Program
             .MinimumLevel.Debug()
 #if DEBUG
             .WriteTo.Console()
-#endif
-#if !DEBUG
+#else
             .WriteTo.File(new LogFileFormatter(),
                 "Latest.log", rollingInterval: RollingInterval.Day)
 #endif

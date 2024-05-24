@@ -1,7 +1,8 @@
-using System.Net.Http;
 using Autofac;
+using OpenAI_API;
 using PBL3.Contracts;
 using PBL3.Extensions.MarkupExtensions;
+using PBL3.Services;
 using PBL3.ViewModels;
 using Serilog;
 
@@ -18,6 +19,7 @@ internal static class Bootstrapper
     public static void Register()
     {
         RegisterInstances();
+        RegisterServices();
         RegisterViewModels();
 
         var container = _builder.Build();
@@ -31,7 +33,15 @@ internal static class Bootstrapper
     private static void RegisterInstances()
     {
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
-        _builder.RegisterInstance(new HttpClient());
+        _builder.RegisterInstance(new OpenAIAPI(APIAuthentication.LoadFromPath()));
+    }
+
+    /// <summary>
+    ///     Register Services
+    /// </summary>
+    private static void RegisterServices()
+    {
+        _builder.RegisterType<OpenAIService>().As<IOpenAIService>().PropertiesAutowired().SingleInstance();
     }
 
     /// <summary>

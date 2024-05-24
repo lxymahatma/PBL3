@@ -16,11 +16,20 @@
         <DefineConstants>$(DefineConstants);ENABLE_XAML_HOT_RELOAD</DefineConstants>
     </PropertyGroup>
 
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DebugType>none</DebugType>
+        <SelfContained>true</SelfContained>
+        <PublishSingleFile>true</PublishSingleFile>
+        <PublishTrimmed>false</PublishTrimmed>
+        <PublishReadyToRun>false</PublishReadyToRun>
+        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    </PropertyGroup>
+
     <!--Hot Reload Packages-->
     <ItemGroup>
         <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="Avalonia.Markup.Xaml.Loader" Version="11.0.10"/>
-        <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="HotAvalonia" Version="1.0.1"/>
-        <PackageReference Include="HotAvalonia.Extensions" Version="1.0.1" PrivateAssets="All"/>
+        <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="HotAvalonia" Version="1.1.1"/>
+        <PackageReference Include="HotAvalonia.Extensions" Version="1.1.1" PrivateAssets="All"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -33,6 +42,7 @@
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10"/>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2"/>
         <PackageReference Include="JetBrains.Annotations" Version="2023.3.0"/>
+        <PackageReference Include="OpenAI" Version="1.11.0"/>
         <PackageReference Include="Serilog" Version="4.0.0-dev-02149"/>
         <PackageReference Include="Serilog.Sinks.Console" Version="5.1.0-dev-00943"/>
         <PackageReference Include="Serilog.Sinks.File" Version="5.0.1-dev-00972"/>
