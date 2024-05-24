@@ -6,6 +6,4 @@ public sealed class ClassInformation
     public string? Name { get; set; }
     public string? Description { get; set; }
     public int Credit { get; set; }
-    public double PassRate { get; set; }
-    public string? AverageGrade { get; set; }
 }
