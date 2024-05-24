@@ -42,12 +42,12 @@ jobs:
 
       - name: List result on Linux
         if: matrix.target-os == 'ubuntu-latest'
-        run: ls -l bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/linux-${{ matrix.target-arch }}/publish
+        run: ls -l UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/linux-${{ matrix.target-arch }}/publish
 
       - name: List result on Windows
         if: matrix.target-os == 'windows-latest'
-        run: ls -l bin\${{ matrix.build-type }}\net${{ matrix.dotnet-version }}\win-${{ matrix.target-arch }}\publish
+        run: ls -l UI\bin\${{ matrix.build-type }}\net${{ matrix.dotnet-version }}\win-${{ matrix.target-arch }}\publish
 
       - name : List result on MacOS
         if: matrix.target-os == 'osx-latest'
-        run: ls -l bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/osx-${{ matrix.target-arch }}/publish
+        run: ls -l UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/osx-${{ matrix.target-arch }}/publish
