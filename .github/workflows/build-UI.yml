@@ -37,6 +37,7 @@ jobs:
     
       - name: Build Project
         run: |
+          cd UI
           dotnet publish --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }} --self-contained=${{ matrix.self-contained }}
 
       - name: List result on Linux
