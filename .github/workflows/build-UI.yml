@@ -1,0 +1,52 @@
+name: Build UI
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - UI/**
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        build-type:
+          - Release
+        target-os:
+          - ubuntu-latest
+          - windows-latest
+          - osx-latest
+        target-arch:
+          - x64
+          - arm64
+        dotnet-version:
+          - '8.0'
+        self-contained:
+          - true
+    
+    runs-on: ${{ matrix.target-os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+    
+      - name: Build Project
+        run: |
+          dotnet publish --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }} --self-contained=${{ matrix.self-contained }}
+
+      - name: List result on Linux
+        if: matrix.target-os == 'ubuntu-latest'
+        run: ls -l bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/linux-${{ matrix.target-arch }}/publish
+
+      - name: List result on Windows
+        if: matrix.target-os == 'windows-latest'
+        run: ls -l bin\${{ matrix.build-type }}\net${{ matrix.dotnet-version }}\win-${{ matrix.target-arch }}\publish
+
+      - name : List result on MacOS
+        if: matrix.target-os == 'osx-latest'
+        run: ls -l bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/osx-${{ matrix.target-arch }}/publish
