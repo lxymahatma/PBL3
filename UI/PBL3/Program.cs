@@ -14,7 +14,7 @@ internal static class Program
     public static void Main(string[] args)
     {
         // Prevent multiple launch
-        using var mutex = new Mutex(true, "PBL3");
+        using var mutex = new Mutex(true, nameof(PBL3));
         if (!mutex.WaitOne(TimeSpan.Zero, true))
         {
             return;
