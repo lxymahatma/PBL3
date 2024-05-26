@@ -12,9 +12,9 @@ jobs:
         build-type:
           - Release
         target-platform:
-          - {os = ubuntu-latest, name = linux}
-          - {os = windows-latest, name = win}
-          - {os = osx-latest, name = osx}
+          - {os: ubuntu-latest, name: linux}
+          - {os: windows-latest, name: win}
+          - {os: osx-latest, name: osx}
         target-arch:
           - x64
           - arm64
