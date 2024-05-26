@@ -40,5 +40,5 @@ jobs:
 
       - name: List result
         run: |
-            ls -l UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish
+            ls -l ${{ github.workspace }}/UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish
         shell: bash
