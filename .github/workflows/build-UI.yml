@@ -14,7 +14,7 @@ jobs:
         target-platform:
           - {os: ubuntu-latest, name: linux}
           - {os: windows-latest, name: win}
-          - {os: osx-latest, name: osx}
+          - {os: macos-latest, name: osx}
         target-arch:
           - x64
           - arm64
@@ -35,10 +35,10 @@ jobs:
 
       - name: Build Project
         run: |
-          cd UI
-          dotnet publish --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }} --self-contained=${{ matrix.self-contained }}
+          dotnet publish UI/PBL3.sln --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }} --self-contained=${{ matrix.self-contained }}
 
       - name: List result
-        run: |
-            ls -l ${{ github.workspace }}/UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish
         shell: bash
+        working-directory: ${{ github.workspace }}
+        run: |
+          ls -l UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish
