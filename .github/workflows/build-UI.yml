@@ -39,6 +39,12 @@ jobs:
 
       - name: List result
         shell: bash
-        working-directory: ${{ github.workspace }}
+        working-directory: ./
         run: |
           ls -l UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PBL3-${{ matrix.target-platform.name }}-${{ matrix.target-arch }}
+          path: UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/*
