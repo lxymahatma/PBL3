@@ -31,7 +31,8 @@ Recommendation System. It summarizes the rationale behind each version.
 ## 2. Glossary
 
 See [General Glossary](Glossary.md#general-glossary "General Glossary for the whole project document")
-and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary for Requirement Specification Document") for more detail.
+and [Requirement Specification Document Glossary](Glossary.md#requirement-specification-document "Specific Glossary for Requirement Specification Document")
+for more detail.
 
 ## 3. Introduction
 
