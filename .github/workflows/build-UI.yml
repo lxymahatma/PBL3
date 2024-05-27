@@ -2,7 +2,7 @@ name: Build UI
 
 on:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
     paths:
       - UI/**
 
@@ -14,9 +14,9 @@ jobs:
         build-type:
           - Release
         target-platform:
-          - {os: ubuntu-latest, name: linux}
-          - {os: windows-latest, name: win}
-          - {os: macos-latest, name: osx}
+          - { os: ubuntu-latest, name: linux }
+          - { os: windows-latest, name: win }
+          - { os: macos-latest, name: osx }
         target-arch:
           - x64
           - arm64

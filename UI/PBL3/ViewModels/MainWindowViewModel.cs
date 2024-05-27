@@ -1,12 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using JetBrains.Annotations;
-using PBL3.Contracts;
-using Serilog;
-
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-
-namespace PBL3.ViewModels;
+﻿namespace PBL3.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
 {
@@ -14,7 +6,10 @@ public partial class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
     private string _searchText = string.Empty;
 
     [UsedImplicitly]
-    public ILogger Logger { get; init; }
+    public ILogger Logger { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IUserService UserService { get; init; } = null!;
 
     [RelayCommand]
     private void Search()

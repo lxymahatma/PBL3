@@ -2,7 +2,7 @@ name: Build documentation
 
 on:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
     paths:
       - Writerside/**
   workflow_dispatch:
@@ -63,7 +63,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: [build, test]
+    needs: [ build, test ]
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
@@ -86,7 +86,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
   publish-indexes:
-    needs: [build, test, deploy]
+    needs: [ build, test, deploy ]
     runs-on: ubuntu-latest
     container:
       image: registry.jetbrains.team/p/writerside/builder/algolia-publisher:2.0.32-3

@@ -1,6 +1,3 @@
-using System;
-using Avalonia.Markup.Xaml;
-
 namespace PBL3.Extensions.MarkupExtensions;
 
 public sealed class DependencyInjectionExtension : MarkupExtension

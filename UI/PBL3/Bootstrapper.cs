@@ -1,10 +1,8 @@
 using Autofac;
 using OpenAI_API;
-using PBL3.Contracts;
 using PBL3.Extensions.MarkupExtensions;
 using PBL3.Services;
 using PBL3.ViewModels;
-using Serilog;
 
 namespace PBL3;
 
@@ -42,6 +40,7 @@ internal static class Bootstrapper
     private static void RegisterServices()
     {
         _builder.RegisterType<OpenAIService>().As<IOpenAIService>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<UserService>().As<IUserService>().PropertiesAutowired().SingleInstance();
     }
 
     /// <summary>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading;
-using Avalonia;
-using Serilog;
+﻿using Avalonia;
 #if !DEBUG
 using PBL3.Models;
 #endif
