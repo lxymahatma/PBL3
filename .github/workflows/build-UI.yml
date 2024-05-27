@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
     paths:
       - UI/**
+  workflow_dispatch:
 
 jobs:
   build:
@@ -46,6 +47,7 @@ jobs:
           ls -l UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish
 
       - name: Upload Artifact
+      
         uses: actions/upload-artifact@v4
         with:
           name: PBL3-${{ matrix.target-platform.name }}-${{ matrix.target-arch }}
