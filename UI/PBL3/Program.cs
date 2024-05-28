@@ -1,4 +1,5 @@
-﻿using Avalonia;
+﻿using System.Diagnostics;
+using Avalonia;
 #if !DEBUG
 using PBL3.Models;
 #endif
@@ -29,6 +30,7 @@ internal static class Program
         catch (Exception ex)
         {
             Log.Logger.Fatal(ex, "Unhandled exception");
+            Process.Start(LogPath);
         }
     }
 
