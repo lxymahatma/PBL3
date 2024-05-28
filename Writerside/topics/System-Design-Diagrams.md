@@ -6,59 +6,59 @@
 
 1. User
     - Attributes: userID, username, password, email
-    - Methods: login(), logout(), register(), deleteUser()
+    - Methods: Login(), Logout(), Register(), DeleteUser()
 
 2. UserProfile
     - Attributes: firstName, lastName, userPreferences, academicLevel
-    - Methods: updateProfile(), viewProfile()
+    - Methods: UpdateProfile(), ViewProfile()
 
 3. Course
     - Attributes: courseID, courseName, description, credits, prerequisites
-    - Methods: getCourseDetails(), updateCourseInfo()
+    - Methods: GetCourseDetails(), UpdateCourseInfo()
 
 4. CourseRecommendation
     - Attributes: recommendationList
-    - Methods: generateRecommendations(query), filterResults(criteria)
+    - Methods: GenerateRecommendations(query), FilterResults(criteria)
 
 5. Query
     - Attributes: queryString, searchParameters
-    - Methods: parseQuery(), executeSearch()
+    - Methods: ParseQuery(), ExecuteSearch()
 
 6. OpenAIAPI
     - Attributes: models, configuration
-    - Methods: analyzeText(input), extractKeywords()
+    - Methods: AnalyzeText(input), ExtractKeywords()
 
 7. Feedback
-    - Attributes: feedbackID, rating, comments, userID, courseID
-    - Methods: submitFeedback(), editFeedback()
+    - Attributes: feedbackID, rating, comments, userID, course_urdID
+    - Methods: SubmitFeedback(), EditFeedback()
 
 8. Forum
     - Attributes: forumID, title, description
-    - Methods: createThread(), deleteThread(), postReply()
+    - Methods: CreateThread(), DeleteThread(), PostReply()
 
 9. ForumThread
     - Attributes: threadID, title, creatorID, creationDate
-    - Methods: editThread(), viewThread()
+    - Methods: EditThread(), ViewThread()
 
 10. ForumPost
     - Attributes: postID, threadID, content, postTime
-    - Methods: editPost(), deletePost()
+    - Methods: EditPost(), DeletePost()
 
 11. CourseBookmark
     - Attributes: userID, courseID, bookmarkDate
-    - Methods: addBookmark(), removeBookmark()
+    - Methods: AddBookmark(), RemoveBookmark()
 
 12. Admin
     - Attributes: adminID, adminLevel
-    - Methods: viewUserData(), modifyCourseInfo()
+    - Methods: ViewUserData(), ModifyCourseInfo()
 
 13. SystemAnalytics
     - Attributes: dataLogs, accessRecords
-    - Methods: generateReport(), analyzeTrends()
+    - Methods: GenerateReport(), AnalyzeTrends()
 
 14. AuthenticationService
     - Attributes: securityProtocol, sessionDetails
-    - Methods: authenticateUser(), resetPassword()
+    - Methods: AuthenticateUser(), ResetPassword()
 
 ### Use cases
 
