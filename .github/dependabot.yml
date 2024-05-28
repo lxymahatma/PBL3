@@ -2,7 +2,7 @@ version: 2
 updates:
   - package-ecosystem: "nuget"
     target-branch: "main"
-    directory: "/"
+    directory: "UI/"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 10
