@@ -46,15 +46,14 @@ jobs:
         run: |
           ls -l UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish
 
-      - name: Set Execution Permissions
+      - name: Package Build
+        shell: bash
         working-directory: ./
-        if: ${{matrix.target-platform.name}} =="linux" || ${{matrix.target-platform.name}} =="osx"
         run: |
-          chmod a+x UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/PBL3
+          7z a -tzip PBL3-${{ matrix.target-platform.name }}-${{ matrix.target-arch }}.zip UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/*
 
-      - name: Upload Artifact
-      
+      - name: Upload Artifact 
         uses: actions/upload-artifact@v4
         with:
           name: PBL3-${{ matrix.target-platform.name }}-${{ matrix.target-arch }}
-          path: UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/*
+          path: PBL3-${{ matrix.target-platform.name }}-${{ matrix.target-arch }}.zip
