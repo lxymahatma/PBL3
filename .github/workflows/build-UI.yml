@@ -50,7 +50,7 @@ jobs:
         working-directory: ./
         if: ${{matrix.target-platform.name}} =="linux" || ${{matrix.target-platform.name}} =="osx"
         run: |
-          chmod +x UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/PBL3
+          chmod a+x UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/PBL3
 
       - name: Upload Artifact
       
