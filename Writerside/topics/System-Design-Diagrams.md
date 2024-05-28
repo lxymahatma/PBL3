@@ -5,59 +5,59 @@
 ![ClassDiagram.png](ClassDiagram.png)
 
 1. User
-    - Attributes: userID, username, password, email
+    - Attributes: Username, Password, Email
     - Methods: Login(), Logout(), Register(), DeleteUser()
 
 2. UserProfile
-    - Attributes: firstName, lastName, userPreferences, academicLevel
+    - Attributes: FirstName, LastName, UserPreferences, AcademicLevel
     - Methods: UpdateProfile(), ViewProfile()
 
 3. Course
-    - Attributes: courseID, courseName, description, credits, prerequisites
+    - Attributes: CourseID, CourseName, Description, Credits, Prerequisites
     - Methods: GetCourseDetails(), UpdateCourseInfo()
 
 4. CourseRecommendation
-    - Attributes: recommendationList
-    - Methods: GenerateRecommendations(query), FilterResults(criteria)
+    - Attributes: RecommendationList
+    - Methods: GenerateRecommendations(Query), FilterResults(Criteria)
 
 5. Query
-    - Attributes: queryString, searchParameters
+    - Attributes: QueryString, SearchParameters
     - Methods: ParseQuery(), ExecuteSearch()
 
 6. OpenAIAPI
-    - Attributes: models, configuration
-    - Methods: AnalyzeText(input), ExtractKeywords()
+    - Attributes: Models, Configuration
+    - Methods: AnalyzeText(Input), ExtractKeywords()
 
 7. Feedback
-    - Attributes: feedbackID, rating, comments, userID, course_urdID
+    - Attributes: FeedbackID, Rating, Comments, Username, CourseID
     - Methods: SubmitFeedback(), EditFeedback()
 
 8. Forum
-    - Attributes: forumID, title, description
+    - Attributes: ForumID, Title, Description
     - Methods: CreateThread(), DeleteThread(), PostReply()
 
 9. ForumThread
-    - Attributes: threadID, title, creatorID, creationDate
+    - Attributes: ThreadID, Title, CreatorID, CreationDate
     - Methods: EditThread(), ViewThread()
 
 10. ForumPost
-    - Attributes: postID, threadID, content, postTime
-    - Methods: EditPost(), DeletePost()
+    - Attributes: PostID, ThreadID, Content, PostTime
+    - Methods: EditPost(), DeleteParent()
 
 11. CourseBookmark
-    - Attributes: userID, courseID, bookmarkDate
+    - Attributes: Username, CourseID, BookmarkDate
     - Methods: AddBookmark(), RemoveBookmark()
 
 12. Admin
-    - Attributes: adminID, adminLevel
+    - Attributes: AdminID, AdminLevel
     - Methods: ViewUserData(), ModifyCourseInfo()
 
 13. SystemAnalytics
-    - Attributes: dataLogs, accessRecords
+    - Attributes: DataLogs, AccessRecords
     - Methods: GenerateReport(), AnalyzeTrends()
 
 14. AuthenticationService
-    - Attributes: securityProtocol, sessionDetails
+    - Attributes: SecurityProtocol, SessionDetails
     - Methods: AuthenticateUser(), ResetPassword()
 
 ### Use cases
@@ -84,9 +84,12 @@
 
 ![SequenceDiagramU1.png](SequenceDiagramU1.png)
 
-1. Actor: User
-2. System Components: User Interface, AuthenticationService, Database
-   Sequence Steps:
+**Actor**: User
+
+**System Components**: User Interface, AuthenticationService, Database
+
+**Sequence Steps**:
+
 1. User initiates the registration process by accessing the registration form on the User Interface.
 2. User fills out the registration form with necessary details (username, password, email, etc.).
 3. User Interface sends the filled-out registration form data to the AuthenticationService.
@@ -112,10 +115,10 @@
 
 ![SequenceDiagramU2.png](SequenceDiagramU2.png)
 
-1. Actor: User
-2. System Components: User Interface, AuthenticationService, Database
+**Actor**: User
+**System Components**: User Interface, AuthenticationService, Database
 
-Sequence Steps:
+**Sequence Steps**:
 
 1. User accesses the login form on the User Interface.
 2. User enters their username and password into the form.
@@ -137,4 +140,35 @@ Sequence Steps:
     - Displays a welcome message and transitions the user to the dashboard or homepage if login is successful.
     - Displays an error message if the login failed, offering the user the option to try again or reset their password.
 
+#### Use Case "View and Edit Account Information" (U3) ####
+
+![SequenceDiagramU3.png](SequenceDiagramU3.png)
+
+**Actor**: User
+**System Components**: User Interface, UserProfile, Database
+
+**Sequence Steps:**
+
+**Viewing Account Information**
+
+1. User logs into the system and navigates to the account information page.
+2. User Interface sends a request to UserProfile to retrieve the user's information.
+3. UserProfile sends a query to the Database to fetch the user's details.
+4. Database retrieves the information and returns it to UserProfile.
+5. UserProfile receives the data and sends it to the User Interface.
+6. User Interface displays the user's account information (e.g., username, email, name, academic level).
+
+**Editing Account Information**
+
+1. User selects the option to edit their account information on the same page.
+2. User Interface allows the user to edit fields such as email, name, and academic level.
+3. User makes changes and submits the updated information.
+4. User Interface sends the updated details to UserProfile.
+5. UserProfile validates the new information and sends an update request to the Database:
+    - Checks for the format of the email.
+    - Validates that the name does not contain invalid characters.
+    - Ensures that the academic level is within the allowed range.
+6. Database updates the user's information and confirms the update back to UserProfile.
+7. UserProfile receives the confirmation and notifies the User Interface of the successful update.
+8. User Interface informs the User that their information has been successfully updated.
 
