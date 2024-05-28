@@ -14,7 +14,7 @@ public class UserService : IUserService
 
         if (user is null)
         {
-            Logger.Error("User not found");
+            Logger.Error("User with key {Key} not found", key);
             return false;
         }
 
@@ -24,7 +24,7 @@ public class UserService : IUserService
             return false;
         }
 
-        Logger.Information("User logged in");
+        Logger.Information("User {UserName} logged in", user.UserName);
         return true;
     }
 }
