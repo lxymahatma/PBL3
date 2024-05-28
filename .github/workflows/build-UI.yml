@@ -46,7 +46,7 @@ jobs:
         run: |
           ls -l UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish
 
-      - name: Executable
+      - name: Set Execution Permissions
         working-directory: ./
         if: ${{matrix.target-platform.name}} =="linux" || ${{matrix.target-platform.name}} =="osx"
         run: |
