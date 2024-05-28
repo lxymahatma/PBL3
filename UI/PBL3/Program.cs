@@ -7,6 +7,8 @@ namespace PBL3;
 
 internal static class Program
 {
+    private static readonly string LogPath = Path.Combine(AppContext.BaseDirectory, "Latest.log");
+
     [STAThread]
     public static void Main(string[] args)
     {
@@ -17,6 +19,7 @@ internal static class Program
             return;
         }
 
+        DeleteExistedLogFile();
         CreateLogger();
         RegisterDependencies();
         try
@@ -31,6 +34,14 @@ internal static class Program
 
     private static void RegisterDependencies() => Bootstrapper.Register();
 
+    private static void DeleteExistedLogFile()
+    {
+        if (File.Exists(LogPath))
+        {
+            File.Delete(LogPath);
+        }
+    }
+
     private static void CreateLogger()
     {
         Log.Logger = new LoggerConfiguration()
@@ -38,8 +49,7 @@ internal static class Program
 #if DEBUG
             .WriteTo.Console()
 #else
-            .WriteTo.File(new LogFileFormatter(),
-                "Latest.log", rollingInterval: RollingInterval.Day)
+            .WriteTo.File(new LogFileFormatter(), LogPath)
 #endif
             .CreateLogger();
     }
