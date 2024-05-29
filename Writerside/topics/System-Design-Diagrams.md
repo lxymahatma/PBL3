@@ -116,6 +116,7 @@
 ![SequenceDiagramU2.png](SequenceDiagramU2.png)
 
 **Actor**: User
+
 **System Components**: User Interface, AuthenticationService, Database
 
 **Sequence Steps**:
@@ -145,6 +146,7 @@
 ![SequenceDiagramU3.png](SequenceDiagramU3.png)
 
 **Actor**: User
+
 **System Components**: User Interface, UserProfile, Database
 
 **Sequence Steps:**
@@ -172,3 +174,18 @@
 7. UserProfile receives the confirmation and notifies the User Interface of the successful update.
 8. User Interface informs the User that their information has been successfully updated.
 
+#### Use Case "Reset Account Password" (U4) ####
+
+#### Use Case "Delete Account" (U5) ####
+
+#### Use Case "View Academic Calendar" (U6) ####
+
+#### Use Case "View and Bookmark Course Pathways" (U7) ####
+
+#### Use Case "Filter Courses" (U8) ####
+
+#### Use Case "Obtain Course Recommendation from Query" (U9) ####
+
+#### Use Case "Submit Course Feedback" (U10) ####
+
+#### Use Case "Access and Analyze User Data" (U11) ####
