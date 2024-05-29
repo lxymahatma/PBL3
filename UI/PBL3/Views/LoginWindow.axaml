@@ -1,0 +1,24 @@
+<Window xmlns:contract="clr-namespace:PBL3.Contracts"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:PBL3.ViewModels"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PBL3.Views.LoginWindow"
+        Title="LoginWindow"
+        d:DesignHeight="450"
+        d:DesignWidth="800"
+        x:DataType="vm:LoginWindowViewModel"
+        DataContext="{ext:DependencyInjection Type=contract:ILoginWindowViewModel}"
+        mc:Ignorable="d">
+    <Grid RowDefinitions="*,*,*,*,*,*" ShowGridLines="True">
+        <TextBlock Text="Login" />
+        <TextBlock Grid.Row="1" Text="User Name or Email" />
+        <TextBox Grid.Row="2" Text="{Binding Key}" />
+        <TextBlock Grid.Row="3" Text="Password" />
+        <TextBox Grid.Row="4" Text="{Binding Password}" />
+        <Button Grid.Row="5" Command="{Binding LoginCommand}" />
+    </Grid>
+</Window>
+

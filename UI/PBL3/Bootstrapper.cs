@@ -49,7 +49,9 @@ internal static class Bootstrapper
     /// </summary>
     private static void RegisterViewModels()
     {
+        _builder.RegisterType<LoginWindowViewModel>().As<ILoginWindowViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<RegisterWindowViewModel>().As<IRegisterWindowViewModel>().PropertiesAutowired().SingleInstance();
     }
 
     private static void ConfigureStaticResolvers(IContainer container)
