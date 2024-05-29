@@ -12,6 +12,11 @@
         x:DataType="vm:LoginWindowViewModel"
         DataContext="{ext:DependencyInjection Type=contract:ILoginWindowViewModel}"
         mc:Ignorable="d">
+
+    <Design.DataContext>
+        <vm:LoginWindowViewModel />
+    </Design.DataContext>
+
     <Grid RowDefinitions="*,*,*,*,*,*" ShowGridLines="True">
         <TextBlock Text="Login" />
         <TextBlock Grid.Row="1" Text="User Name or Email" />

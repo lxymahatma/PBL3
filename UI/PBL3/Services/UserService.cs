@@ -8,14 +8,8 @@ public class UserService : IUserService
     [UsedImplicitly]
     public IDatabaseService DatabaseService { get; init; } = null!;
 
-    public bool Login(string? key, string? password)
+    public bool Login(string key, string password)
     {
-        if (key is null || password is null)
-        {
-            Logger.Information("Entered invalid information");
-            return false;
-        }
-
         var user = DatabaseService.GetUserFromKey(key);
 
         if (user is null)

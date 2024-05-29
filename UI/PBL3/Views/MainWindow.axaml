@@ -1,32 +1,38 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:PBL3.ViewModels"
+<Window xmlns:contract="clr-namespace:PBL3.Contracts"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
-        xmlns:contract="clr-namespace:PBL3.Contracts"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:PBL3.ViewModels"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="PBL3.Views.MainWindow"
+        Title="PBL3"
+        d:DesignHeight="450"
+        d:DesignWidth="800"
         x:DataType="vm:MainWindowViewModel"
         DataContext="{ext:DependencyInjection Type=contract:IMainWindowViewModel}"
         Icon="/Assets/avalonia-logo.ico"
-        Title="PBL3">
+        mc:Ignorable="d">
 
     <Design.DataContext>
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <Grid ShowGridLines="True" ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
+    <Grid ColumnDefinitions="Auto,Auto"
+          RowDefinitions="Auto,Auto"
+          ShowGridLines="True">
         <StackPanel Grid.Row="0" Grid.Column="0"
                     Width="100" />
         <TextBox Grid.Row="0" Grid.Column="1"
                  Width="500"
-                 Text="{Binding SearchText}"
                  VerticalContentAlignment="Center"
+                 Text="{Binding SearchText}"
                  Watermark="Search Course">
             <TextBox.InnerRightContent>
                 <Button Command="{Binding SearchCommand}">
-                    <PathIcon Data="{StaticResource Magnify}" Height="30" Width="30" />
+                    <PathIcon Width="30"
+                              Height="30"
+                              Data="{StaticResource Magnify}" />
                 </Button>
 
             </TextBox.InnerRightContent>

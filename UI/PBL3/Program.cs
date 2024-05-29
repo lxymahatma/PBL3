@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using Avalonia;
 #if !DEBUG
 using PBL3.Models;
 #endif
@@ -20,7 +19,6 @@ internal static class Program
             return;
         }
 
-        DeleteExistedLogFile();
         CreateLogger();
         RegisterDependencies();
         try
@@ -36,16 +34,13 @@ internal static class Program
 
     private static void RegisterDependencies() => Bootstrapper.Register();
 
-    private static void DeleteExistedLogFile()
-    {
-        if (File.Exists(LogPath))
-        {
-            File.Delete(LogPath);
-        }
-    }
-
     private static void CreateLogger()
     {
+        using (var fs = File.OpenWrite(LogPath))
+        {
+            fs.SetLength(0);
+        }
+
         Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
 #if DEBUG

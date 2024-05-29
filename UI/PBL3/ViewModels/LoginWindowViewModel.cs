@@ -1,15 +1,13 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace PBL3.ViewModels;
 
 public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
 {
-    [Required]
     [ObservableProperty]
+    [Required]
     private string? _key;
 
-    [Required]
     [ObservableProperty]
+    [Required]
     private string? _password;
 
     [UsedImplicitly]
@@ -21,7 +19,15 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
     [RelayCommand]
     private void Login()
     {
-        var result = UserService.Login(Key, Password);
+        ValidateAllProperties();
+
+        if (HasErrors)
+        {
+            Logger.Error("Entered invalid information");
+            return;
+        }
+
+        var result = UserService.Login(Key!, Password!);
         if (result)
         {
             return;

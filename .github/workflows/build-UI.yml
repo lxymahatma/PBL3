@@ -52,7 +52,7 @@ jobs:
         run: |
           7z a -tzip PBL3.zip ./UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/*
 
-      - name: Upload Artifact 
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: PBL3-${{ matrix.target-platform.name }}-${{ matrix.target-arch }}
