@@ -176,6 +176,8 @@
 
 #### Use Case "Reset Account Password" (U4) ####
 
+![SequenceDiagramU4.png](SequenceDiagramU4.png)
+
 **Actor**: User
 
 **System Components**: User Interface, AuthenticationService, Database
@@ -212,6 +214,7 @@
 ![SequenceDiagramU5.png](SequenceDiagramU5.png)
 
 **Actor**: User
+
 **System Components**: User Interface, AuthenticationService, Database
 
 Sequence Steps:
@@ -235,7 +238,49 @@ Sequence Steps:
 
 #### Use Case "View Academic Calendar" (U6) ####
 
+![SequenceDiagram6.png](SequenceDiagram6.png)
+
+**Actor**: User
+
+**System Components**: User Interface, System, Database
+
+**Sequence Steps**:
+
+1. User logs into the system and navigates to the section where the academic calendar is available.
+2. User Interface sends a request to the System to retrieve the academic calendar.
+3. System sends a query to the Database to fetch the academic calendar data.
+4. Database retrieves the calendar details and sends them back to the System.
+5. System processes the calendar data, organizing it into a user-friendly format.
+6. System sends the formatted academic calendar to the User Interface.
+7. User Interface displays the academic calendar to the User, allowing them to view important academic dates, such as semester start and end
+   dates, exam periods, holidays, and registration deadlines.
+
 #### Use Case "View and Bookmark Course Pathways" (U7) ####
+
+**Actor**: User
+
+**System Components**: User Interface, Course, CourseBookmark, Database
+
+**Sequence Steps**:
+
+Viewing Course Pathways
+
+1. User logs into the system and navigates to the section where course pathways are available.
+2. User Interface sends a request to the Course component to retrieve the available courses and their pathways.
+3. Course component queries the Database to fetch the course details and pathways.
+4. Database returns the requested course data to the Course component.
+5. Course component formats the course data and sends it back to the User Interface.
+6. User Interface displays the course pathways to the User, allowing them to explore various courses and their prerequisites, credits, and
+   descriptions.
+
+Bookmarking Courses
+
+1. User selects specific courses they are interested in and chooses to bookmark them for future reference.
+2. User Interface captures the user's selection and sends the course IDs to the CourseBookmark component.
+3. CourseBookmark component processes the request and sends it to the Database to save the bookmarks under the user’s profile.
+4. Database stores the bookmark details and confirms the successful bookmarking back to the CourseBookmark component.
+5. CourseBookmark component confirms the successful bookmarking to the User Interface.
+6. User Interface notifies the User that the courses have been successfully bookmarked.
 
 #### Use Case "Filter Courses" (U8) ####
 
