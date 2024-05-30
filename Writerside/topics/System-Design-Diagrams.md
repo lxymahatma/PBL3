@@ -176,7 +176,62 @@
 
 #### Use Case "Reset Account Password" (U4) ####
 
+**Actor**: User
+
+**System Components**: User Interface, AuthenticationService, Database
+
+**Sequence Steps**:
+
+1. User navigates to the login page and clicks on the "Forgot Password" link.
+2. User Interface prompts the User to enter their email address.
+3. User enters their email and submits the request.
+4. User Interface sends the email address to AuthenticationService.
+5. AuthenticationService validates the email format:
+    - If invalid, it sends an error message back to the User Interface, which then displays it to the User.
+6. If the email format is valid, AuthenticationService checks with the Database to confirm the existence of the account associated with the
+   email.
+7. Database returns a response:
+    - If no account is associated, it sends a "no account found" response to AuthenticationService.
+    - If found, it sends a "user verified" response.
+8. AuthenticationService:
+    - If the user is verified, it generates a password reset link with a unique, time-limited token.
+    - Sends the reset link to the User's email.
+9. User receives the email and clicks on the password reset link, which redirects them to a password reset page.
+10. User Interface displays the password reset form where the User can enter a new password.
+11. User enters a new password and submits the form.
+12. User Interface sends the new password to AuthenticationService.
+13. AuthenticationService validates the new password against security criteria:
+    - If the password does not meet the criteria, sends an error message back to the User Interface.
+    - If it meets the criteria, hashes the password and sends it to the Database for updating.
+14. Database updates the password and confirms the update to AuthenticationService.
+15. AuthenticationService notifies the User Interface of the successful password reset.
+16. User Interface informs the User that their password has been successfully reset and redirects them to the login page.
+
 #### Use Case "Delete Account" (U5) ####
+
+![SequenceDiagramU5.png](SequenceDiagramU5.png)
+
+**Actor**: User
+**System Components**: User Interface, AuthenticationService, Database
+
+Sequence Steps:
+
+1. User logs into the system and navigates to the account settings or profile page.
+2. User selects the option to delete their account.
+3. User Interface prompts the User to confirm their decision:
+    - This may include entering their password again for verification and clicking a "Confirm Deletion" button.
+4. User enters their password and confirms the deletion.
+5. User Interface sends the password and deletion request to AuthenticationService.
+6. AuthenticationService verifies the password with the Database:
+    - If the password is incorrect, it sends an "invalid password" response to the User Interface, which informs the User.
+    - If the password is correct, it proceeds with the deletion process.
+7. AuthenticationService sends a command to the Database to delete the user's account.
+8. Database performs the deletion:
+    - Removes all records associated with the user's account (personal information, settings, data, etc.).
+    - Confirms the deletion to AuthenticationService.
+9. AuthenticationService receives confirmation of the deletion.
+10. AuthenticationService informs the User Interface that the account has been successfully deleted.
+11. User Interface notifies the User that their account has been deleted and logs them out of the system.
 
 #### Use Case "View Academic Calendar" (U6) ####
 
