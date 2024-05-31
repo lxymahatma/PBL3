@@ -335,4 +335,50 @@ Sequence Steps:
 
 #### Use Case "Submit Course Feedback" (U10) ####
 
+![SequenceDiagramU10.png](SequenceDiagramU10.png)
+
+**Actor**: User
+
+**System Components**: User Interface, Feedback, Database
+
+Sequence Steps:
+
+1. User completes a course and decides to provide feedback.
+2. User navigates to the feedback section of the course in the User Interface.
+3. User Interface provides a form for submitting feedback, which includes rating and comment fields.
+4. User fills out the form, providing a numerical rating and optional textual comments.
+5. User Interface captures the feedback and sends it to the Feedback component.
+6. Feedback component validates the input to ensure it meets any specified criteria (e.g., rating within valid range, comments do not
+   contain prohibited content).
+7. If validation fails, Feedback component sends an error message back to the User Interface, which then displays it to the User.
+8. If validation passes, Feedback component sends the feedback data to the Database.
+9. Database stores the feedback, linking it with the user's ID and the course ID.
+10. Database confirms the successful storage of feedback to the Feedback component.
+11. Feedback component notifies the User Interface of the successful feedback submission.
+12. User Interface displays a confirmation message to the User thanking them for their feedback.
+
 #### Use Case "Access and Analyze User Data" (U11) ####
+
+![SequenceDiagramU11.png](SequenceDiagramU11.png)
+
+**Actor**: Admin
+
+**System Components**: User Interface, SystemAnalytics, Database
+
+Sequence Steps:
+
+1. Admin logs into the system and navigates to the dashboard for user data analysis.
+2. User Interface presents options for selecting specific data sets (e.g., user engagement metrics, feedback, course completion rates) and
+   criteria for analysis (e.g., time period, user demographics).
+3. Admin selects the desired data sets and criteria, and submits the query.
+4. User Interface sends the request to the SystemAnalytics component.
+5. SystemAnalytics formulates the query based on the selected parameters and sends it to the Database.
+6. Database executes the query and retrieves the relevant user data.
+7. Database sends the raw data back to the SystemAnalytics.
+8. SystemAnalytics processes the raw data, performing necessary calculations and transformations to produce actionable insights (e.g.,
+   statistical analysis, trend detection, pattern recognition).
+9. SystemAnalytics sends the analyzed data back to the User Interface.
+10. User Interface displays the analyzed results in an accessible format (e.g., graphs, charts, tables) to the Admin.
+11. Admin reviews the results, gaining insights into user behavior and system performance which can be used to make informed decisions about
+    system improvements, policy changes, or targeted interventions.
+
