@@ -257,6 +257,8 @@ Sequence Steps:
 
 #### Use Case "View and Bookmark Course Pathways" (U7) ####
 
+![SequenceDiagramU7.png](SequenceDiagramU7.png)
+
 **Actor**: User
 
 **System Components**: User Interface, Course, CourseBookmark, Database
@@ -284,7 +286,52 @@ Bookmarking Courses
 
 #### Use Case "Filter Courses" (U8) ####
 
+![SequenceDiagramU8.png](SequenceDiagramU8.png)
+
+**Actor**: User
+
+**System Components**: User Interface, CourseRecommendation, Database
+
+Sequence Steps:
+
+1. User accesses the course browsing or recommendation section of the application.
+2. User Interface displays various filter options (e.g., department, level, availability).
+3. User selects desired filter criteria and submits the filter request.
+4. User Interface captures the filter choices and sends them to the CourseRecommendation component.
+5. CourseRecommendation processes the request, formulating a query based on the selected criteria.
+6. CourseRecommendation sends the query to the Database to retrieve relevant courses.
+7. Database executes the query and retrieves courses that match the filter criteria.
+8. Database sends the filtered course results back to the CourseRecommendation component.
+9. CourseRecommendation processes the results, perhaps ordering or further refining them based on additional logic (like prioritizing by
+   popularity or prerequisites).
+10. CourseRecommendation sends the processed course list back to the User Interface.
+11. User Interface updates the display to show the filtered courses to the User.
+
 #### Use Case "Obtain Course Recommendation from Query" (U9) ####
+
+![SequenceDiagramU9.png](SequenceDiagramU9.png)
+
+**Actor**: User
+
+**System Components**: User Interface, Query, OpenAIAPI, CourseRecommendation, Database
+
+Sequence Steps:
+
+1. User logs into the system and navigates to the course recommendation feature.
+2. User inputs a natural language query describing their course interests or requirements in the search field provided on the User
+   Interface.
+3. User Interface captures the query and sends it to the Query component.
+4. Query component parses the query to extract essential keywords and search parameters, then sends this refined data to the OpenAIAPI.
+5. OpenAIAPI analyzes the refined query to further understand the context and intent, extracting key topics and terms relevant to courses.
+6. OpenAIAPI sends the analysis results back to the Query component.
+7. Query component forwards these results to the CourseRecommendation system.
+8. CourseRecommendation uses the received keywords and terms to formulate a database search query.
+9. CourseRecommendation sends the search query to the Database to find matching courses.
+10. Database retrieves courses that fit the criteria and sends them back to the CourseRecommendation system.
+11. CourseRecommendation processes the list, possibly ranking the courses based on relevance to the query, popularity, and other criteria.
+12. CourseRecommendation sends the final list of recommended courses to the User Interface.
+13. User Interface displays the recommended courses to the User, providing detailed information such as course descriptions, prerequisites,
+    and possible pathways.
 
 #### Use Case "Submit Course Feedback" (U10) ####
 
