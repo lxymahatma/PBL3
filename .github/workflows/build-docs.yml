@@ -5,6 +5,9 @@ on:
     branches: [ "main" ]
     paths:
       - Writerside/**
+  pull_request:
+    paths:
+      - Writerside/**
   workflow_dispatch:
 
 permissions:
