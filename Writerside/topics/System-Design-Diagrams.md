@@ -25,6 +25,7 @@
 #### Use Case "Register Account" (U1) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU1.png](SequenceDiagramU1.png)
 
 **Actor**: User
@@ -70,6 +71,7 @@
 #### Use Case "Log In" (U2) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU2.png](SequenceDiagramU2.png)
 
 **Actor**: User
@@ -103,6 +105,7 @@
 #### Use Case "View and Edit Account Information" (U3) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU3.png](SequenceDiagramU3.png)
 
 **Actor**: User
@@ -141,6 +144,7 @@
 #### Use Case "Reset Account Password" (U4) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU4.png](SequenceDiagramU4.png)
 
 **Actor**: User
@@ -191,6 +195,7 @@
 #### Use Case "Delete Account" (U5) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU5.png](SequenceDiagramU5.png)
 
 **Actor**: User
@@ -221,6 +226,7 @@ Sequence Steps:
 #### Use Case "View Academic Calendar" (U6) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagram6.png](SequenceDiagram6.png)
 
 **Actor**: User
@@ -249,6 +255,7 @@ Sequence Steps:
 #### Use Case "View and Bookmark Course Pathways" (U7) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU7.png](SequenceDiagramU7.png)
 
 **Actor**: User
@@ -291,6 +298,7 @@ Bookmarking Courses
 #### Use Case "Filter Courses" (U8) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU8.png](SequenceDiagramU8.png)
 
 **Actor**: User
@@ -319,6 +327,7 @@ Sequence Steps:
 #### Use Case "Obtain Course Recommendation from Query" (U9) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU9.png](SequenceDiagramU9.png)
 
 **Actor**: User
@@ -350,6 +359,7 @@ Sequence Steps:
 #### Use Case "Submit Course Feedback" (U10) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU10.png](SequenceDiagramU10.png)
 
 **Actor**: User
@@ -372,7 +382,7 @@ Sequence Steps:
 11. Feedback component notifies the User Interface of the successful feedback submission.
 12. User Interface displays a confirmation message to the User thanking them for their feedback.
 
-**Activity Digrams**
+**Activity Diagrams**
 
 ![ActivityDiagramU10.png](ActivityDiagramU10.png)
 
@@ -389,6 +399,7 @@ Sequence Steps:
 #### Use Case "Access and Analyze User Data" (U11) ####
 
 **Sequence Diagram**
+
 ![SequenceDiagramU11.png](SequenceDiagramU11.png)
 
 **Actor**: Admin
