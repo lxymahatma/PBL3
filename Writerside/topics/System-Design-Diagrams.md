@@ -132,6 +132,8 @@
 
 **Activity Diagram**
 
+![ActivityDiagramU3.png](ActivityDiagramU3.png)
+
 #### Use Case "Reset Account Password" (U4) ####
 
 **Sequence Diagram**
@@ -234,17 +236,11 @@ Sequence Steps:
 
 **Activity Diagram**
 
+![ActivityDiagramU6.png](ActivityDiagramU6.png)
+
 1. User requests to view academic calendar
 2. System gets academic calendar data
-3. System displays key dates
-4. System gets current term
-5. System adjusts available courses based on current term
-6. System displays available courses
-7. User selects courses
-8. System aligns course selectionw ith academic calendar
-9. SYstem checks for scheduling conflicts
-10. If there are conflicts detected, the system returns to display available courses
-11. If there are no conlficts, the system confirms schedule
+3. System displays academic calendar
 
 #### Use Case "View and Bookmark Course Pathways" (U7) ####
 
