@@ -251,6 +251,8 @@ The use case describes the process of a user logging into the system.
 
 ### Use Case "View and Edit Account Information" (U3)
 
+![ClassDiagramU3.png](ClassDiagramU3.png)
+
 **Sequence Diagram**
 
 ![SequenceDiagramU3.png](SequenceDiagramU3.png)
