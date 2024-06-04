@@ -54,6 +54,15 @@
 
 ![ActivityDiagramU1.jpg](ActivityDiagramU1.jpg)
 
+1. Open the register account page
+2. Users will be prompted to enter basic information. Such as, email, password, username, basic information.
+3. The system will verify the email address entered by the user.
+4. If the email exists, the user can go to the next step.
+5. If not the system will go back to the register account page.
+6. The system will ask the user whether they agree to our terms of use.
+7. If the user agrees to the terms, account registration will be completed.
+8. If the user does not agree to the terms, registration will fail and return to the register account page.
+
 #### Use Case "Log In" (U2) ####
 
 **Sequence Diagram**
@@ -161,6 +170,16 @@
 
 **Activity Diagram**
 
+1. Open the forgot password page.
+2. The user can enter email address or username to connect the account.
+3. The system will confirm whether the account exists.
+4. If the account not exists, the system will return to the beginning.
+5. If the account exists, the system will send a password reset link to user’s email address. Password reset link will be valid for one
+   hour.
+6. If user enter it in time, the they can reset the password.
+7. If not the user will not able to reset the password, and go back to the forgot password page.
+8. After reset the password the system will show the confirm password reset message.
+
 #### Use Case "Delete Account" (U5) ####
 
 **Sequence Diagram**
@@ -213,6 +232,18 @@ Sequence Steps:
 
 **Activity Diagram**
 
+1. User requests to view academic calendar
+2. System gets academic calendar data
+3. System displays key dates
+4. System gets current term
+5. System adjusts available courses based on current term
+6. System displays available courses
+7. User selects courses
+8. System aligns course selectionw ith academic calendar
+9. SYstem checks for scheduling conflicts
+10. If there are conflicts detected, the system returns to display available courses
+11. If there are no conlficts, the system confirms schedule
+
 #### Use Case "View and Bookmark Course Pathways" (U7) ####
 
 **Sequence Diagram**
@@ -244,6 +275,14 @@ Bookmarking Courses
 6. User Interface notifies the User that the courses have been successfully bookmarked.
 
 **Activity Diagram**
+
+1. User views recommended courses
+2. User selects course to bookmark
+3. System saves course to bookmark list
+4. User accesses bookmark section
+5. System displays bookmarked courses
+6. If user removes course from bookmark, system returns to the viewing recommended courses page
+7. If user adds courses to bookmark, system updates bookmark list
 
 #### Use Case "Filter Courses" (U8) ####
 
@@ -327,6 +366,16 @@ Sequence Steps:
 
 **Activity Digrams**
 
+1. User completes a course
+2. User enters rating from a scale of 1 to 5
+3. Users have the option to leave written reviews
+4. User submits course feedback
+5. System filters inappropriate language/spam
+6. If feedback is inappropriate, the system goes back to the leave written review page
+7. If feedback is appropriate, feedback will be stores by the system
+8. System aggregates ratings
+9. System displays ratings and reviews
+
 #### Use Case "Access and Analyze User Data" (U11) ####
 
 **Sequence Diagram**
@@ -354,3 +403,14 @@ Sequence Steps:
     system improvements, policy changes, or targeted interventions.
 
 **Activity Diagram**
+
+![ActivityDiagramU11.jpg](ActivityDiagramU11.jpg)
+
+1. University official open the access user data page.
+2. The user select which data they want to access (User data or Course data).
+3. Selecting user data, the user can view user information and user data analyzed by the system.
+4. Selecting course data, the user can view course information and course data analyzed by the system.
+5. Users end this access.
+6. The user can choose to access other data or end visit the access user data page.
+7. If user want to access other data, the system will return to select data stage.
+8. If user want to end visit the activity end.
