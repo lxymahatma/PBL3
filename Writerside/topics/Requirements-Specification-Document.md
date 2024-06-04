@@ -205,10 +205,10 @@ errors without total system failure and with minimal downtime.
 * **FR-4.7**: Users **should** be able to post replies to any thread.
 * **FR-4.8**: The system **should** allow replies to include text, links, and images.
 * **FR-4.9**: The system **should** allow users to edit their own posts and threads.
-* **FR-4.10**: There **should** be a 30 minutes time limit after posting within which edits can be made.
+* **FR-4.10**: The system **should** allow users to edit their own posts and threads anytime.
 * **FR-4.11**: Edited posts **should** display an "edited" label with the edit timestamp.
 * **FR-4.12**: The system **should** implement moderation tools to manage the content and enforce forum rules.
-* **FR-4.13**: Moderators **should** be able to delete or edit any post or thread.
+* **FR-4.13**: Moderators **should** be able to delete any post or thread.
 * **FR-4.14**: Moderators **should** be able to ban users who violate forum rules.
 * **FR-4.15**: The system **should** support reporting posts to moderators for review.
 * **FR-4.16**: The system **should** allow users to rate posts and mark answers as helpful.
