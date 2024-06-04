@@ -209,13 +209,9 @@ errors without total system failure and with minimal downtime.
 * **FR-4.9**: The system **should** allow users to edit their own posts and threads.
 * **FR-4.10**: The system **should** allow users to edit their own posts and threads anytime.
 * **FR-4.11**: Edited posts **should** display an "edited" label with the edit timestamp.
-* **FR-4.12**: The system **should** implement moderation tools to manage the content and enforce forum rules.
-* **FR-4.13**: Moderators **should** be able to delete any post or thread.
-* **FR-4.14**: Moderators **should** be able to ban users who violate forum rules.
-* **FR-4.15**: The system **should** support reporting posts to moderators for review.
-* **FR-4.16**: The system **should** allow users to rate posts and mark answers as helpful.
-* **FR-4.17**: Users **should** be able to upvote or downvote posts.
-* **FR-4.18**: The total score of each post **should** be visible next to it.
+* **FR-4.12**: The system **should** allow users to rate posts and mark answers as helpful.
+* **FR-4.13**: Users **should** be able to upvote or downvote posts.
+* **FR-4.14**: The total score of each post **should** be visible next to it.
 
 #### FR-5 - Course Recommendation
 
