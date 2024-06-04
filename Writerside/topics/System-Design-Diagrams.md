@@ -117,6 +117,8 @@
 
 ## Component Diagram
 
+![Component_Diagram.png](Component_Diagram.png)
+
 ## Use cases
 
 ![UseCaseDiagram](UseCaseDiagram.png)
