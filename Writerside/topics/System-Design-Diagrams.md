@@ -310,6 +310,8 @@ Sequence Steps:
 
 **Activity Diagram**
 
+![ActivityDiagramU8.png](ActivityDiagramU8.png)
+
 #### Use Case "Obtain Course Recommendation from Query" (U9) ####
 
 **Sequence Diagram**
@@ -338,6 +340,8 @@ Sequence Steps:
     and possible pathways.
 
 **Activity Diagram**
+
+![ActivityDiagramU9.png](ActivityDiagramU9.png)
 
 #### Use Case "Submit Course Feedback" (U10) ####
 
