@@ -170,6 +170,8 @@
 
 **Activity Diagram**
 
+![ActivityDiagramU4.jpg](ActivityDiagramU4.jpg)
+
 1. Open the forgot password page.
 2. The user can enter email address or username to connect the account.
 3. The system will confirm whether the account exists.
@@ -276,6 +278,8 @@ Bookmarking Courses
 
 **Activity Diagram**
 
+![ActivityDiagramU7.png](ActivityDiagramU7.png)
+
 1. User views recommended courses
 2. User selects course to bookmark
 3. System saves course to bookmark list
@@ -365,6 +369,8 @@ Sequence Steps:
 12. User Interface displays a confirmation message to the User thanking them for their feedback.
 
 **Activity Digrams**
+
+![ActivityDiagramU10.png](ActivityDiagramU10.png)
 
 1. User completes a course
 2. User enters rating from a scale of 1 to 5
