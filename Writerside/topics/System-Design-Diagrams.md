@@ -132,7 +132,7 @@
 
 **Activity Diagram**
 
-![ActivityDiagramU3.png](ActivityDiagramU3.png)
+![ActivtyDiagramU3.1.png](ActivtyDiagramU3.1.png)
 
 #### Use Case "Reset Account Password" (U4) ####
 
