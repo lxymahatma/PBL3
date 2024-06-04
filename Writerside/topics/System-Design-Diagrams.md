@@ -1,5 +1,7 @@
 # System Design Diagrams
 
+## Component Diagram
+
 ## Use cases
 
 ![UseCaseDiagram](UseCaseDiagram.png)
@@ -433,3 +435,7 @@ Sequence Steps:
 6. The user can choose to access other data or end visit the access user data page.
 7. If user want to access other data, the system will return to select data stage.
 8. If user want to end visit the activity end.
+
+#### Use Case "Create and Delete Thread" (U12) ####
+
+#### Use Case "Create, Edit, Reply, and Delete Post " (U13) ####
