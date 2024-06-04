@@ -34,39 +34,48 @@
 
 **Sequence Steps**:
 
-1. User initiates the registration process by accessing the registration form on the User Interface.
-2. User fills out the registration form with necessary details (username, password, email, etc.).
-3. User Interface sends the filled-out registration form data to the AuthenticationService.
-4. AuthenticationService receives the registration data and performs initial validations:
-    - Validates the format of the email.
-    - Checks if the password meets the security criteria.
-    - Ensures the username is not already taken (involves a quick check with the Database).
-5. If any validation fails, AuthenticationService sends an error message back to the User Interface, which then displays it to the User.
-6. If all validations pass, AuthenticationService hashes the password and prepares the data for database entry.
-7. AuthenticationService sends the validated and processed data to the Database to create a new user record.
-8. Database attempts to create a new record:
-    - Checks for uniqueness constraints again (to prevent race conditions).
-    - If successful, confirms the creation of the user account.
-    - If it fails (e.g., due to a username now being taken), it sends a failure message back to the AuthenticationService.
-9. AuthenticationService receives the response from the Database:
-    - If the account creation is successful, it sends a success notification to the User Interface.
-    - If the account creation fails, it sends the appropriate error message to the User Interface.
-10. User Interface receives the final response and informs the User:
-    - Displays a success message and possibly directs the user to a login page or a confirmation email is sent.
-    - Displays an error message if the registration failed, asking the user to try different credentials or contact support.
+| Step | Description                                                                                                  |
+|------|--------------------------------------------------------------------------------------------------------------|
+| 1    | User initiates the registration process by accessing the registration form on the User Interface.            |
+| 2    | User fills out the registration form with necessary details (username, password, email, etc.).               |
+| 3    | User Interface sends the filled-out registration form data to the AuthenticationService.                     |
+| 4    | AuthenticationService receives the registration data and performs initial validations:                       |
+|      | - Validates the format of the email.                                                                         |
+|      | - Checks if the password meets the security criteria.                                                        |
+|      | - Ensures the username is not already taken (involves a quick check with the Database).                      |
+| 5    | If any validation fails, AuthenticationService sends an error message back to the User Interface, which then |
+|      | displays it to the User.                                                                                     |
+| 6    | If all validations pass, AuthenticationService hashes the password and prepares the data for database entry. |
+| 7    | AuthenticationService sends the validated and processed data to the Database to create a new user record.    |
+| 8    | Database attempts to create a new record:                                                                    |
+|      | - Checks for uniqueness constraints again (to prevent race conditions).                                      |
+|      | - If successful, confirms the creation of the user account.                                                  |
+|      | - If it fails (e.g., due to a username now being taken), it sends a failure message back to the              |
+|      | AuthenticationService.                                                                                       |
+| 9    | AuthenticationService receives the response from the Database:                                               |
+|      | - If the account creation is successful, it sends a success notification to the User Interface.              |
+|      | - If the account creation fails, it sends the appropriate error message to the User Interface.               |
+| 10   | User Interface receives the final response and informs the User:                                             |
+|      | - Displays a success message and possibly directs the user to a flush page or a confirmation email is sent.  |
+|      | - Displays an error message if the registration failed, asking the user to try different credentials or      |
+|      | contact support.                                                                                             |
 
 **Activity Diagram**
 
 ![ActivityDiagramU1.jpg](ActivityDiagramU1.jpg)
 
-1. Open the register account page
-2. Users will be prompted to enter basic information. Such as, email, password, username, basic information.
-3. The system will verify the email address entered by the user.
-4. If the email exists, the user can go to the next step.
-5. If not the system will go back to the register account page.
-6. The system will ask the user whether they agree to our terms of use.
-7. If the user agrees to the terms, account registration will be completed.
-8. If the user does not agree to the terms, registration will fail and return to the register account page.
+**Activity Steps**:
+
+| Step | Description                                                                                             |
+|------|---------------------------------------------------------------------------------------------------------|
+| 1    | Open the register account page.                                                                         |
+| 2    | Users will be prompted to enter basic information such as email, password, username, and other details. |
+| 3    | The system will verify the email address entered by the user.                                           |
+| 4    | If the email exists, the user can go to the next step.                                                  |
+| 5    | If not, the system will go back to the register account day.                                            |
+| 6    | The system will ask the user whether they agree to our terms of use.                                    |
+| 7    | If the user agrees to the terms, account registration will be completed.                                |
+| 8    | If the user does not agree to the sales, registration will fail and return to the register account day. |
 
 ### Use Case "Log In" (U2)
 
