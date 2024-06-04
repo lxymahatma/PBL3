@@ -50,7 +50,9 @@
     - Displays a success message and possibly directs the user to a login page or a confirmation email is sent.
     - Displays an error message if the registration failed, asking the user to try different credentials or contact support.
 
-**Activity Diagrams**
+**Activity Diagram**
+
+![ActivityDiagramU1.jpg](ActivityDiagramU1.jpg)
 
 #### Use Case "Log In" (U2) ####
 
@@ -83,7 +85,7 @@
     - Displays a welcome message and transitions the user to the dashboard or homepage if login is successful.
     - Displays an error message if the login failed, offering the user the option to try again or reset their password.
 
-**Activity Diagrams**
+**Activity Diagram**
 
 #### Use Case "View and Edit Account Information" (U3) ####
 
@@ -119,7 +121,7 @@
 7. UserProfile receives the confirmation and notifies the User Interface of the successful update.
 8. User Interface informs the User that their information has been successfully updated.
 
-**Activity Diagrams**
+**Activity Diagram**
 
 #### Use Case "Reset Account Password" (U4) ####
 
@@ -157,7 +159,7 @@
 15. AuthenticationService notifies the User Interface of the successful password reset.
 16. User Interface informs the User that their password has been successfully reset and redirects them to the login page.
 
-**Activity Diagrams**
+**Activity Diagram**
 
 #### Use Case "Delete Account" (U5) ####
 
@@ -187,7 +189,7 @@ Sequence Steps:
 10. AuthenticationService informs the User Interface that the account has been successfully deleted.
 11. User Interface notifies the User that their account has been deleted and logs them out of the system.
 
-**Activity Diagrams**
+**Activity Diagram**
 
 #### Use Case "View Academic Calendar" (U6) ####
 
@@ -209,7 +211,7 @@ Sequence Steps:
 7. User Interface displays the academic calendar to the User, allowing them to view important academic dates, such as semester start and end
    dates, exam periods, holidays, and registration deadlines.
 
-**Activity Diagrams**
+**Activity Diagram**
 
 #### Use Case "View and Bookmark Course Pathways" (U7) ####
 
@@ -241,7 +243,7 @@ Bookmarking Courses
 5. CourseBookmark component confirms the successful bookmarking to the User Interface.
 6. User Interface notifies the User that the courses have been successfully bookmarked.
 
-**Activity Diagrams**
+**Activity Diagram**
 
 #### Use Case "Filter Courses" (U8) ####
 
@@ -267,7 +269,7 @@ Sequence Steps:
 10. CourseRecommendation sends the processed course list back to the User Interface.
 11. User Interface updates the display to show the filtered courses to the User.
 
-**Activity Diagrams**
+**Activity Diagram**
 
 #### Use Case "Obtain Course Recommendation from Query" (U9) ####
 
@@ -296,7 +298,7 @@ Sequence Steps:
 13. User Interface displays the recommended courses to the User, providing detailed information such as course descriptions, prerequisites,
     and possible pathways.
 
-**Activity Diagrams**
+**Activity Diagram**
 
 #### Use Case "Submit Course Feedback" (U10) ####
 
@@ -351,4 +353,4 @@ Sequence Steps:
 11. Admin reviews the results, gaining insights into user behavior and system performance which can be used to make informed decisions about
     system improvements, policy changes, or targeted interventions.
 
-**Activity Diagrams**
+**Activity Diagram**

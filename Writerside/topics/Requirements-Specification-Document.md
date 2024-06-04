@@ -172,7 +172,7 @@ errors without total system failure and with minimal downtime.
 * **FR-1.3**: The system **shall** support secure login with email and password
 * **FR-1.4**: The system **shall** provide a password recovery mechanism for users to reset forgotten passwords via email.
 * **FR-1.5**: Users **shall** register using their email, password, and basic profile information.
-* **FR-1.6**: The system **should** collect citizens consent to our terms of use.
+* **FR-1.6**: The system **should** collect users consent to our terms of use.
 
 #### FR-2 - Reset Password
 
