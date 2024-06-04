@@ -139,7 +139,7 @@
 
 **Activity Diagram**
 
-![ActivityDiagramU3.1.png](ActivtyDiagramU3.1.png)
+![ActivtyDiagramU3.1.png](ActivtyDiagramU3.1.png)
 
 ### Use Case "Reset Account Password" (U4)
 
@@ -438,4 +438,138 @@ Sequence Steps:
 
 ### Use Case "Create and Delete Thread" (U12)
 
-### Use Case "Create, Edit, Reply, and Delete Post " (U13)
+Creating a Thread
+
+**Sequence Diagram**
+
+![SequenceDiagramU12.1.png](SequenceDiagramU12.1.png)
+
+**Actor**: User
+
+**System Components**: User Interface, Forum Management, Database
+
+Sequence Steps:
+
+1. User Authentication: The user logs into the system.
+2. Access Community Forum: The user navigates to the community forums section of the interface.
+3. Initiate Thread Creation: The user clicks on the "Create New Thread" button or link.
+4. Enter Thread Details: The user enters the title and description of the thread. Additional options like tagging relevant course codes or
+   topics may be available.
+5. Submit Thread: After entering all necessary information, the user submits the thread for posting.
+6. Confirmation: The system displays a confirmation message indicating that the thread has been successfully created.
+7. View Thread: The new thread is now visible in the forum for other users to view and respond to.
+
+Deleting a Thread
+
+**Sequence Diagram**
+
+![SequenceDiagramU12.2.png](SequenceDiagramU12.2.png)
+
+**Actor**: User
+
+**System Components**: User Interface, Forum Management, Database
+
+Sequence Steps:
+
+1. User Authentication: Confirm that the user is logged in (could be verified continuously through session management).
+2. Navigate to Thread: The user locates the thread they wish to delete. This might involve navigating through their profile to find threads
+   they've started or directly accessing the thread through the forum.
+3. Select Delete Option: The user selects the "Delete" option on the thread. This may be an icon or a link, typically located near the
+   thread title or at the end of the first post.
+4. Confirm Deletion: The system prompts the user to confirm the deletion to prevent accidental removals. The user must confirm their intent
+   to delete the thread.
+5. Deletion Process: Upon confirmation, the system deletes the thread.
+6. Confirmation of Deletion: The user receives a message confirming that the thread has been successfully deleted.
+7. Update Forum Display: The thread is removed from the forum display, and the user is redirected back to the forum homepage or their
+   profile page.
+
+#### Use Case "Create, Edit, Reply, and Delete Post " (U13) ####
+
+**Actor**: User
+
+**System Components**: User Interface, PostManagement, Database
+
+Sequence Steps:
+
+Creating a Post
+
+1. User logs into the system and navigates to a specific thread in the community forum.
+    - User Interface displays the thread with existing posts and an option to add a new post.
+
+2. User selects the option to create a new post.
+    - User Interface presents a form for entering the post's content.
+
+3. User enters details for the new post and submits the form.
+    - User Interface captures the input data and sends it to the PostManagement component.
+
+4. PostManagement validates the post details and sends a create request to the Database.
+    - Checks for any inappropriate content or format errors.
+
+5. Database stores the new post and confirms the creation back to PostManagement.
+    - The Database records the post, assigns it an identifier, and links it to the thread.
+
+6. PostManagement receives the confirmation and notifies the User Interface of the successful creation.
+    - Includes a success message and details about the new post (e.g., post ID, timestamp).
+
+7. User Interface displays the newly created post within the thread and confirms to the User.
+    - User can see their post live in the thread, available for others to view and respond to.
+
+#### Editing a Post ####
+
+1. User selects the edit option on their own post.
+    - User Interface provides an editable form pre-filled with the existing post content.
+
+2. User modifies the content and submits the updated information.
+    - User Interface sends the updated content to the PostManagement.
+
+3. PostManagement validates the updated details and sends an update request to the Database.
+    - Verifies the edited content for format and appropriateness.
+
+4. Database updates the post details and confirms the update back to PostManagement.
+    - The Database modifies the post record and confirms the update.
+
+5. PostManagement receives the update confirmation and informs the User Interface.
+    - Sends a message indicating successful update.
+
+6. User Interface updates the post display and notifies the User of the successful edit.
+    - User sees the updated content in place of the old one in the thread.
+
+#### Replying to a Post ####
+
+1. User selects the reply option on a post.
+    - User Interface provides a form for entering the reply content.
+
+2. User writes their reply and submits it.
+    - User Interface captures the reply and forwards it to PostManagement.
+
+3. PostManagement processes the reply, attaching it to the original post, and sends it to the Database.
+    - Ensures the reply is linked to the correct post.
+
+4. Database stores the reply and links it under the original post, confirming back to PostManagement.
+    - The Database records the reply as a child of the original post.
+
+5. PostManagement confirms the successful addition of the reply to the User Interface.
+    - A success message is sent to the User Interface.
+
+6. User Interface displays the new reply under the original post and confirms to the User.
+    - The thread is updated to show the reply inline with the discussion.
+
+#### Deleting a Post ####
+
+1. User selects the delete option on their post.
+    - User Interface asks the User to confirm the deletion to prevent accidental removals.
+
+2. Upon confirmation, User Interface sends the delete request to PostManagement.
+    - The request includes the post ID and user verification.
+
+3. PostManagement verifies the User's authority to delete the post and sends a delete command to the Database.
+    - Checks if the User is the owner of the post or has moderator rights.
+
+4. Database deletes the post and returns a confirmation of deletion to PostManagement.
+    - The Database removes the post from its records.
+
+5. PostManagement receives the deletion confirmation and notifies the User Interface.
+    - Confirmation ensures the process was completed correctly.
+
+6. User SuperInterface updates to reflect the deletion of the post and informs the User.
+    - The forum display is refreshed to show that the post is no longer available.
