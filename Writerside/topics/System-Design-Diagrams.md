@@ -1,5 +1,92 @@
 # System Design Diagrams
 
+## Classes
+
+### User Class
+
+| **Attributes**    | **Methods**            |
+|-------------------|------------------------|
+| - string UserName | + void Register()      |
+| - string Password | + void Login()         |
+| - string Email    | + void ResetPassword() |
+| - bool IsAdmin    | + void DeleteAccount() |
+
+### Student Class (inherits from User)
+
+| **Attributes**  | **Methods**                  |
+|-----------------|------------------------------|
+| - int StudentId | (inherits methods from User) |
+
+### Admin Class (inherits from User)
+
+| **Attributes**             | **Methods**                  |
+|----------------------------|------------------------------|
+| (no additional attributes) | (inherits methods from User) |
+
+### UserService Class
+
+| **Attributes**                     | **Methods**                               |
+|------------------------------------|-------------------------------------------|
+| - ILogger Logger                   | + bool Register(User user)                |
+| - IDatabaseService DatabaseService | + bool Login(string key, string password) |
+| - User User                        | + bool Delete()                           |
+|                                    | + bool ResetPassword()                    |
+
+### DatabaseService Class
+
+| **Attributes**   | **Methods**                     |
+|------------------|---------------------------------|
+| - ILogger Logger | + User[] GetUsersFromDatabase() |
+|                  | + User GetUserByKey(string key) |
+|                  | + bool SaveUser(User user)      |
+
+### RegisterPage Class
+
+| **Attributes**                 | **Methods**                               |
+|--------------------------------|-------------------------------------------|
+| - IRegisterViewModel ViewModel | + void DisplayRegistrationForm()          |
+|                                | + void CaptureUserInput()                 |
+|                                | + void ShowErrorMessage(string message)   |
+|                                | + void ShowSuccessMessage(string message) |
+
+### RegisterViewModel Class (implements IRegisterViewModel)
+
+| **Attributes**             | **Methods**           |
+|----------------------------|-----------------------|
+| - string UserName          | + void RegisterUser() |
+| - string Password          |                       |
+| - string Email             |                       |
+| - IUserService UserService |                       |
+
+### IRegisterViewModel Interface
+
+| **Methods**           |
+|-----------------------|
+| + void RegisterUser() |
+
+### LoginPage Class
+
+| **Attributes**              | **Methods**                               |
+|-----------------------------|-------------------------------------------|
+| - ILoginViewModel ViewModel | + void DisplayLoginForm()                 |
+|                             | + void CaptureUserInput()                 |
+|                             | + void ShowErrorMessage(string message)   |
+|                             | + void ShowSuccessMessage(string message) |
+
+### LoginViewModel Class (implements ILoginViewModel)
+
+| **Attributes**             | **Methods**        |
+|----------------------------|--------------------|
+| - string UserName          | + bool LoginUser() |
+| - string Password          |                    |
+| - IUserService UserService |                    |
+
+### ILoginViewModel Interface
+
+| **Methods**        |
+|--------------------|
+| + bool LoginUser() |
+
 ## Component Diagram
 
 ## Use cases
@@ -23,6 +110,30 @@
 | U13    | Create, Edit, Reply, and Delete Post    | Users can create, edit, reply and delete posts.        |
 
 ### Use Case "Register Account" (U1)
+
+**Class Diagram**
+
+![ClassDiagramU1.png](ClassDiagramU1.png)
+
+| **Use Case ID**          | U1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | Register Account                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Description**          | This use case allows a user to register a new account in the system. The user provides necessary details, which are validated and stored in the system.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Actors**               | User, UserService, DatabaseService, RegisterPage, RegisterViewModel, IRegisterViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Preconditions**        | The user is on the registration page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Postconditions**       | The user account is created and stored in the database. The user is informed of successful registration.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Normal Flow**          | 1. User selects "Register" option on the application interface.<br>2. System presents a registration form on the User Interface.<br>3. User enters registration details.<br>4. User Interface captures the data and validates the input.<br>5. User Interface sends data to UserService.<br>6. UserService validates the data.<br>7. UserService sends validated data to DatabaseService.<br>8. DatabaseService stores the user data.<br>9. UserService confirms the successful registration to the User Interface.<br>10. User Interface displays a success message to the user. |
+| **Alternative Flow**     | **Invalid Input**:<br>1. If the input data is invalid, UserService returns an error message.<br>2. User Interface displays the error message and prompts the user to correct the input.<br>3. User corrects the input and resubmits the form.<br>4. The system processes the corrected input as described in the Normal Flow.                                                                                                                                                                                                                                                     |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the registration process, an error message is displayed to the user.<br>2. The user may try to register again later.                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Special Requirements** | The system should ensure the registration form is easy to use and accessible. The data should be validated for correctness and completeness before submission.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Assumptions**          | The user has access to the registration page and intends to create a new account.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+
+**Associations and Multiplicities**
+
+- **UserService** is associated with **DatabaseService** (1:1).
+- **UserService** can manage multiple **User** instances (1:many).
+- **RegisterPage** is associated with **RegisterViewModel** (1:1).
+- **RegisterViewModel** is associated with **UserService** (1:1).
 
 **Sequence Diagram**
 
@@ -75,6 +186,37 @@
 | 8    | If the user does not agree to the sales, registration will fail and return to the register account day. |
 
 ### Use Case "Log In" (U2)
+
+**Class Diagram**
+
+![ClassDiagramU2.png](ClassDiagramU2.png)\
+
+# Use Case Documentation for U2: Log In
+
+## Overview
+
+The use case describes the process of a user logging into the system.
+
+| **Use Case ID**          | U2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | Log In                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Description**          | This use case allows a user to log into the system using their credentials. The user provides their username and password, which are validated against stored data.                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Actors**               | User, UserService, DatabaseService, LoginPage, LoginViewModel, ILoginViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Preconditions**        | The user has an existing account and is on the login page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Postconditions**       | The user is authenticated and granted access to the system.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Normal Flow**          | 1. User selects "Log In" option on the application interface.<br>2. System presents a login form on the User Interface.<br>3. User enters their username and password.<br>4. User Interface captures the data and sends it to UserService.<br>5. UserService validates the credentials.<br>6. UserService sends a request to DatabaseService to verify the user.<br>7. DatabaseService checks the credentials and confirms authentication.<br>8. UserService confirms successful authentication to the User Interface.<br>9. User Interface grants access to the user. |
+| **Alternative Flow**     | **Invalid Credentials**:<br>1. If the credentials are invalid, UserService returns an error message.<br>2. User Interface displays the error message and prompts the user to try again.<br>3. User re-enters credentials and resubmits the form.<br>4. The system processes the new input as described in the Normal Flow.                                                                                                                                                                                                                                             |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the login process, an error message is displayed to the user.<br>2. The user may try to log in again later.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Special Requirements** | The system should ensure the login form is secure and protects against common security vulnerabilities such as SQL injection and brute force attacks.                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Assumptions**          | The user has valid login credentials.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Notes and Issues**     | Future enhancements might include adding multi-factor authentication for additional security.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+
+## Associations and Multiplicities
+
+- **UserService** is associated with **DatabaseService** (1:1).
+- **UserService** can manage multiple **User** instances (1:many).
+- **LoginPage** is associated with **LoginViewModel** (1:1).
+- **LoginViewModel** is associated with **UserService** (1:1).
 
 **Sequence Diagram**
 
