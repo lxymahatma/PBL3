@@ -366,7 +366,7 @@ Sequence Steps:
 
 **System Components**: User Interface, Feedback, Database
 
-Sequence Steps:
+**Sequence Steps**:
 
 1. User completes a course and decides to provide feedback.
 2. User navigates to the feedback section of the course in the User Interface.
@@ -406,7 +406,7 @@ Sequence Steps:
 
 **System Components**: User Interface, SystemAnalytics, Database
 
-Sequence Steps:
+**Sequence Steps**:
 
 1. Admin logs into the system and navigates to the dashboard for user data analysis.
 2. User Interface presents options for selecting specific data sets (e.g., user engagement metrics, feedback, course completion rates) and
@@ -438,7 +438,7 @@ Sequence Steps:
 
 ### Use Case "Create and Delete Thread" (U12)
 
-Creating a Thread
+**Creating a Thread**
 
 **Sequence Diagram**
 
@@ -448,7 +448,7 @@ Creating a Thread
 
 **System Components**: User Interface, Forum Management, Database
 
-Sequence Steps:
+**Sequence Steps**:
 
 1. User Authentication: The user logs into the system.
 2. Access Community Forum: The user navigates to the community forums section of the interface.
@@ -459,7 +459,7 @@ Sequence Steps:
 6. Confirmation: The system displays a confirmation message indicating that the thread has been successfully created.
 7. View Thread: The new thread is now visible in the forum for other users to view and respond to.
 
-Deleting a Thread
+**Deleting a Thread**
 
 **Sequence Diagram**
 
@@ -469,7 +469,7 @@ Deleting a Thread
 
 **System Components**: User Interface, Forum Management, Database
 
-Sequence Steps:
+**Sequence Steps**:
 
 1. User Authentication: Confirm that the user is logged in (could be verified continuously through session management).
 2. Navigate to Thread: The user locates the thread they wish to delete. This might involve navigating through their profile to find threads
@@ -483,15 +483,19 @@ Sequence Steps:
 7. Update Forum Display: The thread is removed from the forum display, and the user is redirected back to the forum homepage or their
    profile page.
 
-#### Use Case "Create, Edit, Reply, and Delete Post " (U13) ####
+#### Use Case "Create, Edit, Reply, and Delete Post" (U13) ####
+
+**Creating a Post**
+
+**Sequence Diagram**
+
+![SequenceDiagramU13.1.png](SequenceDiagramU13.1.png)
 
 **Actor**: User
 
-**System Components**: User Interface, PostManagement, Database
+**System Components**: User Interface, Post Management, Database
 
-Sequence Steps:
-
-Creating a Post
+**Sequence Steps**
 
 1. User logs into the system and navigates to a specific thread in the community forum.
     - User Interface displays the thread with existing posts and an option to add a new post.
@@ -514,7 +518,15 @@ Creating a Post
 7. User Interface displays the newly created post within the thread and confirms to the User.
     - User can see their post live in the thread, available for others to view and respond to.
 
-#### Editing a Post ####
+**Editing a Post**
+
+![SequenceDiagramU13.2.png](SequenceDiagramU13.2.png)
+
+**Actor**: User
+
+**System Components**: User Interface, Post Management, Database
+
+Sequence Steps:
 
 1. User selects the edit option on their own post.
     - User Interface provides an editable form pre-filled with the existing post content.
@@ -536,6 +548,8 @@ Creating a Post
 
 #### Replying to a Post ####
 
+![SequenceDiagramU13.3.png](SequenceDiagramU13.3.png)
+
 1. User selects the reply option on a post.
     - User Interface provides a form for entering the reply content.
 
@@ -555,6 +569,8 @@ Creating a Post
     - The thread is updated to show the reply inline with the discussion.
 
 #### Deleting a Post ####
+
+![SequenceDiagramU13.4.png](SequenceDiagramU13.4.png)
 
 1. User selects the delete option on their post.
     - User Interface asks the User to confirm the deletion to prevent accidental removals.
