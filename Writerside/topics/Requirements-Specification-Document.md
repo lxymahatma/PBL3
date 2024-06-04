@@ -69,6 +69,8 @@ for more detail.
 | U9     | Obtain Course Recommendation from Query | Gain course recommendations from query.                |
 | U10    | Submit Course Feedback                  | Submit course feedback in the system.                  |
 | U11    | Access and Analyze User Data            | University officials can access and analyze user data. |
+| U12    | Create and Delete Thread                | Users can create and delete threads.                   |
+| U13    | Create, Edit, Reply, and Delete Post    | Users can create, edit, reply and delete posts.        |
 
 ## 4. User Requirements
 
