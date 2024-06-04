@@ -1,66 +1,6 @@
 # System Design Diagrams
 
-## Class Diagram
-
-![ClassDiagram.png](ClassDiagram.png)
-
-1. User
-    - Attributes: Username, Password, Email
-    - Methods: Login(), Logout(), Register(), DeleteUser()
-
-2. UserProfile
-    - Attributes: FirstName, LastName, UserPreferences, AcademicLevel
-    - Methods: UpdateProfile(), ViewProfile()
-
-3. Course
-    - Attributes: CourseID, CourseName, Description, Credits, Prerequisites
-    - Methods: GetCourseDetails(), UpdateCourseInfo()
-
-4. CourseRecommendation
-    - Attributes: RecommendationList
-    - Methods: GenerateRecommendations(Query), FilterResults(Criteria)
-
-5. Query
-    - Attributes: QueryString, SearchParameters
-    - Methods: ParseQuery(), ExecuteSearch()
-
-6. OpenAIAPI
-    - Attributes: Models, Configuration
-    - Methods: AnalyzeText(Input), ExtractKeywords()
-
-7. Feedback
-    - Attributes: FeedbackID, Rating, Comments, Username, CourseID
-    - Methods: SubmitFeedback(), EditFeedback()
-
-8. Forum
-    - Attributes: ForumID, Title, Description
-    - Methods: CreateThread(), DeleteThread(), PostReply()
-
-9. ForumThread
-    - Attributes: ThreadID, Title, CreatorID, CreationDate
-    - Methods: EditThread(), ViewThread()
-
-10. ForumPost
-    - Attributes: PostID, ThreadID, Content, PostTime
-    - Methods: EditPost(), DeleteParent()
-
-11. CourseBookmark
-    - Attributes: Username, CourseID, BookmarkDate
-    - Methods: AddBookmark(), RemoveBookmark()
-
-12. Admin
-    - Attributes: AdminID, AdminLevel
-    - Methods: ViewUserData(), ModifyCourseInfo()
-
-13. SystemAnalytics
-    - Attributes: DataLogs, AccessRecords
-    - Methods: GenerateReport(), AnalyzeTrends()
-
-14. AuthenticationService
-    - Attributes: SecurityProtocol, SessionDetails
-    - Methods: AuthenticateUser(), ResetPassword()
-
-### Use cases
+## Use cases
 
 ![UseCaseDiagram](UseCaseDiagram.png)
 
@@ -78,10 +18,9 @@
 | U10    | Submit Course Feedback                  | Submit course feedback in the system.                  |
 | U11    | Access and Analyze User Data            | University officials can access and analyze user data. |
 
-## Sequence Diagram
-
 #### Use Case "Register Account" (U1) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU1.png](SequenceDiagramU1.png)
 
 **Actor**: User
@@ -111,8 +50,11 @@
     - Displays a success message and possibly directs the user to a login page or a confirmation email is sent.
     - Displays an error message if the registration failed, asking the user to try different credentials or contact support.
 
+**Activity Diagrams**
+
 #### Use Case "Log In" (U2) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU2.png](SequenceDiagramU2.png)
 
 **Actor**: User
@@ -141,8 +83,11 @@
     - Displays a welcome message and transitions the user to the dashboard or homepage if login is successful.
     - Displays an error message if the login failed, offering the user the option to try again or reset their password.
 
+**Activity Diagrams**
+
 #### Use Case "View and Edit Account Information" (U3) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU3.png](SequenceDiagramU3.png)
 
 **Actor**: User
@@ -174,8 +119,11 @@
 7. UserProfile receives the confirmation and notifies the User Interface of the successful update.
 8. User Interface informs the User that their information has been successfully updated.
 
+**Activity Diagrams**
+
 #### Use Case "Reset Account Password" (U4) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU4.png](SequenceDiagramU4.png)
 
 **Actor**: User
@@ -209,8 +157,11 @@
 15. AuthenticationService notifies the User Interface of the successful password reset.
 16. User Interface informs the User that their password has been successfully reset and redirects them to the login page.
 
+**Activity Diagrams**
+
 #### Use Case "Delete Account" (U5) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU5.png](SequenceDiagramU5.png)
 
 **Actor**: User
@@ -236,8 +187,11 @@ Sequence Steps:
 10. AuthenticationService informs the User Interface that the account has been successfully deleted.
 11. User Interface notifies the User that their account has been deleted and logs them out of the system.
 
+**Activity Diagrams**
+
 #### Use Case "View Academic Calendar" (U6) ####
 
+**Sequence Diagram**
 ![SequenceDiagram6.png](SequenceDiagram6.png)
 
 **Actor**: User
@@ -255,8 +209,11 @@ Sequence Steps:
 7. User Interface displays the academic calendar to the User, allowing them to view important academic dates, such as semester start and end
    dates, exam periods, holidays, and registration deadlines.
 
+**Activity Diagrams**
+
 #### Use Case "View and Bookmark Course Pathways" (U7) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU7.png](SequenceDiagramU7.png)
 
 **Actor**: User
@@ -284,8 +241,11 @@ Bookmarking Courses
 5. CourseBookmark component confirms the successful bookmarking to the User Interface.
 6. User Interface notifies the User that the courses have been successfully bookmarked.
 
+**Activity Diagrams**
+
 #### Use Case "Filter Courses" (U8) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU8.png](SequenceDiagramU8.png)
 
 **Actor**: User
@@ -307,8 +267,11 @@ Sequence Steps:
 10. CourseRecommendation sends the processed course list back to the User Interface.
 11. User Interface updates the display to show the filtered courses to the User.
 
+**Activity Diagrams**
+
 #### Use Case "Obtain Course Recommendation from Query" (U9) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU9.png](SequenceDiagramU9.png)
 
 **Actor**: User
@@ -333,8 +296,11 @@ Sequence Steps:
 13. User Interface displays the recommended courses to the User, providing detailed information such as course descriptions, prerequisites,
     and possible pathways.
 
+**Activity Diagrams**
+
 #### Use Case "Submit Course Feedback" (U10) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU10.png](SequenceDiagramU10.png)
 
 **Actor**: User
@@ -357,8 +323,11 @@ Sequence Steps:
 11. Feedback component notifies the User Interface of the successful feedback submission.
 12. User Interface displays a confirmation message to the User thanking them for their feedback.
 
+**Activity Digrams**
+
 #### Use Case "Access and Analyze User Data" (U11) ####
 
+**Sequence Diagram**
 ![SequenceDiagramU11.png](SequenceDiagramU11.png)
 
 **Actor**: Admin
@@ -382,3 +351,4 @@ Sequence Steps:
 11. Admin reviews the results, gaining insights into user behavior and system performance which can be used to make informed decisions about
     system improvements, policy changes, or targeted interventions.
 
+**Activity Diagrams**
