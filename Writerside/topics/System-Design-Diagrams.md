@@ -87,6 +87,34 @@
 |--------------------|
 | + bool LoginUser() |
 
+### PasswordResetPage Class
+
+| **Attributes**                      | **Methods**                               |
+|-------------------------------------|-------------------------------------------|
+| - IPasswordResetViewModel ViewModel | + void DisplayPasswordResetForm()         |
+|                                     | + void CaptureUserInput()                 |
+|                                     | + void ShowErrorMessage(string message)   |
+|                                     | + void ShowSuccessMessage(string message) |
+
+### PasswordResetViewModel Class (implements IPasswordResetViewModel)
+
+| **Attributes**             | **Methods**            |
+|----------------------------|------------------------|
+| - string Email             | + bool ResetPassword() |
+| - IUserService UserService |                        |
+
+### IPasswordResetViewModel Interface
+
+| **Methods**            |
+|------------------------|
+| + bool ResetPassword() |
+
+### EmailService Class
+
+| **Attributes**   | **Methods**                                     |
+|------------------|-------------------------------------------------|
+| - ILogger Logger | + bool SendResetLink(string email, string link) |
+
 ## Component Diagram
 
 ## Use cases
@@ -189,13 +217,7 @@
 
 **Class Diagram**
 
-![ClassDiagramU2.png](ClassDiagramU2.png)\
-
-# Use Case Documentation for U2: Log In
-
-## Overview
-
-The use case describes the process of a user logging into the system.
+![ClassDiagramU2.png](ClassDiagramU2.png)
 
 | **Use Case ID**          | U2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -227,31 +249,51 @@ The use case describes the process of a user logging into the system.
 
 **Sequence Steps**:
 
-| Step | Description                                                                                                                                                             |
-|------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1    | User accesses the login form on the User Interface.                                                                                                                     |
-| 2    | User enters their username and password into the form.                                                                                                                  |
-| 3    | User Interface sends the login credentials to the AuthenticationService.                                                                                                |
-| 4    | AuthenticationService receives the credentials and performs initial checks:                                                                                             |
-|      | - Validates the format of the username and password.                                                                                                                    |
-|      | - If the format is incorrect, it sends an error message back to the User Interface.                                                                                     |
-| 5    | If the formats are correct, AuthenticationService hashes the password and sends the username and hashed password to the Database for verification.                      |                                                                                                                 |
-| 6    | Database checks the hashed password against the stored hash for the given username:                                                                                     |
-|      | - If the username does not exist, it returns a "user not found" response.                                                                                               |
-|      | - If the password does not match, it returns a "wrong password" response.                                                                                               |
-|      | - If both match, it returns a "login successful" response along with user data if necessary.                                                                            |
-| 7    | AuthenticationService receives the response from the Database:                                                                                                          |
-|      | - If the login is successful, it may generate a session token or other security credentials and sends a success message along with any user data to the User Interface. |
-|      | - If the login fails, it sends the appropriate error message (e.g., "wrong username or password") to the UserInterface.                                                 |
-| 8    | User Interface receives the final response and informs the User:                                                                                                        |
-|      | - Displays a welcome message and transitions the user to the dashboard or homepage if login is successful.                                                              |
-|      | - Displays an error message if the login failed, offering the user the option to try again or reset their password.                                                     |
+| Step | Description                                                                                                                                                                                                                  |
+|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1    | User accesses the login form on the User Interface.                                                                                                                                                                          |
+| 2    | User enters their username and password into the form.                                                                                                                                                                       |
+| 3    | User Interface sends the login credentials to the AuthenticationService.                                                                                                                                                     |
+| 4    | AuthenticationService receives the credentials and performs initial checks:<br/>- Validates the format of the username and password.<br/>- If the format is incorrect, it sends an error message back to the User Interface. |
+| 5    | If the formats are correct, AuthenticationService hashes the password and sends the username and hashed password to the Database for verification.                                                                           |                                                                                                                 |
+| 6    | Database checks the hashed password against the stored hash for the given username:                                                                                                                                          |
+|      | - If the username does not exist, it returns a "user not found" response.                                                                                                                                                    |
+|      | - If the password does not match, it returns a "wrong password" response.                                                                                                                                                    |
+|      | - If both match, it returns a "login successful" response along with user data if necessary.                                                                                                                                 |
+| 7    | AuthenticationService receives the response from the Database:                                                                                                                                                               |
+|      | - If the login is successful, it may generate a session token or other security credentials and sends a success message along with any user data to the User Interface.                                                      |
+|      | - If the login fails, it sends the appropriate error message (e.g., "wrong username or password") to the UserInterface.                                                                                                      |
+| 8    | User Interface receives the final response and informs the User:                                                                                                                                                             |
+|      | - Displays a welcome message and transitions the user to the dashboard or homepage if login is successful.                                                                                                                   |
+|      | - Displays an error message if the login failed, offering the user the option to try again or reset their password.                                                                                                          |
 
 **Activity Diagram**
 
 ### Use Case "View and Edit Account Information" (U3)
 
+**Class Diagram**
+
 ![ClassDiagramU3.png](ClassDiagramU3.png)
+
+| **Use Case ID**          | U3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | View and Edit Account Information                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Description**          | This use case allows a user to view and edit their account information. The user can update details such as username, password, and email, which are then validated and stored in the system.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Actors**               | User, UserService, DatabaseService, AccountPage, AccountViewModel, IAccountViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Preconditions**        | The user is logged into the system and is on the account page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Postconditions**       | The user's account information is updated and stored in the database. The user is informed of successful update.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Normal Flow**          | 1. User navigates to the account page on the application interface.<br>2. System presents the account information form on the User Interface.<br>3. User views current account details.<br>4. User updates their account information.<br>5. User Interface captures the updated data and sends it to UserService.<br>6. UserService validates the updated data.<br>7. UserService sends the validated data to DatabaseService.<br>8. DatabaseService updates the user data.<br>9. UserService confirms the successful update to the User Interface.<br>10. User Interface displays a success message to the user. |
+| **Alternative Flow**     | **Invalid Input**:<br>1. If the updated data is invalid, UserService returns an error message.<br>2. User Interface displays the error message and prompts the user to correct the input.<br>3. User corrects the input and resubmits the form.<br>4. The system processes the corrected input as described in the Normal Flow.                                                                                                                                                                                                                                                                                   |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the update process, an error message is displayed to the user.<br>2. The user may try to update their information again later.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Special Requirements** | The system should ensure the account information form is secure and protects against common security vulnerabilities such as SQL injection and XSS.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Assumptions**          | The user has valid account credentials and is authorized to update their account information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+
+**Associations and Multiplicities**
+
+**UserService** is associated with **DatabaseService** (1:1).
+**UserService** can manage multiple **User** instances (1).
+**AccountPage** is associated with **AccountViewModel** (1:1).
+**AccountViewModel** is associated with **UserService** (1:1).
 
 **Sequence Diagram**
 
@@ -295,6 +337,31 @@ The use case describes the process of a user logging into the system.
 ![ActivtyDiagramU3.1.png](ActivtyDiagramU3.1.png)
 
 ### Use Case "Reset Account Password" (U4)
+
+**Class Diagram**
+
+![ClassDiagramU4.png](ClassDiagramU4.png)
+
+| **Use Case ID**          | U4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | Reset Account Password                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Description**          | This use case allows a user to reset their account password. The user provides their email, receives a reset link, and sets a new password.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Actors**               | User, UserService, DatabaseService, PasswordResetPage, PasswordResetViewModel, IPasswordResetViewModel, EmailService                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Preconditions**        | The user has access to the password reset page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Postconditions**       | The user's password is reset and updated in the database. The user is informed of the successful password reset.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Normal Flow**          | 1. User navigates to the password reset page on the application interface.<br>2. System presents the password reset form on the User Interface.<br>3. User enters their email address.<br>4. User Interface captures the email address and sends it to UserService.<br>5. UserService validates the email address.<br>6. UserService sends a request to DatabaseService to verify the user.<br>7. DatabaseService confirms the user's existence.<br>8. UserService generates a password reset link and sends it to the user's email via EmailService.<br>9. User receives the email and clicks on the password reset link.<br>10. System presents the password reset form on the User Interface.<br>11. User enters and confirms the new password.<br>12. User Interface captures the new password and sends it to UserService.<br>13. UserService validates the new password.<br>14. UserService sends the updated password to DatabaseService.<br>15. DatabaseService updates the user's password.<br>16. UserService confirms the successful password reset to the User Interface.<br>17. User Interface displays a success message to the user. |
+| **Alternative Flow**     | **Invalid Email**:<br>1. If the email address is invalid, UserService returns an error message.<br>2. User Interface displays the error message and prompts the user to enter a valid email address.<br>3. User re-enters the email address and resubmits the form.<br>4. The system processes the new input as described in the Normal Flow.<br>**Invalid Password**:<br>1. If the new password is invalid, UserService returns an error message.<br>2. User Interface displays the error message and prompts the user to enter a valid password.<br>3. User re-enters the password and resubmits the form.<br>4. The system processes the new input as described in the Normal Flow.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the password reset process, an error message is displayed to the user.<br>2. The user may try to reset their password again later.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Special Requirements** | The system should ensure the password reset form is secure and protects against common security vulnerabilities such as SQL injection and XSS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Assumptions**          | The user has access to their email account and can receive the password reset link.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+
+**Associations and Multiplicities**
+
+- **UserService** is associated with **DatabaseService** (1:1).
+- **UserService** is associated with **EmailService** (1:1).
+- **UserService** can manage multiple **User** instances (1:many).
+- **PasswordResetPage** is associated with **PasswordResetViewModel** (1:1).
+- **PasswordResetViewModel** is associated with **UserService** (1:1).
 
 **Sequence Diagram**
 
@@ -353,6 +420,10 @@ The use case describes the process of a user logging into the system.
 
 ### Use Case "Delete Account" (U5)
 
+**Class Diagram**
+
+![ClassDiagramU5.png](ClassDiagramU5.png)
+
 **Sequence Diagram**
 
 ![SequenceDiagramU5.png](SequenceDiagramU5.png)
@@ -387,6 +458,8 @@ Sequence Steps:
 
 ### Use Case "View Academic Calendar" (U6)
 
+**Class Diagram**
+
 **Sequence Diagram**
 
 ![SequenceDiagram6.png](SequenceDiagram6.png)
@@ -418,6 +491,8 @@ Sequence Steps:
 | 3    | System displays academic calendar.       |
 
 ### Use Case "View and Bookmark Course Pathways" (U7)
+
+**Class Diagram**
 
 **Sequence Diagram**
 
@@ -467,6 +542,8 @@ Bookmarking Courses
 
 ### Use Case "Filter Courses" (U8)
 
+**Class Diagram**
+
 **Sequence Diagram**
 
 ![SequenceDiagramU8.png](SequenceDiagramU8.png)
@@ -496,6 +573,8 @@ Sequence Steps:
 ![ActivityDiagramU8.png](ActivityDiagramU8.png)
 
 ### Use Case "Obtain Course Recommendation from Query" (U9)
+
+**Class Diagram**
 
 **Sequence Diagram**
 
@@ -528,6 +607,8 @@ Sequence Steps:
 ![ActivityDiagramU9.png](ActivityDiagramU9.png)
 
 ### Use Case "Submit Course Feedback" (U10)
+
+**Class Diagram**
 
 **Sequence Diagram**
 
@@ -572,6 +653,8 @@ Sequence Steps:
 
 ### Use Case "Access and Analyze User Data" (U11)
 
+**Class Diagram**
+
 **Sequence Diagram**
 
 ![SequenceDiagramU11.png](SequenceDiagramU11.png)
@@ -612,6 +695,8 @@ Sequence Steps:
 | 8    | If user wants to end visit, the activity ends.                                                      |
 
 ### Use Case "Create and Delete Thread" (U12)
+
+**Class Diagram**
 
 **Creating a Thread**
 
@@ -658,6 +743,8 @@ Sequence Steps:
 | 7    | The thread is removed from the forum display, and the user is redirected back to the forum homepage or their profile page.                                                               |
 
 #### Use Case "Create, Edit, Reply, and Delete Post" (U13) ####
+
+**Class Diagram**
 
 **Creating a Post**
 
