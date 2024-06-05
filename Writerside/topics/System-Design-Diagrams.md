@@ -139,6 +139,33 @@
 |------------------------|
 | + bool DeleteAccount() |
 
+### AcademicCalendarService Class
+
+| **Attributes**                     | **Methods**                              |
+|------------------------------------|------------------------------------------|
+| - ILogger Logger                   | + AcademicCalendar GetAcademicCalendar() |
+| - IDatabaseService DatabaseService |
+
+### CalendarPage Class
+
+| **Attributes**                 | **Methods**                               |
+|--------------------------------|-------------------------------------------|
+| - ICalendarViewModel ViewModel | + void DisplayCalendar()                  |
+|                                | + void ShowErrorMessage(string message)   |
+|                                | + void ShowSuccessMessage(string message) |
+
+### CalendarViewModel Class (implements ICalendarViewModel)
+
+| **Attributes**                                    | **Methods**                               |
+|---------------------------------------------------|-------------------------------------------|
+| - AcademicCalendarService AcademicCalendarService | + AcademicCalendar LoadAcademicCalendar() |
+
+### ICalendarViewModel Interface
+
+| **Methods**                               |
+|-------------------------------------------|
+| + AcademicCalendar LoadAcademicCalendar() |
+
 ## Component Diagram
 
 ![Component_Diagram.png](Component_Diagram.png)
@@ -462,7 +489,6 @@
 | **Exceptions**           | **System Error**:<br>1. If there is a system error during the deletion process, an error message is displayed to the user.<br>2. The user may try to delete their account again later.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **Special Requirements** | The system should ensure the account deletion process is secure and protects against accidental or unauthorized deletions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | **Assumptions**          | The user has valid login credentials and is authorized to delete their account.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Notes and Issues**     | Future enhancements might include adding a multi-step verification process for additional security.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 **Associations and Multiplicities**
 
@@ -506,6 +532,28 @@ Sequence Steps:
 ### Use Case "View Academic Calendar" (U6)
 
 **Class Diagram**
+
+![ClassDiagramU6.png](ClassDiagramU6.png)
+
+| **Use Case ID**          | U6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | View Academic Calendar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Description**          | This use case allows a user to view the academic calendar. The system retrieves and displays the academic calendar from the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Actors**               | User, AcademicCalendarService, DatabaseService, CalendarPage, CalendarViewModel, ICalendarViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Preconditions**        | The user is logged into the system and is on the calendar page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Postconditions**       | The academic calendar is displayed to the user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Normal Flow**          | 1. User navigates to the calendar page on the application interface.<br>2. System presents the calendar view on the User Interface.<br>3. User requests to view the academic calendar.<br>4. User Interface captures the request and sends it to AcademicCalendarService.<br>5. AcademicCalendarService retrieves the calendar data from DatabaseService.<br>6. DatabaseService returns the academic calendar data to AcademicCalendarService.<br>7. AcademicCalendarService sends the calendar data to CalendarViewModel.<br>8. CalendarViewModel processes the calendar data.<br>9. CalendarViewModel sends the processed data to User Interface.<br>10. User Interface displays the academic calendar to the user. |
+| **Alternative Flow**     | **Data Retrieval Error**:<br>1. If there is an error retrieving the calendar data, AcademicCalendarService returns an error message.<br>2. User Interface displays the error message to the user.<br>3. User can retry the request to view the academic calendar.<br>4. The system processes the new request as described in the Normal Flow.                                                                                                                                                                                                                                                                                                                                                                         |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the calendar retrieval process, an error message is displayed to the user.<br>2. The user may try to view the academic calendar again later.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Special Requirements** | The system should ensure the academic calendar is up-to-date and accurately retrieved from the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Assumptions**          | The academic calendar data is available in the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+
+**Associations and Multiplicities**
+
+- **AcademicCalendarService** is associated with **DatabaseService** (1:1).
+- **AcademicCalendarService** can manage multiple **AcademicCalendar** instances (1:many).
+- **CalendarPage** is associated with **CalendarViewModel** (1:1).
+- **CalendarViewModel** is associated with **AcademicCalendarService** (1:1).
 
 **Sequence Diagram**
 
