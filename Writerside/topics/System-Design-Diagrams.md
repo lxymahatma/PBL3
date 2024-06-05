@@ -115,6 +115,30 @@
 |------------------|-------------------------------------------------|
 | - ILogger Logger | + bool SendResetLink(string email, string link) |
 
+### AccountPage Class
+
+| **Attributes**                      | **Methods**                               |
+|-------------------------------------|-------------------------------------------|
+| - IDeleteAccountViewModel ViewModel | + void DisplayAccountInfo()               |
+|                                     | + void CaptureUserInput()                 |
+|                                     | + void ShowErrorMessage(string message)   |
+|                                     | + void ShowSuccessMessage(string message) |
+|                                     | + void ConfirmDeletion()                  |
+
+### DeleteAccountViewModel Class (implements IDeleteAccountViewModel)
+
+| **Attributes**             | **Methods**            |
+|----------------------------|------------------------|
+| - string UserName          | + bool DeleteAccount() |
+| - string Password          |                        |
+| - IUserService UserService |                        |
+
+### IDeleteAccountViewModel Interface
+
+| **Methods**            |
+|------------------------|
+| + bool DeleteAccount() |
+
 ## Component Diagram
 
 ![Component_Diagram.png](Component_Diagram.png)
@@ -234,7 +258,7 @@
 | **Special Requirements** | The system should ensure the login form is secure and protects against common security vulnerabilities such as SQL injection and brute force attacks.                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **Assumptions**          | The user has valid login credentials.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-## Associations and Multiplicities
+**Associations and Multiplicities**
 
 - **UserService** is associated with **DatabaseService** (1:1).
 - **UserService** can manage multiple **User** instances (1:many).
@@ -425,6 +449,27 @@
 **Class Diagram**
 
 ![ClassDiagramU5.png](ClassDiagramU5.png)
+
+| **Use Case ID**          | U5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | Delete Account                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Description**          | This use case allows a user to delete their account from the system. The user confirms their decision to delete the account, which is then removed from the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Actors**               | User, UserService, DatabaseService, AccountPage, DeleteAccountViewModel, IDeleteAccountViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Preconditions**        | The user is logged into the system and is on the account page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Postconditions**       | The user's account is deleted from the database. The user is informed of the successful account deletion.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Normal Flow**          | 1. User navigates to the account page on the application interface.<br>2. System presents the account information form on the User Interface.<br>3. User selects the option to delete their account.<br>4. System prompts the user to confirm their decision.<br>5. User confirms the deletion and provides their password for verification.<br>6. User Interface captures the confirmation and password, then sends it to UserService.<br>7. UserService validates the password.<br>8. UserService sends the deletion request to DatabaseService.<br>9. DatabaseService deletes the user account from the database.<br>10. UserService confirms the successful deletion to the User Interface.<br>11. User Interface displays a success message to the user and logs them out. |
+| **Alternative Flow**     | **Invalid Password**:<br>1. If the password is invalid, UserService returns an error message.<br>2. User Interface displays the error message and prompts the user to enter the correct password.<br>3. User re-enters the password and resubmits the form.<br>4. The system processes the new input as described in the Normal Flow.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the deletion process, an error message is displayed to the user.<br>2. The user may try to delete their account again later.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Special Requirements** | The system should ensure the account deletion process is secure and protects against accidental or unauthorized deletions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Assumptions**          | The user has valid login credentials and is authorized to delete their account.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Notes and Issues**     | Future enhancements might include adding a multi-step verification process for additional security.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+
+**Associations and Multiplicities**
+
+- **UserService** is associated with **DatabaseService** (1:1).
+- **UserService** can manage multiple **User** instances (1:many).
+- **AccountPage** is associated with **DeleteAccountViewModel** (1:1).
+- **DeleteAccountViewModel** is associated with **UserService** (1:1).
 
 **Sequence Diagram**
 
