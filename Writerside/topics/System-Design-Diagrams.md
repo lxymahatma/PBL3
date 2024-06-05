@@ -2,77 +2,16 @@
 
 ## Classes
 
-### Thread Class
-
-| **Attributes**          | **Methods**                   |
-|-------------------------|-------------------------------|
-| - int ThreadId          | + void AddPost(Post post)     |
-| - string Title          | + void RemovePost(int postId) |
-| - string Description    |                               |
-| - DateTime CreationTime |                               |
-| - User Creator          |                               |
-| - Post[] Posts          |                               |
-
-### Post Class
-
-| **Attributes**          | **Methods**           |
-|-------------------------|-----------------------|
-| - int PostId            | (no specific methods) |
-| - string Content        |                       |
-| - DateTime CreationTime |                       |
-| - User Creator          |                       |
-
-### ForumService Class
-
-| **Attributes**                     | **Methods**                                           |
-|------------------------------------|-------------------------------------------------------|
-| - ILogger Logger                   | + Thread[] GetAllThreads()                            |
-| - IDatabaseService DatabaseService | + bool CreateThread(Thread thread)                    |
-|                                    | + bool DeleteThread(int threadId)                     |
-|                                    | + Post[] GetPostsForThread(int threadId)              |
-|                                    | + bool AddPostToThread(int threadId, Post post)       |
-|                                    | + bool RemovePostFromThread(int threadId, int postId) |
-
-### ForumPage Class
-
-| **Attributes**              | **Methods**                               |
-|-----------------------------|-------------------------------------------|
-| - IForumViewModel ViewModel | + void DisplayThreads()                   |
-|                             | + void CaptureThreadInput()               |
-|                             | + void CapturePostInput()                 |
-|                             | + void ShowSuccessMessage(string message) |
-|                             | + void ShowErrorMessage(string message)   |
-
-### ForumViewModel Class (implements IForumViewModel)
-
-| **Attributes**              | **Methods**                                           |
-|-----------------------------|-------------------------------------------------------|
-| - ForumService ForumService | + Thread[] LoadThreads()                              |
-|                             | + bool CreateThread(string title, string description) |
-|                             | + bool DeleteThread(int threadId)                     |
-|                             | + Post[] LoadPostsForThread(int threadId)             |
-|                             | + bool AddPostToThread(int threadId, string content)  |
-|                             | + bool RemovePostFromThread(int threadId, int postId) |
-
-### IForumViewModel Interface
-
-| **Methods**                                           |
-|-------------------------------------------------------|
-| + Thread[] LoadThreads()                              |
-| + bool CreateThread(string title, string description) |
-| + bool DeleteThread(int threadId)                     |
-| + Post[] LoadPostsForThread(int threadId)             |
-| + bool AddPostToThread(int threadId, string content)  |
-| + bool RemovePostFromThread(int threadId, int postId) |
-
 ### User Class
 
-| **Attributes**    | **Methods**            |
-|-------------------|------------------------|
-| - string UserName | + void Register()      |
-| - string Password | + void Login()         |
-| - string Email    | + void ResetPassword() |
-| - bool IsAdmin    | + void DeleteAccount() |
+| **Attributes**    | **Methods**              |
+|-------------------|--------------------------|
+| - string UserName | + void Register()        |
+| - string Password | + void Login()           |
+| - string Email    | + void ResetPassword()   |
+| - bool IsAdmin    | + void DeleteAccount()   |
+|                   | + void ViewAccountInfo() |
+|                   | + void EditAccountInfo() |
 
 ### Student Class (inherits from User)
 
@@ -342,8 +281,11 @@
 | - int Rating              |                       |
 | - string Comments         |                       |
 | - DateTime SubmissionDate |                       |
-| - User SubmittedBy        |                       |
-| - Course Course           |                       |
+| - User SubmittedBy        |
+
+                       |
+
+| - Course Course | |
 
 ### FeedbackService Class
 
@@ -422,6 +364,69 @@
 |--------------------------------------------------------------------------|
 | + UserData[] LoadUserAnalytics(DateTime startDate, DateTime endDate)     |
 | + CourseData[] LoadCourseAnalytics(DateTime startDate, DateTime endDate) |
+
+### Thread Class
+
+| **Attributes**          | **Methods**                   |
+|-------------------------|-------------------------------|
+| - int ThreadId          | + void AddPost(Post post)     |
+| - string Title          | + void RemovePost(int postId) |
+| - string Description    |                               |
+| - DateTime CreationTime |                               |
+| - User Creator          |                               |
+| - Post[] Posts          |                               |
+
+### Post Class
+
+| **Attributes**          | **Methods**           |
+|-------------------------|-----------------------|
+| - int PostId            | (no specific methods) |
+| - string Content        |                       |
+| - DateTime CreationTime |                       |
+| - User Creator          |                       |
+
+### ForumService Class
+
+| **Attributes**                     | **Methods**                                           |
+|------------------------------------|-------------------------------------------------------|
+| - ILogger Logger                   | + Thread[] GetAllThreads()                            |
+| - IDatabaseService DatabaseService | + bool CreateThread(Thread thread)                    |
+|                                    | + bool DeleteThread(int threadId)                     |
+|                                    | + Post[] GetPostsForThread(int threadId)              |
+|                                    | + bool AddPostToThread(int threadId, Post post)       |
+|                                    | + bool RemovePostFromThread(int threadId, int postId) |
+
+### ForumPage Class
+
+| **Attributes**              | **Methods**                               |
+|-----------------------------|-------------------------------------------|
+| - IForumViewModel ViewModel | + void DisplayThreads()                   |
+|                             | + void CaptureThreadInput()               |
+|                             | + void CapturePostInput()                 |
+|                             | + void ShowSuccessMessage(string message) |
+|                             | + void ShowErrorMessage(string message)   |
+
+### ForumViewModel Class (implements IForumViewModel)
+
+| **Attributes**              | **Methods**                                           |
+|-----------------------------|-------------------------------------------------------|
+| - ForumService ForumService | + Thread[] LoadThreads()                              |
+|                             | + bool CreateThread(string title, string description) |
+|                             | + bool DeleteThread(int threadId)                     |
+|                             | + Post[] LoadPostsForThread(int threadId)             |
+|                             | + bool AddPostToThread(int threadId, string content)  |
+|                             | + bool RemovePostFromThread(int threadId, int postId) |
+
+### IForumViewModel Interface
+
+| **Methods**                                           |
+|-------------------------------------------------------|
+| + Thread[] LoadThreads()                              |
+| + bool CreateThread(string title, string description) |
+| + bool DeleteThread(int threadId)                     |
+| + Post[] LoadPostsForThread(int threadId)             |
+| + bool AddPostToThread(int threadId, string content)  |
+| + bool RemovePostFromThread(int threadId, int postId) |
 
 ## Component Diagram
 
