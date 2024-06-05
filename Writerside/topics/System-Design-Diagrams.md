@@ -166,6 +166,200 @@
 |-------------------------------------------|
 | + AcademicCalendar LoadAcademicCalendar() |
 
+### Course Class
+
+| **Attributes**           | **Methods**                 |
+|--------------------------|-----------------------------|
+| - int CourseId           | + string GetCourseDetails() |
+| - string Name            |                             |
+| - string Description     |                             |
+| - int Credits            |                             |
+| - Course[] Prerequisites |                             |
+
+### CourseService Class
+
+| **Attributes**                     | **Methods**                                     |
+|------------------------------------|-------------------------------------------------|
+| - ILogger Logger                   | + Course[] GetCoursePathways()                  |
+| - IDatabaseService DatabaseService | + bool AddBookmark(User user, Course course)    |
+|                                    | + bool RemoveBookmark(User user, Course course) |
+|                                    | + Course GetCourseDetails(int courseId)         |
+
+### CoursePage Class
+
+| **Attributes**               | **Methods**                               |
+|------------------------------|-------------------------------------------|
+| - ICourseViewModel ViewModel | + void DisplayCourses()                   |
+|                              | + void ShowErrorMessage(string message)   |
+|                              | + void ShowSuccessMessage(string message) |
+
+### CourseViewModel Class (implements ICourseViewModel)
+
+| **Attributes**                | **Methods**                         |
+|-------------------------------|-------------------------------------|
+| - CourseService CourseService | + Course[] LoadCoursePathways()     |
+|                               | + bool BookmarkCourse(int courseId) |
+|                               | + bool RemoveBookmark(int courseId) |
+
+### ICourseViewModel Interface
+
+| **Methods**                         |
+|-------------------------------------|
+| + Course[] LoadCoursePathways()     |
+| + bool BookmarkCourse(int courseId) |
+| + bool RemoveBookmark(int courseId) |
+
+### Bookmark Class
+
+| **Attributes**  | **Methods**           |
+|-----------------|-----------------------|
+| - User User     | (no specific methods) |
+| - Course Course |                       |
+
+### FilterPage Class
+
+| **Attributes**               | **Methods**                                  |
+|------------------------------|----------------------------------------------|
+| - IFilterViewModel ViewModel | + void DisplayFilterOptions()                |
+|                              | + void CaptureUserInput()                    |
+|                              | + void ShowFilteredCourses(Course[] courses) |
+|                              | + void ShowErrorMessage(string message)      |
+
+### FilterViewModel Class (implements IFilterViewModel)
+
+| **Attributes**                | **Methods**                                     |
+|-------------------------------|-------------------------------------------------|
+| - CourseService CourseService | + Course[] LoadFilteredCourses(string criteria) |
+
+### IFilterViewModel Interface
+
+| **Methods**                                     |
+|-------------------------------------------------|
+| + Course[] LoadFilteredCourses(string criteria) |
+
+### CourseRecommendationService Class
+
+| **Attributes**                     | **Methods**                                       |
+|------------------------------------|---------------------------------------------------|
+| - ILogger Logger                   | + Course[] GetCourseRecommendations(string query) |
+| - IDatabaseService DatabaseService | + Course GetCourseDetails(int courseId)           |
+| - IOpenAIService OpenAIService     |                                                   |
+
+### OpenAIService Class
+
+| **Attributes**   | **Methods**                       |
+|------------------|-----------------------------------|
+| - ILogger Logger | + string AnalyzeText(string text) |
+
+### QueryPage Class
+
+| **Attributes**              | **Methods**                                     |
+|-----------------------------|-------------------------------------------------|
+| - IQueryViewModel ViewModel | + void CaptureUserQuery()                       |
+|                             | + void DisplayRecommendations(Course[] courses) |
+|                             | + void ShowErrorMessage(string message)         |
+
+### QueryViewModel Class (implements IQueryViewModel)
+
+| **Attributes**                                            | **Methods**                                  |
+|-----------------------------------------------------------|----------------------------------------------|
+| - CourseRecommendationService CourseRecommendationService | + Course[] LoadRecommendations(string query) |
+
+### IQueryViewModel Interface
+
+| **Methods**                                  |
+|----------------------------------------------|
+| + Course[] LoadRecommendations(string query) |
+
+### Feedback Class
+
+| **Attributes**            | **Methods**           |
+|---------------------------|-----------------------|
+| - int FeedbackId          | (no specific methods) |
+| - int Rating              |                       |
+| - string Comments         |                       |
+| - DateTime SubmissionDate |                       |
+| - User SubmittedBy        |                       |
+| - Course Course           |                       |
+
+### FeedbackService Class
+
+| **Attributes**                     | **Methods**                                  |
+|------------------------------------|----------------------------------------------|
+| - ILogger Logger                   | + bool SubmitFeedback(Feedback feedback)     |
+| - IDatabaseService DatabaseService | + Feedback[] GetCourseFeedback(int courseId) |
+
+### FeedbackPage Class
+
+| **Attributes**                 | **Methods**                               |
+|--------------------------------|-------------------------------------------|
+| - IFeedbackViewModel ViewModel | + void CaptureUserFeedback()              |
+|                                | + void DisplayFeedbackForm()              |
+|                                | + void ShowSuccessMessage(string message) |
+|                                | + void ShowErrorMessage(string message)   |
+
+### FeedbackViewModel Class (implements IFeedbackViewModel)
+
+| **Attributes**                    | **Methods**                                                      |
+|-----------------------------------|------------------------------------------------------------------|
+| - FeedbackService FeedbackService | + bool SubmitFeedback(int rating, string comments, int courseId) |
+
+### IFeedbackViewModel Interface
+
+| **Methods**                                                      |
+|------------------------------------------------------------------|
+| + bool SubmitFeedback(int rating, string comments, int courseId) |
+
+### UserData Class
+
+| **Attributes**             | **Methods**           |
+|----------------------------|-----------------------|
+| - int UserId               | (no specific methods) |
+| - string UserName          |                       |
+| - string Email             |                       |
+| - DateTime LastLogin       |                       |
+| - string[] CoursesEnrolled |                       |
+
+### CourseData Class
+
+| **Attributes**              | **Methods**           |
+|-----------------------------|-----------------------|
+| - int CourseId              | (no specific methods) |
+| - string CourseName         |                       |
+| - int EnrollmentCount       |                       |
+| - float AverageRating       |                       |
+| - string[] FeedbackComments |                       |
+
+### AnalyticsService Class
+
+| **Attributes**                     | **Methods**                                                             |
+|------------------------------------|-------------------------------------------------------------------------|
+| - ILogger Logger                   | + UserData[] GetUserAnalytics(DateTime startDate, DateTime endDate)     |
+| - IDatabaseService DatabaseService | + CourseData[] GetCourseAnalytics(DateTime startDate, DateTime endDate) |
+
+### AnalyticsPage Class
+
+| **Attributes**                  | **Methods**                                                            |
+|---------------------------------|------------------------------------------------------------------------|
+| - IAnalyticsViewModel ViewModel | + void DisplayAnalyticsOptions()                                       |
+|                                 | + void CaptureAdminInput()                                             |
+|                                 | + void ShowAnalyticsData(UserData[] userData, CourseData[] courseData) |
+|                                 | + void ShowErrorMessage(string message)                                |
+
+### AnalyticsViewModel Class (implements IAnalyticsViewModel)
+
+| **Attributes**                      | **Methods**                                                              |
+|-------------------------------------|--------------------------------------------------------------------------|
+| - AnalyticsService AnalyticsService | + UserData[] LoadUserAnalytics(DateTime startDate, DateTime endDate)     |
+|                                     | + CourseData[] LoadCourseAnalytics(DateTime startDate, DateTime endDate) |
+
+### IAnalyticsViewModel Interface
+
+| **Methods**                                                              |
+|--------------------------------------------------------------------------|
+| + UserData[] LoadUserAnalytics(DateTime startDate, DateTime endDate)     |
+| + CourseData[] LoadCourseAnalytics(DateTime startDate, DateTime endDate) |
+
 ## Component Diagram
 
 ![Component_Diagram.png](Component_Diagram.png)
@@ -192,7 +386,7 @@
 
 ### Use Case "Register Account" (U1)
 
-**Class Diagram**
+**Class Diagram**:
 
 ![ClassDiagramU1.png](ClassDiagramU1.png)
 
@@ -216,7 +410,7 @@
 - **RegisterPage** is associated with **RegisterViewModel** (1:1).
 - **RegisterViewModel** is associated with **UserService** (1:1).
 
-**Sequence Diagram**
+**Sequence Diagram**:
 
 ![SequenceDiagramU1.png](SequenceDiagramU1.png)
 
@@ -268,7 +462,7 @@
 
 ### Use Case "Log In" (U2)
 
-**Class Diagram**
+**Class Diagram**:
 
 ![ClassDiagramU2.png](ClassDiagramU2.png)
 
@@ -292,7 +486,7 @@
 - **LoginPage** is associated with **LoginViewModel** (1:1).
 - **LoginViewModel** is associated with **UserService** (1:1).
 
-**Sequence Diagram**
+**Sequence Diagram**:
 
 ![SequenceDiagramU2.png](SequenceDiagramU2.png)
 
@@ -324,7 +518,7 @@
 
 ### Use Case "View and Edit Account Information" (U3)
 
-**Class Diagram**
+**Class Diagram**:
 
 ![ClassDiagramU3.png](ClassDiagramU3.png)
 
@@ -348,7 +542,7 @@
 **AccountPage** is associated with **AccountViewModel** (1:1).
 **AccountViewModel** is associated with **UserService** (1:1).
 
-**Sequence Diagram**
+**Sequence Diagram**:
 
 ![SequenceDiagramU3.png](SequenceDiagramU3.png)
 
@@ -391,7 +585,7 @@
 
 ### Use Case "Reset Account Password" (U4)
 
-**Class Diagram**
+**Class Diagram**:
 
 ![ClassDiagramU4.png](ClassDiagramU4.png)
 
@@ -416,7 +610,7 @@
 - **PasswordResetPage** is associated with **PasswordResetViewModel** (1:1).
 - **PasswordResetViewModel** is associated with **UserService** (1:1).
 
-**Sequence Diagram**
+**Sequence Diagram**:
 
 ![SequenceDiagramU4.png](SequenceDiagramU4.png)
 
@@ -473,7 +667,7 @@
 
 ### Use Case "Delete Account" (U5)
 
-**Class Diagram**
+**Class Diagram**:
 
 ![ClassDiagramU5.png](ClassDiagramU5.png)
 
@@ -497,7 +691,7 @@
 - **AccountPage** is associated with **DeleteAccountViewModel** (1:1).
 - **DeleteAccountViewModel** is associated with **UserService** (1:1).
 
-**Sequence Diagram**
+**Sequence Diagram**:
 
 ![SequenceDiagramU5.png](SequenceDiagramU5.png)
 
@@ -531,7 +725,7 @@ Sequence Steps:
 
 ### Use Case "View Academic Calendar" (U6)
 
-**Class Diagram**
+**Class Diagram**:
 
 ![ClassDiagramU6.png](ClassDiagramU6.png)
 
@@ -555,7 +749,7 @@ Sequence Steps:
 - **CalendarPage** is associated with **CalendarViewModel** (1:1).
 - **CalendarViewModel** is associated with **AcademicCalendarService** (1:1).
 
-**Sequence Diagram**
+**Sequence Diagram**:
 
 ![SequenceDiagram6.png](SequenceDiagram6.png)
 
@@ -587,9 +781,33 @@ Sequence Steps:
 
 ### Use Case "View and Bookmark Course Pathways" (U7)
 
-**Class Diagram**
+**Class Diagram**:
 
-**Sequence Diagram**
+![ClassDiagramU7.png](ClassDiagramU7.png)
+
+| **Use Case ID**          | U7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | View and Bookmark Course Pathways                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Description**          | This use case allows a user to view course pathways and bookmark desired courses for future reference. The system retrieves and displays the course pathways from the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Actors**               | User, CourseService, DatabaseService, CoursePage, CourseViewModel, ICourseViewModel, Bookmark                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Preconditions**        | The user is logged into the system and is on the course page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Postconditions**       | The user can view course pathways and bookmark selected courses. The bookmarks are stored in the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Normal Flow**          | 1. User navigates to the course page on the application interface.<br>2. System presents the course pathways view on the User Interface.<br>3. User requests to view course pathways.<br>4. User Interface captures the request and sends it to CourseService.<br>5. CourseService retrieves the course data from DatabaseService.<br>6. DatabaseService returns the course data to CourseService.<br>7. CourseService sends the course data to CourseViewModel.<br>8. CourseViewModel processes the course data.<br>9. CourseViewModel sends the processed data to User Interface.<br>10. User Interface displays the course pathways to the user.<br>11. User selects a course to bookmark.<br>12. User Interface captures the bookmark request and sends it to CourseService.<br>13. CourseService sends the bookmark request to DatabaseService.<br>14. DatabaseService saves the bookmark details and confirms the successful bookmarking back to CourseService.<br>15. CourseService confirms the successful bookmarking to the User Interface.<br>16. User Interface notifies the user that the course has been successfully bookmarked. |
+| **Alternative Flow**     | **Data Retrieval Error**:<br>1. If there is an error retrieving the course data, CourseService returns an error message.<br>2. User Interface displays the error message to the user.<br>3. User can retry the request to view course pathways.<br>4. The system processes the new request as described in the Normal Flow.<br>**Bookmarking Error**:<br>1. If there is an error saving the bookmark, DatabaseService returns an error message.<br>2. User Interface displays the error message to the user.<br>3. User can retry the bookmarking request.<br>4. The system processes the new request as described in the Normal Flow.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the course retrieval or bookmarking process, an error message is displayed to the user.<br>2. The user may try to view course pathways or bookmark courses again later.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Special Requirements** | The system should ensure the course data and bookmarks are up-to-date and accurately retrieved and stored in the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Assumptions**          | The course data is available in the database and the user has the necessary permissions to bookmark courses.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+**Associations and Multiplicities**
+
+- **CourseService** is associated with **DatabaseService** (1:1).
+- **CourseService** can manage multiple **Course** instances (1:many).
+- **CoursePage** is associated with **CourseViewModel** (1:1).
+- **CourseViewModel** is associated with **CourseService** (1:1).
+- **User** can have multiple **Bookmark** instances (1:many).
+- **Course** can have multiple **Prerequisite** courses (1:many).
+
+**Sequence Diagram**:
 
 ![SequenceDiagramU7.png](SequenceDiagramU7.png)
 
@@ -637,9 +855,31 @@ Bookmarking Courses
 
 ### Use Case "Filter Courses" (U8)
 
-**Class Diagram**
+**Class Diagram**:
 
-**Sequence Diagram**
+![ClassDiagramU8.png](ClassDiagramU8.png)
+
+| **Use Case ID**          | U8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | Filter Courses                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Description**          | This use case allows a user to filter courses based on chosen criteria. The system retrieves and displays the filtered courses from the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Actors**               | User, CourseService, DatabaseService, FilterPage, FilterViewModel, IFilterViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Preconditions**        | The user is logged into the system and is on the filter page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Postconditions**       | The user can view a list of courses that match the selected filter criteria.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Normal Flow**          | 1. User navigates to the filter page on the application interface.<br>2. System presents the filter options on the User Interface.<br>3. User selects desired filter criteria and submits the filter request.<br>4. User Interface captures the filter criteria and sends it to CourseService.<br>5. CourseService sends the filter request to DatabaseService.<br>6. DatabaseService retrieves the filtered courses based on the criteria.<br>7. DatabaseService returns the filtered courses to CourseService.<br>8. CourseService sends the filtered course data to FilterViewModel.<br>9. FilterViewModel processes the course data.<br>10. FilterViewModel sends the processed data to User Interface.<br>11. User Interface displays the filtered courses to the user. |
+| **Alternative Flow**     | **Data Retrieval Error**:<br>1. If there is an error retrieving the filtered courses, CourseService returns an error message.<br>2. User Interface displays the error message to the user.<br>3. User can retry the filter request.<br>4. The system processes the new request as described in the Normal Flow.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the course retrieval process, an error message is displayed to the user.<br>2. The user may try to filter courses again later.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Special Requirements** | The system should ensure the course data is up-to-date and accurately retrieved from the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Assumptions**          | The course data is available in the database and the user has the necessary permissions to filter courses.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+
+**Associations and Multiplicities**
+
+- **CourseService** is associated with **DatabaseService** (1:1).
+- **CourseService** can manage multiple **Course** instances (1:many).
+- **FilterPage** is associated with **FilterViewModel** (1:1).
+- **FilterViewModel** is associated with **CourseService** (1:1).
+
+**Sequence Diagram**:
 
 ![SequenceDiagramU8.png](SequenceDiagramU8.png)
 
@@ -669,9 +909,32 @@ Sequence Steps:
 
 ### Use Case "Obtain Course Recommendation from Query" (U9)
 
-**Class Diagram**
+**Class Diagram**:
 
-**Sequence Diagram**
+![ClassDiagramU9.png](ClassDiagramU9.png)
+
+| **Use Case ID**          | U9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | Obtain Course Recommendation from Query                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Description**          | This use case allows a user to get course recommendations based on a natural language query. The system processes the query and retrieves relevant courses from the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Actors**               | User, CourseRecommendationService, OpenAIService, DatabaseService, QueryPage, QueryViewModel, IQueryViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Preconditions**        | The user is logged into the system and is on the query page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Postconditions**       | The user can view a list of recommended courses based on their query.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Normal Flow**          | 1. User navigates to the query page on the application interface.<br>2. System presents the query input field on the User Interface.<br>3. User enters a natural language query and submits it.<br>4. User Interface captures the query and sends it to CourseRecommendationService.<br>5. CourseRecommendationService sends the query to OpenAIService.<br>6. OpenAIService analyzes the query and extracts relevant keywords.<br>7. OpenAIService returns the analyzed data to CourseRecommendationService.<br>8. CourseRecommendationService formulates a search query using the extracted keywords.<br>9. CourseRecommendationService sends the search query to DatabaseService.<br>10. DatabaseService retrieves the matching courses from the database.<br>11. DatabaseService returns the course data to CourseRecommendationService.<br>12. CourseRecommendationService sends the course data to QueryViewModel.<br>13. QueryViewModel processes the course data.<br>14. QueryViewModel sends the processed data to User Interface.<br>15. User Interface displays the recommended courses to the user. |
+| **Alternative Flow**     | **Query Analysis Error**:<br>1. If there is an error analyzing the query, OpenAIService returns an error message.<br>2. CourseRecommendationService displays the error message to the user.<br>3. User can retry the query.<br>4. The system processes the new query as described in the Normal Flow.<br>**Data Retrieval Error**:<br>1. If there is an error retrieving the courses, CourseRecommendationService returns an error message.<br>2. User Interface displays the error message to the user.<br>3. User can retry the query.<br>4. The system processes the new query as described in the Normal Flow.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the query analysis or course retrieval process, an error message is displayed to the user.<br>2. The user may try to obtain course recommendations again later.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Special Requirements** | The system should ensure the course data is up-to-date and accurately retrieved from the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Assumptions**          | The course data is available in the database and the user has the necessary permissions to query for course recommendations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+**Associations and Multiplicities**
+
+- **CourseRecommendationService** is associated with **DatabaseService** (1:1).
+- **CourseRecommendationService** is associated with **OpenAIService** (1:1).
+- **CourseRecommendationService** can manage multiple **Course** instances (1:many).
+- **QueryPage** is associated with **QueryViewModel** (1:1).
+- **QueryViewModel** is associated with **CourseRecommendationService** (1:1).
+
+**Sequence Diagram**:
 
 ![SequenceDiagramU9.png](SequenceDiagramU9.png)
 
@@ -703,9 +966,32 @@ Sequence Steps:
 
 ### Use Case "Submit Course Feedback" (U10)
 
-**Class Diagram**
+**Class Diagram**:
 
-**Sequence Diagram**
+![ClassDiagramU10.png](ClassDiagramU10.png)
+
+| **Use Case ID**          | U10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | Submit Course Feedback                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Description**          | This use case allows a user to submit feedback for a course they have completed. The system captures the feedback, validates it, and stores it in the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Actors**               | User, FeedbackService, DatabaseService, FeedbackPage, FeedbackViewModel, IFeedbackViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Preconditions**        | The user is logged into the system and has completed a course.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Postconditions**       | The feedback is stored in the database and associated with the course and user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Normal Flow**          | 1. User navigates to the feedback page for the completed course on the application interface.<br>2. System presents the feedback form on the User Interface.<br>3. User fills out the feedback form, providing a rating and comments, and submits the form.<br>4. User Interface captures the feedback and sends it to FeedbackService.<br>5. FeedbackService validates the feedback and sends it to DatabaseService.<br>6. DatabaseService saves the feedback and confirms the successful storage back to FeedbackService.<br>7. FeedbackService confirms the successful submission to the User Interface.<br>8. User Interface displays a confirmation message to the user. |
+| **Alternative Flow**     | **Feedback Validation Error**:<br>1. If the feedback validation fails, FeedbackService returns an error message.<br>2. User Interface displays the error message to the user.<br>3. User can correct the feedback and resubmit the form.<br>4. The system processes the new feedback as described in the Normal Flow.<br>**Data Storage Error**:<br>1. If there is an error storing the feedback, DatabaseService returns an error message.<br>2. User Interface displays the error message to the user.<br>3. User can retry submitting the feedback.<br>4. The system processes the new submission as described in the Normal Flow.                                         |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the feedback submission process, an error message is displayed to the user.<br>2. The user may try to submit feedback again later.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Special Requirements** | The system should ensure the feedback data is validated and stored securely in the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Assumptions**          | The user has the necessary permissions to submit feedback and the course data is available in the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+
+## Associations and Multiplicities
+
+- **FeedbackService** is associated with **DatabaseService** (1:1).
+- **FeedbackService** can manage multiple **Feedback** instances (1:many).
+- **Feedback** is associated with **Course** and **User** (1:1).
+- **FeedbackPage** is associated with **FeedbackViewModel** (1:1).
+- **FeedbackViewModel** is associated with **FeedbackService** (1:1).
+
+**Sequence Diagram**:
 
 ![SequenceDiagramU10.png](SequenceDiagramU10.png)
 
@@ -748,9 +1034,31 @@ Sequence Steps:
 
 ### Use Case "Access and Analyze User Data" (U11)
 
-**Class Diagram**
+**Class Diagram**:
 
-**Sequence Diagram**
+![ClassDiagrmU11.png](ClassDiagrmU11.png)
+
+| **Use Case ID**          | U11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Use Case Name**        | Access and Analyze User Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Description**          | This use case allows a university official to access and analyze user data for insights into user engagement, feedback, and course completion rates. The system retrieves and processes the relevant data from the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Actors**               | Admin, AnalyticsService, DatabaseService, AnalyticsPage, AnalyticsViewModel, IAnalyticsViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Preconditions**        | The admin is logged into the system and has the necessary permissions to access and analyze user data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Postconditions**       | The admin can view analyzed user data and make informed decisions based on the insights provided.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Normal Flow**          | 1. Admin logs into the system and navigates to the analytics page.<br>2. System presents the analytics options on the User Interface.<br>3. Admin selects the desired data sets (e.g., user engagement, course feedback) and criteria for analysis (e.g., time period, demographics).<br>4. Admin submits the request for data analysis.<br>5. User Interface captures the request and sends it to AnalyticsService.<br>6. AnalyticsService sends the data request to DatabaseService.<br>7. DatabaseService retrieves the requested user data from the database.<br>8. DatabaseService returns the raw data to AnalyticsService.<br>9. AnalyticsService processes the raw data, performing necessary calculations and transformations.<br>10. AnalyticsService sends the analyzed data to AnalyticsViewModel.<br>11. AnalyticsViewModel sends the processed data to User Interface.<br>12. User Interface displays the analyzed data in an accessible format (e.g., graphs, charts, tables) to the admin. |
+| **Alternative Flow**     | **Data Retrieval Error**:<br>1. If there is an error retrieving the data, AnalyticsService returns an error message.<br>2. User Interface displays the error message to the admin.<br>3. Admin can retry the data request.<br>4. The system processes the new request as described in the Normal Flow.<br>**Data Processing Error**:<br>1. If there is an error processing the data, AnalyticsService returns an error message.<br>2. User Interface displays the error message to the admin.<br>3. Admin can retry the data request.<br>4. The system processes the new request as described in the Normal Flow.                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Exceptions**           | **System Error**:<br>1. If there is a system error during the data retrieval or processing, an error message is displayed to the admin.<br>2. The admin may try to access and analyze the user data again later.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Special Requirements** | The system should ensure the user data is retrieved and processed accurately and securely.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Assumptions**          | The user data is available in the database and the admin has the necessary permissions to access and analyze it.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+
+**Associations and Multiplicities**
+
+- **AnalyticsService** is associated with **DatabaseService** (1:1).
+- **AnalyticsService** can manage multiple **UserData** and **CourseData** instances (1:many).
+- **AnalyticsPage** is associated with **AnalyticsViewModel** (1:1).
+- **AnalyticsViewModel** is associated with **AnalyticsService** (1:1).
+
+**Sequence Diagram**:
 
 ![SequenceDiagramU11.png](SequenceDiagramU11.png)
 
@@ -791,11 +1099,11 @@ Sequence Steps:
 
 ### Use Case "Create and Delete Thread" (U12)
 
-**Class Diagram**
+**Class Diagram**:
 
 **Creating a Thread**
 
-**Sequence Diagram**
+**Sequence Diagram**:
 
 ![SequenceDiagramU12.1.png](SequenceDiagramU12.1.png)
 
@@ -817,7 +1125,7 @@ Sequence Steps:
 
 **Deleting a Thread**
 
-**Sequence Diagram**
+**Sequence Diagram**:
 
 ![SequenceDiagramU12.2.png](SequenceDiagramU12.2.png)
 
@@ -839,11 +1147,11 @@ Sequence Steps:
 
 #### Use Case "Create, Edit, Reply, and Delete Post" (U13) ####
 
-**Class Diagram**
+**Class Diagram**:
 
 **Creating a Post**
 
-**Sequence Diagram**
+**Sequence Diagram**:
 
 ![SequenceDiagramU13.1.png](SequenceDiagramU13.1.png)
 
