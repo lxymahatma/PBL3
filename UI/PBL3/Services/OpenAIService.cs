@@ -1,11 +1,11 @@
-using OpenAI_API;
+using OpenAI;
 
 namespace PBL3.Services;
 
 public sealed class OpenAIService : IOpenAIService
 {
     [UsedImplicitly]
-    public OpenAIAPI OpenAIAPI { get; init; } = null!;
+    public OpenAIClient OpenAIClient { get; init; } = null!;
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;

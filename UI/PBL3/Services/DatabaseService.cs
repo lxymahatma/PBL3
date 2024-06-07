@@ -11,6 +11,8 @@ public class DatabaseService : IDatabaseService
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
 
+    public Dictionary<string, CourseInformation> GetCoursesFromDatabase() => throw new NotImplementedException();
+
     public Dictionary<string, User> GetUsersFromDatabase() => _users;
 
     public User? GetUserFromKey(string key) => _users.GetValueOrDefault(key);

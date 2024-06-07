@@ -1,5 +1,5 @@
 using Autofac;
-using OpenAI_API;
+using OpenAI;
 using PBL3.Extensions.MarkupExtensions;
 using PBL3.Services;
 using PBL3.ViewModels;
@@ -31,7 +31,7 @@ internal static class Bootstrapper
     private static void RegisterInstances()
     {
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
-        _builder.RegisterInstance(new OpenAIAPI(APIAuthentication.LoadFromPath()));
+        _builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
     }
 
     /// <summary>
@@ -58,4 +58,6 @@ internal static class Bootstrapper
     {
         DependencyInjectionExtension.Resolver = type => container.Resolve(type!);
     }
+
+    private static string LoadFromFile(string path = "OpenAIKey.txt") => File.ReadAllText(path);
 }
