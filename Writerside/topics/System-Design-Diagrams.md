@@ -4,7 +4,7 @@
 
 ## Component Diagram
 
-![Component_Diagram.png](Component_Diagram.png)
+![ComponentDiagram.png](ComponentDiagram.png)
 
 ## Use cases
 
