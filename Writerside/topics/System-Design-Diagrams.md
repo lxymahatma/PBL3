@@ -6,6 +6,17 @@
 
 ![ComponentDiagram.png](ComponentDiagram.png)
 
+| Component         | Description                                                                                                                                            |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| User Interface    | Provides a user-friendly interface for students to interact with the course recommendation system.                                                     |
+| Academic Calendar | Provides the User Interface component access to the academic calendar.                                                                                 |
+| Feedback System   | Allows students to post threads and view other users' threads.                                                                                         |
+| OpenAI API        | Analyzes user queries, extracts relevant information, and processes course descriptions to provide course recommendations.                             |
+| User Database     | Stores and manages user account information, including login credentials and profile information.                                                      |
+| Course Database   | Stores and manages the university's course catalog data, including course descriptions, credits, prerequisites, instructor information, and schedules. |
+
+
+
 ## Use cases
 
 ![UseCaseDiagram](UseCaseDiagram.png)
