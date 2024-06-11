@@ -32,7 +32,7 @@ We have finished defining the scope and goals of the system, as well as identify
 The next step is to gather all the course materials that will be utilized within the system and extract important information from the
 course syllabus to create a course database.
 
-To extract keywords from user inputs, we will use the `OpenAI API Dotnet` nuget package to use <tooltip term="API">API</tooltip> by ChatGPT.
+To extract keywords from user inputs, we will use the `OpenAI` nuget package to use <tooltip term="API">API</tooltip> by ChatGPT.
 Next, we will decide what method to use to filter recommended courses based on user needs.
 In the subsequent step, we will work on implementing the system to the application interface.
 Once that's done, we'll test the system and review to make necessary adjustments to the application.
@@ -95,5 +95,5 @@ and [Project Proposal Glossary](Glossary.md#project-proposal "Specific Glossary 
 ## References
 
 * [Avalonia](https://avaloniaui.net/)
-* [OpenAI API Dotnet](https://github.com/OkGoDoIt/OpenAI-API-dotnet)
+* [OpenAI](https://github.com/openai/openai-dotnet)
 * [openai-cookbook](https://github.com/openai/openai-cookbook/blob/main/examples/Question_answering_using_embeddings.ipynb)
