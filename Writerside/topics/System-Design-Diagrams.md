@@ -14,6 +14,7 @@
 | OpenAI API        | Analyzes user queries, extracts relevant information, and processes course descriptions to provide course recommendations.                             |
 | User Database     | Stores and manages user account information, including login credentials and profile information.                                                      |
 | Course Database   | Stores and manages the university's course catalog data, including course descriptions, credits, prerequisites, instructor information, and schedules. |
+| Forum Database    | Stores and manages the threads and posts of the community forums.                                                                                      |
 
 
 
