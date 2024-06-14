@@ -6,7 +6,7 @@
 
 ## Component Diagram
 
-![ComponentDiagram.png](ComponentDiagram.png)
+![ComponentDiagram](ComponentDiagram.png)
 
 | Component                | Description                                                                                                                                            |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
