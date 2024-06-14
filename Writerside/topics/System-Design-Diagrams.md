@@ -1,3 +1,5 @@
+<show-structure for="chapter" depth="3"/>
+
 # System Design Diagrams
 
 ## Classes
@@ -15,8 +17,6 @@
 | User Database     | Stores and manages user account information, including login credentials and profile information.                                                      |
 | Course Database   | Stores and manages the university's course catalog data, including course descriptions, credits, prerequisites, instructor information, and schedules. |
 | Forum Database    | Stores and manages the threads and posts of the community forums.                                                                                      |
-
-
 
 ## Use cases
 
@@ -38,7 +38,7 @@
 | U12    | Create and Delete Thread                | Users can create and delete threads.                   |
 | U13    | Create, Edit, Reply, and Delete Post    | Users can create, edit, reply and delete posts.        |
 
-# Use Case "Register Account" (U1)
+### Use Case "Register Account" (U1)
 
 **Class Diagram**:
 
@@ -114,7 +114,7 @@
 | 7    | If the user agrees to the terms, account registration will be completed.                                |
 | 8    | If the user does not agree to the sales, registration will fail and return to the register account day. |
 
-# Use Case "Log In" (U2)
+### Use Case "Log In" (U2)
 
 **Class Diagram**:
 
@@ -170,7 +170,7 @@
 
 **Activity Diagram**
 
-# Use Case "View and Edit Account Information" (U3)
+### Use Case "View and Edit Account Information" (U3)
 
 **Class Diagram**:
 
@@ -237,7 +237,7 @@
 
 ![ActivtyDiagramU3.1.png](ActivtyDiagramU3.1.png)
 
-# Use Case "Reset Account Password" (U4)
+### Use Case "Reset Account Password" (U4)
 
 **Class Diagram**:
 
@@ -319,7 +319,7 @@
 | 7    | If not, the user will not be able to reset the password and will go back to the forgot password page.       |
 | 8    | After resetting the password, the system will show the confirm password reset message.                      |
 
-# Use Case "Delete Account" (U5)
+### Use Case "Delete Account" (U5)
 
 **Class Diagram**:
 
@@ -377,7 +377,7 @@ Sequence Steps:
 
 **Activity Diagram**
 
-# Use Case "View Academic Calendar" (U6)
+### Use Case "View Academic Calendar" (U6)
 
 **Class Diagram**:
 
@@ -433,7 +433,7 @@ Sequence Steps:
 | 2    | System gets academic calendar data.      |
 | 3    | System displays academic calendar.       |
 
-# Use Case "View and Bookmark Course Pathways" (U7)
+### Use Case "View and Bookmark Course Pathways" (U7)
 
 **Class Diagram**:
 
@@ -507,7 +507,7 @@ Bookmarking Courses
 | 6    | If the user removes a course from the bookmark, the system returns to the viewing recommended courses page. |
 | 7    | If the user adds courses to the bookmark, the system updates the bookmark list.                             |
 
-# Use Case "Filter Courses" (U8)
+### Use Case "Filter Courses" (U8)
 
 **Class Diagram**:
 
@@ -561,7 +561,7 @@ Sequence Steps:
 
 ![ActivityDiagramU8.png](ActivityDiagramU8.png)
 
-# Use Case "Obtain Course Recommendation from Query" (U9)
+### Use Case "Obtain Course Recommendation from Query" (U9)
 
 **Class Diagram**:
 
@@ -618,7 +618,7 @@ Sequence Steps:
 
 ![ActivityDiagramU9.png](ActivityDiagramU9.png)
 
-# Use Case "Submit Course Feedback" (U10)
+### Use Case "Submit Course Feedback" (U10)
 
 **Class Diagram**:
 
@@ -686,7 +686,7 @@ Sequence Steps:
 | 8    | System aggregates ratings.                                                           |
 | 9    | System displays ratings and reviews.                                                 |
 
-# Use Case "Access and Analyze User Data" (U11)
+### Use Case "Access and Analyze User Data" (U11)
 
 **Class Diagram**:
 
@@ -751,7 +751,7 @@ Sequence Steps:
 | 7    | If user wants to access other data, the system will return to select data stage.                    |
 | 8    | If user wants to end visit, the activity ends.                                                      |
 
-# Use Case "Create and Delete Thread" (U12)
+### Use Case "Create and Delete Thread" (U12)
 
 **Class Diagram**:
 
@@ -823,7 +823,7 @@ Sequence Steps:
 | 6    | The user receives a message confirming that the thread has been successfully deleted.                                                                                                    |
 | 7    | The thread is removed from the forum display, and the user is redirected back to the forum homepage or their profile page.                                                               |
 
-# Use Case "Create, Edit, Reply, and Delete Post" (U13) #
+### Use Case "Create, Edit, Reply, and Delete Post" (U13) #
 
 **Class Diagram**:
 
@@ -892,7 +892,7 @@ Sequence Steps:
 | 5    | PostManagement receives the update confirmation and sends a message indicating successful update to the User Interface.                                                   |
 | 6    | User Interface updates the post display and notifies the User of the successful edit, allowing the User to see the updated content in place of the old one in the thread. |
 
-#### Replying to a Post ####
+**Replying to a Post**
 
 ![SequenceDiagramU13.3.png](SequenceDiagramU13.3.png)
 
@@ -905,7 +905,7 @@ Sequence Steps:
 | 5    | PostManagement confirms the successful addition of the reply and sends a success message to the User Interface.                                           |
 | 6    | User Interface displays the new reply under the original post and confirms to the User, updating the thread to show the reply inline with the discussion. |
 
-#### Deleting a Post ####
+**Deleting a Post**
 
 ![SequenceDiagramU13.4.png](SequenceDiagramU13.4.png)
 
