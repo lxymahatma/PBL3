@@ -10,6 +10,11 @@ on:
       - UI/**
   workflow_dispatch:
 
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     strategy:
@@ -44,13 +49,11 @@ jobs:
           dotnet publish UI/PBL3.sln --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }} --self-contained=${{ matrix.self-contained }}
 
       - name: List Result
-        shell: bash
         working-directory: ./
         run: |
           ls -l UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish
 
       - name: Package Build
-        shell: bash
         working-directory: ./
         run: |
           7z a -tzip PBL3.zip ./UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/*
