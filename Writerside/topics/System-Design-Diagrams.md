@@ -168,6 +168,21 @@
 
 **Activity Diagram**
 
+![ActivityDiagramU2.png](ActivityDiagramU2.png)
+
+**Activity Steps**
+
+| **Step** | **Description**                                                                           |
+|----------|-------------------------------------------------------------------------------------------|
+| 1        | Open the Login page                                                                       |
+| 2        | The user enters a username and password                                                   |
+| 3        | Press the confirm button                                                                  |
+| 4        | The system checks the username first                                                      |
+| 5        | If the username is correct, next check the password                                       |
+| 6        | If not, the system returns “User not found”, and the system will return to the Login page |
+| 7        | If the password is correct, the user successfully logs in                                 |
+| 8        | If not, the system returns “Wrong password”, and the system will return to the Login page |
+
 # Use Case "View and Edit Account Information" (U3)
 
 **Class Diagram**:
@@ -830,6 +845,30 @@ Sequence Steps:
 | 5    | Upon confirmation, the system deletes the thread.                                                                                                                                        |
 | 6    | The user receives a message confirming that the thread has been successfully deleted.                                                                                                    |
 | 7    | The thread is removed from the forum display, and the user is redirected back to the forum homepage or their profile page.                                                               |
+
+**Activity Digram**
+
+![ActivityDiagarmU12.png](ActivityDiagarmU12.png)
+
+**Activity Steps**
+
+| **Step** | **Description**                                                                              |
+|----------|----------------------------------------------------------------------------------------------|
+| 1        | System displays discussion board                                                             |
+| 2        | User can choose to either create or delete a thread                                          |
+| 3        | If the user chooses to create a thread, the system displays the create thread form           |
+| 4        | User enters a title and description for the new thread                                       |
+| 5        | User has the option to format the text and add links or images                               |
+| 6        | User has the option to tag threads with relevant course codes or topics                      |
+| 7        | User submits thread                                                                          |
+| 8        | System filters inappropriate content                                                         |
+| 9        | If the input is valid, the system will display the thread                                    |
+| 10       | If the input is invalid, the system will display an error message                            |
+| 11       | If the user chooses to delete a thread, the user will be able to select the thread to delete |
+| 12       | System displays details of the chosen thread                                                 |
+| 13       | User confirms deletion                                                                       |
+| 14       | System deletes thread from database                                                          |
+| 15       | System updates discussion board                                                              |
 
 # Use Case "Create, Edit, Reply, and Delete Post" (U13) #
 
