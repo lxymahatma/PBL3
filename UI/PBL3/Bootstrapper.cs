@@ -31,7 +31,7 @@ internal static class Bootstrapper
     private static void RegisterInstances()
     {
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
-        _builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
+        //_builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
     }
 
     /// <summary>
