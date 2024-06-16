@@ -16,4 +16,9 @@ public partial class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
     {
         Logger.Information("Searching for {SearchText}", SearchText);
     }
+    [RelayCommand]
+    private void Login()
+    {
+        Logger.Information("Logging in");
+    }
 }

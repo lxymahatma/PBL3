@@ -1,5 +1,9 @@
 # System Design Diagrams
 
+## Context Diagram
+
+![ContextDiagram](ContextDiagram.png)
+
 ## Component Diagram
 
 ![ComponentDiagram.png](ComponentDiagram.png)
