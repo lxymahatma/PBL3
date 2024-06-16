@@ -1,7 +1,5 @@
 # System Design Diagrams
 
-## Classes
-
 ## Component Diagram
 
 ![ComponentDiagram.png](ComponentDiagram.png)
@@ -249,6 +247,17 @@
 **Activity Diagram**
 
 ![ActivtyDiagramU3.1.png](ActivtyDiagramU3.1.png)
+
+| **Step** | **Description**                                                                 |
+|----------|---------------------------------------------------------------------------------|
+| 1        | Users need to log into their account.                                           |
+| 2        | After logging in, users can access their account information.                   |
+| 3        | Users can view their current account information.                               |
+| 4        | The system prompts users to decide whether they want to edit their information. |
+| 5        | If users choose to edit, they can input new or updated information.             |
+| 6        | The system saves the changes made by the user.                                  |
+| 7        | The system confirms the changes to the user.                                    |
+| 8        | If users do not choose to edit, the process ends without making any changes.    |
 
 # Use Case "Reset Account Password" (U4)
 
@@ -589,6 +598,15 @@ Sequence Steps:
 
 ![ActivityDiagramU8.png](ActivityDiagramU8.png)
 
+| **Step** | **Description**                                                          |
+|----------|--------------------------------------------------------------------------|
+| 1        | Users select the criteria they want to use to filter courses.            |
+| 2        | The system applies the selected filter criteria.                         |
+| 3        | The system retrieves the list of courses that match the filter criteria. |
+| 4        | Users can view the list of filtered courses.                             |
+| 5        | Users can select criteria to sort the filtered courses.                  |
+| 6        | The system displays the sorted list of filtered courses.                 |
+
 # Use Case "Obtain Course Recommendation from Query" (U9)
 
 **Class Diagram**:
@@ -645,6 +663,16 @@ Sequence Steps:
 **Activity Diagram**
 
 ![ActivityDiagramU9.png](ActivityDiagramU9.png)
+
+| **Step** | **Description**                                                                                            |
+|----------|------------------------------------------------------------------------------------------------------------|
+| 1        | Users start by inputting their query or requirements for course recommendations.                           |
+| 2        | The system processes the user's query.                                                                     |
+| 3        | The system generates course recommendations based on the processed query.                                  |
+| 4        | The system displays the recommended courses to the user.                                                   |
+| 5        | The system asks users if they want to provide feedback on the recommendations.                             |
+| 6        | If users choose to provide feedback, the system collects feedback from the user about the recommendations. |
+| 7        | If users do not choose to provide feedback, the process ends without collecting feedback.                  |
 
 # Use Case "Submit Course Feedback" (U10)
 
