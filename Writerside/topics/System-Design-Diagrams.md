@@ -4,19 +4,27 @@
 
 ![ContextDiagram](ContextDiagram.png)
 
+| **Component**                    | **Description**                                                                                                                          |
+|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| **Course Recommendation System** | Central system that processes user queries, generates course recommendations, and manages user and course data.                          |
+| **Student**                      | Users of the system who seek recommendations for courses and manage their course selections.                                             |
+| **Admin**                        | Administrators who use the system to access aggregated data on user interactions and course selections for analysis and decision-making. |
+| **System Database**              | The storage system for user data, thread data, course information, and other related data required by the course recommendation system.  |
+| **OpenAI API**                   | External API used to process user queries and generate course recommendations using natural language processing and machine learning.    |
+
 ## Component Diagram
 
 ![ComponentDiagram.png](ComponentDiagram.png)
 
-| Component         | Description                                                                                                                                            |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| User Interface    | Provides a user-friendly interface for students to interact with the course recommendation system.                                                     |
-| Academic Calendar | Provides the User Interface component access to the academic calendar.                                                                                 |
-| Feedback System   | Allows students to post threads and view other users' threads.                                                                                         |
-| OpenAI API        | Analyzes user queries, extracts relevant information, and processes course descriptions to provide course recommendations.                             |
-| User Database     | Stores and manages user account information, including login credentials and profile information.                                                      |
-| Course Database   | Stores and manages the university's course catalog data, including course descriptions, credits, prerequisites, instructor information, and schedules. |
-| Forum Database    | Stores and manages the threads and posts of the community forums.                                                                                      |
+| Component             | Description                                                                                                                                            |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **User Interface**    | Provides a user-friendly interface for students to interact with the course recommendation system.                                                     |
+| **Academic Calendar** | Provides the User Interface component access to the academic calendar.                                                                                 |
+| **Feedback System**   | Allows students to post threads and view other users' threads.                                                                                         |
+| **OpenAI API**        | Analyzes user queries, extracts relevant information, and processes course descriptions to provide course recommendations.                             |
+| **User Database**     | Stores and manages user account information, including login credentials and profile information.                                                      |
+| **Course Database**   | Stores and manages the university's course catalog data, including course descriptions, credits, prerequisites, instructor information, and schedules. |
+| **Forum Database**    | Stores and manages the threads and posts of the community forums.                                                                                      |
 
 ## Use cases
 
