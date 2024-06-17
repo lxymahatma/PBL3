@@ -260,7 +260,7 @@
 
 ### Use Case "Reset Account Password" (U4)
 
-#### (U4) Class Diagram:
+#### (U4) Class Diagram
 
 ![ClassDiagramU4_1.png](ClassDiagramU4_1.png)
 
@@ -587,7 +587,7 @@
 
 ### Use Case "Obtain Course Recommendation from Query" (U9)
 
-#### (U9) Class Diagram:
+#### (U9) Class Diagram
 
 ![ClassDiagramU9_1.png](ClassDiagramU9_1.png)
 
