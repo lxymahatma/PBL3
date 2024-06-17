@@ -1,3 +1,5 @@
+<show-structure for="chapter" depth="3"/>
+
 # System Design Diagrams
 
 ## Context Diagram
@@ -46,9 +48,9 @@
 | U12    | Create and Delete Thread                | Users can create and delete threads.                   |
 | U13    | Create, Edit, Reply, and Delete Post    | Users can create, edit, reply and delete posts.        |
 
-# Use Case "Register Account" (U1)
+### Use Case "Register Account" (U1)
 
-**Class Diagram**:
+#### (U1) Class Diagram:
 
 ![ClassDiagramU1_1.png](ClassDiagramU1_1.png)
 
@@ -71,15 +73,13 @@
 | **ObservableValidator**      | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `RegisterWindowViewModel`                                                                                                                      |
 | **ViewModelBase**            | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `RegisterWindowViewModel`                                                                                                                      |
 
-**Sequence Diagram**:
+#### (U1) Sequence Diagram:
 
 ![SequenceDiagramU1.png](SequenceDiagramU1.png)
 
 **Actor**: User
 
 **System Components**: User Interface, AuthenticationService, Database
-
-**Sequence Steps**:
 
 | Step | Description                                                                                                                           |
 |------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -104,11 +104,9 @@
 |      | - Displays a success message and possibly directs the user to a login page or a confirmation email is sent.                           |
 |      | - Displays an error message if the registration failed, asking the user to try different credentials or contact support.              |
 
-**Activity Diagram**
+#### (U1) Activity Diagram
 
 ![ActivityDiagramU1.jpg](ActivityDiagramU1.jpg)
-
-**Activity Steps**:
 
 | Step | Description                                                                                             |
 |------|---------------------------------------------------------------------------------------------------------|
@@ -121,9 +119,9 @@
 | 7    | If the user agrees to the terms, account registration will be completed.                                |
 | 8    | If the user does not agree to the sales, registration will fail and return to the register account day. |
 
-# Use Case "Log In" (U2)
+### Use Case "Log In" (U2)
 
-**Class Diagram**:
+#### (U2) Class Diagram:
 
 ![ClassDiagramU2_1.png](ClassDiagramU2_1.png)
 
@@ -146,15 +144,13 @@
 | **ObservableValidator**      | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `RegisterWindowViewModel`                                                                                                                      |
 | **ViewModelBase**            | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `RegisterWindowViewModel`                                                                                                                      |
 
-**Sequence Diagram**:
+#### (U2) Sequence Diagram:
 
 ![SequenceDiagramU2.png](SequenceDiagramU2.png)
 
 **Actor**: User
 
 **System Components**: User Interface, AuthenticationService, Database
-
-**Sequence Steps**:
 
 | Step | Description                                                                                                                                                                                                                  |
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -174,11 +170,9 @@
 |      | - Displays a welcome message and transitions the user to the dashboard or homepage if login is successful.                                                                                                                   |
 |      | - Displays an error message if the login failed, offering the user the option to try again or reset their password.                                                                                                          |
 
-**Activity Diagram**
+#### (U2) Activity Diagram
 
 ![ActivityDiagramU2.png](ActivityDiagramU2.png)
-
-**Activity Steps**
 
 | **Step** | **Description**                                                                           |
 |----------|-------------------------------------------------------------------------------------------|
@@ -191,9 +185,9 @@
 | 7        | If the password is correct, the user successfully logs in                                 |
 | 8        | If not, the system returns “Wrong password”, and the system will return to the Login page |
 
-# Use Case "View and Edit Account Information" (U3)
+### Use Case "View and Edit Account Information" (U3)
 
-**Class Diagram**:
+#### (U3) Class Diagram:
 
 ![ClassDiagramU3_1.png](ClassDiagramU3_1.png)
 
@@ -214,15 +208,13 @@
 | **DatabaseService**       | `Logger: ILogger`                                                                                                      | `SaveUser(user: User): Boolean`<br/>`GetAllThreadsFromDatabase(): Thread[]`<br/>`DeleteThread(thread: Thread): Boolean`<br/>`GetAggregatedDataAsync(): void`<br/>`GetUsersFromDatabase(): User[]`<br/>`GetThreadFromId(threadId: int): Thread`<br/>`SaveCourseInformation(course: CourseInformation): Boolean`<br/>`GetCourseInformationFromName(courseName: String): CourseInformation`<br/>`GetDataForAnalysisAsync(): void`<br/>`GetUserFromKey(key: String): User`<br/>`SaveThread(thread: Thread): Boolean` | - 1 to 1 with `IDatabaseService`<br/>- 1 to 1 with `ILogger`                                                                                                 |
 | **ILogger**               | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `UserService`<br/>- 1 to 1 with `DatabaseService`                                                                                              |
 
-**Sequence Diagram**:
+#### (U3) Sequence Diagram:
 
 ![SequenceDiagramU3.png](SequenceDiagramU3.png)
 
 **Actor**: User
 
 **System Components**: User Interface, UserProfile, Database
-
-**Sequence Steps:**
 
 **Viewing Account Information**
 
@@ -251,7 +243,7 @@
 | 7    | UserProfile receives the confirmation and notifies the User Interface of the successful update. |
 | 8    | User Interface informs the User that their information has been successfully updated.           |
 
-**Activity Diagram**
+#### (U3) Activity Diagram:
 
 ![ActivtyDiagramU3.1.png](ActivtyDiagramU3.1.png)
 
@@ -266,9 +258,9 @@
 | 7        | The system confirms the changes to the user.                                    |
 | 8        | If users do not choose to edit, the process ends without making any changes.    |
 
-# Use Case "Reset Account Password" (U4)
+### Use Case "Reset Account Password" (U4)
 
-**Class Diagram**:
+#### (U4) Class Diagram::
 
 ![ClassDiagramU4_1.png](ClassDiagramU4_1.png)
 
@@ -291,15 +283,13 @@
 | **ObservableValidator**   | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `AccountPageViewModel`                                                                                                                         |
 | **ViewModelBase**         | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `AccountPageViewModel`                                                                                                                         |
 
-**Sequence Diagram**:
+#### (U4) Sequence Diagram:
 
 ![SequenceDiagramU4.png](SequenceDiagramU4.png)
 
 **Actor**: User
 
 **System Components**: User Interface, AuthenticationService, Database
-
-**Sequence Steps**:
 
 | Step | Description                                                                                               |
 |------|-----------------------------------------------------------------------------------------------------------|
@@ -330,7 +320,7 @@
 | 16   | User Interface informs the User that their password has been successfully reset and redirects them to the |
 |      | login page.                                                                                               |
 
-**Activity Diagram**
+#### (U4) Activity Diagram:
 
 ![ActivityDiagramU4.jpg](ActivityDiagramU4.jpg)
 
@@ -346,9 +336,9 @@
 | 7    | If not, the user will not be able to reset the password and will go back to the forgot password page.       |
 | 8    | After resetting the password, the system will show the confirm password reset message.                      |
 
-# Use Case "Delete Account" (U5)
+### Use Case "Delete Account" (U5)
 
-**Class Diagram**:
+#### (U5) Class Diagram:
 
 ![ClassDiagramU5_1.png](ClassDiagramU5_1.png)
 
@@ -371,15 +361,13 @@
 | **ObservableValidator**   | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `AccountPageViewModel`                                                                                                                         |
 | **ViewModelBase**         | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `AccountPageViewModel`                                                                                                                         |
 
-**Sequence Diagram**:
+#### (U5) Sequence Diagram:
 
 ![SequenceDiagramU5.png](SequenceDiagramU5.png)
 
 **Actor**: User
 
 **System Components**: User Interface, AuthenticationService, Database
-
-Sequence Steps:
 
 | Step | Description                                                                                                      |
 |------|------------------------------------------------------------------------------------------------------------------|
@@ -401,7 +389,7 @@ Sequence Steps:
 | 10   | AuthenticationService informs the User Interface that the account has been successfully deleted.                 |
 | 11   | User Interface notifies the User that their account has been deleted and logs them out of the system.            |
 
-**Activity Diagram**
+#### (U5) Activity Diagram:
 
 ![ActivityDiagramU5.png](ActivityDiagramU5.png)
 
@@ -413,9 +401,9 @@ Sequence Steps:
 | 4    | If the user presses cancel, the system will return to the user page |
 | 5    | If the user confirms, the account will be deleted                   |
 
-# Use Case "View Academic Calendar" (U6)
+### Use Case "View Academic Calendar" (U6)
 
-**Class Diagram**:
+#### (U6) Class Diagram:
 
 ![ClassDiagramU6_1.png](ClassDiagramU6_1.png)
 
@@ -435,15 +423,13 @@ Sequence Steps:
 | **HomePage**            | None                                                                                                                                                                                                            | `HomePage(): void`<br/>`InitializeComponents(): void`                                                                                                                                                                                                                                                                                                                                                                                                                                                            | - 1 to 1 with `UserControl`                                                                                                                  |
 | **UserControl**         | None                                                                                                                                                                                                            | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePage`                                                                                                                     |
 
-**Sequence Diagram**:
+#### (U6) Sequence Diagram:
 
 ![SequenceDiagram6.png](SequenceDiagram6.png)
 
 **Actor**: User
 
 **System Components**: User Interface, System, Database
-
-**Sequence Steps**:
 
 | Step | Description                                                                                                                                                                                          |
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -455,7 +441,7 @@ Sequence Steps:
 | 6    | System sends the formatted academic calendar to the User Interface.                                                                                                                                  |
 | 7    | User Interface displays the academic calendar to the User, allowing them to view important academic dates, such as semester start and end dates, exam periods, holidays, and registration deadlines. |
 
-**Activity Diagram**
+#### (U6) Activity Diagram:
 
 ![ActivityDiagramU6.png](ActivityDiagramU6.png)
 
@@ -465,13 +451,11 @@ Sequence Steps:
 | 2    | System gets academic calendar data.      |
 | 3    | System displays academic calendar.       |
 
-# Use Case "View and Bookmark Course Pathways" (U7)
+### Use Case "View and Bookmark Course Pathways" (U7)
 
-**Class Diagram**:
+#### (U7) Class Diagram:
 
 ![ClassDiagramU7_1.jpg](ClassDiagramU7_1.jpg)
-
-**Class Diagram Description**
 
 | **Class**                | **Attributes**                                                                                                                                                                                                                | **Methods**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | **Associations**                                                                                                                                                                                      |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -495,7 +479,7 @@ Sequence Steps:
 | **CourseCategory**       | `NAME(): String`                                                                                                                                                                                                              | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - Enumeration used by `CourseInformation`                                                                                                                                                             |
 | **CourseRating**         | `NAME(): String`                                                                                                                                                                                                              | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - Enumeration used by `CourseInformation`                                                                                                                                                             |
 
-**Sequence Diagram**:
+#### (U7) Sequence Diagram:
 
 ![SequenceDiagramU7.png](SequenceDiagramU7.png)
 
@@ -503,9 +487,7 @@ Sequence Steps:
 
 **System Components**: User Interface, Course, CourseBookmark, Database
 
-**Sequence Steps**:
-
-Viewing Course Pathways
+**Viewing Course Pathways**
 
 | Step | Description                                                                                                                                           |
 |------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -516,7 +498,7 @@ Viewing Course Pathways
 | 5    | Course component formats the course data and sends it back to the User Interface.                                                                     |
 | 6    | User Interface displays the course pathways to the User, allowing them to explore various courses and their prerequisites, credits, and descriptions. |
 
-Bookmarking Courses
+**Bookmarking Courses**
 
 | Step | Description                                                                                                                 |
 |------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -527,7 +509,7 @@ Bookmarking Courses
 | 5    | CourseBookmark component confirms the successful bookmarking to the User Interface.                                         |
 | 6    | User Interface notifies the User that the courses have been successfully bookmarked.                                        |
 
-**Activity Diagram**
+#### (U7) Activity Diagram:
 
 ![ActivityDiagramU7.png](ActivityDiagramU7.png)
 
@@ -541,13 +523,11 @@ Bookmarking Courses
 | 6    | If the user removes a course from the bookmark, the system returns to the viewing recommended courses page. |
 | 7    | If the user adds courses to the bookmark, the system updates the bookmark list.                             |
 
-# Use Case "Filter Courses" (U8)
+### Use Case "Filter Courses" (U8)
 
-**Class Diagram**:
+#### (U8) Class Diagram:
 
 ![ClassDiagramU8_1.png](ClassDiagramU8_1.png)
-
-**Class Diagram Description**
 
 | **Class**               | **Attributes**                                                                                                                                                                                                                | **Methods**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | **Associations**                                                                                                                                                                         |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -570,15 +550,13 @@ Bookmarking Courses
 | **ObservableValidator** | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePageViewModel`                                                                                                                                                        |
 | **ViewModelBase**       | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePageViewModel`                                                                                                                                                        |
 
-**Sequence Diagram**:
+#### (U8) Sequence Diagram:
 
 ![SequenceDiagramU8.png](SequenceDiagramU8.png)
 
 **Actor**: User
 
 **System Components**: User Interface, CourseRecommendation, Database
-
-Sequence Steps:
 
 | Step | Description                                                                                                                                                         |
 |------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -594,7 +572,7 @@ Sequence Steps:
 | 10   | CourseRecommendation sends the processed course list back to the User Interface.                                                                                    |
 | 11   | User Interface updates the display to show the filtered courses to the User.                                                                                        |
 
-**Activity Diagram**
+#### (U8) Activity Diagram:
 
 ![ActivityDiagramU8.png](ActivityDiagramU8.png)
 
@@ -607,9 +585,9 @@ Sequence Steps:
 | 5        | Users can select criteria to sort the filtered courses.                  |
 | 6        | The system displays the sorted list of filtered courses.                 |
 
-# Use Case "Obtain Course Recommendation from Query" (U9)
+### Use Case "Obtain Course Recommendation from Query" (U9)
 
-**Class Diagram**:
+#### (U9) Class Diagram::
 
 ![ClassDiagramU9_1.png](ClassDiagramU9_1.png)
 
@@ -634,15 +612,13 @@ Sequence Steps:
 | **ObservableValidator** | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePageViewModel`                                                                                                                                                        |
 | **ViewModelBase**       | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePageViewModel`                                                                                                                                                        |
 
-**Sequence Diagram**:
+#### (U9) Sequence Diagram:
 
 ![SequenceDiagramU9.png](SequenceDiagramU9.png)
 
 **Actor**: User
 
 **System Components**: User Interface, Query, OpenAIAPI, CourseRecommendation, Database
-
-Sequence Steps:
 
 | Step | Description                                                                                                                                                    |
 |------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -660,7 +636,7 @@ Sequence Steps:
 | 12   | CourseRecommendation sends the final list of recommended courses to the User Interface.                                                                        |
 | 13   | User Interface displays the recommended courses to the User, providing detailed information such as course descriptions, prerequisites, and possible pathways. |
 
-**Activity Diagram**
+#### (U9) Activity Diagram:
 
 ![ActivityDiagramU9.png](ActivityDiagramU9.png)
 
@@ -674,13 +650,11 @@ Sequence Steps:
 | 6        | If users choose to provide feedback, the system collects feedback from the user about the recommendations. |
 | 7        | If users do not choose to provide feedback, the process ends without collecting feedback.                  |
 
-# Use Case "Submit Course Feedback" (U10)
+### Use Case "Submit Course Feedback" (U10)
 
-**Class Diagram**:
+#### (U10) Class Diagram:
 
 ![SubmitCourseFeedback(U10)_ClassDiagram.png](SubmitCourseFeedback(U10)_ClassDiagram.png)
-
-**Class Diagram Description:**
 
 | **Class**                | **Attributes**                                                                                                                                                                                                                | **Methods**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | **Associations**                                                                                                                                                                                      |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -701,15 +675,13 @@ Sequence Steps:
 | **UserControl**          | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | - 1 to 1 with `CoursePage`                                                                                                                                                                            |
 | **CoursePage**           | None                                                                                                                                                                                                                          | `CoursePage(): void`<br/>`InitializeComponents(): void`                                                                                                                                                                                                                                                                                                                                                                                                                                                         | - 1 to 1 with `UserControl`                                                                                                                                                                           |
 
-**Sequence Diagram**:
+#### (U10) Sequence Diagram:
 
 ![SequenceDiagramU10.png](SequenceDiagramU10.png)
 
 **Actor**: User
 
 **System Components**: User Interface, Feedback, Database
-
-**Sequence Steps**:
 
 | Step | Description                                                                                                                                                     |
 |------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -726,7 +698,7 @@ Sequence Steps:
 | 11   | Feedback component notifies the User Interface of the successful feedback submission.                                                                           |
 | 12   | User Interface displays a confirmation message to the User thanking them for their feedback.                                                                    |
 
-**Activity Diagrams**
+#### (U10) Activity Diagram:
 
 ![ActivityDiagramU10.png](ActivityDiagramU10.png)
 
@@ -742,13 +714,11 @@ Sequence Steps:
 | 8    | System aggregates ratings.                                                           |
 | 9    | System displays ratings and reviews.                                                 |
 
-# Use Case "Access and Analyze User Data" (U11)
+### Use Case "Access and Analyze User Data" (U11)
 
-**Class Diagram**:
+#### (U11) Class Diagram:
 
 ![ClassDiagram(U11)_AccessAndAnalyseUserData.png](ClassDiagram(U11)_AccessAndAnalyseUserData.png)
-
-**Class Diagram Description**
 
 | **Class**               | **Attributes**                                                                                                         | **Methods**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | **Associations**                                                                                                                    |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -769,15 +739,13 @@ Sequence Steps:
 | **UserControl**         | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | - 1 to 1 with `AdminPage`                                                                                                           |
 | **AdminPage**           | None                                                                                                                   | `AdminPage(): void`<br/>`InitializeComponents(): void`                                                                                                                                                                                                                                                                                                                                                                                                                                                          | - 1 to 1 with `UserControl`                                                                                                         |
 
-**Sequence Diagram**:
+#### (U11) Sequence Diagram:
 
 ![SequenceDiagramU11.png](SequenceDiagramU11.png)
 
 **Actor**: Admin
 
 **System Components**: User Interface, SystemAnalytics, Database
-
-**Sequence Steps**:
 
 | Step | Description                                                                                                                                                                                              |
 |------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -793,7 +761,7 @@ Sequence Steps:
 | 10   | User Interface displays the analyzed results in an accessible format (e.g., graphs, charts, tables) to the Admin.                                                                                        |
 | 11   | Admin reviews the results, gaining insights into user behavior and system performance which can be used to make informed decisions about system improvements, policy changes, or targeted interventions. |
 
-**Activity Diagram**
+#### (U11) Activity Diagram:
 
 ![ActivityDiagramU11.jpg](ActivityDiagramU11.jpg)
 
@@ -808,13 +776,11 @@ Sequence Steps:
 | 7    | If user wants to access other data, the system will return to select data stage.                    |
 | 8    | If user wants to end visit, the activity ends.                                                      |
 
-# Use Case "Create and Delete Thread" (U12)
+### Use Case "Create and Delete Thread" (U12)
 
-**Class Diagram**:
+#### (U12) Class Diagram:
 
 ![CreateAndDeleteThread_ClassDigram(U12)_1.png](CreateAndDeleteThread_ClassDigram(U12)_1.png)
-
-**ClassDiagram Description**
 
 | **Class**               | **Attributes**                                                                                                                                                                                                                | **Methods**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | **Associations**                                                                                                                                                                                                               |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -838,15 +804,13 @@ Sequence Steps:
 | **IDatabaseService**    | None                                                                                                                                                                                                                          | `DeleteThread(thread: Thread): Boolean`<br/>`SaveCourseInformation(course: CourseInformation): Boolean`<br/>`GetUsersFromDatabase(): User[]`<br/>`GetUserFromKey(key: String): User`<br/>`GetThreadFromId(threadId: int): Thread`<br/>`SaveUser(user: User): Boolean`<br/>`GetDataForAnalysis(): void`<br/>`SaveThread(thread: Thread): Boolean`<br/>`GetThreadsFromDatabase(): Thread[]`<br/>`GetAllThreadsFromDatabase(): Thread[]`<br/>`GetCourseInformationFromName(courseName: String): CourseInformation` | - 1 to 1 with `ForumService`<br/>- 1 to 1 with `DatabaseService`<br/>- 1 to 1 with `ILogger`                                                                                                                                   |
 | **DatabaseService**     | `Logger: ILogger`                                                                                                                                                                                                             | `DeleteThread(thread: Thread): Boolean`<br/>`SaveCourseInformation(course: CourseInformation): Boolean`<br/>`GetUsersFromDatabase(): User[]`<br/>`GetUserFromKey(key: String): User`<br/>`GetThreadFromId(threadId: int): Thread`<br/>`SaveUser(user: User): Boolean`<br/>`GetDataForAnalysis(): void`<br/>`SaveThread(thread: Thread): Boolean`<br/>`GetThreadsFromDatabase(): Thread[]`<br/>`GetAllThreadsFromDatabase(): Thread[]`<br/>`GetCourseInformationFromName(courseName: String): CourseInformation` | - 1 to 1 with `IDatabaseService`<br/>- 1 to 1 with `ILogger`                                                                                                                                                                   |
 
-**Sequence Diagram**:
+#### (U12) Sequence Diagram:
 
 ![SequenceDiagramU12.1.png](SequenceDiagramU12.1.png)
 
 **Actor**: User
 
 **System Components**: User Interface, Forum Management, Database
-
-**Sequence Steps**:
 
 | Step | Description                                                                                                                                                      |
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -860,15 +824,11 @@ Sequence Steps:
 
 **Deleting a Thread**
 
-**Sequence Diagram**:
-
 ![SequenceDiagramU12.2.png](SequenceDiagramU12.2.png)
 
 **Actor**: User
 
 **System Components**: User Interface, Forum Management, Database
-
-**Sequence Steps**:
 
 | Step | Description                                                                                                                                                                              |
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -880,11 +840,9 @@ Sequence Steps:
 | 6    | The user receives a message confirming that the thread has been successfully deleted.                                                                                                    |
 | 7    | The thread is removed from the forum display, and the user is redirected back to the forum homepage or their profile page.                                                               |
 
-**Activity Digram**
+#### (U12) Activity Diagram
 
 ![ActivityDiagarmU12.png](ActivityDiagarmU12.png)
-
-**Activity Steps**
 
 | **Step** | **Description**                                                                              |
 |----------|----------------------------------------------------------------------------------------------|
@@ -904,9 +862,9 @@ Sequence Steps:
 | 14       | System deletes thread from database                                                          |
 | 15       | System updates discussion board                                                              |
 
-# Use Case "Create, Edit, Reply, and Delete Post" (U13) #
+### Use Case "Create, Edit, Reply, and Delete Post" (U13)
 
-**Class Diagram**:
+#### (U13) Class Diagram:
 
 ![ClassDiagramU13_1.png](ClassDiagramU13_1.png)
 
@@ -935,15 +893,13 @@ Sequence Steps:
 
 **Creating a Post**
 
-**Sequence Diagram**:
+#### (U13) Sequence Diagram:
 
 ![SequenceDiagramU13.1.png](SequenceDiagramU13.1.png)
 
 **Actor**: User
 
 **System Components**: User Interface, Post Management, Database
-
-**Sequence Steps**
 
 | Step | Description                                                                                                                                                                                |
 |------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -963,8 +919,6 @@ Sequence Steps:
 
 **System Components**: User Interface, Post Management, Database
 
-Sequence Steps:
-
 | Step | Description                                                                                                                                                               |
 |------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1    | User selects the edit option on their own post, and the User Interface provides an editable form pre-filled with the existing post content.                               |
@@ -974,7 +928,7 @@ Sequence Steps:
 | 5    | PostManagement receives the update confirmation and sends a message indicating successful update to the User Interface.                                                   |
 | 6    | User Interface updates the post display and notifies the User of the successful edit, allowing the User to see the updated content in place of the old one in the thread. |
 
-#### Replying to a Post ####
+**Replying to a Post**
 
 ![SequenceDiagramU13.3.png](SequenceDiagramU13.3.png)
 
@@ -987,7 +941,7 @@ Sequence Steps:
 | 5    | PostManagement confirms the successful addition of the reply and sends a success message to the User Interface.                                           |
 | 6    | User Interface displays the new reply under the original post and confirms to the User, updating the thread to show the reply inline with the discussion. |
 
-#### Deleting a Post ####
+**Deleting a Post**
 
 ![SequenceDiagramU13.4.png](SequenceDiagramU13.4.png)
 
