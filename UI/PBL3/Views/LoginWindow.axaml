@@ -17,13 +17,34 @@
         <vm:LoginWindowViewModel />
     </Design.DataContext>
 
-    <Grid RowDefinitions="*,*,*,*,*,*" ShowGridLines="True">
-        <TextBlock Text="Login" />
-        <TextBlock Grid.Row="1" Text="User Name or Email" />
-        <TextBox Grid.Row="2" Text="{Binding Key}" />
-        <TextBlock Grid.Row="3" Text="Password" />
-        <TextBox Grid.Row="4" Text="{Binding Password}" />
-        <Button Grid.Row="5" Command="{Binding LoginCommand}" />
+    <Grid RowDefinitions="40,25,50,25,50,40" ShowGridLines="True">
+
+        <TextBlock Grid.Row="0"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Text="Login" />
+        <TextBlock Grid.Row="1"
+                   VerticalAlignment="Center"
+                   FontFamily="inria-sans"
+                   FontSize="14"
+                   FontWeight="Bold"
+                   Text="User Name or Email" />
+        <TextBox Grid.Row="2"
+                 VerticalAlignment="Center"
+                 Text="{Binding Key}" />
+        <TextBlock Grid.Row="3"
+                   VerticalAlignment="Center"
+                   FontFamily="inria-sans"
+                   FontSize="14"
+                   FontWeight="Bold"
+                   Text="Password" />
+        <TextBox Grid.Row="4"
+                 VerticalAlignment="Center"
+                 Text="{Binding Password}" />
+        <Button Grid.Row="5"
+                Command="{Binding LoginCommand}"
+                Content="Login" />
     </Grid>
+
 </Window>
 

@@ -39,11 +39,10 @@
             </TextBox.InnerRightContent>
 
         </TextBox>
-        <Button Grid.Row="0" Grid.Column="1"
-                HorizontalAlignment="Right"
-                Command="{Binding LoginCommand}"
-                Content="Login" />
-
+        <!--  <Button Grid.Row="0" Grid.Column="1"  -->
+        <!--  HorizontalAlignment="Right"  -->
+        <!--  Command="{Binding LoginCommand}"  -->
+        <!--  Content="Login" />  -->
     </Grid>
 
 </Window>
