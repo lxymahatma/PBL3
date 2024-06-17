@@ -2,6 +2,38 @@
 
 # System Design Diagrams
 
+## Application Design
+
+### Languages
+
+* C#
+* XAML
+
+### Frameworks / Libraries
+
+* [Avalonia](https://github.com/AvaloniaUI/Avalonia) - Develop Desktop, Embedded, Mobile and WebAssembly apps with C# and XAML
+* [Autofac](https://github.com/autofac/Autofac) - .NET IoC container
+* [OpenAI Dotnet](https://github.com/openai/openai-dotnet) - Official .NET library for the OpenAI API
+* [CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet) - .NET MVVM library with helpers
+* [HotAvalonia](https://github.com/Kir-Antipov/HotAvalonia) - .NET library crafted to seamlessly integrate hot reload functionality into
+  Avalonia applications
+* [Serilog](https://github.com/serilog/serilog) - Simple .NET logging with fully-structured events
+* [NRedisStack](https://github.com/redis/NRedisStack) - Redis Stack .Net client
+
+### Build System
+
+* [MSBuild](https://github.com/dotnet/msbuild) - Build platform for .NET and Visual Studio
+
+### Testing
+
+* [Xunit](https://github.com/xunit/xunit) - Free, open source, community-focused unit testing tool for .NET
+* [Moq](https://github.com/devlooped/moq) - Mocking framework for .NET
+
+### Development Tools
+
+* [Rider](https://www.jetbrains.com/rider) - IDE
+* [Visual Studio](https://visualstudio.microsoft.com) - IDE
+
 ## Context Diagram
 
 ![ContextDiagram](ContextDiagram.png)
@@ -260,7 +292,7 @@
 
 ### Use Case "Reset Account Password" (U4)
 
-#### (U4) Class Diagram:
+#### (U4) Class Diagram
 
 ![ClassDiagramU4_1.png](ClassDiagramU4_1.png)
 
@@ -587,7 +619,7 @@
 
 ### Use Case "Obtain Course Recommendation from Query" (U9)
 
-#### (U9) Class Diagram:
+#### (U9) Class Diagram
 
 ![ClassDiagramU9_1.png](ClassDiagramU9_1.png)
 
