@@ -50,7 +50,7 @@
 
 ### Use Case "Register Account" (U1)
 
-#### (U1) Class Diagram:
+#### (U1) Class Diagram
 
 ![ClassDiagramU1_1.png](ClassDiagramU1_1.png)
 
@@ -73,7 +73,7 @@
 | **ObservableValidator**      | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `RegisterWindowViewModel`                                                                                                                      |
 | **ViewModelBase**            | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `RegisterWindowViewModel`                                                                                                                      |
 
-#### (U1) Sequence Diagram:
+#### (U1) Sequence Diagram
 
 ![SequenceDiagramU1.png](SequenceDiagramU1.png)
 
@@ -121,7 +121,7 @@
 
 ### Use Case "Log In" (U2)
 
-#### (U2) Class Diagram:
+#### (U2) Class Diagram
 
 ![ClassDiagramU2_1.png](ClassDiagramU2_1.png)
 
@@ -144,7 +144,7 @@
 | **ObservableValidator**      | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `RegisterWindowViewModel`                                                                                                                      |
 | **ViewModelBase**            | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `RegisterWindowViewModel`                                                                                                                      |
 
-#### (U2) Sequence Diagram:
+#### (U2) Sequence Diagram
 
 ![SequenceDiagramU2.png](SequenceDiagramU2.png)
 
@@ -187,7 +187,7 @@
 
 ### Use Case "View and Edit Account Information" (U3)
 
-#### (U3) Class Diagram:
+#### (U3) Class Diagram
 
 ![ClassDiagramU3_1.png](ClassDiagramU3_1.png)
 
@@ -208,7 +208,7 @@
 | **DatabaseService**       | `Logger: ILogger`                                                                                                      | `SaveUser(user: User): Boolean`<br/>`GetAllThreadsFromDatabase(): Thread[]`<br/>`DeleteThread(thread: Thread): Boolean`<br/>`GetAggregatedDataAsync(): void`<br/>`GetUsersFromDatabase(): User[]`<br/>`GetThreadFromId(threadId: int): Thread`<br/>`SaveCourseInformation(course: CourseInformation): Boolean`<br/>`GetCourseInformationFromName(courseName: String): CourseInformation`<br/>`GetDataForAnalysisAsync(): void`<br/>`GetUserFromKey(key: String): User`<br/>`SaveThread(thread: Thread): Boolean` | - 1 to 1 with `IDatabaseService`<br/>- 1 to 1 with `ILogger`                                                                                                 |
 | **ILogger**               | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `UserService`<br/>- 1 to 1 with `DatabaseService`                                                                                              |
 
-#### (U3) Sequence Diagram:
+#### (U3) Sequence Diagram
 
 ![SequenceDiagramU3.png](SequenceDiagramU3.png)
 
@@ -243,7 +243,7 @@
 | 7    | UserProfile receives the confirmation and notifies the User Interface of the successful update. |
 | 8    | User Interface informs the User that their information has been successfully updated.           |
 
-#### (U3) Activity Diagram:
+#### (U3) Activity Diagram
 
 ![ActivtyDiagramU3.1.png](ActivtyDiagramU3.1.png)
 
@@ -260,7 +260,7 @@
 
 ### Use Case "Reset Account Password" (U4)
 
-#### (U4) Class Diagram::
+#### (U4) Class Diagram:
 
 ![ClassDiagramU4_1.png](ClassDiagramU4_1.png)
 
@@ -283,7 +283,7 @@
 | **ObservableValidator**   | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `AccountPageViewModel`                                                                                                                         |
 | **ViewModelBase**         | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `AccountPageViewModel`                                                                                                                         |
 
-#### (U4) Sequence Diagram:
+#### (U4) Sequence Diagram
 
 ![SequenceDiagramU4.png](SequenceDiagramU4.png)
 
@@ -320,7 +320,7 @@
 | 16   | User Interface informs the User that their password has been successfully reset and redirects them to the |
 |      | login page.                                                                                               |
 
-#### (U4) Activity Diagram:
+#### (U4) Activity Diagram
 
 ![ActivityDiagramU4.jpg](ActivityDiagramU4.jpg)
 
@@ -338,7 +338,7 @@
 
 ### Use Case "Delete Account" (U5)
 
-#### (U5) Class Diagram:
+#### (U5) Class Diagram
 
 ![ClassDiagramU5_1.png](ClassDiagramU5_1.png)
 
@@ -361,7 +361,7 @@
 | **ObservableValidator**   | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `AccountPageViewModel`                                                                                                                         |
 | **ViewModelBase**         | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `AccountPageViewModel`                                                                                                                         |
 
-#### (U5) Sequence Diagram:
+#### (U5) Sequence Diagram
 
 ![SequenceDiagramU5.png](SequenceDiagramU5.png)
 
@@ -389,7 +389,7 @@
 | 10   | AuthenticationService informs the User Interface that the account has been successfully deleted.                 |
 | 11   | User Interface notifies the User that their account has been deleted and logs them out of the system.            |
 
-#### (U5) Activity Diagram:
+#### (U5) Activity Diagram
 
 ![ActivityDiagramU5.png](ActivityDiagramU5.png)
 
@@ -403,7 +403,7 @@
 
 ### Use Case "View Academic Calendar" (U6)
 
-#### (U6) Class Diagram:
+#### (U6) Class Diagram
 
 ![ClassDiagramU6_1.png](ClassDiagramU6_1.png)
 
@@ -423,7 +423,7 @@
 | **HomePage**            | None                                                                                                                                                                                                            | `HomePage(): void`<br/>`InitializeComponents(): void`                                                                                                                                                                                                                                                                                                                                                                                                                                                            | - 1 to 1 with `UserControl`                                                                                                                  |
 | **UserControl**         | None                                                                                                                                                                                                            | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePage`                                                                                                                     |
 
-#### (U6) Sequence Diagram:
+#### (U6) Sequence Diagram
 
 ![SequenceDiagram6.png](SequenceDiagram6.png)
 
@@ -441,7 +441,7 @@
 | 6    | System sends the formatted academic calendar to the User Interface.                                                                                                                                  |
 | 7    | User Interface displays the academic calendar to the User, allowing them to view important academic dates, such as semester start and end dates, exam periods, holidays, and registration deadlines. |
 
-#### (U6) Activity Diagram:
+#### (U6) Activity Diagram
 
 ![ActivityDiagramU6.png](ActivityDiagramU6.png)
 
@@ -453,7 +453,7 @@
 
 ### Use Case "View and Bookmark Course Pathways" (U7)
 
-#### (U7) Class Diagram:
+#### (U7) Class Diagram
 
 ![ClassDiagramU7_1.jpg](ClassDiagramU7_1.jpg)
 
@@ -479,7 +479,7 @@
 | **CourseCategory**       | `NAME(): String`                                                                                                                                                                                                              | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - Enumeration used by `CourseInformation`                                                                                                                                                             |
 | **CourseRating**         | `NAME(): String`                                                                                                                                                                                                              | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - Enumeration used by `CourseInformation`                                                                                                                                                             |
 
-#### (U7) Sequence Diagram:
+#### (U7) Sequence Diagram
 
 ![SequenceDiagramU7.png](SequenceDiagramU7.png)
 
@@ -509,7 +509,7 @@
 | 5    | CourseBookmark component confirms the successful bookmarking to the User Interface.                                         |
 | 6    | User Interface notifies the User that the courses have been successfully bookmarked.                                        |
 
-#### (U7) Activity Diagram:
+#### (U7) Activity Diagram
 
 ![ActivityDiagramU7.png](ActivityDiagramU7.png)
 
@@ -525,7 +525,7 @@
 
 ### Use Case "Filter Courses" (U8)
 
-#### (U8) Class Diagram:
+#### (U8) Class Diagram
 
 ![ClassDiagramU8_1.png](ClassDiagramU8_1.png)
 
@@ -550,7 +550,7 @@
 | **ObservableValidator** | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePageViewModel`                                                                                                                                                        |
 | **ViewModelBase**       | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePageViewModel`                                                                                                                                                        |
 
-#### (U8) Sequence Diagram:
+#### (U8) Sequence Diagram
 
 ![SequenceDiagramU8.png](SequenceDiagramU8.png)
 
@@ -572,7 +572,7 @@
 | 10   | CourseRecommendation sends the processed course list back to the User Interface.                                                                                    |
 | 11   | User Interface updates the display to show the filtered courses to the User.                                                                                        |
 
-#### (U8) Activity Diagram:
+#### (U8) Activity Diagram
 
 ![ActivityDiagramU8.png](ActivityDiagramU8.png)
 
@@ -587,7 +587,7 @@
 
 ### Use Case "Obtain Course Recommendation from Query" (U9)
 
-#### (U9) Class Diagram::
+#### (U9) Class Diagram:
 
 ![ClassDiagramU9_1.png](ClassDiagramU9_1.png)
 
@@ -612,7 +612,7 @@
 | **ObservableValidator** | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePageViewModel`                                                                                                                                                        |
 | **ViewModelBase**       | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - 1 to 1 with `HomePageViewModel`                                                                                                                                                        |
 
-#### (U9) Sequence Diagram:
+#### (U9) Sequence Diagram
 
 ![SequenceDiagramU9.png](SequenceDiagramU9.png)
 
@@ -636,7 +636,7 @@
 | 12   | CourseRecommendation sends the final list of recommended courses to the User Interface.                                                                        |
 | 13   | User Interface displays the recommended courses to the User, providing detailed information such as course descriptions, prerequisites, and possible pathways. |
 
-#### (U9) Activity Diagram:
+#### (U9) Activity Diagram
 
 ![ActivityDiagramU9.png](ActivityDiagramU9.png)
 
@@ -652,7 +652,7 @@
 
 ### Use Case "Submit Course Feedback" (U10)
 
-#### (U10) Class Diagram:
+#### (U10) Class Diagram
 
 ![SubmitCourseFeedback(U10)_ClassDiagram.png](SubmitCourseFeedback(U10)_ClassDiagram.png)
 
@@ -675,7 +675,7 @@
 | **UserControl**          | None                                                                                                                                                                                                                          | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | - 1 to 1 with `CoursePage`                                                                                                                                                                            |
 | **CoursePage**           | None                                                                                                                                                                                                                          | `CoursePage(): void`<br/>`InitializeComponents(): void`                                                                                                                                                                                                                                                                                                                                                                                                                                                         | - 1 to 1 with `UserControl`                                                                                                                                                                           |
 
-#### (U10) Sequence Diagram:
+#### (U10) Sequence Diagram
 
 ![SequenceDiagramU10.png](SequenceDiagramU10.png)
 
@@ -698,7 +698,7 @@
 | 11   | Feedback component notifies the User Interface of the successful feedback submission.                                                                           |
 | 12   | User Interface displays a confirmation message to the User thanking them for their feedback.                                                                    |
 
-#### (U10) Activity Diagram:
+#### (U10) Activity Diagram
 
 ![ActivityDiagramU10.png](ActivityDiagramU10.png)
 
@@ -716,7 +716,7 @@
 
 ### Use Case "Access and Analyze User Data" (U11)
 
-#### (U11) Class Diagram:
+#### (U11) Class Diagram
 
 ![ClassDiagram(U11)_AccessAndAnalyseUserData.png](ClassDiagram(U11)_AccessAndAnalyseUserData.png)
 
@@ -739,7 +739,7 @@
 | **UserControl**         | None                                                                                                                   | None                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | - 1 to 1 with `AdminPage`                                                                                                           |
 | **AdminPage**           | None                                                                                                                   | `AdminPage(): void`<br/>`InitializeComponents(): void`                                                                                                                                                                                                                                                                                                                                                                                                                                                          | - 1 to 1 with `UserControl`                                                                                                         |
 
-#### (U11) Sequence Diagram:
+#### (U11) Sequence Diagram
 
 ![SequenceDiagramU11.png](SequenceDiagramU11.png)
 
@@ -761,7 +761,7 @@
 | 10   | User Interface displays the analyzed results in an accessible format (e.g., graphs, charts, tables) to the Admin.                                                                                        |
 | 11   | Admin reviews the results, gaining insights into user behavior and system performance which can be used to make informed decisions about system improvements, policy changes, or targeted interventions. |
 
-#### (U11) Activity Diagram:
+#### (U11) Activity Diagram
 
 ![ActivityDiagramU11.jpg](ActivityDiagramU11.jpg)
 
@@ -778,7 +778,7 @@
 
 ### Use Case "Create and Delete Thread" (U12)
 
-#### (U12) Class Diagram:
+#### (U12) Class Diagram
 
 ![CreateAndDeleteThread_ClassDigram(U12)_1.png](CreateAndDeleteThread_ClassDigram(U12)_1.png)
 
@@ -804,7 +804,7 @@
 | **IDatabaseService**    | None                                                                                                                                                                                                                          | `DeleteThread(thread: Thread): Boolean`<br/>`SaveCourseInformation(course: CourseInformation): Boolean`<br/>`GetUsersFromDatabase(): User[]`<br/>`GetUserFromKey(key: String): User`<br/>`GetThreadFromId(threadId: int): Thread`<br/>`SaveUser(user: User): Boolean`<br/>`GetDataForAnalysis(): void`<br/>`SaveThread(thread: Thread): Boolean`<br/>`GetThreadsFromDatabase(): Thread[]`<br/>`GetAllThreadsFromDatabase(): Thread[]`<br/>`GetCourseInformationFromName(courseName: String): CourseInformation` | - 1 to 1 with `ForumService`<br/>- 1 to 1 with `DatabaseService`<br/>- 1 to 1 with `ILogger`                                                                                                                                   |
 | **DatabaseService**     | `Logger: ILogger`                                                                                                                                                                                                             | `DeleteThread(thread: Thread): Boolean`<br/>`SaveCourseInformation(course: CourseInformation): Boolean`<br/>`GetUsersFromDatabase(): User[]`<br/>`GetUserFromKey(key: String): User`<br/>`GetThreadFromId(threadId: int): Thread`<br/>`SaveUser(user: User): Boolean`<br/>`GetDataForAnalysis(): void`<br/>`SaveThread(thread: Thread): Boolean`<br/>`GetThreadsFromDatabase(): Thread[]`<br/>`GetAllThreadsFromDatabase(): Thread[]`<br/>`GetCourseInformationFromName(courseName: String): CourseInformation` | - 1 to 1 with `IDatabaseService`<br/>- 1 to 1 with `ILogger`                                                                                                                                                                   |
 
-#### (U12) Sequence Diagram:
+#### (U12) Sequence Diagram
 
 ![SequenceDiagramU12.1.png](SequenceDiagramU12.1.png)
 
@@ -864,7 +864,7 @@
 
 ### Use Case "Create, Edit, Reply, and Delete Post" (U13)
 
-#### (U13) Class Diagram:
+#### (U13) Class Diagram
 
 ![ClassDiagramU13_1.png](ClassDiagramU13_1.png)
 
@@ -893,7 +893,7 @@
 
 **Creating a Post**
 
-#### (U13) Sequence Diagram:
+#### (U13) Sequence Diagram
 
 ![SequenceDiagramU13.1.png](SequenceDiagramU13.1.png)
 
