@@ -30,26 +30,31 @@
                    FontSize="20"
                    FontWeight="ExtraBold"
                    Text="User Login" />
+
         <TextBlock Grid.Row="1"
                    VerticalAlignment="Center"
                    FontFamily="inria-sans"
                    FontSize="14"
                    FontWeight="Bold"
                    Text="User Name or Email" />
+
         <TextBox Grid.Row="2"
                  VerticalAlignment="Center"
                  Text="{Binding Key}"
                  Watermark="YamadaTaro1234" />
+
         <TextBlock Grid.Row="3"
                    VerticalAlignment="Center"
                    FontFamily="inria-sans"
                    FontSize="14"
                    FontWeight="Bold"
                    Text="Password" />
+
         <TextBox Grid.Row="4"
                  VerticalAlignment="Center"
                  Text="{Binding Password}"
                  Watermark="123456789" />
+
         <Button Grid.Row="5"
                 Margin="0,0,100,0"
                 HorizontalAlignment="Center"
@@ -57,6 +62,7 @@
                 Command="{Binding LoginCommand}"
                 Content="Log in"
                 FontWeight="DemiBold" />
+
         <Button Grid.Row="5"
                 Margin="100,0,0,0"
                 HorizontalAlignment="Center"
