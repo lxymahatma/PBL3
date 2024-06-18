@@ -36,4 +36,10 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
         Key = null;
         Password = null;
     }
+
+    [RelayCommand]
+    private void Register()
+    {
+        
+    }
 }
