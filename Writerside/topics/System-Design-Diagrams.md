@@ -12,6 +12,7 @@
 ### Frameworks / Libraries
 
 * [Avalonia](https://github.com/AvaloniaUI/Avalonia) - Develop Desktop, Embedded, Mobile and WebAssembly apps with C# and XAML
+* [MessageBox.Avalonia](https://github.com/AvaloniaCommunity/MessageBox.Avalonia) - MessageBox for AvaloniaUI
 * [Autofac](https://github.com/autofac/Autofac) - .NET IoC container
 * [OpenAI Dotnet](https://github.com/openai/openai-dotnet) - Official .NET library for the OpenAI API
 * [CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet) - .NET MVVM library with helpers
