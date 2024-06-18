@@ -66,9 +66,10 @@
 
         <Button Grid.Row="5"
                 Margin="100,0,0,0"
-                Command="{Binding SwitchToRegisterCommand}"
+                Command="{Binding RegisterCommand}"
                 Content="Register"
                 FontWeight="DemiBold" />
     </Grid>
 
 </Window>
+
