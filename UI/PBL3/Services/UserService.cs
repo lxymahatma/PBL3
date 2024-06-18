@@ -27,4 +27,6 @@ public class UserService : IUserService
         Logger.Information("User {UserName} logged in", user.UserName);
         return true;
     }
+
+    public bool Register(User user) => DatabaseService.RegisterUser(user);
 }

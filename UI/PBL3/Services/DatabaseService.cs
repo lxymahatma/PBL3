@@ -15,5 +15,19 @@ public class DatabaseService : IDatabaseService
 
     public Dictionary<string, User> GetUsersFromDatabase() => _users;
 
+    public bool RegisterUser(User user)
+    {
+        if (_users.ContainsKey(user.UserName!) || _users.ContainsKey(user.Email!))
+        {
+            Logger.Error("User {UserName} with Email {Email} already exists", user.UserName, user.Email);
+            return false;
+        }
+
+        _users[user.UserName!] = user;
+        _users[user.Email!] = user;
+        Logger.Information("User {UserName} added with Email {Email}", user.UserName, user.Email);
+        return true;
+    }
+
     public User? GetUserFromKey(string key) => _users.GetValueOrDefault(key);
 }
