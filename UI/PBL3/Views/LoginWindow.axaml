@@ -23,14 +23,14 @@
         <Grid.Styles>
             <Style Selector="Button">
                 <Setter Property="Width" Value="80" />
-                <Setter Property="HorizontalAlignment" Value="Center"/>
-                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
             </Style>
             <Style Selector="TextBlock">
-                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center" />
             </Style>
             <Style Selector="TextBox">
-                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center" />
             </Style>
         </Grid.Styles>
         <TextBlock Grid.Row="0"
@@ -66,10 +66,9 @@
 
         <Button Grid.Row="5"
                 Margin="100,0,0,0"
-                Command="{Binding RegisterCommand}"
+                Command="{Binding SwitchToRegisterCommand}"
                 Content="Register"
                 FontWeight="DemiBold" />
     </Grid>
 
 </Window>
-

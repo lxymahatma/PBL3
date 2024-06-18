@@ -9,11 +9,14 @@ public partial class RegisterWindowViewModel : ViewModelBase, IRegisterWindowVie
 
     [ObservableProperty]
     [Required]
-    [Range(10, 20)]
+    [MinLength(6)]
+    [MaxLength(20)]
     private string? _password;
 
     [ObservableProperty]
     [Required]
+    [MinLength(3)]
+    [MaxLength(15)]
     private string? _userName;
 
     [UsedImplicitly]

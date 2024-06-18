@@ -8,6 +8,8 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
 
     [ObservableProperty]
     [Required]
+    [MinLength(6)]
+    [MaxLength(20)]
     private string? _password;
 
     [UsedImplicitly]
@@ -38,8 +40,7 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
     }
 
     [RelayCommand]
-    private void Register()
+    private void SwitchToRegister()
     {
-        
     }
 }
