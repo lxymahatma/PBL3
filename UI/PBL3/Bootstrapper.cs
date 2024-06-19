@@ -1,7 +1,8 @@
 using Autofac;
 using PBL3.Extensions.MarkupExtensions;
 using PBL3.Services;
-using PBL3.ViewModels;
+using MainWindowViewModel = PBL3.ViewModels.Windows.MainWindowViewModel;
+using RegisterPageViewModel = PBL3.ViewModels.Pages.RegisterPageViewModel;
 
 namespace PBL3;
 
@@ -51,7 +52,7 @@ internal static class Bootstrapper
     {
         _builder.RegisterType<LoginWindowViewModel>().As<ILoginWindowViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().PropertiesAutowired().SingleInstance();
-        _builder.RegisterType<RegisterWindowViewModel>().As<IRegisterWindowViewModel>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<RegisterPageViewModel>().As<IRegisterPageViewModel>().PropertiesAutowired().SingleInstance();
     }
 
     private static void ConfigureStaticResolvers(IContainer container)

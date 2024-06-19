@@ -10,3 +10,7 @@ global using PBL3.Contracts;
 global using PBL3.Models;
 global using Serilog;
 global using System.ComponentModel.DataAnnotations;
+global using PBL3.Contracts.ViewModels;
+global using PBL3.ViewModels;
+global using PBL3.ViewModels.Windows;
+global using PBL3.Views.Windows;

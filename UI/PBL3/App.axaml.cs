@@ -1,7 +1,6 @@
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using HotAvalonia;
-using PBL3.Views;
 
 namespace PBL3;
 

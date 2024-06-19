@@ -1,4 +1,4 @@
-namespace PBL3.Views;
+namespace PBL3.Views.Windows;
 
 public partial class LoginWindow : Window
 {

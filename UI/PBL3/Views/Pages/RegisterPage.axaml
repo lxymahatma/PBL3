@@ -1,8 +1,8 @@
-<Window xmlns:contract="clr-namespace:PBL3.Contracts"
+<Window xmlns:contract="clr-namespace:PBL3.Contracts.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:vm="using:PBL3.ViewModels"
+        xmlns:vm="using:PBL3.ViewModels.Pages"
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="PBL3.Views.RegisterWindow"
@@ -11,12 +11,12 @@
         Height="450"
         d:DesignHeight="450"
         d:DesignWidth="500"
-        x:DataType="vm:RegisterWindowViewModel"
-        DataContext="{ext:DependencyInjection Type=contract:IRegisterWindowViewModel}"
+        x:DataType="vm:RegisterPageViewModel"
+        DataContext="{ext:DependencyInjection Type=contract:IRegisterPageViewModel}"
         mc:Ignorable="d">
 
     <Design.DataContext>
-        <vm:RegisterWindowViewModel />
+        <vm:RegisterPageViewModel />
     </Design.DataContext>
 
     <Grid RowDefinitions="40, 25, 50, 25, 50, 25, 50, 70" ShowGridLines="True">

@@ -1,4 +1,4 @@
-﻿namespace PBL3.ViewModels;
+﻿namespace PBL3.ViewModels.Windows;
 
 public partial class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
 {

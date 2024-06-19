@@ -1,6 +1,4 @@
-using System.Runtime.InteropServices.JavaScript;
-
-namespace PBL3.ViewModels;
+namespace PBL3.ViewModels.Windows;
 
 public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
 {
@@ -16,7 +14,7 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
-    
+
     [UsedImplicitly]
     public IMessageBoxService MessageBoxService { get; init; } = null!;
 
@@ -51,6 +49,5 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
     private void Register()
     {
         ValidateAllProperties();
-        
     }
 }
