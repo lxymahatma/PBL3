@@ -24,16 +24,15 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
         }
 
         var result = UserService.Login(Key!, Password!);
-        if (result)
+        if (!result)
         {
-            MessageBoxService.SuccessMessageBox("Success", "Login successful");
-            return;
+            MessageBoxService.ErrorMessageBox("Error", "Login failed: Invalid key or password");
+            Key = null;
+            Password = null;
         }
 
-        MessageBoxService.ErrorMessageBox("Error", "Login failed: Invalid key or password");
-
-        Key = null;
-        Password = null;
+        MessageBoxService.SuccessMessageBox("Success", "Login successful");
+        DialogService.Close(PopupWindowViewModel);
     }
 
     [RelayCommand]
@@ -42,16 +41,19 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     #region Services
 
     [UsedImplicitly]
+    public IDialogService DialogService { get; init; } = null!;
+
+    [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
 
     [UsedImplicitly]
     public IMessageBoxService MessageBoxService { get; init; } = null!;
 
     [UsedImplicitly]
-    public IUserService UserService { get; init; } = null!;
+    public IPopupWindowViewModel PopupWindowViewModel { get; init; } = null!;
 
     [UsedImplicitly]
-    public IPopupWindowViewModel PopupWindowViewModel { get; init; } = null!;
+    public IUserService UserService { get; init; } = null!;
 
     #endregion
 }

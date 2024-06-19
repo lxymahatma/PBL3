@@ -8,6 +8,8 @@ public sealed class UserService : IUserService
     [UsedImplicitly]
     public IDatabaseService DatabaseService { get; init; } = null!;
 
+    public bool LoggedIn { get; private set; }
+
     public bool Login(string key, string password)
     {
         var user = DatabaseService.GetUserFromKey(key);
@@ -25,6 +27,7 @@ public sealed class UserService : IUserService
         }
 
         Logger.Information("User {UserName} logged in", user.UserName);
+        LoggedIn = true;
         return true;
     }
 

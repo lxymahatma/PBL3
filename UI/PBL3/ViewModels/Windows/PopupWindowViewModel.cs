@@ -10,9 +10,6 @@ public sealed partial class PopupWindowViewModel : ViewModelBase, IPopupWindowVi
     [ObservableProperty]
     private string _title = "Login";
 
-    [UsedImplicitly]
-    public ILogger Logger { get; init; } = null!;
-
     public PopupWindowViewModel()
     {
         _tabs =
@@ -31,4 +28,31 @@ public sealed partial class PopupWindowViewModel : ViewModelBase, IPopupWindowVi
         Title = _tabs[index].Title;
         Logger.Information("Switched to {Title}", Title);
     }
+
+    [RelayCommand]
+    private void OnClose(WindowClosingEventArgs e)
+    {
+        if (UserService.LoggedIn)
+        {
+            e.Cancel = false;
+            return;
+        }
+
+        Logger.Warning("User tried to close the window without logging in");
+        MessageBoxService.ErrorMessageBox("Error", "You must login to continue");
+        e.Cancel = true;
+    }
+
+    #region Services
+
+    [UsedImplicitly]
+    public ILogger Logger { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IMessageBoxService MessageBoxService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IUserService UserService { get; init; } = null!;
+
+    #endregion
 }

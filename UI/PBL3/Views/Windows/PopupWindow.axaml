@@ -19,9 +19,10 @@
         <vm:PopupWindowViewModel />
     </Design.DataContext>
 
+    <!-- Bind to Close Command so that only specific click on button will make the window close -->
     <Interaction.Behaviors>
         <EventTriggerBehavior EventName="Closing">
-            <InvokeCommandAction />
+            <InvokeCommandAction Command="{Binding CloseCommand}" PassEventArgsToCommand="True" />
         </EventTriggerBehavior>
     </Interaction.Behaviors>
 
