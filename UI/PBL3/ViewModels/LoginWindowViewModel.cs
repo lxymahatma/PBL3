@@ -14,6 +14,9 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
+    
+    [UsedImplicitly]
+    public IMessageBoxService MessageBoxService { get; init; } = null!;
 
     [UsedImplicitly]
     public IUserService UserService { get; init; } = null!;
@@ -32,6 +35,7 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
         var result = UserService.Login(Key!, Password!);
         if (result)
         {
+            MessageBoxService.SuccessMessageBox("Success", "Login successful");
             return;
         }
 
