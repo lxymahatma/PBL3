@@ -5,7 +5,6 @@
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:PBL3.ViewModels.Windows"
-        xmlns:pages="using:PBL3.Views.Pages"
         x:Class="PBL3.Views.Windows.PopupWindow"
         Title="{Binding Title}"
         Width="400"
@@ -20,8 +19,6 @@
         <vm:PopupWindowViewModel />
     </Design.DataContext>
 
-    <Grid>
-        <pages:LoginPage />
-    </Grid>
+    <UserControl Content="{Binding Content}" />
 
 </Window>

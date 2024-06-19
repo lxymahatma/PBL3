@@ -36,6 +36,7 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
         if (HasErrors)
         {
             Logger.Error("Entered invalid information");
+            return;
         }
 
         var user = new User

@@ -21,6 +21,9 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     [UsedImplicitly]
     public IUserService UserService { get; init; } = null!;
 
+    [UsedImplicitly]
+    public IPopupWindowViewModel PopupWindowViewModel { get; init; } = null!;
+
     [RelayCommand]
     private void Login()
     {
@@ -46,8 +49,8 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     }
 
     [RelayCommand]
-    private void Register()
+    private void SwitchToRegisterPage()
     {
-        ValidateAllProperties();
+        PopupWindowViewModel.SwitchTab(1);
     }
 }
