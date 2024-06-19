@@ -12,18 +12,6 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     [MaxLength(20)]
     private string? _password;
 
-    [UsedImplicitly]
-    public ILogger Logger { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IMessageBoxService MessageBoxService { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IUserService UserService { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IPopupWindowViewModel PopupWindowViewModel { get; init; } = null!;
-
     [RelayCommand]
     private void Login()
     {
@@ -49,8 +37,21 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     }
 
     [RelayCommand]
-    private void SwitchToRegisterPage()
-    {
-        PopupWindowViewModel.SwitchTab(1);
-    }
+    private void SwitchToRegisterPage() => PopupWindowViewModel.SwitchTab(1);
+
+    #region Services
+
+    [UsedImplicitly]
+    public ILogger Logger { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IMessageBoxService MessageBoxService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IUserService UserService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IPopupWindowViewModel PopupWindowViewModel { get; init; } = null!;
+
+    #endregion
 }

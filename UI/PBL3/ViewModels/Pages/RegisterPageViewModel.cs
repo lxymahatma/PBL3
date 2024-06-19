@@ -19,15 +19,6 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
     [MaxLength(15)]
     private string? _userName;
 
-    [UsedImplicitly]
-    public ILogger Logger { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IUserService UserService { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IMessageBoxService MessageBoxService { get; init; } = null!;
-
     [RelayCommand]
     private void Register()
     {
@@ -52,4 +43,17 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
             MessageBoxService.ErrorMessageBox("Register failed", "User already exists");
         }
     }
+
+    #region Services
+
+    [UsedImplicitly]
+    public ILogger Logger { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IUserService UserService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IMessageBoxService MessageBoxService { get; init; } = null!;
+
+    #endregion
 }

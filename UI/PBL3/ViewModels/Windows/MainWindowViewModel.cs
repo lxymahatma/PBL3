@@ -5,15 +5,6 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     [ObservableProperty]
     private string _searchText = string.Empty;
 
-    [UsedImplicitly]
-    public ILogger Logger { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IUserService UserService { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IDialogService DialogService { get; init; } = null!;
-
     [RelayCommand]
     private async Task OpenLoginPage()
     {
@@ -26,4 +17,17 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     {
         Logger.Information("Searching for {SearchText}", SearchText);
     }
+
+    #region Services
+
+    [UsedImplicitly]
+    public ILogger Logger { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IUserService UserService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IDialogService DialogService { get; init; } = null!;
+
+    #endregion
 }
