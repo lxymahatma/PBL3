@@ -20,6 +20,8 @@
   Avalonia applications
 * [Serilog](https://github.com/serilog/serilog) - Simple .NET logging with fully-structured events
 * [NRedisStack](https://github.com/redis/NRedisStack) - Redis Stack .Net client
+* [HanumanInstitute.MvvmDialogs](https://github.com/mysteryx93/HanumanInstitute.MvvmDialogs) - Opening dialogs from a view model when using
+  MVVM
 
 ### Build System
 
