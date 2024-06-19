@@ -1,10 +1,10 @@
-<Window xmlns:contract="clr-namespace:PBL3.Contracts.ViewModels"
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:contract="clr-namespace:PBL3.Contracts.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="using:PBL3.ViewModels.Windows"
-        xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="PBL3.Views.Windows.MainWindow"
         Title="PBL3"
         d:DesignHeight="450"
@@ -14,7 +14,7 @@
         Icon="/Assets/avalonia-logo.ico"
         mc:Ignorable="d">
 
-    <!-- For opening login page when main window opened -->
+    <!--  For opening login page when main window opened  -->
     <Interaction.Behaviors>
         <EventTriggerBehavior EventName="Opened">
             <InvokeCommandAction Command="{Binding OpenLoginPageCommand}" />
