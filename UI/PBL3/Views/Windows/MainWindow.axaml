@@ -11,7 +11,7 @@
         d:DesignWidth="800"
         x:DataType="vm:MainWindowViewModel"
         DataContext="{ext:DependencyInjection Type=contract:IMainWindowViewModel}"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/icon.ico"
         mc:Ignorable="d">
 
     <!--  For opening login page when main window opened  -->
