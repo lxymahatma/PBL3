@@ -40,7 +40,7 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
         var result = UserService.Register(user);
         if (!result)
         {
-            MessageBoxService.ErrorMessageBox("Register failed", "User already exists");
+            MessageBoxService.Error("Register failed: User already exists");
         }
     }
 

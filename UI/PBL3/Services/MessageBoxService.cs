@@ -7,11 +7,14 @@ namespace PBL3.Services;
 
 public sealed class MessageBoxService : IMessageBoxService
 {
-    public Task<ButtonResult> SuccessMessageBox(string title, string content, Icon icon = Icon.Success) => MessageBox(title, content, icon);
+    public Task<ButtonResult> Success(string content, Icon icon = Icon.Success) => MessageBox("Success", content, icon);
 
-    public Task<ButtonResult> ErrorMessageBox(string title, string content, Icon icon = Icon.Error) => MessageBox(title, content, icon);
+    public Task<ButtonResult> Success(string title, string content, Icon icon = Icon.Success) => MessageBox(title, content, icon);
+    public Task<ButtonResult> Error(string content, Icon icon = Icon.Error) => MessageBox("Error", content, icon);
 
-    public Task<ButtonResult> ErrorMessageBox(string title, Exception exception, Icon icon = Icon.Error) => MessageBox(title, exception.Message, icon);
+    public Task<ButtonResult> Error(string title, string content, Icon icon = Icon.Error) => MessageBox(title, content, icon);
+
+    public Task<ButtonResult> Error(string title, Exception exception, Icon icon = Icon.Error) => MessageBox(title, exception.Message, icon);
 
     private async Task<ButtonResult> MessageBox(string title, string content, Icon icon, ButtonEnum button = ButtonEnum.Ok)
     {

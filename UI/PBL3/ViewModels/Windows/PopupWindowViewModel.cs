@@ -39,7 +39,7 @@ public sealed partial class PopupWindowViewModel : ViewModelBase, IPopupWindowVi
         }
 
         Logger.Warning("User tried to close the window without logging in");
-        MessageBoxService.ErrorMessageBox("Error", "You must login to continue");
+        MessageBoxService.Error("You must login to continue");
         e.Cancel = true;
     }
 

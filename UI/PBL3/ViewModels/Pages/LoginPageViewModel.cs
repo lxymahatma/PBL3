@@ -26,12 +26,12 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
         var result = UserService.Login(Key!, Password!);
         if (!result)
         {
-            MessageBoxService.ErrorMessageBox("Error", "Login failed: Invalid key or password");
+            MessageBoxService.Error("Login failed: Invalid username, email or password");
             Key = null;
             Password = null;
         }
 
-        MessageBoxService.SuccessMessageBox("Success", "Login successful");
+        MessageBoxService.Success("Login successful");
         DialogService.Close(PopupWindowViewModel);
     }
 
