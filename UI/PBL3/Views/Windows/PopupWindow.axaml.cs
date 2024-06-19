@@ -1,8 +1,8 @@
 namespace PBL3.Views.Windows;
 
-public partial class LoginWindow : Window
+public partial class PopupWindow : Window
 {
-    public LoginWindow()
+    public PopupWindow()
     {
         InitializeComponent();
     }

@@ -5,7 +5,7 @@
         xmlns:vm="using:PBL3.ViewModels.Windows"
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        x:Class="PBL3.Views.LoginWindow"
+        x:Class="PBL3.Views.Windows.PopupWindow"
         Title="LoginWindow"
         Width="400"
         Height="450"

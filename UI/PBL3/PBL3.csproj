@@ -60,7 +60,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Update="Views\Windows\LoginWindow.axaml.cs">
+        <Compile Update="Views\Windows\PopupWindow.axaml.cs">
             <DependentUpon>LoginWindow.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
