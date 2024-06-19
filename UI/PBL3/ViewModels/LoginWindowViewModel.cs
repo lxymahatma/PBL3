@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices.JavaScript;
+
 namespace PBL3.ViewModels;
 
 public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
@@ -39,6 +41,8 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
             return;
         }
 
+        MessageBoxService.ErrorMessageBox("Error", "Login failed: Invalid key or password");
+
         Key = null;
         Password = null;
     }
@@ -46,6 +50,7 @@ public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
     [RelayCommand]
     private void Register()
     {
+        ValidateAllProperties();
         
     }
 }
