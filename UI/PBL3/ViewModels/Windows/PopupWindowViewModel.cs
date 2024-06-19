@@ -8,7 +8,7 @@ public sealed partial class PopupWindowViewModel : ViewModelBase, IPopupWindowVi
     private ViewModelBase _content;
 
     [ObservableProperty]
-    private string _title = "Login";
+    private string _title = "Login Page";
 
     public PopupWindowViewModel()
     {

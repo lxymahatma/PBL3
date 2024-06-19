@@ -15,7 +15,7 @@ internal static class Bootstrapper
     /// </summary>
     public static void Register()
     {
-        RegisterInstances();
+        RegisterComponents();
         RegisterServices();
         RegisterViewModels();
 
@@ -27,7 +27,7 @@ internal static class Bootstrapper
     /// <summary>
     ///     Register instances
     /// </summary>
-    private static void RegisterInstances()
+    private static void RegisterComponents()
     {
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
         //_builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
@@ -54,10 +54,11 @@ internal static class Bootstrapper
     /// </summary>
     private static void RegisterViewModels()
     {
+        _builder.RegisterType<HomePageViewModel>().As<IHomePageViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<LoginPageViewModel>().As<ILoginPageViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().PropertiesAutowired().SingleInstance();
-        _builder.RegisterType<RegisterPageViewModel>().As<IRegisterPageViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<PopupWindowViewModel>().As<IPopupWindowViewModel>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<RegisterPageViewModel>().As<IRegisterPageViewModel>().PropertiesAutowired().SingleInstance();
     }
 
     private static void ConfigureStaticResolvers(IContainer container)
