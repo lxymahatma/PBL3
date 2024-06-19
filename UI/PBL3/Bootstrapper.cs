@@ -1,14 +1,13 @@
 using Autofac;
 using PBL3.Extensions.MarkupExtensions;
 using PBL3.Services;
-using MainWindowViewModel = PBL3.ViewModels.Windows.MainWindowViewModel;
-using RegisterPageViewModel = PBL3.ViewModels.Pages.RegisterPageViewModel;
 
 namespace PBL3;
 
 internal static class Bootstrapper
 {
     private static readonly ContainerBuilder _builder = new();
+    private static IContainer _container = null!;
 
     /// <summary>
     ///     Register all instances, services and view models
@@ -20,9 +19,9 @@ internal static class Bootstrapper
         RegisterServices();
         RegisterViewModels();
 
-        var container = _builder.Build();
+        _container = _builder.Build();
 
-        ConfigureStaticResolvers(container);
+        ConfigureStaticResolvers(_container);
     }
 
     /// <summary>
@@ -32,6 +31,11 @@ internal static class Bootstrapper
     {
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
         //_builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
+        _builder.Register(_ => new DialogService(
+                new DialogManager(new ViewLocator()),
+                x => _container.Resolve(x)))
+            .As<IDialogService>().SingleInstance();
+        _builder.RegisterType<User>().SingleInstance();
     }
 
     /// <summary>
@@ -50,9 +54,10 @@ internal static class Bootstrapper
     /// </summary>
     private static void RegisterViewModels()
     {
-        _builder.RegisterType<LoginWindowViewModel>().As<ILoginWindowViewModel>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<LoginPageViewModel>().As<ILoginPageViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<RegisterPageViewModel>().As<IRegisterPageViewModel>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<PopupWindowViewModel>().As<IPopupWindowViewModel>().PropertiesAutowired().SingleInstance();
     }
 
     private static void ConfigureStaticResolvers(IContainer container)

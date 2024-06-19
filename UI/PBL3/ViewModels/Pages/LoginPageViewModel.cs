@@ -1,6 +1,6 @@
-namespace PBL3.ViewModels.Windows;
+namespace PBL3.ViewModels.Pages;
 
-public partial class LoginWindowViewModel : ViewModelBase, ILoginWindowViewModel
+public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewModel
 {
     [ObservableProperty]
     [Required]

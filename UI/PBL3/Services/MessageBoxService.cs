@@ -5,7 +5,7 @@ using MsBox.Avalonia.Enums;
 
 namespace PBL3.Services;
 
-public class MessageBoxService : IMessageBoxService
+public sealed class MessageBoxService : IMessageBoxService
 {
     public Task<ButtonResult> SuccessMessageBox(string title, string content, Icon icon = Icon.Success) => MessageBox(title, content, icon);
 

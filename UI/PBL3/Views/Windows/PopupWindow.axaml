@@ -1,74 +1,27 @@
-<Window xmlns:contract="clr-namespace:PBL3.Contracts.ViewModels"
+<Window xmlns:contract="using:PBL3.Contracts.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
+        xmlns:ext="using:PBL3.Extensions.MarkupExtensions"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:vm="using:PBL3.ViewModels.Windows"
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:PBL3.ViewModels.Windows"
+        xmlns:pages="using:PBL3.Views.Pages"
         x:Class="PBL3.Views.Windows.PopupWindow"
-        Title="LoginWindow"
+        Title="{Binding Title}"
         Width="400"
         Height="450"
         d:DesignHeight="450"
         d:DesignWidth="400"
-        x:DataType="vm:LoginWindowViewModel"
-        DataContext="{ext:DependencyInjection Type=contract:ILoginWindowViewModel}"
+        x:DataType="vm:PopupWindowViewModel"
+        DataContext="{ext:DependencyInjection Type=contract:IPopupWindowViewModel}"
         mc:Ignorable="d">
 
     <Design.DataContext>
-        <vm:LoginWindowViewModel />
+        <vm:PopupWindowViewModel />
     </Design.DataContext>
 
-    <Grid RowDefinitions="40,25,50,25,Auto,40" ShowGridLines="True">
-        <Grid.Styles>
-            <Style Selector="Button">
-                <Setter Property="Width" Value="80" />
-                <Setter Property="HorizontalAlignment" Value="Center" />
-                <Setter Property="HorizontalContentAlignment" Value="Center" />
-            </Style>
-            <Style Selector="TextBlock">
-                <Setter Property="VerticalAlignment" Value="Center" />
-            </Style>
-            <Style Selector="TextBox">
-                <Setter Property="VerticalAlignment" Value="Center" />
-            </Style>
-        </Grid.Styles>
-        <TextBlock Grid.Row="0"
-                   FontSize="20"
-                   FontWeight="ExtraBold"
-                   Text="User Login" />
-
-        <TextBlock Grid.Row="1"
-                   FontFamily="inria-sans"
-                   FontSize="14"
-                   FontWeight="Bold"
-                   Text="User Name or Email" />
-
-        <TextBox Grid.Row="2"
-                 Text="{Binding Key}"
-                 Watermark="YamadaTaro1234" />
-
-        <TextBlock Grid.Row="3"
-                   FontFamily="inria-sans"
-                   FontSize="14"
-                   FontWeight="Bold"
-                   Text="Password" />
-
-        <TextBox Grid.Row="4"
-                 Text="{Binding Password}"
-                 Watermark="123456789" />
-
-        <Button Grid.Row="5"
-                Margin="0,0,100,0"
-                Command="{Binding LoginCommand}"
-                Content="Log in"
-                FontWeight="DemiBold" />
-
-        <Button Grid.Row="5"
-                Margin="100,0,0,0"
-                Command="{Binding RegisterCommand}"
-                Content="Register"
-                FontWeight="DemiBold" />
+    <Grid>
+        <pages:LoginPage />
     </Grid>
 
 </Window>

@@ -1,6 +1,6 @@
 namespace PBL3.Views.Pages;
 
-public partial class HomePage : UserControl
+public sealed partial class HomePage : UserControl
 {
     public HomePage()
     {

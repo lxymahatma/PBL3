@@ -1,6 +1,6 @@
 namespace PBL3.ViewModels.Pages;
 
-public partial class RegisterPageViewModel : ViewModelBase, IRegisterPageViewModel
+public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPageViewModel
 {
     [ObservableProperty]
     [Required]

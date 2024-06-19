@@ -1,7 +1,4 @@
 ﻿using System.Diagnostics;
-#if !DEBUG
-using PBL3.Models;
-#endif
 
 namespace PBL3;
 

@@ -1,6 +1,6 @@
 ﻿namespace PBL3.Services;
 
-public class UserService : IUserService
+public sealed class UserService : IUserService
 {
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;

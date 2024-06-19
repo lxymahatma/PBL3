@@ -1,6 +1,6 @@
 ﻿namespace PBL3.Services;
 
-public class DatabaseService : IDatabaseService
+public sealed class DatabaseService : IDatabaseService
 {
     private static readonly Dictionary<string, User> _users = new()
     {

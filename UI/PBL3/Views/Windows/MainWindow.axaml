@@ -14,6 +14,13 @@
         Icon="/Assets/avalonia-logo.ico"
         mc:Ignorable="d">
 
+    <!-- For opening login page when main window opened -->
+    <Interaction.Behaviors>
+        <EventTriggerBehavior EventName="Opened">
+            <InvokeCommandAction Command="{Binding OpenLoginPageCommand}" />
+        </EventTriggerBehavior>
+    </Interaction.Behaviors>
+
     <Design.DataContext>
         <vm:MainWindowViewModel />
     </Design.DataContext>
