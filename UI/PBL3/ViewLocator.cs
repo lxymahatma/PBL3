@@ -4,9 +4,10 @@ public sealed class ViewLocator : StrongViewLocator
 {
     public ViewLocator()
     {
-        Register<RegisterPageViewModel, RegisterPage>();
-        Register<MainWindowViewModel, MainWindow>();
+        Register<HomePageViewModel, HomePage>();
         Register<LoginPageViewModel, LoginPage>();
+        Register<MainWindowViewModel, MainWindow>();
         Register<PopupWindowViewModel, PopupWindow>();
+        Register<RegisterPageViewModel, RegisterPage>();
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace PBL3;
+﻿namespace PBL3;
 
 internal static class Program
 {
@@ -25,7 +23,6 @@ internal static class Program
         catch (Exception ex)
         {
             Log.Logger.Fatal(ex, "Unhandled exception");
-            Process.Start(LogPath);
         }
     }
 
