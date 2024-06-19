@@ -15,6 +15,11 @@
         DataContext="{ext:DependencyInjection Type=contract:IPopupWindowViewModel}"
         mc:Ignorable="d">
 
+    <Window.KeyBindings>
+        <KeyBinding Gesture="{OnPlatform Alt+F4, macOS=⌘+Q}" Command="{Binding ExitCommand}" />
+        <KeyBinding Gesture="Escape" Command="{Binding ExitCommand}" />
+    </Window.KeyBindings>
+
     <Design.DataContext>
         <vm:PopupWindowViewModel />
     </Design.DataContext>

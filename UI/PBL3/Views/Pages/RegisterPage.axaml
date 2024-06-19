@@ -60,11 +60,19 @@
                  Watermark="123456789" />
 
         <Button Grid.Row="7"
-                Margin="0,0,0,0"
+                Margin="0,0,100,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Command="{Binding RegisterCommand}"
                 Content="Register"
+                FontWeight="DemiBold" />
+
+        <Button Grid.Row="7"
+                Margin="100,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding SwitchToLoginPageCommand}"
+                Content="Login"
                 FontWeight="DemiBold" />
     </Grid>
 

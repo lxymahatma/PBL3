@@ -43,6 +43,9 @@ public sealed partial class PopupWindowViewModel : ViewModelBase, IPopupWindowVi
         e.Cancel = true;
     }
 
+    [RelayCommand]
+    private static void Exit() => Environment.Exit(0);
+
     #region Services
 
     [UsedImplicitly]

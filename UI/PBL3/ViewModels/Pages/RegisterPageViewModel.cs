@@ -44,6 +44,9 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
         }
     }
 
+    [RelayCommand]
+    private void SwitchToLoginPage() => PopupWindowViewModel.SwitchTab(0);
+
     #region Services
 
     [UsedImplicitly]
@@ -54,6 +57,9 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
 
     [UsedImplicitly]
     public IMessageBoxService MessageBoxService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IPopupWindowViewModel PopupWindowViewModel { get; init; } = null!;
 
     #endregion
 }
