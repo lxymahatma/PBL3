@@ -32,7 +32,7 @@ public sealed partial class PopupWindowViewModel : ViewModelBase, IPopupWindowVi
     [RelayCommand]
     private void OnClose(WindowClosingEventArgs e)
     {
-        if (UserService.LoggedIn)
+        if (UserService.IsLoggedIn)
         {
             e.Cancel = false;
             return;

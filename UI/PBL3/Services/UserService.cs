@@ -8,7 +8,7 @@ public sealed class UserService : IUserService
     [UsedImplicitly]
     public IDatabaseService DatabaseService { get; init; } = null!;
 
-    public bool LoggedIn { get; private set; }
+    public bool IsLoggedIn { get; private set; }
 
     public bool Login(string key, string password)
     {
@@ -27,7 +27,7 @@ public sealed class UserService : IUserService
         }
 
         Logger.Information("User {UserName} logged in", user.UserName);
-        LoggedIn = true;
+        IsLoggedIn = true;
         return true;
     }
 
