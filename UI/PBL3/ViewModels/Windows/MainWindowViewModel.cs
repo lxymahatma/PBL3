@@ -10,14 +10,12 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     [RelayCommand]
     private async Task OpenLoginPage()
     {
-        while (true)
+        do
         {
             var loginPageButtonResult = await DialogService.ShowContentDialogAsync(this, LoginPageViewModel.Settings);
-            if (await LoginPageButtonResult(loginPageButtonResult))
-            {
-                break;
-            }
+            await LoginPageButtonResult(loginPageButtonResult);
         }
+        while (!UserService.IsLoggedIn);
     }
 
     private async Task<bool> LoginPageButtonResult(ContentDialogResult result)

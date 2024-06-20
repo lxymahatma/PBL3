@@ -39,14 +39,12 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
             MessageBoxService.Error("Login failed: Invalid username, email or password");
             Key = null;
             Password = null;
+            return false;
         }
 
         MessageBoxService.Success("Login successful");
         return true;
     }
-
-    /*[RelayCommand]
-    private void SwitchToRegisterPage() => PopupWindowViewModel.SwitchTab(1);*/
 
     #region Services
 

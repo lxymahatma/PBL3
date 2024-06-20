@@ -57,9 +57,6 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
         return false;
     }
 
-    /*[RelayCommand]
-    private void SwitchToLoginPage() => PopupWindowViewModel.SwitchTab(0);*/
-
     #region Services
 
     [UsedImplicitly]
