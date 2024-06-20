@@ -14,8 +14,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
         {
             var loginPageButtonResult = await DialogService.ShowContentDialogAsync(this, LoginPageViewModel.Settings);
             await LoginPageButtonResult(loginPageButtonResult);
-        }
-        while (!UserService.IsLoggedIn);
+        } while (!UserService.IsLoggedIn);
     }
 
     private async Task<bool> LoginPageButtonResult(ContentDialogResult result)
@@ -23,7 +22,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
         switch (result)
         {
             case ContentDialogResult.Primary:
-                return LoginPageViewModel.Login();
+                return await LoginPageViewModel.Login();
             case ContentDialogResult.Secondary:
                 var registerPageButtonResult = await DialogService.ShowContentDialogAsync(this, RegisterPageViewModel.Settings);
                 return await RegisterPageButtonResult(registerPageButtonResult);
@@ -39,7 +38,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
         switch (result)
         {
             case ContentDialogResult.Primary:
-                var registerResult = RegisterPageViewModel.Register();
+                var registerResult = await RegisterPageViewModel.Register();
                 if (registerResult)
                 {
                     return true;

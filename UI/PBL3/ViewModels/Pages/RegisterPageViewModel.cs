@@ -30,7 +30,7 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
         DefaultButton = ContentDialogButton.Primary
     };
 
-    public bool Register()
+    public async Task<bool> Register()
     {
         ValidateAllProperties();
 
@@ -53,7 +53,7 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
             return true;
         }
 
-        MessageBoxService.Error("Register failed: User already exists");
+        await MessageBoxService.ErrorAsync("Register failed: User already exists");
         return false;
     }
 

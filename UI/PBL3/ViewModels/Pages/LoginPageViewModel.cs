@@ -23,7 +23,7 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
         DefaultButton = ContentDialogButton.Primary
     };
 
-    public bool Login()
+    public async Task<bool> Login()
     {
         ValidateAllProperties();
 
@@ -36,13 +36,13 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
         var result = UserService.Login(Key!, Password!);
         if (!result)
         {
-            MessageBoxService.Error("Login failed: Invalid username, email or password");
+            await MessageBoxService.ErrorAsync("Login failed: Invalid username, email or password");
             Key = null;
             Password = null;
             return false;
         }
 
-        MessageBoxService.Success("Login successful");
+        await MessageBoxService.SuccessAsync("Login successful");
         return true;
     }
 
