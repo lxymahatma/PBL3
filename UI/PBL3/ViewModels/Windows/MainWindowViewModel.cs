@@ -28,8 +28,5 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     [UsedImplicitly]
     public ILoginDialogViewModel LoginDialogViewModel { get; init; } = null!;
 
-    [UsedImplicitly]
-    public IRegisterDialogViewModel RegisterDialogViewModel { get; init; } = null!;
-
     #endregion
 }
