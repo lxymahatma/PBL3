@@ -6,6 +6,7 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
 {
     [ObservableProperty]
     [Required]
+    [MinLength(3)]
     private string? _key;
 
     [ObservableProperty]
