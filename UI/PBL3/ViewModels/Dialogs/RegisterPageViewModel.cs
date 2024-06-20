@@ -35,7 +35,7 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
     {
         while (!await TryRegister())
         {
-            await Settings.ShowAsync();
+            await DialogService.ShowAsync(this);
         }
 
         await SwitchToLogin();
@@ -69,9 +69,12 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
     }
 
     [RelayCommand]
-    private async Task SwitchToLogin() => await LoginPageViewModel.Settings.ShowAsync();
+    private async Task SwitchToLogin() => await DialogService.ShowAsync(LoginPageViewModel);
 
     #region Services
+
+    [UsedImplicitly]
+    public IDialogService DialogService { get; init; } = null!;
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;

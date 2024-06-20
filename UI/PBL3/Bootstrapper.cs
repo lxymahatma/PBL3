@@ -41,6 +41,7 @@ internal static class Bootstrapper
     private static void RegisterServices()
     {
         _builder.RegisterType<DatabaseService>().As<IDatabaseService>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<DialogService>().As<IDialogService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<MessageBoxService>().As<IMessageBoxService>().SingleInstance();
         _builder.RegisterType<OpenAIService>().As<IOpenAIService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<UserService>().As<IUserService>().PropertiesAutowired().SingleInstance();

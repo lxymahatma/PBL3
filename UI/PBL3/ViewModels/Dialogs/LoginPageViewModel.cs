@@ -29,7 +29,7 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     {
         while (!await TryLogin())
         {
-            await Settings.ShowAsync();
+            await DialogService.ShowAsync(this);
         }
     }
 
@@ -55,9 +55,12 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     }
 
     [RelayCommand]
-    private async Task SwitchToRegister() => await RegisterPageViewModel.Settings.ShowAsync();
+    private async Task SwitchToRegister() => await DialogService.ShowAsync(RegisterPageViewModel);
 
     #region Services
+
+    [UsedImplicitly]
+    public IDialogService DialogService { get; init; } = null!;
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
