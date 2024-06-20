@@ -26,7 +26,7 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
         var result = UserService.Login(Key!, Password!);
         if (!result)
         {
-            MessageBoxService.Error("Login failed: Invalid username, email or password");
+            MessageBoxService.Error("Login Failed: Invalid username, email or password");
             Key = null;
             Password = null;
         }
