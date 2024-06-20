@@ -12,6 +12,7 @@ global using Serilog;
 global using System.ComponentModel.DataAnnotations;
 global using HanumanInstitute.MvvmDialogs;
 global using HanumanInstitute.MvvmDialogs.Avalonia;
+global using HanumanInstitute.MvvmDialogs.Avalonia.Fluent;
 global using PBL3.Contracts.ViewModels;
 global using PBL3.ViewModels.Pages;
 global using PBL3.ViewModels.Windows;

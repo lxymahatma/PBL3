@@ -1,3 +1,5 @@
+using FluentAvalonia.UI.Controls;
+
 namespace PBL3.ViewModels.Pages;
 
 public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPageViewModel
@@ -19,15 +21,23 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
     [MaxLength(15)]
     private string? _userName;
 
-    [RelayCommand]
-    private void Register()
+    public ContentDialogSettings Settings => new()
+    {
+        Content = this,
+        Title = "User Register",
+        PrimaryButtonText = "Register",
+        SecondaryButtonText = "Login",
+        DefaultButton = ContentDialogButton.Primary
+    };
+
+    public bool Register()
     {
         ValidateAllProperties();
 
         if (HasErrors)
         {
             Logger.Error("Entered invalid information");
-            return;
+            return false;
         }
 
         var user = new User
@@ -38,10 +48,13 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
         };
 
         var result = UserService.Register(user);
-        if (!result)
+        if (result)
         {
-            MessageBoxService.Error("Register failed: User already exists");
+            return true;
         }
+
+        MessageBoxService.Error("Register failed: User already exists");
+        return false;
     }
 
     /*[RelayCommand]

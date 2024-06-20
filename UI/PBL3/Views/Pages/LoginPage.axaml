@@ -30,11 +30,6 @@
                 <Setter Property="VerticalAlignment" Value="Center" />
             </Style>
         </Grid.Styles>
-        
-        <TextBlock Grid.Row="0"
-                   FontSize="20"
-                   FontWeight="ExtraBold"
-                   Text="User Login" />
 
         <TextBlock Grid.Row="1"
                    FontFamily="inria-sans"
@@ -55,17 +50,5 @@
         <TextBox Grid.Row="4"
                  Text="{Binding Password}"
                  Watermark="123456789" />
-
-        <Button Grid.Row="5"
-                Margin="0,0,100,0"
-                Command="{Binding LoginCommand}"
-                Content="Log in"
-                FontWeight="DemiBold" />
-
-        <Button Grid.Row="5"
-                Margin="100,0,0,0"
-                Command="{Binding SwitchToRegisterPageCommand}"
-                Content="Register"
-                FontWeight="DemiBold" />
     </Grid>
 </UserControl>

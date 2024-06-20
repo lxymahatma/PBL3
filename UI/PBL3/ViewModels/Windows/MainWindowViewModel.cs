@@ -1,4 +1,6 @@
-﻿namespace PBL3.ViewModels.Windows;
+﻿using FluentAvalonia.UI.Controls;
+
+namespace PBL3.ViewModels.Windows;
 
 public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
 {
@@ -8,7 +10,54 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     [RelayCommand]
     private async Task OpenLoginPage()
     {
-       
+        while (true)
+        {
+            var loginPageButtonResult = await DialogService.ShowContentDialogAsync(this, LoginPageViewModel.Settings);
+            if (await LoginPageButtonResult(loginPageButtonResult))
+            {
+                break;
+            }
+        }
+    }
+
+    private async Task<bool> LoginPageButtonResult(ContentDialogResult result)
+    {
+        switch (result)
+        {
+            case ContentDialogResult.Primary:
+                return LoginPageViewModel.Login();
+            case ContentDialogResult.Secondary:
+                var registerPageButtonResult = await DialogService.ShowContentDialogAsync(this, RegisterPageViewModel.Settings);
+                return await RegisterPageButtonResult(registerPageButtonResult);
+            case ContentDialogResult.None:
+                return false;
+            default:
+                return false;
+        }
+    }
+
+    private async Task<bool> RegisterPageButtonResult(ContentDialogResult result)
+    {
+        switch (result)
+        {
+            case ContentDialogResult.Primary:
+                var registerResult = RegisterPageViewModel.Register();
+                if (registerResult)
+                {
+                    return true;
+                }
+
+                var registerPageButtonResult = await DialogService.ShowContentDialogAsync(this, RegisterPageViewModel.Settings);
+                return await RegisterPageButtonResult(registerPageButtonResult);
+
+            case ContentDialogResult.Secondary:
+                var loginPageButtonResult = await DialogService.ShowContentDialogAsync(this, LoginPageViewModel.Settings);
+                return await LoginPageButtonResult(loginPageButtonResult);
+            case ContentDialogResult.None:
+                return false;
+            default:
+                return false;
+        }
     }
 
     [RelayCommand]
@@ -27,6 +76,12 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
 
     [UsedImplicitly]
     public IDialogService DialogService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public ILoginPageViewModel LoginPageViewModel { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IRegisterPageViewModel RegisterPageViewModel { get; init; } = null!;
 
     #endregion
 }

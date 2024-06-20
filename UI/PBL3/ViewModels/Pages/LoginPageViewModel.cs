@@ -1,3 +1,5 @@
+using FluentAvalonia.UI.Controls;
+
 namespace PBL3.ViewModels.Pages;
 
 public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewModel
@@ -12,15 +14,23 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     [MaxLength(20)]
     private string? _password;
 
-    [RelayCommand]
-    private void Login()
+    public ContentDialogSettings Settings => new()
+    {
+        Content = this,
+        Title = "User Login",
+        PrimaryButtonText = "Login",
+        SecondaryButtonText = "Register",
+        DefaultButton = ContentDialogButton.Primary
+    };
+
+    public bool Login()
     {
         ValidateAllProperties();
 
         if (HasErrors)
         {
             Logger.Error("Entered invalid information");
-            return;
+            return false;
         }
 
         var result = UserService.Login(Key!, Password!);
@@ -32,7 +42,7 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
         }
 
         MessageBoxService.Success("Login successful");
-        //DialogService.Close(PopupWindowViewModel);
+        return true;
     }
 
     /*[RelayCommand]
