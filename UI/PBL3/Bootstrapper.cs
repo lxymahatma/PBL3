@@ -53,11 +53,11 @@ internal static class Bootstrapper
     private static void RegisterViewModels()
     {
         _builder.RegisterType<HomePageViewModel>().As<IHomePageViewModel>().PropertiesAutowired().SingleInstance();
-        _builder.RegisterType<LoginPageViewModel>().As<ILoginPageViewModel>()
+        _builder.RegisterType<LoginDialogViewModel>().As<ILoginDialogViewModel>()
             .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies)
             .SingleInstance();
         _builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().PropertiesAutowired().SingleInstance();
-        _builder.RegisterType<RegisterPageViewModel>().As<IRegisterPageViewModel>()
+        _builder.RegisterType<RegisterDialogViewModel>().As<IRegisterDialogViewModel>()
             .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies)
             .SingleInstance();
     }

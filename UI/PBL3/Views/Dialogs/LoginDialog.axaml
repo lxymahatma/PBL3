@@ -5,15 +5,15 @@
              xmlns:ext="using:PBL3.Extensions.MarkupExtensions"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:dialogs="clr-namespace:PBL3.ViewModels.Dialogs"
-             x:Class="PBL3.Views.Dialogs.LoginPage"
+             x:Class="PBL3.Views.Dialogs.LoginDialog"
              d:DesignHeight="450"
              d:DesignWidth="800"
-             x:DataType="dialogs:LoginPageViewModel"
-             DataContext="{ext:DependencyInjection Type=contract:ILoginPageViewModel}"
+             x:DataType="dialogs:LoginDialogViewModel"
+             DataContext="{ext:DependencyInjection Type=contract:ILoginDialogViewModel}"
              mc:Ignorable="d">
 
     <Design.DataContext>
-        <dialogs:LoginPageViewModel />
+        <dialogs:LoginDialogViewModel />
     </Design.DataContext>
 
     <Grid RowDefinitions="40,25,50,25,Auto,40" ShowGridLines="True">

@@ -5,15 +5,15 @@
              xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:dialogs="clr-namespace:PBL3.ViewModels.Dialogs"
-             x:Class="PBL3.Views.Dialogs.RegisterPage"
+             x:Class="PBL3.Views.Dialogs.RegisterDialog"
              d:DesignHeight="450"
              d:DesignWidth="500"
-             x:DataType="dialogs:RegisterPageViewModel"
-             DataContext="{ext:DependencyInjection Type=contract:IRegisterPageViewModel}"
+             x:DataType="dialogs:RegisterDialogViewModel"
+             DataContext="{ext:DependencyInjection Type=contract:IRegisterDialogViewModel}"
              mc:Ignorable="d">
 
     <Design.DataContext>
-        <dialogs:RegisterPageViewModel />
+        <dialogs:RegisterDialogViewModel />
     </Design.DataContext>
 
     <Grid RowDefinitions="40, 25, 50, 25, 50, 25, 50, 70" ShowGridLines="True">

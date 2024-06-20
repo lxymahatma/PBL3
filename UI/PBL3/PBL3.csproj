@@ -64,11 +64,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Update="Views\Dialogs\LoginPage.axaml.cs">
+        <Compile Update="Views\Dialogs\LoginDialog.axaml.cs">
             <DependentUpon>LoginPage.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
-        <Compile Update="Views\Dialogs\RegisterPage.axaml.cs">
+        <Compile Update="Views\Dialogs\RegisterDialog.axaml.cs">
             <DependentUpon>RegisterPage.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>

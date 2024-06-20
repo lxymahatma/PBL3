@@ -1,6 +1,6 @@
 namespace PBL3.ViewModels.Dialogs;
 
-public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewModel
+public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogViewModel
 {
     [ObservableProperty]
     [Required]
@@ -55,7 +55,7 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     }
 
     [RelayCommand]
-    private async Task SwitchToRegister() => await DialogService.ShowAsync(RegisterPageViewModel);
+    private async Task SwitchToRegister() => await DialogService.ShowAsync(RegisterDialogViewModel);
 
     #region Services
 
@@ -72,7 +72,7 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     public IUserService UserService { get; init; } = null!;
 
     [UsedImplicitly]
-    public IRegisterPageViewModel RegisterPageViewModel { get; init; } = null!;
+    public IRegisterDialogViewModel RegisterDialogViewModel { get; init; } = null!;
 
     #endregion
 }
