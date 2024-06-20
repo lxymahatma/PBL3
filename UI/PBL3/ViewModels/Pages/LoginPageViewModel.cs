@@ -32,11 +32,11 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
         }
 
         MessageBoxService.Success("Login successful");
-        DialogService.Close(PopupWindowViewModel);
+        //DialogService.Close(PopupWindowViewModel);
     }
 
-    [RelayCommand]
-    private void SwitchToRegisterPage() => PopupWindowViewModel.SwitchTab(1);
+    /*[RelayCommand]
+    private void SwitchToRegisterPage() => PopupWindowViewModel.SwitchTab(1);*/
 
     #region Services
 
@@ -48,9 +48,6 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
 
     [UsedImplicitly]
     public IMessageBoxService MessageBoxService { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IPopupWindowViewModel PopupWindowViewModel { get; init; } = null!;
 
     [UsedImplicitly]
     public IUserService UserService { get; init; } = null!;

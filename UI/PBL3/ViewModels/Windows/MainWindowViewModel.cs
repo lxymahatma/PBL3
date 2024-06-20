@@ -8,8 +8,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     [RelayCommand]
     private async Task OpenLoginPage()
     {
-        var dialog = DialogService.CreateViewModel<IPopupWindowViewModel>();
-        await DialogService.ShowDialogAsync(this, dialog);
+       
     }
 
     [RelayCommand]

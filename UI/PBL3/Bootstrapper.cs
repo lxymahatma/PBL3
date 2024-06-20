@@ -32,7 +32,8 @@ internal static class Bootstrapper
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
         //_builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
         _builder.Register(_ => new DialogService(
-                new DialogManager(new ViewLocator()),
+                new DialogManager(new ViewLocator(),
+                    new DialogFactory().AddFluent()),
                 x => _container.Resolve(x)))
             .As<IDialogService>().SingleInstance();
         _builder.RegisterType<User>().SingleInstance();
@@ -57,7 +58,6 @@ internal static class Bootstrapper
         _builder.RegisterType<HomePageViewModel>().As<IHomePageViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<LoginPageViewModel>().As<ILoginPageViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().PropertiesAutowired().SingleInstance();
-        _builder.RegisterType<PopupWindowViewModel>().As<IPopupWindowViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<RegisterPageViewModel>().As<IRegisterPageViewModel>().PropertiesAutowired().SingleInstance();
     }
 
