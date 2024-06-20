@@ -1,7 +1,5 @@
 namespace PBL3.Contracts.ViewModels;
 
-public interface IRegisterPageViewModel
+public interface IRegisterPageViewModel : IDialogViewModel
 {
-    ContentDialogSettings Settings { get; }
-    Task<bool> Register();
 }

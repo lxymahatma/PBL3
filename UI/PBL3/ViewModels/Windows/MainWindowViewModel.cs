@@ -1,6 +1,4 @@
-﻿using FluentAvalonia.UI.Controls;
-
-namespace PBL3.ViewModels.Windows;
+﻿namespace PBL3.ViewModels.Windows;
 
 public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
 {
@@ -8,54 +6,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     private string _searchText = string.Empty;
 
     [RelayCommand]
-    private async Task OpenLoginPage()
-    {
-        do
-        {
-            var loginPageButtonResult = await DialogService.ShowContentDialogAsync(this, LoginPageViewModel.Settings);
-            await LoginPageButtonResult(loginPageButtonResult);
-        } while (!UserService.IsLoggedIn);
-    }
-
-    private async Task<bool> LoginPageButtonResult(ContentDialogResult result)
-    {
-        switch (result)
-        {
-            case ContentDialogResult.Primary:
-                return await LoginPageViewModel.Login();
-            case ContentDialogResult.Secondary:
-                var registerPageButtonResult = await DialogService.ShowContentDialogAsync(this, RegisterPageViewModel.Settings);
-                return await RegisterPageButtonResult(registerPageButtonResult);
-            case ContentDialogResult.None:
-                return false;
-            default:
-                return false;
-        }
-    }
-
-    private async Task<bool> RegisterPageButtonResult(ContentDialogResult result)
-    {
-        switch (result)
-        {
-            case ContentDialogResult.Primary:
-                var registerResult = await RegisterPageViewModel.Register();
-                if (registerResult)
-                {
-                    return true;
-                }
-
-                var registerPageButtonResult = await DialogService.ShowContentDialogAsync(this, RegisterPageViewModel.Settings);
-                return await RegisterPageButtonResult(registerPageButtonResult);
-
-            case ContentDialogResult.Secondary:
-                var loginPageButtonResult = await DialogService.ShowContentDialogAsync(this, LoginPageViewModel.Settings);
-                return await LoginPageButtonResult(loginPageButtonResult);
-            case ContentDialogResult.None:
-                return false;
-            default:
-                return false;
-        }
-    }
+    private async Task OpenLoginPage() => await LoginPageViewModel.Settings.ShowAsync();
 
     [RelayCommand]
     private void Search()
@@ -70,9 +21,6 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
 
     [UsedImplicitly]
     public IUserService UserService { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IDialogService DialogService { get; init; } = null!;
 
     [UsedImplicitly]
     public ILoginPageViewModel LoginPageViewModel { get; init; } = null!;

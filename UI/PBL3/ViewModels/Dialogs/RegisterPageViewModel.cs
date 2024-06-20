@@ -1,6 +1,4 @@
-using FluentAvalonia.UI.Controls;
-
-namespace PBL3.ViewModels.Pages;
+namespace PBL3.ViewModels.Dialogs;
 
 public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPageViewModel
 {
@@ -21,16 +19,29 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
     [MaxLength(15)]
     private string? _userName;
 
-    public ContentDialogSettings Settings => new()
+    public ContentDialog Settings => new()
     {
         Content = this,
         Title = "User Register",
         PrimaryButtonText = "Register",
         SecondaryButtonText = "Login",
-        DefaultButton = ContentDialogButton.Primary
+        DefaultButton = ContentDialogButton.Primary,
+        PrimaryButtonCommand = RegisterCommand,
+        SecondaryButtonCommand = SwitchToLoginCommand
     };
 
-    public async Task<bool> Register()
+    [RelayCommand]
+    private async Task Register()
+    {
+        while (!await TryRegister())
+        {
+            await Settings.ShowAsync();
+        }
+
+        await SwitchToLogin();
+    }
+
+    private async Task<bool> TryRegister()
     {
         ValidateAllProperties();
 
@@ -57,6 +68,9 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
         return false;
     }
 
+    [RelayCommand]
+    private async Task SwitchToLogin() => await LoginPageViewModel.Settings.ShowAsync();
+
     #region Services
 
     [UsedImplicitly]
@@ -67,6 +81,9 @@ public sealed partial class RegisterPageViewModel : ViewModelBase, IRegisterPage
 
     [UsedImplicitly]
     public IMessageBoxService MessageBoxService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public ILoginPageViewModel LoginPageViewModel { get; init; } = null!;
 
     #endregion
 }

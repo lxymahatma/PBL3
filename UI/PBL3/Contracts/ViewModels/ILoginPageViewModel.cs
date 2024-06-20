@@ -1,7 +1,5 @@
 namespace PBL3.Contracts.ViewModels;
 
-public interface ILoginPageViewModel
+public interface ILoginPageViewModel : IDialogViewModel
 {
-    ContentDialogSettings Settings { get; }
-    Task<bool> Login();
 }

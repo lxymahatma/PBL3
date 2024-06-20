@@ -1,6 +1,4 @@
-using FluentAvalonia.UI.Controls;
-
-namespace PBL3.ViewModels.Pages;
+namespace PBL3.ViewModels.Dialogs;
 
 public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewModel
 {
@@ -15,16 +13,27 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
     [MaxLength(20)]
     private string? _password;
 
-    public ContentDialogSettings Settings => new()
+    public ContentDialog Settings => new()
     {
         Content = this,
         Title = "User Login",
         PrimaryButtonText = "Login",
         SecondaryButtonText = "Register",
-        DefaultButton = ContentDialogButton.Primary
+        DefaultButton = ContentDialogButton.Primary,
+        PrimaryButtonCommand = LoginCommand,
+        SecondaryButtonCommand = SwitchToRegisterCommand
     };
 
-    public async Task<bool> Login()
+    [RelayCommand]
+    private async Task Login()
+    {
+        while (!await TryLogin())
+        {
+            await Settings.ShowAsync();
+        }
+    }
+
+    private async Task<bool> TryLogin()
     {
         ValidateAllProperties();
 
@@ -38,8 +47,6 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
         if (!result)
         {
             await MessageBoxService.ErrorAsync("Login failed: Invalid username, email or password");
-            Key = null;
-            Password = null;
             return false;
         }
 
@@ -47,10 +54,10 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
         return true;
     }
 
-    #region Services
+    [RelayCommand]
+    private async Task SwitchToRegister() => await RegisterPageViewModel.Settings.ShowAsync();
 
-    [UsedImplicitly]
-    public IDialogService DialogService { get; init; } = null!;
+    #region Services
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
@@ -60,6 +67,9 @@ public sealed partial class LoginPageViewModel : ViewModelBase, ILoginPageViewMo
 
     [UsedImplicitly]
     public IUserService UserService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IRegisterPageViewModel RegisterPageViewModel { get; init; } = null!;
 
     #endregion
 }

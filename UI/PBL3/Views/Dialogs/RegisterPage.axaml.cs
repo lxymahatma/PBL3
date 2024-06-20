@@ -1,4 +1,4 @@
-namespace PBL3.Views.Pages;
+namespace PBL3.Views.Dialogs;
 
 public sealed partial class RegisterPage : UserControl
 {
