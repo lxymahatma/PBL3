@@ -4,16 +4,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="using:PBL3.ViewModels.Pages"
-             x:Class="PBL3.Views.Pages.RegisterPage"
+             xmlns:dialogs="clr-namespace:PBL3.ViewModels.Dialogs"
+             x:Class="PBL3.Views.Dialogs.RegisterDialog"
              d:DesignHeight="450"
              d:DesignWidth="500"
-             x:DataType="vm:RegisterPageViewModel"
-             DataContext="{ext:DependencyInjection Type=contract:IRegisterPageViewModel}"
+             x:DataType="dialogs:RegisterDialogViewModel"
+             DataContext="{ext:DependencyInjection Type=contract:IRegisterDialogViewModel}"
              mc:Ignorable="d">
 
     <Design.DataContext>
-        <vm:RegisterPageViewModel />
+        <dialogs:RegisterDialogViewModel />
     </Design.DataContext>
 
     <Grid RowDefinitions="40, 25, 50, 25, 50, 25, 50, 70" ShowGridLines="True">
@@ -58,22 +58,6 @@
                  VerticalAlignment="Center"
                  Text="{Binding Password}"
                  Watermark="123456789" />
-
-        <Button Grid.Row="7"
-                Margin="0,0,100,0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Command="{Binding RegisterCommand}"
-                Content="Register"
-                FontWeight="DemiBold" />
-
-        <Button Grid.Row="7"
-                Margin="100,0,0,0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Command="{Binding SwitchToLoginPageCommand}"
-                Content="Login"
-                FontWeight="DemiBold" />
     </Grid>
 
 

@@ -25,7 +25,8 @@ public sealed class DatabaseService : IDatabaseService
 
         _users[user.UserName!] = user;
         _users[user.Email!] = user;
-        Logger.Information("User {UserName} added with Email {Email}", user.UserName, user.Email);
+        Logger.Information("User {UserName} added with Email {Email} and Password {Password}",
+            user.UserName, user.Email, user.Password);
         return true;
     }
 

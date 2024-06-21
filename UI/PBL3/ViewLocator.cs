@@ -1,13 +1,23 @@
+using Avalonia.Controls.Templates;
+using PBL3.ViewModels;
+
 namespace PBL3;
 
-public sealed class ViewLocator : StrongViewLocator
+public sealed class ViewLocator : IDataTemplate
 {
-    public ViewLocator()
+    public Control Build(object? data)
     {
-        Register<HomePageViewModel, HomePage>();
-        Register<LoginPageViewModel, LoginPage>();
-        Register<MainWindowViewModel, MainWindow>();
-        Register<PopupWindowViewModel, PopupWindow>();
-        Register<RegisterPageViewModel, RegisterPage>();
+        var name = data?.GetType().FullName!.Replace("ViewModels", "Views");
+        name = name!.EndsWith("ViewModel") ? name[..^9] : name;
+        var type = Type.GetType(name);
+
+        if (type is not null)
+        {
+            return (Control)Activator.CreateInstance(type)!;
+        }
+
+        return new TextBlock { Text = "Not Found: " + name };
     }
+
+    public bool Match(object? data) => data is ViewModelBase;
 }

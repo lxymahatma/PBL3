@@ -1,6 +1,7 @@
 using Autofac;
 using PBL3.Extensions.MarkupExtensions;
 using PBL3.Services;
+using IContainer = Autofac.IContainer;
 
 namespace PBL3;
 
@@ -21,7 +22,7 @@ internal static class Bootstrapper
 
         _container = _builder.Build();
 
-        ConfigureStaticResolvers(_container);
+        ConfigureStaticResolvers();
     }
 
     /// <summary>
@@ -31,10 +32,6 @@ internal static class Bootstrapper
     {
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
         //_builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
-        _builder.Register(_ => new DialogService(
-                new DialogManager(new ViewLocator()),
-                x => _container.Resolve(x)))
-            .As<IDialogService>().SingleInstance();
         _builder.RegisterType<User>().SingleInstance();
     }
 
@@ -44,6 +41,7 @@ internal static class Bootstrapper
     private static void RegisterServices()
     {
         _builder.RegisterType<DatabaseService>().As<IDatabaseService>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<DialogService>().As<IDialogService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<MessageBoxService>().As<IMessageBoxService>().SingleInstance();
         _builder.RegisterType<OpenAIService>().As<IOpenAIService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<UserService>().As<IUserService>().PropertiesAutowired().SingleInstance();
@@ -55,15 +53,18 @@ internal static class Bootstrapper
     private static void RegisterViewModels()
     {
         _builder.RegisterType<HomePageViewModel>().As<IHomePageViewModel>().PropertiesAutowired().SingleInstance();
-        _builder.RegisterType<LoginPageViewModel>().As<ILoginPageViewModel>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<LoginDialogViewModel>().As<ILoginDialogViewModel>()
+            .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies)
+            .SingleInstance();
         _builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().PropertiesAutowired().SingleInstance();
-        _builder.RegisterType<PopupWindowViewModel>().As<IPopupWindowViewModel>().PropertiesAutowired().SingleInstance();
-        _builder.RegisterType<RegisterPageViewModel>().As<IRegisterPageViewModel>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<RegisterDialogViewModel>().As<IRegisterDialogViewModel>()
+            .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies)
+            .SingleInstance();
     }
 
-    private static void ConfigureStaticResolvers(IContainer container)
+    private static void ConfigureStaticResolvers()
     {
-        DependencyInjectionExtension.Resolver = type => container.Resolve(type!);
+        DependencyInjectionExtension.Resolver = type => _container.Resolve(type!);
     }
 
     private static string LoadFromFile(string path = "OpenAIKey.txt") => File.ReadAllText(path);

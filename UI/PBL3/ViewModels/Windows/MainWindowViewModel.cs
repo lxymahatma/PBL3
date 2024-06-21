@@ -6,11 +6,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     private string _searchText = string.Empty;
 
     [RelayCommand]
-    private async Task OpenLoginPage()
-    {
-        var dialog = DialogService.CreateViewModel<IPopupWindowViewModel>();
-        await DialogService.ShowDialogAsync(this, dialog);
-    }
+    private async Task OpenLoginPage() => await DialogService.ShowAsync(LoginDialogViewModel, () => UserService.IsLoggedIn);
 
     [RelayCommand]
     private void Search()
@@ -21,13 +17,16 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     #region Services
 
     [UsedImplicitly]
+    public IDialogService DialogService { get; init; } = null!;
+
+    [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
 
     [UsedImplicitly]
     public IUserService UserService { get; init; } = null!;
 
     [UsedImplicitly]
-    public IDialogService DialogService { get; init; } = null!;
+    public ILoginDialogViewModel LoginDialogViewModel { get; init; } = null!;
 
     #endregion
 }
