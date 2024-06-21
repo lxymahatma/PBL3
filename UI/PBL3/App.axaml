@@ -1,5 +1,7 @@
-<Application xmlns:local="using:PBL3" xmlns:sty="using:FluentAvalonia.Styling"
-             xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:PBL3"
+             xmlns:sty="using:FluentAvalonia.Styling"
              x:Class="PBL3.App"
              RequestedThemeVariant="Default">
 

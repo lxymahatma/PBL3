@@ -17,17 +17,17 @@ public sealed class DialogService : IDialogService
 
         _currentDialog.Closing -= OnDialogClosing;
         CloseCurrentDialog();
-        await ShowAsync(viewModel, closingCondition);
+        await ShowAsync(viewModel, closingCondition).ConfigureAwait(false);
     }
 
-    public async Task ShowAsync(IDialogViewModel viewModel, Func<bool> closingCondition)
+    public Task ShowAsync(IDialogViewModel viewModel, Func<bool> closingCondition)
     {
         _currentDialog = viewModel.DialogSettings;
         _currentClosingCondition = closingCondition;
 
         _currentDialog.Closing += OnDialogClosing;
         Logger.Information("Showing Dialog: {Dialog}", _currentDialog.Title);
-        await _currentDialog.ShowAsync();
+        return _currentDialog.ShowAsync();
     }
 
     private void CloseCurrentDialog()
@@ -36,5 +36,6 @@ public sealed class DialogService : IDialogService
         _currentDialog.Hide();
     }
 
-    private void OnDialogClosing(ContentDialog sender, ContentDialogClosingEventArgs args) => args.Cancel = !_currentClosingCondition!();
+    private void OnDialogClosing(ContentDialog sender, ContentDialogClosingEventArgs args) =>
+        args.Cancel = !_currentClosingCondition!();
 }

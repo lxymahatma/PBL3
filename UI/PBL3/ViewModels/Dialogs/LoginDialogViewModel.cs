@@ -25,7 +25,7 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     };
 
     [RelayCommand]
-    private async Task Login()
+    private async Task LoginAsync()
     {
         ValidateAllProperties();
 
@@ -38,15 +38,16 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
         UserService.Login(Key!, Password!);
         if (!UserService.IsLoggedIn)
         {
-            await MessageBoxService.ErrorAsync("Login failed: Invalid username, email or password");
+            await MessageBoxService.ErrorAsync("Login failed: Invalid username, email or password").ConfigureAwait(false);
             return;
         }
 
-        await MessageBoxService.SuccessAsync("Login successful");
+        await MessageBoxService.SuccessAsync("Login successful").ConfigureAwait(false);
     }
 
     [RelayCommand]
-    private async Task SwitchToRegister() => await DialogService.SwitchDialogAsync(RegisterDialogViewModel, () => UserService.IsRegistered);
+    private async Task SwitchToRegisterAsync() =>
+        await DialogService.SwitchDialogAsync(RegisterDialogViewModel, () => UserService.IsRegistered).ConfigureAwait(false);
 
     #region Services
 

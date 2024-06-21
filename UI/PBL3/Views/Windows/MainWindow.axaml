@@ -1,10 +1,15 @@
-<Window xmlns:contract="clr-namespace:PBL3.Contracts.ViewModels" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:contract="clr-namespace:PBL3.Contracts.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:page="using:PBL3.Views.Pages"
         xmlns:vm="using:PBL3.ViewModels.Windows"
-        xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="PBL3.Views.Windows.MainWindow"
         Title="PBL3"
-        d:DesignHeight="450" d:DesignWidth="800"
+        d:DesignHeight="450"
+        d:DesignWidth="800"
         x:DataType="vm:MainWindowViewModel"
         DataContext="{ext:DependencyInjection Type=contract:IMainWindowViewModel}"
         Icon="/Assets/icon.ico"
@@ -21,29 +26,6 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto"
-          ShowGridLines="True">
-        <StackPanel Grid.Row="0" Grid.Column="0"
-                    Width="100">
-            <Button Command="{Binding SettingsCommand}">
-                <PathIcon Width="30" Height="30"
-                          Data="{StaticResource Setting}" />
-            </Button>
-        </StackPanel>
-        <TextBox Grid.Row="0" Grid.Column="1"
-                 Width="500"
-                 VerticalContentAlignment="Center"
-                 Text="{Binding SearchText}"
-                 Watermark="Search Course">
-            <TextBox.InnerRightContent>
-                <Button Command="{Binding SearchCommand}">
-                    <PathIcon Width="30" Height="30"
-                              Data="{StaticResource Magnify}" />
-                </Button>
-
-            </TextBox.InnerRightContent>
-
-        </TextBox>
-    </Grid>
+    <page:HomePage />
 
 </Window>

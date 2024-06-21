@@ -31,7 +31,7 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     };
 
     [RelayCommand]
-    private async Task Register()
+    private async Task RegisterAsync()
     {
         ValidateAllProperties();
 
@@ -51,16 +51,16 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
         UserService.Register(user);
         if (!UserService.IsRegistered)
         {
-            await MessageBoxService.ErrorAsync("Register failed: User already exists");
+            await MessageBoxService.ErrorAsync("Register failed: User already exists").ConfigureAwait(false);
             return;
         }
 
-        await SwitchToLogin();
+        await SwitchToLoginAsync().ConfigureAwait(false);
     }
 
     [RelayCommand]
-    private async Task SwitchToLogin() =>
-        await DialogService.SwitchDialogAsync(LoginDialogViewModel, () => UserService.IsLoggedIn);
+    private async Task SwitchToLoginAsync() =>
+        await DialogService.SwitchDialogAsync(LoginDialogViewModel, () => UserService.IsLoggedIn).ConfigureAwait(false);
 
     #region Services
 
