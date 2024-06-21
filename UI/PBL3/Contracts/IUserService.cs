@@ -4,6 +4,6 @@ public interface IUserService
 {
     bool IsLoggedIn { get; }
     bool IsRegistered { get; }
-    bool Login(string key, string password);
-    bool Register(User user);
+    void Login(string key, string password);
+    void Register(User user);
 }

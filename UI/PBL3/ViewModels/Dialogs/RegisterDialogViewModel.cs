@@ -7,6 +7,8 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     [EmailAddress]
     private string? _email;
 
+    private bool _isSwitch;
+
     [ObservableProperty]
     [Required]
     [MinLength(6)]
@@ -19,16 +21,21 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     [MaxLength(15)]
     private string? _userName;
 
-    public ContentDialog DialogSettings => new()
+    public ContentDialog GetDialogSettings()
     {
-        Content = this,
-        Title = "User Register",
-        PrimaryButtonText = "Register",
-        SecondaryButtonText = "Login",
-        DefaultButton = ContentDialogButton.Primary,
-        PrimaryButtonCommand = RegisterCommand,
-        SecondaryButtonCommand = SwitchToLoginCommand
-    };
+        var dialog = new ContentDialog
+        {
+            Content = this,
+            Title = "User Register",
+            PrimaryButtonText = "Register",
+            SecondaryButtonText = "Login",
+            DefaultButton = ContentDialogButton.Primary,
+            PrimaryButtonCommand = RegisterCommand,
+            SecondaryButtonCommand = SwitchToLoginCommand
+        };
+        dialog.Closing += (_, args) => args.Cancel = !UserService.IsRegistered && !_isSwitch;
+        return dialog;
+    }
 
     [RelayCommand]
     private async Task Register()
@@ -48,8 +55,8 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
             UserName = UserName!
         };
 
-        var result = UserService.Register(user);
-        if (!result)
+        UserService.Register(user);
+        if (!UserService.IsRegistered)
         {
             await MessageBoxService.ErrorAsync("Register failed: User already exists");
             return;
@@ -61,8 +68,10 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     [RelayCommand]
     private async Task SwitchToLogin()
     {
+        _isSwitch = true;
         DialogService.HideCurrentDialog();
         await DialogService.ShowAsync(LoginDialogViewModel);
+        _isSwitch = false;
     }
 
     #region Services

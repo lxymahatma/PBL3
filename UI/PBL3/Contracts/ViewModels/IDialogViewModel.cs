@@ -2,5 +2,5 @@
 
 public interface IDialogViewModel
 {
-    ContentDialog DialogSettings { get; }
+    ContentDialog GetDialogSettings();
 }

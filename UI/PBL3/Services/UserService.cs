@@ -11,30 +11,25 @@ public sealed class UserService : IUserService
     public bool IsLoggedIn { get; private set; }
     public bool IsRegistered { get; private set; }
 
-    public bool Login(string key, string password)
+    public void Login(string key, string password)
     {
         var user = DatabaseService.GetUserFromKey(key);
 
         if (user is null)
         {
             Logger.Error("User with key {Key} not found", key);
-            return false;
+            return;
         }
 
         if (user.Password != password)
         {
             Logger.Error("Password incorrect");
-            return false;
+            return;
         }
 
         Logger.Information("User {UserName} logged in", user.UserName);
         IsLoggedIn = true;
-        return true;
     }
 
-    public bool Register(User user)
-    {
-        IsRegistered = DatabaseService.RegisterUser(user);
-        return IsRegistered;
-    }
+    public void Register(User user) => IsRegistered = DatabaseService.RegisterUser(user);
 }

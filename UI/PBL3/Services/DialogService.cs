@@ -15,7 +15,7 @@ public sealed class DialogService : IDialogService
 
     public async Task ShowAsync(IDialogViewModel viewModel)
     {
-        _currentDialog = viewModel.DialogSettings;
+        _currentDialog = viewModel.GetDialogSettings();
         Logger.Information("Showing Dialog: {Dialog}", _currentDialog.Title);
         await _currentDialog.ShowAsync();
     }
