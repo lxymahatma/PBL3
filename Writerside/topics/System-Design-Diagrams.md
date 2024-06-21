@@ -12,6 +12,8 @@
 ### Frameworks / Libraries
 
 * [Avalonia](https://github.com/AvaloniaUI/Avalonia) - Develop Desktop, Embedded, Mobile and WebAssembly apps with C# and XAML
+* [FluentAvalonia](https://github.com/amwx/FluentAvalonia) - Control library focused on fluent design and bringing more
+  WinUI controls into Avalonia
 * [MessageBox.Avalonia](https://github.com/AvaloniaCommunity/MessageBox.Avalonia) - MessageBox for AvaloniaUI
 * [Autofac](https://github.com/autofac/Autofac) - .NET IoC container
 * [OpenAI Dotnet](https://github.com/openai/openai-dotnet) - Official .NET library for the OpenAI API
@@ -20,8 +22,6 @@
   Avalonia applications
 * [Serilog](https://github.com/serilog/serilog) - Simple .NET logging with fully-structured events
 * [NRedisStack](https://github.com/redis/NRedisStack) - Redis Stack .Net client
-* [HanumanInstitute.MvvmDialogs](https://github.com/mysteryx93/HanumanInstitute.MvvmDialogs) - Opening dialogs from a view model when using
-  MVVM
 
 ### Build System
 
