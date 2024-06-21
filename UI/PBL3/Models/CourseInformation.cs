@@ -8,6 +8,6 @@ public sealed class CourseInformation
     public int Credit { get; set; }
     public CourseCategory Category { get; set; }
     public CourseRating Rating { get; set; }
-    public Thread Thread { get; set; }
+    public Thread? Thread { get; set; }
     public CourseInformation[]? Prerequisites { get; set; }
 }
