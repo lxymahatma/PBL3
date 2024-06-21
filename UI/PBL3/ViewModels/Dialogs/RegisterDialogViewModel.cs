@@ -19,7 +19,7 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     [MaxLength(15)]
     private string? _userName;
 
-    public ContentDialog Settings => new()
+    public ContentDialog DialogSettings => new()
     {
         Content = this,
         Title = "User Register",
@@ -33,22 +33,12 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     [RelayCommand]
     private async Task Register()
     {
-        while (!await TryRegister())
-        {
-            await DialogService.ShowAsync(this);
-        }
-
-        await SwitchToLogin();
-    }
-
-    private async Task<bool> TryRegister()
-    {
         ValidateAllProperties();
 
         if (HasErrors)
         {
             Logger.Error("Entered invalid information");
-            return false;
+            return;
         }
 
         var user = new User
@@ -59,17 +49,21 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
         };
 
         var result = UserService.Register(user);
-        if (result)
+        if (!result)
         {
-            return true;
+            await MessageBoxService.ErrorAsync("Register failed: User already exists");
+            return;
         }
 
-        await MessageBoxService.ErrorAsync("Register failed: User already exists");
-        return false;
+        await SwitchToLogin();
     }
 
     [RelayCommand]
-    private async Task SwitchToLogin() => await DialogService.ShowAsync(LoginDialogViewModel);
+    private async Task SwitchToLogin()
+    {
+        DialogService.HideCurrentDialog();
+        await DialogService.ShowAsync(LoginDialogViewModel);
+    }
 
     #region Services
 

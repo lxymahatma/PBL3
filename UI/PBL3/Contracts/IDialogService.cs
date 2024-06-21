@@ -2,5 +2,6 @@
 
 public interface IDialogService
 {
+    void HideCurrentDialog();
     Task ShowAsync(IDialogViewModel viewModel);
 }

@@ -13,7 +13,7 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     [MaxLength(20)]
     private string? _password;
 
-    public ContentDialog Settings => new()
+    public ContentDialog DialogSettings => new()
     {
         Content = this,
         Title = "User Login",
@@ -27,35 +27,30 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     [RelayCommand]
     private async Task Login()
     {
-        while (!await TryLogin())
-        {
-            await DialogService.ShowAsync(this);
-        }
-    }
-
-    private async Task<bool> TryLogin()
-    {
         ValidateAllProperties();
 
         if (HasErrors)
         {
             Logger.Error("Entered invalid information");
-            return false;
+            return;
         }
 
         var result = UserService.Login(Key!, Password!);
         if (!result)
         {
             await MessageBoxService.ErrorAsync("Login failed: Invalid username, email or password");
-            return false;
+            return;
         }
 
         await MessageBoxService.SuccessAsync("Login successful");
-        return true;
     }
 
     [RelayCommand]
-    private async Task SwitchToRegister() => await DialogService.ShowAsync(RegisterDialogViewModel);
+    private async Task SwitchToRegister()
+    {
+        DialogService.HideCurrentDialog();
+        await DialogService.ShowAsync(RegisterDialogViewModel);
+    }
 
     #region Services
 

@@ -9,6 +9,7 @@ public sealed class UserService : IUserService
     public IDatabaseService DatabaseService { get; init; } = null!;
 
     public bool IsLoggedIn { get; private set; }
+    public bool IsRegistered { get; private set; }
 
     public bool Login(string key, string password)
     {
@@ -31,5 +32,9 @@ public sealed class UserService : IUserService
         return true;
     }
 
-    public bool Register(User user) => DatabaseService.RegisterUser(user);
+    public bool Register(User user)
+    {
+        IsRegistered = DatabaseService.RegisterUser(user);
+        return IsRegistered;
+    }
 }
