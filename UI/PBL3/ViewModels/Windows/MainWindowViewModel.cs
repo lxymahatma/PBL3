@@ -13,6 +13,12 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     {
         Logger.Information("Searching for {SearchText}", SearchText);
     }
+    
+    [RelayCommand]
+    private void Settings()
+    {
+        Logger.Information("Opening settings");
+    }
 
     #region Services
 
