@@ -2,9 +2,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:contract="using:PBL3.Contracts.ViewModels"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dialogs="clr-namespace:PBL3.ViewModels.Dialogs"
              xmlns:ext="using:PBL3.Extensions.MarkupExtensions"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:dialogs="clr-namespace:PBL3.ViewModels.Dialogs"
              x:Class="PBL3.Views.Dialogs.LoginDialog"
              d:DesignHeight="450"
              d:DesignWidth="800"
@@ -38,7 +38,7 @@
                    Text="User Name or Email" />
 
         <TextBox Grid.Row="2"
-                 Text="{Binding Key}"
+                 Text="{Binding Key, Mode=TwoWay}"
                  Watermark="YamadaTaro1234" />
 
         <TextBlock Grid.Row="3"
@@ -48,7 +48,7 @@
                    Text="Password" />
 
         <TextBox Grid.Row="4"
-                 Text="{Binding Password}"
+                 Text="{Binding Password, Mode=TwoWay}"
                  Watermark="123456789" />
     </Grid>
 </UserControl>

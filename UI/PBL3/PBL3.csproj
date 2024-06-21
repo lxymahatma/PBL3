@@ -29,15 +29,6 @@
         <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     </PropertyGroup>
 
-    <!--Hot Reload Packages-->
-    <ItemGroup>
-        <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="Avalonia.Markup.Xaml.Loader" Version="11.0.11"/>
-        <PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.0.10.9"/>
-        <PackageReference Include="FluentAvaloniaUI" Version="2.0.5"/>
-        <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="HotAvalonia" Version="1.1.1"/>
-        <PackageReference Include="HotAvalonia.Extensions" Version="1.1.1" PrivateAssets="All"/>
-    </ItemGroup>
-
     <ItemGroup>
         <PackageReference Include="Autofac" Version="8.0.0"/>
         <PackageReference Include="Avalonia" Version="11.0.11"/>
@@ -46,7 +37,9 @@
         <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.11"/>
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.11"/>
+        <PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.0.10.9"/>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2"/>
+        <PackageReference Include="FluentAvaloniaUI" Version="2.0.5"/>
         <PackageReference Include="JetBrains.Annotations" Version="2023.3.0"/>
         <PackageReference Include="MessageBox.Avalonia" Version="3.1.5.1"/>
         <PackageReference Include="OpenAI" Version="2.0.0-beta.5"/>
@@ -63,14 +56,11 @@
         <PackageReference Include="Serilog.Sinks.File" Version="5.0.1-dev-00976"/>
     </ItemGroup>
 
+    <!--Hot Reload Packages-->
     <ItemGroup>
-        <Compile Update="Views\Dialogs\LoginDialog.axaml.cs">
-            <DependentUpon>LoginPage.axaml</DependentUpon>
-            <SubType>Code</SubType>
-        </Compile>
-        <Compile Update="Views\Dialogs\RegisterDialog.axaml.cs">
-            <DependentUpon>RegisterPage.axaml</DependentUpon>
-            <SubType>Code</SubType>
-        </Compile>
+        <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="Avalonia.Markup.Xaml.Loader" Version="11.0.11"/>
+        <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="HotAvalonia" Version="1.1.1"/>
+        <PackageReference Include="HotAvalonia.Extensions" Version="1.1.1" PrivateAssets="All"/>
     </ItemGroup>
+
 </Project>

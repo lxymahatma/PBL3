@@ -2,9 +2,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:contract="clr-namespace:PBL3.Contracts.ViewModels"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dialogs="clr-namespace:PBL3.ViewModels.Dialogs"
              xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:dialogs="clr-namespace:PBL3.ViewModels.Dialogs"
              x:Class="PBL3.Views.Dialogs.RegisterDialog"
              d:DesignHeight="450"
              d:DesignWidth="500"
@@ -32,7 +32,7 @@
 
         <TextBox Grid.Row="2"
                  VerticalAlignment="Center"
-                 Text="{Binding Email}"
+                 Text="{Binding Email, Mode=TwoWay}"
                  Watermark="JohnSmith@EduPath.com" />
 
         <TextBlock Grid.Row="3"
@@ -44,7 +44,7 @@
 
         <TextBox Grid.Row="4"
                  VerticalAlignment="Center"
-                 Text="{Binding UserName}"
+                 Text="{Binding UserName, Mode=TwoWay}"
                  Watermark="JohnSmith1234" />
 
         <TextBlock Grid.Row="5"
@@ -56,7 +56,7 @@
 
         <TextBox Grid.Row="6"
                  VerticalAlignment="Center"
-                 Text="{Binding Password}"
+                 Text="{Binding Password, Mode=TwoWay}"
                  Watermark="123456789" />
     </Grid>
 

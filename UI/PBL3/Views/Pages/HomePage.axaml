@@ -22,7 +22,7 @@
 
         <StackPanel Grid.Row="0" Grid.Column="0"
                     Width="100">
-            <Button Command="{Binding OpenSettingsCommand}">
+            <Button Command="{Binding OpenSettingsCommand, Mode=OneWay}">
                 <PathIcon Width="30"
                           Height="30"
                           Data="{StaticResource Setting}" />
@@ -32,10 +32,10 @@
         <TextBox Grid.Row="0" Grid.Column="1"
                  Width="500"
                  VerticalContentAlignment="Center"
-                 Text="{Binding SearchText}"
+                 Text="{Binding SearchText, Mode=TwoWay}"
                  Watermark="Search Course">
             <TextBox.InnerRightContent>
-                <Button Command="{Binding SearchCommand}">
+                <Button Command="{Binding SearchCommand, Mode=OneWay}">
                     <PathIcon Width="30"
                               Height="30"
                               Data="{StaticResource Magnify}" />
