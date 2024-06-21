@@ -2,21 +2,39 @@
 
 public sealed class DialogService : IDialogService
 {
-    private ContentDialog _currentDialog = null!;
+    private Func<bool>? _currentClosingCondition;
+    private ContentDialog? _currentDialog;
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
 
-    public void HideCurrentDialog()
+    public async Task SwitchDialogAsync(IDialogViewModel viewModel, Func<bool> closingCondition)
     {
-        Logger.Information("Hiding Dialog: {Dialog}", _currentDialog.Title);
-        _currentDialog.Hide();
+        if (_currentDialog is null)
+        {
+            return;
+        }
+
+        _currentDialog.Closing -= OnDialogClosing;
+        CloseCurrentDialog();
+        await ShowAsync(viewModel, closingCondition);
     }
 
-    public async Task ShowAsync(IDialogViewModel viewModel)
+    public async Task ShowAsync(IDialogViewModel viewModel, Func<bool> closingCondition)
     {
-        _currentDialog = viewModel.GetDialogSettings();
+        _currentDialog = viewModel.DialogSettings;
+        _currentClosingCondition = closingCondition;
+
+        _currentDialog.Closing += OnDialogClosing;
         Logger.Information("Showing Dialog: {Dialog}", _currentDialog.Title);
         await _currentDialog.ShowAsync();
     }
+
+    private void CloseCurrentDialog()
+    {
+        Logger.Information("Closing Dialog: {Dialog}", _currentDialog!.Title);
+        _currentDialog.Hide();
+    }
+
+    private void OnDialogClosing(ContentDialog sender, ContentDialogClosingEventArgs args) => args.Cancel = !_currentClosingCondition!();
 }

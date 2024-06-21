@@ -7,8 +7,6 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     [EmailAddress]
     private string? _email;
 
-    private bool _isSwitch;
-
     [ObservableProperty]
     [Required]
     [MinLength(6)]
@@ -21,21 +19,16 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     [MaxLength(15)]
     private string? _userName;
 
-    public ContentDialog GetDialogSettings()
+    public ContentDialog DialogSettings => new()
     {
-        var dialog = new ContentDialog
-        {
-            Content = this,
-            Title = "User Register",
-            PrimaryButtonText = "Register",
-            SecondaryButtonText = "Login",
-            DefaultButton = ContentDialogButton.Primary,
-            PrimaryButtonCommand = RegisterCommand,
-            SecondaryButtonCommand = SwitchToLoginCommand
-        };
-        dialog.Closing += (_, args) => args.Cancel = !UserService.IsRegistered && !_isSwitch;
-        return dialog;
-    }
+        Content = this,
+        Title = "User Register",
+        PrimaryButtonText = "Register",
+        SecondaryButtonText = "Login",
+        DefaultButton = ContentDialogButton.Primary,
+        PrimaryButtonCommand = RegisterCommand,
+        SecondaryButtonCommand = SwitchToLoginCommand
+    };
 
     [RelayCommand]
     private async Task Register()
@@ -66,13 +59,8 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     }
 
     [RelayCommand]
-    private async Task SwitchToLogin()
-    {
-        _isSwitch = true;
-        DialogService.HideCurrentDialog();
-        await DialogService.ShowAsync(LoginDialogViewModel);
-        _isSwitch = false;
-    }
+    private async Task SwitchToLogin() =>
+        await DialogService.SwitchDialogAsync(LoginDialogViewModel, () => UserService.IsLoggedIn);
 
     #region Services
 

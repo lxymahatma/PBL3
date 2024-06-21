@@ -6,7 +6,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     private string _searchText = string.Empty;
 
     [RelayCommand]
-    private async Task OpenLoginPage() => await DialogService.ShowAsync(LoginDialogViewModel);
+    private async Task OpenLoginPage() => await DialogService.ShowAsync(LoginDialogViewModel, () => UserService.IsLoggedIn);
 
     [RelayCommand]
     private void Search()

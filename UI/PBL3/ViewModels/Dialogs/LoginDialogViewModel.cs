@@ -2,8 +2,6 @@ namespace PBL3.ViewModels.Dialogs;
 
 public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogViewModel
 {
-    private bool _isSwitch;
-
     [ObservableProperty]
     [Required]
     [MinLength(3)]
@@ -15,21 +13,16 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     [MaxLength(20)]
     private string? _password;
 
-    public ContentDialog GetDialogSettings()
+    public ContentDialog DialogSettings => new()
     {
-        var dialog = new ContentDialog
-        {
-            Content = this,
-            Title = "User Login",
-            PrimaryButtonText = "Login",
-            SecondaryButtonText = "Register",
-            DefaultButton = ContentDialogButton.Primary,
-            PrimaryButtonCommand = LoginCommand,
-            SecondaryButtonCommand = SwitchToRegisterCommand
-        };
-        dialog.Closing += (_, args) => args.Cancel = !UserService.IsLoggedIn && !_isSwitch;
-        return dialog;
-    }
+        Content = this,
+        Title = "User Login",
+        PrimaryButtonText = "Login",
+        SecondaryButtonText = "Register",
+        DefaultButton = ContentDialogButton.Primary,
+        PrimaryButtonCommand = LoginCommand,
+        SecondaryButtonCommand = SwitchToRegisterCommand
+    };
 
     [RelayCommand]
     private async Task Login()
@@ -53,13 +46,7 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     }
 
     [RelayCommand]
-    private async Task SwitchToRegister()
-    {
-        _isSwitch = true;
-        DialogService.HideCurrentDialog();
-        await DialogService.ShowAsync(RegisterDialogViewModel);
-        _isSwitch = false;
-    }
+    private async Task SwitchToRegister() => await DialogService.SwitchDialogAsync(RegisterDialogViewModel, () => UserService.IsRegistered);
 
     #region Services
 
