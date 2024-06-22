@@ -52,6 +52,7 @@ internal static class Bootstrapper
     /// </summary>
     private static void RegisterViewModels()
     {
+        _builder.RegisterType<AccountPageViewModel>().As<IAccountPageViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<HomePageViewModel>().As<IHomePageViewModel>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<LoginDialogViewModel>().As<ILoginDialogViewModel>()
             .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies)

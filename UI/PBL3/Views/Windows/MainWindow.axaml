@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:page="using:PBL3.Views.Pages"
+        xmlns:ui="using:FluentAvalonia.UI.Controls"
         xmlns:vm="using:PBL3.ViewModels.Windows"
         x:Class="PBL3.Views.Windows.MainWindow"
         Title="PBL3"
@@ -16,16 +16,27 @@
         mc:Ignorable="d">
 
     <!--  For opening login page when main window opened  -->
-    <Interaction.Behaviors>
+    <!--<Interaction.Behaviors>
         <EventTriggerBehavior EventName="Opened">
             <InvokeCommandAction Command="{Binding OpenLoginPageCommand, Mode=OneTime}" />
         </EventTriggerBehavior>
-    </Interaction.Behaviors>
+    </Interaction.Behaviors>-->
 
     <Design.DataContext>
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <page:HomePage />
+    <ui:NavigationView AlwaysShowHeader="False"
+                       Content="{Binding ContentFrame, Mode=TwoWay}"
+                       IsSettingsVisible="False"
+                       PaneDisplayMode="Left"
+                       SelectedItem="{Binding Selected, Mode=OneWay}">
+
+        <ui:NavigationView.MenuItems>
+            <ui:NavigationViewItem Content="Home" IconSource="{StaticResource Home}" />
+            <ui:NavigationViewItem Content="Account" IconSource="{StaticResource Account}" />
+        </ui:NavigationView.MenuItems>
+
+    </ui:NavigationView>
 
 </Window>

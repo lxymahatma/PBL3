@@ -3,16 +3,29 @@
 public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
 {
     [ObservableProperty]
-    private string _searchText = string.Empty;
+    private Frame _contentFrame = new();
+
+    [ObservableProperty]
+    private NavigationViewItem _selected = null!;
 
     [RelayCommand]
-    private async Task OpenLoginPage() =>
-        await DialogService.ShowAsync(LoginDialogViewModel, () => UserService.IsLoggedIn).ConfigureAwait(false);
-
-    [RelayCommand]
-    private void Search()
+    private async Task OpenLoginPage()
     {
-        Logger.Information("Searching for {SearchText}", SearchText);
+        ContentFrame.Navigate(typeof(HomePage));
+        await DialogService.ShowAsync(LoginDialogViewModel, () => UserService.IsLoggedIn).ConfigureAwait(false);
+    }
+
+    partial void OnSelectedChanged(NavigationViewItem value)
+    {
+        switch (value.Content)
+        {
+            case "Home":
+                ContentFrame.Navigate(typeof(HomePage));
+                break;
+            case "Account":
+                ContentFrame.Navigate(typeof(AccountPage));
+                break;
+        }
     }
 
     #region Services
