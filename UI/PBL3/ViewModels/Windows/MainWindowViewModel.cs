@@ -3,27 +3,23 @@
 public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
 {
     [ObservableProperty]
-    private Frame _contentFrame = new();
-
-    [ObservableProperty]
     private NavigationViewItem _selected = null!;
 
+    public Frame ContentFrame => NavigationService.ContentFrame;
+
     [RelayCommand]
-    private async Task OpenLoginPage()
-    {
-        ContentFrame.Navigate(typeof(HomePage));
+    private async Task OpenLoginPageAsync() =>
         await DialogService.ShowAsync(LoginDialogViewModel, () => UserService.IsLoggedIn).ConfigureAwait(false);
-    }
 
     partial void OnSelectedChanged(NavigationViewItem value)
     {
         switch (value.Content)
         {
             case "Home":
-                ContentFrame.Navigate(typeof(HomePage));
+                NavigationService.NavigateTo<HomePage>();
                 break;
             case "Account":
-                ContentFrame.Navigate(typeof(AccountPage));
+                NavigationService.NavigateTo<AccountPage>();
                 break;
         }
     }
@@ -34,13 +30,16 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     public IDialogService DialogService { get; init; } = null!;
 
     [UsedImplicitly]
+    public ILoginDialogViewModel LoginDialogViewModel { get; init; } = null!;
+
+    [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
 
     [UsedImplicitly]
-    public IUserService UserService { get; init; } = null!;
+    public INavigationService NavigationService { get; init; } = null!;
 
     [UsedImplicitly]
-    public ILoginDialogViewModel LoginDialogViewModel { get; init; } = null!;
+    public IUserService UserService { get; init; } = null!;
 
     #endregion
 }

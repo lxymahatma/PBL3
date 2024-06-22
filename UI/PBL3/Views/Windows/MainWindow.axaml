@@ -16,11 +16,11 @@
         mc:Ignorable="d">
 
     <!--  For opening login page when main window opened  -->
-    <!--<Interaction.Behaviors>
+    <Interaction.Behaviors>
         <EventTriggerBehavior EventName="Opened">
             <InvokeCommandAction Command="{Binding OpenLoginPageCommand, Mode=OneTime}" />
         </EventTriggerBehavior>
-    </Interaction.Behaviors>-->
+    </Interaction.Behaviors>
 
     <Design.DataContext>
         <vm:MainWindowViewModel />
@@ -30,7 +30,7 @@
                        Content="{Binding ContentFrame, Mode=TwoWay}"
                        IsSettingsVisible="False"
                        PaneDisplayMode="Left"
-                       SelectedItem="{Binding Selected, Mode=OneWay}">
+                       SelectedItem="{Binding Selected, Mode=TwoWay}">
 
         <ui:NavigationView.MenuItems>
             <ui:NavigationViewItem Content="Home" IconSource="{StaticResource Home}" />
