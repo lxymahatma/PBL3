@@ -1,5 +1,5 @@
 ﻿namespace PBL3.Contracts.ViewModels;
 
-public interface IAccountPageViewModel
+public interface IAccountPageViewModel : IPageViewModel
 {
 }
