@@ -3,16 +3,25 @@
 public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
 {
     [ObservableProperty]
-    private string _searchText = string.Empty;
+    private NavigationViewItem _selected = null!;
+
+    public Frame ContentFrame => NavigationService.ContentFrame;
 
     [RelayCommand]
-    private async Task OpenLoginPage() =>
+    private async Task OpenLoginPageAsync() =>
         await DialogService.ShowAsync(LoginDialogViewModel, () => UserService.IsLoggedIn).ConfigureAwait(false);
 
-    [RelayCommand]
-    private void Search()
+    partial void OnSelectedChanged(NavigationViewItem value)
     {
-        Logger.Information("Searching for {SearchText}", SearchText);
+        switch (value.Content)
+        {
+            case "Home":
+                NavigationService.NavigateTo<HomePage>();
+                break;
+            case "Account":
+                NavigationService.NavigateTo<AccountPage>();
+                break;
+        }
     }
 
     #region Services
@@ -21,13 +30,16 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     public IDialogService DialogService { get; init; } = null!;
 
     [UsedImplicitly]
+    public ILoginDialogViewModel LoginDialogViewModel { get; init; } = null!;
+
+    [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
 
     [UsedImplicitly]
-    public IUserService UserService { get; init; } = null!;
+    public INavigationService NavigationService { get; init; } = null!;
 
     [UsedImplicitly]
-    public ILoginDialogViewModel LoginDialogViewModel { get; init; } = null!;
+    public IUserService UserService { get; init; } = null!;
 
     #endregion
 }

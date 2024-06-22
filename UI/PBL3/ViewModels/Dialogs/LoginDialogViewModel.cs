@@ -42,7 +42,8 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
             return;
         }
 
-        await MessageBoxService.SuccessAsync("Login successful").ConfigureAwait(false);
+        await MessageBoxService.SuccessAsync("Login successful").ConfigureAwait(true);
+        NavigationService.NavigateTo<HomePage>();
     }
 
     [RelayCommand]
@@ -61,10 +62,13 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     public IMessageBoxService MessageBoxService { get; init; } = null!;
 
     [UsedImplicitly]
-    public IUserService UserService { get; init; } = null!;
+    public INavigationService NavigationService { get; init; } = null!;
 
     [UsedImplicitly]
     public IRegisterDialogViewModel RegisterDialogViewModel { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IUserService UserService { get; init; } = null!;
 
     #endregion
 }

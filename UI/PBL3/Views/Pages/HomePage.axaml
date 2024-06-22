@@ -20,15 +20,6 @@
           RowDefinitions="Auto,Auto"
           ShowGridLines="True">
 
-        <StackPanel Grid.Row="0" Grid.Column="0"
-                    Width="100">
-            <Button Command="{Binding OpenSettingsCommand, Mode=OneWay}">
-                <PathIcon Width="30"
-                          Height="30"
-                          Data="{StaticResource Setting}" />
-            </Button>
-        </StackPanel>
-
         <TextBox Grid.Row="0" Grid.Column="1"
                  Width="500"
                  VerticalContentAlignment="Center"
