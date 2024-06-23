@@ -1,14 +1,18 @@
-﻿<UserControl xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ui="using:FluentAvalonia.UI.Controls"
-             xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="PBL3.Views.Pages.AccountPage"
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
              mc:Ignorable="d">
     <Grid RowDefinitions="150, 150, 150">
 
         <ui:SettingsExpander Name="SettingsExpander3" Grid.Row="0"
                              Height="400"
-                             Description="View and Edit" Header="Account Information"
+                             Description="View and Edit"
+                             Header="Account Information"
                              IconSource="{StaticResource Edit}">
             <ui:SettingsExpanderItem Content="Username" Description="get Username here" />
             <ui:SettingsExpanderItem Content="Password" Description="get Password here" />
