@@ -3,32 +3,23 @@ namespace PBL3.ViewModels.Dialogs;
 public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDialogViewModel
 {
     [ObservableProperty]
-    [Required]
-    [EmailAddress]
+    [Required(ErrorMessage = "Email is required")]
+    [EmailAddress(ErrorMessage = "Invalid email address")]
     private string? _email;
 
     [ObservableProperty]
     [Required]
-    [MinLength(6)]
-    [MaxLength(20)]
+    [MinLength(6, ErrorMessage = "Password must be at least 6 characters long")]
+    [MaxLength(20, ErrorMessage = "Password must be at most 20 characters long")]
     private string? _password;
 
     [ObservableProperty]
     [Required]
-    [MinLength(3)]
-    [MaxLength(15)]
+    [MinLength(3, ErrorMessage = "UserName must be at least 3 characters long")]
+    [MaxLength(15, ErrorMessage = "UserName must be at most 15 characters long")]
     private string? _userName;
 
-    public ContentDialog DialogSettings => new()
-    {
-        Content = this,
-        // Title = "User Register",
-        // PrimaryButtonText = "Register",
-        // SecondaryButtonText = "Login",
-        // DefaultButton = ContentDialogButton.Primary,
-        // PrimaryButtonCommand = RegisterCommand,
-        // SecondaryButtonCommand = SwitchToLoginCommand
-    };
+    public ContentDialog DialogSettings => new() { Content = this };
 
     [RelayCommand]
     private async Task RegisterAsync()
@@ -59,8 +50,7 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     }
 
     [RelayCommand]
-    private async Task SwitchToLoginAsync() =>
-        await DialogService.SwitchDialogAsync(LoginDialogViewModel, () => UserService.IsLoggedIn).ConfigureAwait(false);
+    private Task SwitchToLoginAsync() => DialogService.SwitchDialogAsync(LoginDialogViewModel, () => UserService.IsLoggedIn);
 
     #region Services
 

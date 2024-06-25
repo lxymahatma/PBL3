@@ -39,8 +39,7 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     }
 
     [RelayCommand]
-    private async Task SwitchToRegisterAsync() =>
-        await DialogService.SwitchDialogAsync(RegisterDialogViewModel, () => UserService.IsRegistered).ConfigureAwait(false);
+    private Task SwitchToRegisterAsync() => DialogService.SwitchDialogAsync(RegisterDialogViewModel, () => UserService.IsRegistered);
 
     #region Services
 
