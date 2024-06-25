@@ -13,16 +13,7 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     [MaxLength(20)]
     private string? _password;
 
-    public ContentDialog DialogSettings => new()
-    {
-        Content = this
-        // Title = "User Login",
-        // // PrimaryButtonText = "Login",
-        // SecondaryButtonText = "Register",
-        // // DefaultButton = ContentDialogButton.Primary,
-        // // PrimaryButtonCommand = LoginCommand,
-        // SecondaryButtonCommand = SwitchToRegisterCommand
-    };
+    public ContentDialog DialogSettings => new() { Content = this };
 
     [RelayCommand]
     private async Task LoginAsync()
