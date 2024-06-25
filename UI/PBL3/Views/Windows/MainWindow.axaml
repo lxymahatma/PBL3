@@ -11,6 +11,7 @@
         DataContext="{ext:DependencyInjection Type=contract:IMainWindowViewModel}"
         Title="PBL3"
         Icon="/Assets/icon.ico"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         d:DesignHeight="450"
         d:DesignWidth="800">
