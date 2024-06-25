@@ -1,5 +1,3 @@
-using PBL3.Extensions;
-
 namespace PBL3.ViewModels.Dialogs;
 
 public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogViewModel
@@ -17,8 +15,7 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
 
     public ContentDialog DialogSettings => new()
     {
-        
-        Content = this,
+        Content = this
         // Title = "User Login",
         // // PrimaryButtonText = "Login",
         // SecondaryButtonText = "Register",
@@ -45,6 +42,7 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
             return;
         }
 
+        DialogService.CloseCurrentDialog();
         await MessageBoxService.SuccessAsync("Login successful").ConfigureAwait(true);
         NavigationService.NavigateTo<HomePage>();
     }

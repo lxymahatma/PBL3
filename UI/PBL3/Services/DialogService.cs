@@ -30,7 +30,7 @@ public sealed class DialogService : IDialogService
         return _currentDialog.ShowAsync();
     }
 
-    private void CloseCurrentDialog()
+    public void CloseCurrentDialog()
     {
         Logger.Information("Closing Dialog: {Dialog}", _currentDialog!.Title);
         _currentDialog.Hide();
