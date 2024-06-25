@@ -19,13 +19,14 @@
     <Grid RowDefinitions="40, 25, 50, 25, 50, 25, 50, 70" ShowGridLines="True">
         <TextBlock Grid.Row="0"
                    VerticalAlignment="Center"
+                   FontFamily="Times New Roman"
                    FontSize="20"
                    FontWeight="ExtraBold"
                    Text="Register Account" />
 
         <TextBlock Grid.Row="1"
                    VerticalAlignment="Center"
-                   FontFamily="inria-sans"
+                   FontFamily="Times New Roman"
                    FontSize="14"
                    FontWeight="Bold"
                    Text="Email" />
@@ -37,7 +38,7 @@
 
         <TextBlock Grid.Row="3"
                    VerticalAlignment="Center"
-                   FontFamily="inria-sans"
+                   FontFamily="Times New Roman"
                    FontSize="14"
                    FontWeight="Bold"
                    Text="User Name" />
@@ -49,7 +50,7 @@
 
         <TextBlock Grid.Row="5"
                    VerticalAlignment="Center"
-                   FontFamily="inria-sans"
+                   FontFamily="Times New Roman"
                    FontSize="14"
                    FontWeight="Bold"
                    Text="Password" />
@@ -58,6 +59,23 @@
                  VerticalAlignment="Center"
                  Text="{Binding Password, Mode=TwoWay}"
                  Watermark="123456789" />
+
+        <Button Grid.Row="7"
+                Width="120"
+                Margin="0,0,135,0"
+                HorizontalAlignment="Center"
+                Classes="accent"
+                Command="{Binding RegisterCommand}"
+                Content="Register"
+                FontFamily="Times New Roman" />
+
+        <Button Grid.Row="7"
+                Width="120"
+                Margin="135,0,0,0"
+                HorizontalAlignment="Center"
+                Command="{Binding SwitchToLoginCommand}"
+                Content="Go Back"
+                FontFamily="Times New Roman" />
     </Grid>
 
 

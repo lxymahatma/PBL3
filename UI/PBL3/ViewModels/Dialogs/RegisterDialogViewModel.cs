@@ -22,12 +22,12 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     public ContentDialog DialogSettings => new()
     {
         Content = this,
-        Title = "User Register",
-        PrimaryButtonText = "Register",
-        SecondaryButtonText = "Login",
-        DefaultButton = ContentDialogButton.Primary,
-        PrimaryButtonCommand = RegisterCommand,
-        SecondaryButtonCommand = SwitchToLoginCommand
+        // Title = "User Register",
+        // PrimaryButtonText = "Register",
+        // SecondaryButtonText = "Login",
+        // DefaultButton = ContentDialogButton.Primary,
+        // PrimaryButtonCommand = RegisterCommand,
+        // SecondaryButtonCommand = SwitchToLoginCommand
     };
 
     [RelayCommand]
