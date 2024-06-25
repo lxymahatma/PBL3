@@ -5,6 +5,7 @@
              xmlns:dialogs="clr-namespace:PBL3.ViewModels.Dialogs"
              xmlns:ext="using:PBL3.Extensions.MarkupExtensions"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ui="using:FluentAvalonia.UI.Controls"
              x:Class="PBL3.Views.Dialogs.LoginDialog"
              d:DesignHeight="450"
              d:DesignWidth="800"
@@ -16,7 +17,7 @@
         <dialogs:LoginDialogViewModel />
     </Design.DataContext>
 
-    <Grid RowDefinitions="40,25,50,25,Auto,40" ShowGridLines="True">
+    <Grid RowDefinitions="Auto, 40,25,50,25,Auto,40, Auto" ShowGridLines="False">
         <Grid.Styles>
             <Style Selector="Button">
                 <Setter Property="Width" Value="80" />
@@ -28,27 +29,54 @@
             </Style>
             <Style Selector="TextBox">
                 <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
             </Style>
         </Grid.Styles>
-
+        <Image Grid.Row="0"
+               Height="50"
+               Source="/Assets/icon.ico" />
         <TextBlock Grid.Row="1"
-                   FontFamily="inria-sans"
+                   HorizontalAlignment="Center"
+                   FontFamily="Times New Roman"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Text="Sign in EduPath to use" />
+        <TextBlock Grid.Row="2"
+                   FontFamily="Times New Roman"
                    FontSize="14"
                    FontWeight="Bold"
                    Text="User Name or Email" />
 
-        <TextBox Grid.Row="2"
+        <TextBox Grid.Row="3"
                  Text="{Binding Key, Mode=TwoWay}"
                  Watermark="YamadaTaro1234" />
 
-        <TextBlock Grid.Row="3"
-                   FontFamily="inria-sans"
+        <TextBlock Grid.Row="4"
+                   FontFamily="Times New Roman"
                    FontSize="14"
                    FontWeight="Bold"
                    Text="Password" />
 
-        <TextBox Grid.Row="4"
+        <TextBox Grid.Row="5"
                  Text="{Binding Password, Mode=TwoWay}"
                  Watermark="123456789" />
+
+        <Button Grid.Row="6"
+                Width="125"
+                Classes="accent"
+                Command="{Binding LoginCommand}"
+                Content="Login" />
+
+        <TextBlock Grid.Row="7"
+                   Margin="0,0,100,2"
+                   FontFamily="Times New Roman"
+                   FontSize="13"
+                   Text="New to EduPath?" />
+        <ui:HyperlinkButton Grid.Row="7"
+                            Margin="85,0,0,0"
+                            Command="{Binding SwitchToRegisterCommand}"
+                            Content="Create an account"
+                            FontSize="13" />
+
     </Grid>
 </UserControl>

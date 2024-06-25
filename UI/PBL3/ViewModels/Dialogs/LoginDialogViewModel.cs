@@ -1,3 +1,5 @@
+using PBL3.Extensions;
+
 namespace PBL3.ViewModels.Dialogs;
 
 public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogViewModel
@@ -15,13 +17,14 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
 
     public ContentDialog DialogSettings => new()
     {
+        
         Content = this,
-        Title = "User Login",
-        PrimaryButtonText = "Login",
-        SecondaryButtonText = "Register",
-        DefaultButton = ContentDialogButton.Primary,
-        PrimaryButtonCommand = LoginCommand,
-        SecondaryButtonCommand = SwitchToRegisterCommand
+        // Title = "User Login",
+        // // PrimaryButtonText = "Login",
+        // SecondaryButtonText = "Register",
+        // // DefaultButton = ContentDialogButton.Primary,
+        // // PrimaryButtonCommand = LoginCommand,
+        // SecondaryButtonCommand = SwitchToRegisterCommand
     };
 
     [RelayCommand]
