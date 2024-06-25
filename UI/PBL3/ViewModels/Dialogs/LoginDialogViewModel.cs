@@ -3,14 +3,14 @@ namespace PBL3.ViewModels.Dialogs;
 public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogViewModel
 {
     [ObservableProperty]
-    [Required]
-    [MinLength(3)]
+    [Required(ErrorMessage = "UserName or Email is required")]
+    [MinLength(3, ErrorMessage = "UserName or Email must be at least 3 characters long")]
     private string? _key;
 
     [ObservableProperty]
-    [Required]
-    [MinLength(6)]
-    [MaxLength(20)]
+    [Required(ErrorMessage = "Password is required")]
+    [MinLength(6, ErrorMessage = "Password must be at least 6 characters long")]
+    [MaxLength(20, ErrorMessage = "Password must be at most 20 characters long")]
     private string? _password;
 
     public ContentDialog DialogSettings => new() { Content = this };
