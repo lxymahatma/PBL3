@@ -26,13 +26,13 @@ public sealed class DialogService : IDialogService
         _currentClosingCondition = closingCondition;
 
         _currentDialog.Closing += OnDialogClosing;
-        Logger.Information("Showing Dialog: {Dialog}", _currentDialog.Title);
+        Logger.Information("Showing Dialog: {Dialog}", _currentDialog.Content!.GetType().Name[..^15]);
         return _currentDialog.ShowAsync();
     }
 
     public void CloseCurrentDialog()
     {
-        Logger.Information("Closing Dialog: {Dialog}", _currentDialog!.Title);
+        Logger.Information("Closing Dialog: {Dialog}", _currentDialog!.Content!.GetType().Name[..^15]);
         _currentDialog.Hide();
     }
 
