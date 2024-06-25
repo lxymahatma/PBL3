@@ -13,6 +13,10 @@
              DataContext="{ext:DependencyInjection Type=contract:ILoginDialogViewModel}"
              mc:Ignorable="d">
 
+    <UserControl.KeyBindings>
+        <KeyBinding Gesture="Enter" Command="{Binding LoginCommand}" />
+    </UserControl.KeyBindings>
+
     <Design.DataContext>
         <dialogs:LoginDialogViewModel />
     </Design.DataContext>
