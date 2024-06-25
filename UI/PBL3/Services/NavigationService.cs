@@ -1,12 +1,11 @@
 ﻿namespace PBL3.Services;
 
-public partial class NavigationService : ObservableObject, INavigationService
+public sealed class NavigationService : INavigationService
 {
-    [ObservableProperty]
-    private Frame _contentFrame = new();
-
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
+
+    public Frame ContentFrame { get; } = new();
 
     public void NavigateTo<T>()
     {
