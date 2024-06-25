@@ -6,11 +6,11 @@
              xmlns:ext="clr-namespace:PBL3.Extensions.MarkupExtensions"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              x:Class="PBL3.Views.Dialogs.RegisterDialog"
-             d:DesignHeight="450"
-             d:DesignWidth="500"
              x:DataType="dialogs:RegisterDialogViewModel"
              DataContext="{ext:DependencyInjection Type=contract:IRegisterDialogViewModel}"
-             mc:Ignorable="d">
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="500">
 
     <Design.DataContext>
         <dialogs:RegisterDialogViewModel />

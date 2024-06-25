@@ -7,56 +7,60 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ui="using:FluentAvalonia.UI.Controls"
              x:Class="PBL3.Views.Dialogs.LoginDialog"
-             d:DesignHeight="450"
-             d:DesignWidth="800"
              x:DataType="dialogs:LoginDialogViewModel"
              DataContext="{ext:DependencyInjection Type=contract:ILoginDialogViewModel}"
-             mc:Ignorable="d">
+             Width="250"
+             Height="350"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
 
     <UserControl.KeyBindings>
-        <KeyBinding Gesture="Enter" Command="{Binding LoginCommand}" />
+        <KeyBinding Command="{Binding LoginCommand}" Gesture="Enter" />
     </UserControl.KeyBindings>
 
     <Design.DataContext>
         <dialogs:LoginDialogViewModel />
     </Design.DataContext>
 
-    <Grid RowDefinitions="Auto, 40,25,50,25,Auto,40, Auto" ShowGridLines="False">
+    <Grid RowDefinitions="60,40,30,50,30,50,50,40">
         <Grid.Styles>
             <Style Selector="Button">
-                <Setter Property="Width" Value="80" />
                 <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="HorizontalContentAlignment" Value="Center" />
             </Style>
             <Style Selector="TextBlock">
                 <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="Times New Roman" />
             </Style>
             <Style Selector="TextBox">
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="VerticalContentAlignment" Value="Center" />
             </Style>
         </Grid.Styles>
+
         <Image Grid.Row="0"
                Height="50"
+               VerticalAlignment="Center"
                Source="/Assets/icon.ico" />
+
         <TextBlock Grid.Row="1"
                    HorizontalAlignment="Center"
-                   FontFamily="Times New Roman"
                    FontSize="20"
                    FontWeight="Bold"
-                   Text="Sign in EduPath to use" />
+                   Text="Sign in EduPath to Use" />
+
         <TextBlock Grid.Row="2"
-                   FontFamily="Times New Roman"
                    FontSize="14"
                    FontWeight="Bold"
-                   Text="User Name or Email" />
+                   Text="UserName or Email" />
 
         <TextBox Grid.Row="3"
                  Text="{Binding Key, Mode=TwoWay}"
                  Watermark="YamadaTaro1234" />
 
         <TextBlock Grid.Row="4"
-                   FontFamily="Times New Roman"
                    FontSize="14"
                    FontWeight="Bold"
                    Text="Password" />
@@ -68,19 +72,25 @@
         <Button Grid.Row="6"
                 Width="125"
                 Classes="accent"
-                Command="{Binding LoginCommand}"
+                Command="{Binding LoginCommand, Mode=OneWay}"
                 Content="Login" />
 
-        <TextBlock Grid.Row="7"
-                   Margin="0,0,100,2"
-                   FontFamily="Times New Roman"
-                   FontSize="13"
-                   Text="New to EduPath?" />
-        <ui:HyperlinkButton Grid.Row="7"
-                            Margin="85,0,0,0"
-                            Command="{Binding SwitchToRegisterCommand}"
-                            Content="Create an account"
-                            FontSize="13" />
+        <StackPanel Grid.Row="7"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+
+            <TextBlock Margin="10,0,0,0"
+                       HorizontalAlignment="Center"
+                       FontSize="14"
+                       Text="New to EduPath?" />
+
+            <ui:HyperlinkButton Margin="20,0,0,0"
+                                HorizontalAlignment="Center"
+                                Command="{Binding SwitchToRegisterCommand, Mode=OneWay}"
+                                Content="Create an account"
+                                FontSize="14" />
+        </StackPanel>
 
     </Grid>
 </UserControl>
