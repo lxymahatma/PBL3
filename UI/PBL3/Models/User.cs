@@ -6,4 +6,11 @@ public class User
     public required string? Password { get; set; }
     public required string? Email { get; set; }
     public bool IsAdmin => Email is not null && Email.EndsWith("fc.ritsumei.ac.jp");
+
+    public void CopyFrom(User user)
+    {
+        UserName = user.UserName;
+        Password = user.Password;
+        Email = user.Email;
+    }
 }

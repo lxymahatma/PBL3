@@ -10,7 +10,7 @@
              d:DesignHeight="450"
              d:DesignWidth="800"
              x:DataType="page:AccountPageViewModel"
-             DataContext="{ext:DependencyInjection Type=contract:IHomePageViewModel}"
+             DataContext="{ext:DependencyInjection Type=contract:IAccountPageViewModel}"
              mc:Ignorable="d">
 
     <Design.DataContext>
@@ -19,13 +19,13 @@
 
     <Grid RowDefinitions="Auto, Auto, 150">
 
-        <ui:SettingsExpander Name="SettingsExpander3" Grid.Row="0"
+        <ui:SettingsExpander Grid.Row="0"
                              Description="View and Edit"
                              Header="Account Information"
                              IconSource="{StaticResource Edit}">
             <ui:SettingsExpanderItem Content="{Binding User.UserName}" Description="Username" />
-            <!-- <ui:SettingsExpanderItem Content="Password" Description="get Password here" /> -->
-            <ui:SettingsExpanderItem Content="Email" Description="get Email here" />
+            <ui:SettingsExpanderItem Content="{Binding User.Password}" Description="Password" />
+            <ui:SettingsExpanderItem Content="{Binding User.Email}" Description="Email" />
 
         </ui:SettingsExpander>
 

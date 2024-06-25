@@ -32,7 +32,12 @@ internal static class Bootstrapper
     {
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
         //_builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
-        _builder.RegisterType<User>().SingleInstance();
+        _builder.Register(_ => new User
+        {
+            UserName = null,
+            Email = null,
+            Password = null
+        }).SingleInstance();
     }
 
     /// <summary>

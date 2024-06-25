@@ -8,6 +8,9 @@ public sealed class UserService : IUserService
     [UsedImplicitly]
     public IDatabaseService DatabaseService { get; init; } = null!;
 
+    [UsedImplicitly]
+    public User User { get; init; } = null!;
+
     public bool IsLoggedIn { get; private set; }
     public bool IsRegistered { get; private set; }
 
@@ -27,6 +30,7 @@ public sealed class UserService : IUserService
             return;
         }
 
+        User.CopyFrom(user);
         Logger.Information("User {UserName} logged in", user.UserName);
         IsLoggedIn = true;
     }
