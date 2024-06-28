@@ -43,65 +43,46 @@
         </Grid.Styles>
         <TextBlock Grid.Row="0"
                    Margin="0,0,0,30"
+                   HorizontalAlignment="Center"
                    FontSize="20"
                    FontWeight="ExtraBold"
-                   HorizontalAlignment="Center"
                    Text="Register Account" />
 
         <StackPanel Grid.Row="1">
-            <TextBlock
-                FontWeight="Bold"
-                Text="User Name" />
+            <TextBlock FontWeight="Bold" Text="User Name" />
 
-            <TextBox Text="{Binding UserName, Mode=TwoWay}"
-                     Watermark="JohnSmith1234" />
+            <TextBox Text="{Binding UserName, Mode=TwoWay}" Watermark="JohnSmith1234" />
         </StackPanel>
 
 
         <StackPanel Grid.Row="2">
-            <TextBlock
+            <TextBlock FontWeight="Bold" Text="Email" />
 
-                FontWeight="Bold"
-                Text="Email" />
-
-            <TextBox
-                Text="{Binding Email, Mode=TwoWay}"
-                Watermark="JohnSmith@EduPath.com" />
-
+            <TextBox Text="{Binding Email, Mode=TwoWay}" Watermark="JohnSmith@EduPath.com" />
         </StackPanel>
 
-        <StackPanel Grid.Row="3" IsVisible="{Binding IsStudent,Mode=OneWay}">
-            <TextBlock
+        <StackPanel Grid.Row="3" IsVisible="{Binding IsStudent, Mode=OneWay}">
+            <TextBlock FontWeight="Bold" Text="Student ID" />
 
-                FontWeight="Bold"
-                Text="Student ID" />
-
-            <TextBox
-                Text="{Binding StudentId, Mode=TwoWay}" />
-
+            <TextBox Text="{Binding StudentId, Mode=TwoWay}" />
         </StackPanel>
 
         <StackPanel Grid.Row="4">
-            <TextBlock
+            <TextBlock FontWeight="Bold" Text="Password" />
 
-                FontWeight="Bold"
-                Text="Password" />
-
-            <TextBox
-                Text="{Binding Password, Mode=TwoWay}"
-                Watermark="123456789" />
+            <TextBox Text="{Binding Password, Mode=TwoWay}" Watermark="123456789" />
         </StackPanel>
 
 
         <Button Grid.Row="5"
                 Margin="0,0,130,0"
                 Classes="accent"
-                Command="{Binding RegisterCommand}"
+                Command="{Binding RegisterCommand, Mode=OneWay}"
                 Content="Register" />
 
         <Button Grid.Row="5"
                 Margin="130,0,0,0"
-                Command="{Binding SwitchToLoginCommand}"
+                Command="{Binding SwitchToLoginCommand, Mode=OneWay}"
                 Content="Go Back" />
     </Grid>
 
