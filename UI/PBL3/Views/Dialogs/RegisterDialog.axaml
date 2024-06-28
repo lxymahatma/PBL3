@@ -16,8 +16,9 @@
         <dialogs:RegisterDialogViewModel />
     </Design.DataContext>
 
-    <Grid RowDefinitions="40, 25, 50, 25, 50, 25, 50, 70" ShowGridLines="True">
+    <Grid RowDefinitions="40, 25, 50, 25, 50, 25, 50, 70" ShowGridLines="False">
         <TextBlock Grid.Row="0"
+                   Margin="0,0,0,30"
                    VerticalAlignment="Center"
                    FontFamily="Times New Roman"
                    FontSize="20"
