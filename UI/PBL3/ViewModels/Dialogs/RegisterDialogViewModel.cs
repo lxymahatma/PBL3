@@ -8,10 +8,18 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     private string? _email;
 
     [ObservableProperty]
+    private bool _isStudent;
+
+    [ObservableProperty]
     [Required]
     [MinLength(6, ErrorMessage = "Password must be at least 6 characters long")]
     [MaxLength(20, ErrorMessage = "Password must be at most 20 characters long")]
     private string? _password;
+
+    [ObservableProperty]
+    [MinLength(11, ErrorMessage = "Student ID must be exactly 11 characters long")]
+    [MaxLength(11, ErrorMessage = "Student ID must be exactly 11 characters long")]
+    private int? _studentId;
 
     [ObservableProperty]
     [Required]
@@ -20,6 +28,19 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     private string? _userName;
 
     public ContentDialog DialogSettings => new() { Content = this };
+
+    partial void OnEmailChanged(string? value)
+    {
+        if (string.IsNullOrEmpty(value) || value.EndsWith("fc.ritsumei.ac.jp"))
+        {
+            IsStudent = false;
+            StudentId = null;
+        }
+        else
+        {
+            IsStudent = true;
+        }
+    }
 
     [RelayCommand]
     private async Task RegisterAsync()

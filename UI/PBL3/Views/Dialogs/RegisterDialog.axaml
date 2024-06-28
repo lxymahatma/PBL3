@@ -8,6 +8,8 @@
              x:Class="PBL3.Views.Dialogs.RegisterDialog"
              x:DataType="dialogs:RegisterDialogViewModel"
              DataContext="{ext:DependencyInjection Type=contract:IRegisterDialogViewModel}"
+             Width="250"
+             Height="400"
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="500">
@@ -16,7 +18,7 @@
         <dialogs:RegisterDialogViewModel />
     </Design.DataContext>
 
-    <Grid RowDefinitions="40, 25, 50, 25, 50, 25, 50, 70" ShowGridLines="False">
+    <Grid RowDefinitions="40, *, Auto, *, Auto, Auto, Auto, *, Auto, 70" ShowGridLines="True">
         <Grid.Styles>
             <Style Selector="TextBlock">
                 <Setter Property="VerticalAlignment" Value="Center" />
@@ -24,58 +26,68 @@
             </Style>
             <Style Selector="TextBox">
                 <Setter Property="VerticalAlignment" Value="Center" />
-
+            </Style>
+            <Style Selector="Button">
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="Times New Roman" />
+                <Setter Property="Width" Value="110" />
             </Style>
         </Grid.Styles>
         <TextBlock Grid.Row="0"
                    Margin="0,0,0,30"
                    FontSize="20"
                    FontWeight="ExtraBold"
+                   HorizontalAlignment="Center"
                    Text="Register Account" />
 
         <TextBlock Grid.Row="1"
                    FontSize="14"
                    FontWeight="Bold"
-                   Text="Email" />
+                   Text="User Name" />
 
         <TextBox Grid.Row="2"
-                 Text="{Binding Email, Mode=TwoWay}"
-                 Watermark="JohnSmith@EduPath.com" />
+                 Text="{Binding UserName, Mode=TwoWay}"
+                 Watermark="JohnSmith1234" />
 
         <TextBlock Grid.Row="3"
                    FontSize="14"
                    FontWeight="Bold"
-                   Text="User Name" />
+                   Text="Email" />
 
         <TextBox Grid.Row="4"
-                 Text="{Binding UserName, Mode=TwoWay}"
-                 Watermark="JohnSmith1234" />
+                 Text="{Binding Email, Mode=TwoWay}"
+                 Watermark="JohnSmith@EduPath.com" />
 
         <TextBlock Grid.Row="5"
                    FontSize="14"
                    FontWeight="Bold"
-                   Text="Password" />
+                   IsVisible="{Binding IsStudent,Mode=OneWay}"
+                   Text="Student ID" />
 
         <TextBox Grid.Row="6"
+                 IsVisible="{Binding IsStudent,Mode=OneWay}"
+                 Text="{Binding StudentId, Mode=TwoWay}" />
+
+        <TextBlock Grid.Row="7"
+                   FontSize="14"
+                   FontWeight="Bold"
+                   Text="Password" />
+
+        <TextBox Grid.Row="8"
                  Text="{Binding Password, Mode=TwoWay}"
                  Watermark="123456789" />
 
-        <Button Grid.Row="7"
-                Width="120"
-                Margin="0,0,135,0"
-                HorizontalAlignment="Center"
+        <Button Grid.Row="9"
+                Margin="0,0,130,0"
                 Classes="accent"
                 Command="{Binding RegisterCommand}"
-                Content="Register"
-                FontFamily="Times New Roman" />
+                Content="Register" />
 
-        <Button Grid.Row="7"
-                Width="120"
-                Margin="135,0,0,0"
-                HorizontalAlignment="Center"
+        <Button Grid.Row="9"
+                Margin="130,0,0,0"
                 Command="{Binding SwitchToLoginCommand}"
-                Content="Go Back"
-                FontFamily="Times New Roman" />
+                Content="Go Back" />
     </Grid>
 
 
