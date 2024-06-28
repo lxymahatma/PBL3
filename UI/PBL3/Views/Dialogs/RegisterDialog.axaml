@@ -17,17 +17,22 @@
     </Design.DataContext>
 
     <Grid RowDefinitions="40, 25, 50, 25, 50, 25, 50, 70" ShowGridLines="False">
+        <Grid.Styles>
+            <Style Selector="TextBlock">
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="Times New Roman" />
+            </Style>
+            <Style Selector="TextBox">
+                
+            </Style>
+        </Grid.Styles>
         <TextBlock Grid.Row="0"
                    Margin="0,0,0,30"
-                   VerticalAlignment="Center"
-                   FontFamily="Times New Roman"
                    FontSize="20"
                    FontWeight="ExtraBold"
                    Text="Register Account" />
 
         <TextBlock Grid.Row="1"
-                   VerticalAlignment="Center"
-                   FontFamily="Times New Roman"
                    FontSize="14"
                    FontWeight="Bold"
                    Text="Email" />
