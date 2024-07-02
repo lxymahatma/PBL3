@@ -46,7 +46,7 @@ jobs:
 
       - name: Build Project
         run: |
-          dotnet publish UI/PBL3.sln --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }} --self-contained=${{ matrix.self-contained }}
+          dotnet publish UI/EduPath.sln --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }} --self-contained=${{ matrix.self-contained }}
 
       - name: List Result
         working-directory: ./
@@ -56,10 +56,10 @@ jobs:
       - name: Package Build
         working-directory: ./
         run: |
-          7z a -tzip PBL3.zip ./UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/*
+          7z a -tzip EduPath.zip ./UI/bin/${{ matrix.build-type }}/net${{ matrix.dotnet-version }}/${{matrix.target-platform.name}}-${{ matrix.target-arch }}/publish/*
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: PBL3-${{ matrix.target-platform.name }}-${{ matrix.target-arch }}
-          path: PBL3.zip
+          name: EduPath-${{ matrix.target-platform.name }}-${{ matrix.target-arch }}
+          path: EduPath.zip
