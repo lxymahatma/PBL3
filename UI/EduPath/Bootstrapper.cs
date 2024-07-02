@@ -31,7 +31,7 @@ internal static class Bootstrapper
     private static void RegisterComponents()
     {
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
-        //_builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
+        // _builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
         _builder.RegisterType<User>().SingleInstance();
     }
 
@@ -45,6 +45,7 @@ internal static class Bootstrapper
         _builder.RegisterType<MessageBoxService>().As<IMessageBoxService>().SingleInstance();
         _builder.RegisterType<NavigationService>().As<INavigationService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<OpenAIService>().As<IOpenAIService>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<SerializationService>().As<ISerializationService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<UserService>().As<IUserService>().PropertiesAutowired().SingleInstance();
     }
 

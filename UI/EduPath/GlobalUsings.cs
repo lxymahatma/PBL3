@@ -10,6 +10,8 @@ global using EduPath.Contracts;
 global using EduPath.Models;
 global using Serilog;
 global using System.ComponentModel.DataAnnotations;
+global using System.Text.Json;
+global using System.Text.Json.Serialization;
 global using FluentAvalonia.UI.Controls;
 global using EduPath.Contracts.ViewModels;
 global using EduPath.ViewModels.Dialogs;
