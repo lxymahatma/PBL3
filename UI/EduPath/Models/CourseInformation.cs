@@ -8,7 +8,7 @@ public sealed class CourseInformation
     public int Id { get; set; }
 
     [JsonPropertyName("CourseName")]
-    public string? Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
     [JsonPropertyName("RegistrationType")]
     public string? RegistrationType { get; set; }
@@ -25,7 +25,7 @@ public sealed class CourseInformation
     public int Period { get; set; }
 
     [JsonPropertyName("MinimumGrade")]
-    public string MinimumGrade { get; set; }
+    public string? MinimumGrade { get; set; }
 
     public CourseRating Rating { get; set; }
     public Thread? Thread { get; set; }
