@@ -50,26 +50,22 @@
 
         <StackPanel Grid.Row="1">
             <TextBlock FontWeight="Bold" Text="User Name" />
-
             <TextBox Text="{Binding UserName, Mode=TwoWay}" Watermark="JohnSmith1234" />
         </StackPanel>
 
 
         <StackPanel Grid.Row="2">
             <TextBlock FontWeight="Bold" Text="Email" />
-
             <TextBox Text="{Binding Email, Mode=TwoWay}" Watermark="JohnSmith@EduPath.com" />
         </StackPanel>
 
         <StackPanel Grid.Row="3" IsVisible="{Binding IsStudent, Mode=OneWay}">
             <TextBlock FontWeight="Bold" Text="Student ID" />
-
             <TextBox Text="{Binding StudentId, Mode=TwoWay}" />
         </StackPanel>
 
         <StackPanel Grid.Row="4">
             <TextBlock FontWeight="Bold" Text="Password" />
-
             <TextBox Text="{Binding Password, Mode=TwoWay}" Watermark="123456789" />
         </StackPanel>
 
