@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:contract="clr-namespace:EduPath.Contracts.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ext="using:EduPath.Extensions.MarkupExtensions"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:page="using:EduPath.ViewModels.Pages"
+             x:Class="EduPath.Views.Pages.HomePage"
+             x:DataType="page:HomePageViewModel"
+             DataContext="{ext:DependencyInjection Type=contract:IHomePageViewModel}"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+
+    <Design.DataContext>
+        <page:HomePageViewModel />
+    </Design.DataContext>
+
+    <Grid ColumnDefinitions="Auto,Auto"
+          RowDefinitions="Auto,Auto"
+          ShowGridLines="True">
+
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Width="500"
+                 VerticalContentAlignment="Center"
+                 Text="{Binding SearchText, Mode=TwoWay}"
+                 Watermark="Search Course">
+            <TextBox.InnerRightContent>
+                <Button Command="{Binding SearchCommand, Mode=OneWay}">
+                    <PathIcon Width="30"
+                              Height="30"
+                              Data="{StaticResource Magnify}" />
+                </Button>
+            </TextBox.InnerRightContent>
+        </TextBox>
+    </Grid>
+
+</UserControl>

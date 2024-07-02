@@ -1,0 +1,86 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:contract="clr-namespace:EduPath.Contracts.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dialogs="clr-namespace:EduPath.ViewModels.Dialogs"
+             xmlns:ext="clr-namespace:EduPath.Extensions.MarkupExtensions"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="EduPath.Views.Dialogs.RegisterDialog"
+             x:DataType="dialogs:RegisterDialogViewModel"
+             DataContext="{ext:DependencyInjection Type=contract:IRegisterDialogViewModel}"
+             Width="250"
+             Height="400"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="500">
+
+    <Design.DataContext>
+        <dialogs:RegisterDialogViewModel />
+    </Design.DataContext>
+
+    <Grid RowDefinitions="40, Auto, Auto, Auto, Auto, *">
+        <Grid.Styles>
+            <Style Selector="StackPanel > TextBlock">
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="Times New Roman" />
+                <Setter Property="Margin" Value="0,0,0,8" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+            <Style Selector="TextBox">
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+            </Style>
+            <Style Selector="Button">
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="Times New Roman" />
+                <Setter Property="Width" Value="110" />
+            </Style>
+            <Style Selector="StackPanel">
+                <Setter Property="Orientation" Value="Vertical" />
+                <Setter Property="Margin" Value="0,10" />
+            </Style>
+        </Grid.Styles>
+        <TextBlock Grid.Row="0"
+                   Margin="0,0,0,30"
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   FontWeight="ExtraBold"
+                   Text="Register Account" />
+
+        <StackPanel Grid.Row="1">
+            <TextBlock FontWeight="Bold" Text="User Name" />
+            <TextBox Text="{Binding UserName, Mode=TwoWay}" Watermark="JohnSmith1234" />
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="2">
+            <TextBlock FontWeight="Bold" Text="Email" />
+            <TextBox Text="{Binding Email, Mode=TwoWay}" Watermark="JohnSmith@EduPath.com" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" IsVisible="{Binding IsStudent, Mode=OneWay}">
+            <TextBlock FontWeight="Bold" Text="Student ID" />
+            <TextBox Text="{Binding StudentId, Mode=TwoWay}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="4">
+            <TextBlock FontWeight="Bold" Text="Password" />
+            <TextBox Text="{Binding Password, Mode=TwoWay}" Watermark="123456789" />
+        </StackPanel>
+
+
+        <Button Grid.Row="5"
+                Margin="0,0,130,0"
+                Classes="accent"
+                Command="{Binding RegisterCommand, Mode=OneWay}"
+                Content="Register" />
+
+        <Button Grid.Row="5"
+                Margin="130,0,0,0"
+                Command="{Binding SwitchToLoginCommand, Mode=OneWay}"
+                Content="Go Back" />
+    </Grid>
+
+
+</UserControl>
