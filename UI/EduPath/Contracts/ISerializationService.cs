@@ -6,4 +6,5 @@ public interface ISerializationService
     public T? Deserialize<T>(string json);
     Task<string> SerializeAsync<T>(T obj);
     Task<T?> DeserializeAsync<T>(string json);
+    Task<T?> DeserializeAsync<T>(Stream stream);
 }
