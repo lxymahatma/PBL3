@@ -55,9 +55,10 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
 
         var user = new User
         {
-            Email = Email!,
-            Password = Password!,
-            UserName = UserName!
+            Email = Email,
+            Password = Password,
+            UserName = UserName,
+            StudentId = StudentId
         };
 
         UserService.Register(user);
