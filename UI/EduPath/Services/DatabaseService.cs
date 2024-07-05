@@ -8,7 +8,7 @@ public sealed class DatabaseService : IDatabaseService
         ["user2"] = new User { UserName = "user2", Password = "password2", Email = "bb@gmail.com" }
     };
 
-    private static CourseInformation[]? _courseDatabase;
+    private CourseInformation[]? _courseDatabase;
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;

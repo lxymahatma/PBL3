@@ -8,6 +8,16 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
 
+    [UsedImplicitly]
+    public IDatabaseService DatabaseService { get; init; } = null!;
+
+    [RelayCommand]
+    private async Task GetCourses()
+    {
+        Logger.Information("Getting courses...");
+        var courses = await DatabaseService.GetCoursesFromDatabaseAsync();
+    }
+
     [RelayCommand]
     private void Search()
     {
