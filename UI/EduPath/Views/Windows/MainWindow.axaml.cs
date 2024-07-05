@@ -1,5 +1,3 @@
-using EduPath.Models;
-using EduPath.Views.Pages;
 using FluentAvalonia.UI.Windowing;
 
 namespace EduPath.Views.Windows;

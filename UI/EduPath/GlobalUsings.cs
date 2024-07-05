@@ -14,6 +14,7 @@ global using System.Text.Json;
 global using System.Text.Json.Serialization;
 global using FluentAvalonia.UI.Controls;
 global using EduPath.Contracts.ViewModels;
+global using EduPath.Utils;
 global using EduPath.ViewModels.Dialogs;
 global using EduPath.ViewModels.Pages;
 global using EduPath.ViewModels.Windows;

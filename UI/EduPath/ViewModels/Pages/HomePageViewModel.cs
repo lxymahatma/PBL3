@@ -12,10 +12,10 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
     public IDatabaseService DatabaseService { get; init; } = null!;
 
     [RelayCommand]
-    private async Task GetCourses()
+    private async Task GetCoursesAsync()
     {
         Logger.Information("Getting courses...");
-        var courses = await DatabaseService.GetCoursesFromDatabaseAsync();
+        var courses = await DatabaseService.GetCoursesFromDatabaseAsync().ConfigureAwait(false);
     }
 
     [RelayCommand]

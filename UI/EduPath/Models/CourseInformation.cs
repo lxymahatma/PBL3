@@ -14,7 +14,7 @@ public sealed class CourseInformation
     [JsonPropertyName("Lecturer")]
     public string Lecturer { get; set; } = string.Empty;
 
-    [JsonPropertyName("ClassRoom")]
+    [JsonPropertyName("Classroom")]
     public string ClassRoom { get; set; } = string.Empty;
 
     [JsonPropertyName("RegistrationType")]

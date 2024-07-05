@@ -22,5 +22,6 @@ public sealed class SerializationService : ISerializationService
         await using var stream = new MemoryStream(Encoding.UTF8.GetBytes(text));
         return await JsonSerializer.DeserializeAsync<T>(stream);
     }
+
     public async Task<T?> DeserializeAsync<T>(Stream stream) => await JsonSerializer.DeserializeAsync<T>(stream);
 }

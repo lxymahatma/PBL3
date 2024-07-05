@@ -1,6 +1,4 @@
-﻿using EduPath.Utils;
-
-namespace EduPath.Services;
+﻿namespace EduPath.Services;
 
 public sealed class DatabaseService : IDatabaseService
 {
@@ -41,16 +39,16 @@ public sealed class DatabaseService : IDatabaseService
     {
         while (_courseDatabase is null)
         {
-            await LoadCoursesFromDatabase();
+            await LoadCoursesFromDatabaseAsync().ConfigureAwait(false);
         }
 
         return _courseDatabase;
     }
 
-    private async Task LoadCoursesFromDatabase()
+    private async Task LoadCoursesFromDatabaseAsync()
     {
         var stream = ResourceUtils.GetResource("CourseDatabase.json");
-        _courseDatabase = await SerializationService.DeserializeAsync<CourseInformation[]>(stream);
+        _courseDatabase = await SerializationService.DeserializeAsync<CourseInformation[]>(stream).ConfigureAwait(false);
         Logger.Information("Course database loaded");
     }
 }
