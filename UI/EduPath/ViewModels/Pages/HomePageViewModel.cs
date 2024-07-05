@@ -23,10 +23,4 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
     {
         Logger.Information("Searching for {SearchText}", SearchText);
     }
-
-    [RelayCommand]
-    private void OpenSettings()
-    {
-        Logger.Information("Opening settings");
-    }
 }
