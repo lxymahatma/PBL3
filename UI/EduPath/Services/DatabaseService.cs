@@ -49,7 +49,7 @@ public sealed class DatabaseService : IDatabaseService
 
     private async Task LoadCoursesFromDatabase()
     {
-        var stream = ResourceUtils.GetResource("avares://EduPath/Assets/CourseDatabase.json");
+        var stream = ResourceUtils.GetResource("CourseDatabase.json");
         _courseDatabase = await SerializationService.DeserializeAsync<CourseInformation[]>(stream);
         Logger.Information("Course database loaded");
     }
