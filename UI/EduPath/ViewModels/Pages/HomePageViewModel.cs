@@ -43,16 +43,9 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
     [RelayCommand]
     private void Search()
     {
-        Logger.Information("Searching for {SearchText}", SearchText);
-    }
-
-    partial void OnSearchTextChanged(string value)
-    {
-        if (IsAdvancedSearch)
+        if (!IsAdvancedSearch)
         {
-            return;
+            _sourceCache.Refresh();
         }
-
-        _sourceCache.Refresh();
     }
 }

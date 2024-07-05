@@ -13,11 +13,16 @@
              d:DesignHeight="450"
              d:DesignWidth="800">
 
+    <!-- For loading course data when window loaded-->
     <Interaction.Behaviors>
         <EventTriggerBehavior EventName="Loaded">
             <InvokeCommandAction Command="{Binding GetCoursesCommand, Mode=OneTime}" />
         </EventTriggerBehavior>
     </Interaction.Behaviors>
+    
+    <UserControl.KeyBindings>
+        <KeyBinding Command="{Binding SearchCommand, Mode=OneWay}" Gesture="Enter" />
+    </UserControl.KeyBindings>
 
     <Design.DataContext>
         <page:HomePageViewModel />
