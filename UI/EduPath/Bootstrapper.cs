@@ -1,7 +1,6 @@
 using Autofac;
 using EduPath.Extensions.MarkupExtensions;
 using EduPath.Services;
-using IContainer = Autofac.IContainer;
 
 namespace EduPath;
 
