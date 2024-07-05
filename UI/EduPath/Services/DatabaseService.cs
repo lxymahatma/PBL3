@@ -1,4 +1,6 @@
-﻿namespace EduPath.Services;
+﻿using EduPath.Utils;
+
+namespace EduPath.Services;
 
 public sealed class DatabaseService : IDatabaseService
 {
@@ -47,14 +49,8 @@ public sealed class DatabaseService : IDatabaseService
 
     private async Task LoadCoursesFromDatabase()
     {
-        if (!File.Exists("CourseDatabase.json"))
-        {
-            Logger.Error("Course database not found");
-            return;
-        }
-
-        var json = await File.ReadAllTextAsync("CourseDatabase.json");
-        _courseDatabase = await SerializationService.DeserializeAsync<CourseInformation[]>(json);
+        var stream = ResourceUtils.GetResource("avares://EduPath/Assets/CourseDatabase.json");
+        _courseDatabase = await SerializationService.DeserializeAsync<CourseInformation[]>(stream);
         Logger.Information("Course database loaded");
     }
 }
