@@ -3,7 +3,8 @@
              xmlns:contract="clr-namespace:EduPath.Contracts.ViewModels"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ext="using:EduPath.Extensions.MarkupExtensions"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:model="using:EduPath.Models"
              xmlns:page="using:EduPath.ViewModels.Pages"
              x:Class="EduPath.Views.Pages.HomePage"
              x:DataType="page:HomePageViewModel"
@@ -26,7 +27,7 @@
           RowDefinitions="Auto,Auto"
           ShowGridLines="True">
 
-        <TextBox Grid.Row="0" Grid.Column="1"
+        <TextBox Grid.Row="0" Grid.Column="0"
                  Width="500"
                  VerticalContentAlignment="Center"
                  Text="{Binding SearchText, Mode=TwoWay}"
@@ -39,6 +40,14 @@
                 </Button>
             </TextBox.InnerRightContent>
         </TextBox>
+        
+        <ListBox Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Courses}">
+            <ListBox.DataTemplates>
+                <DataTemplate x:DataType="model:CourseInformation">
+                    <TextBlock Text="{Binding Name }"></TextBlock>
+                </DataTemplate>
+            </ListBox.DataTemplates>
+        </ListBox>
     </Grid>
 
 </UserControl>
