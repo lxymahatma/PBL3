@@ -18,6 +18,9 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
     public ILogger Logger { get; init; } = null!;
 
     [UsedImplicitly]
+    public IOpenAIService OpenAIService { get; init; } = null!;
+
+    [UsedImplicitly]
     public IDatabaseService DatabaseService { get; init; } = null!;
 
     public ReadOnlyObservableCollection<CourseInformation> Courses => _courses;
@@ -41,11 +44,20 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
     }
 
     [RelayCommand]
-    private void Search()
+    private async Task SearchAsync()
     {
         if (!IsAdvancedSearch)
         {
+            Logger.Information("Normal Searching for {SearchText}", SearchText);
             _sourceCache.Refresh();
+            return;
         }
+
+        await AdvancedSearchAsync().ConfigureAwait(false);
+    }
+
+    private async Task AdvancedSearchAsync()
+    {
+       
     }
 }
