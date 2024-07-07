@@ -28,17 +28,20 @@
         <page:HomePageViewModel />
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="800,Auto"
+    <Grid ColumnDefinitions="800,*"
           RowDefinitions="Auto,*"
           ShowGridLines="True">
 
         <TextBox Grid.Row="0" Grid.Column="0"
-                 Width="500"
+                 HorizontalAlignment="Stretch"
                  VerticalContentAlignment="Center"
                  Text="{Binding SearchText, Mode=TwoWay}"
                  Watermark="Search Course">
+
             <TextBox.InnerRightContent>
-                <Button Command="{Binding SearchCommand, Mode=OneWay}">
+                <Button BorderBrush="White"
+                        BorderThickness="1"
+                        Command="{Binding SearchCommand, Mode=OneWay}">
                     <PathIcon Width="30"
                               Height="30"
                               Data="{StaticResource Magnify}" />
@@ -52,8 +55,10 @@
                       OnContent="Advanced Search" />
 
         <ScrollViewer Grid.Row="1" Grid.Column="0"
+                      Grid.ColumnSpan="2"
                       HorizontalAlignment="Stretch"
                       VerticalAlignment="Stretch">
+
             <ItemsRepeater ItemsSource="{Binding Courses, Mode=TwoWay}">
                 <ItemsRepeater.ItemTemplate>
                     <DataTemplate x:DataType="model:CourseInformation">
@@ -63,14 +68,21 @@
                                     <Setter Property="Orientation" Value="Horizontal" />
                                 </Style>
                             </Expander.Styles>
+
                             <StackPanel Orientation="Vertical">
                                 <StackPanel>
                                     <TextBlock Text="Lecturer: " />
                                     <TextBlock Text="{Binding Lecturer, Mode=OneTime}" />
                                 </StackPanel>
+
                                 <StackPanel>
                                     <TextBlock Text="Class Room: " />
                                     <TextBlock Text="{Binding ClassRoom, Mode=OneTime}" />
+                                </StackPanel>
+
+                                <StackPanel>
+                                    <TextBlock Text="Period: " />
+                                    <TextBlock Text="{Binding Period, Mode=OneTime}" />
                                 </StackPanel>
                             </StackPanel>
 
