@@ -28,8 +28,8 @@
         <page:HomePageViewModel />
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="Auto,Auto"
-          RowDefinitions="Auto,Auto"
+    <Grid ColumnDefinitions="800,Auto"
+          RowDefinitions="Auto,*"
           ShowGridLines="True">
 
         <TextBox Grid.Row="0" Grid.Column="0"
@@ -51,14 +51,35 @@
                       OffContent="Normal Search"
                       OnContent="Advanced Search" />
 
-        <ListBox Grid.Row="1" Grid.Column="0"
-                 ItemsSource="{Binding Courses, Mode=TwoWay}">
-            <ListBox.DataTemplates>
-                <DataTemplate x:DataType="model:CourseInformation">
-                    <TextBlock Text="{Binding Name, Mode=OneWay}" />
-                </DataTemplate>
-            </ListBox.DataTemplates>
-        </ListBox>
+        <ScrollViewer Grid.Row="1" Grid.Column="0"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch">
+            <ItemsRepeater ItemsSource="{Binding Courses, Mode=TwoWay}">
+                <ItemsRepeater.ItemTemplate>
+                    <DataTemplate x:DataType="model:CourseInformation">
+                        <Expander Header="{Binding Name, Mode=OneTime}">
+                            <Expander.Styles>
+                                <Style Selector="StackPanel>StackPanel">
+                                    <Setter Property="Orientation" Value="Horizontal" />
+                                </Style>
+                            </Expander.Styles>
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel>
+                                    <TextBlock Text="Lecturer: " />
+                                    <TextBlock Text="{Binding Lecturer, Mode=OneTime}" />
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Class Room: " />
+                                    <TextBlock Text="{Binding ClassRoom, Mode=OneTime}" />
+                                </StackPanel>
+                            </StackPanel>
+
+                        </Expander>
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+        </ScrollViewer>
+
     </Grid>
 
 </UserControl>
