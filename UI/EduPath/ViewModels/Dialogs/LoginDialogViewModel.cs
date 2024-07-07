@@ -34,12 +34,11 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
         }
 
         DialogService.CloseCurrentDialog();
-        await MessageBoxService.SuccessAsync("Login successful").ConfigureAwait(true);
-        NavigationService.NavigateTo<HomePage>();
+        await MessageBoxService.SuccessAsync("Login successful").ConfigureAwait(false);
     }
 
     [RelayCommand]
-    private Task SwitchToRegisterAsync() => DialogService.SwitchDialogAsync(RegisterDialogViewModel, () => UserService.IsRegistered);
+    private Task SwitchToRegisterAsync() => DialogService.SwitchDialogAsync(RegisterDialogViewModel);
 
     #region Services
 

@@ -8,7 +8,11 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     public Frame ContentFrame => NavigationService.ContentFrame;
 
     [RelayCommand]
-    private Task OpenLoginPageAsync() => DialogService.ShowAsync(LoginDialogViewModel, () => UserService.IsLoggedIn);
+    private Task OpenLoginPageAsync()
+    {
+        NavigationService.NavigateTo<HomePage>();
+        return DialogService.ShowAsync(LoginDialogViewModel);
+    }
 
     partial void OnSelectedChanged(NavigationViewItem value)
     {

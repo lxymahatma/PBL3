@@ -36,4 +36,11 @@ public sealed class UserService : IUserService
     }
 
     public void Register(User user) => IsRegistered = DatabaseService.RegisterUser(user);
+
+    public void DeleteCurrentUser()
+    {
+        IsLoggedIn = false;
+        IsRegistered = false;
+        DatabaseService.DeleteUserFromDatabase(User);
+    }
 }
