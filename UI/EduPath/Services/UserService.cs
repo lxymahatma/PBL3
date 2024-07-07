@@ -43,4 +43,9 @@ public sealed class UserService : IUserService
         IsRegistered = false;
         DatabaseService.DeleteUserFromDatabase(User);
     }
+
+    public void ResetPassword()
+    {
+        User.Password = null;
+    }
 }
