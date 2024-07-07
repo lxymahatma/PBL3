@@ -2,8 +2,8 @@
 
 public interface IDatabaseService
 {
-    Dictionary<string, CourseInformation> GetCoursesFromDatabase();
-    Dictionary<string, User> GetUsersFromDatabase();
+    Task<CourseInformation[]> GetCoursesFromDatabaseAsync();
+    Task GetUsersFromDatabase();
     bool RegisterUser(User user);
 
     User? GetUserFromKey(string key);

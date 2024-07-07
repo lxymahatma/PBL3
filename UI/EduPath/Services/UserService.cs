@@ -1,7 +1,4 @@
-﻿using EduPath.Contracts;
-using EduPath.Models;
-
-namespace EduPath.Services;
+﻿namespace EduPath.Services;
 
 public sealed class UserService : IUserService
 {

@@ -4,6 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ext="using:EduPath.Extensions.MarkupExtensions"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:model="using:EduPath.Models"
              xmlns:page="using:EduPath.ViewModels.Pages"
              x:Class="EduPath.Views.Pages.HomePage"
              x:DataType="page:HomePageViewModel"
@@ -11,6 +12,17 @@
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800">
+
+    <!--  For loading course data when window loaded  -->
+    <Interaction.Behaviors>
+        <EventTriggerBehavior EventName="Loaded">
+            <InvokeCommandAction Command="{Binding GetCoursesCommand, Mode=OneTime}" />
+        </EventTriggerBehavior>
+    </Interaction.Behaviors>
+
+    <UserControl.KeyBindings>
+        <KeyBinding Command="{Binding SearchCommand, Mode=OneWay}" Gesture="Enter" />
+    </UserControl.KeyBindings>
 
     <Design.DataContext>
         <page:HomePageViewModel />
@@ -20,7 +32,7 @@
           RowDefinitions="Auto,Auto"
           ShowGridLines="True">
 
-        <TextBox Grid.Row="0" Grid.Column="1"
+        <TextBox Grid.Row="0" Grid.Column="0"
                  Width="500"
                  VerticalContentAlignment="Center"
                  Text="{Binding SearchText, Mode=TwoWay}"
@@ -33,6 +45,20 @@
                 </Button>
             </TextBox.InnerRightContent>
         </TextBox>
+
+        <ToggleSwitch Grid.Row="0" Grid.Column="1"
+                      IsChecked="{Binding IsAdvancedSearch, Mode=TwoWay}"
+                      OffContent="Normal Search"
+                      OnContent="Advanced Search" />
+
+        <ListBox Grid.Row="1" Grid.Column="0"
+                 ItemsSource="{Binding Courses, Mode=TwoWay}">
+            <ListBox.DataTemplates>
+                <DataTemplate x:DataType="model:CourseInformation">
+                    <TextBlock Text="{Binding Name, Mode=OneWay}" />
+                </DataTemplate>
+            </ListBox.DataTemplates>
+        </ListBox>
     </Grid>
 
 </UserControl>

@@ -5,5 +5,6 @@ public enum CourseCategory
     Math,
     Programming,
     LiberalArts,
-    Teamwork
+    Engineering,
+    Language
 }

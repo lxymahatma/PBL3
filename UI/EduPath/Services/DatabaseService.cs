@@ -2,33 +2,53 @@
 
 public sealed class DatabaseService : IDatabaseService
 {
-    private static readonly Dictionary<string, User> _users = new()
+    private static readonly Dictionary<string, User> _userDatabase = new()
     {
         ["user1"] = new User { UserName = "user1", Password = "password1", Email = "aa@gmail.com" },
         ["user2"] = new User { UserName = "user2", Password = "password2", Email = "bb@gmail.com" }
     };
 
+    private CourseInformation[]? _courseDatabase;
+
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
 
-    public Dictionary<string, CourseInformation> GetCoursesFromDatabase() => throw new NotImplementedException();
+    [UsedImplicitly]
+    public ISerializationService SerializationService { get; init; } = null!;
 
-    public Dictionary<string, User> GetUsersFromDatabase() => _users;
+    public Task GetUsersFromDatabase() => throw new NotImplementedException();
 
     public bool RegisterUser(User user)
     {
-        if (_users.ContainsKey(user.UserName!) || _users.ContainsKey(user.Email!))
+        if (_userDatabase.ContainsKey(user.UserName!) || _userDatabase.ContainsKey(user.Email!))
         {
             Logger.Error("User {UserName} with Email {Email} already exists", user.UserName, user.Email);
             return false;
         }
 
-        _users[user.UserName!] = user;
-        _users[user.Email!] = user;
+        _userDatabase[user.UserName!] = user;
+        _userDatabase[user.Email!] = user;
         Logger.Information("User {UserName} added with Email {Email} and Password {Password}",
             user.UserName, user.Email, user.Password);
         return true;
     }
 
-    public User? GetUserFromKey(string key) => _users.GetValueOrDefault(key);
+    public User? GetUserFromKey(string key) => _userDatabase.GetValueOrDefault(key);
+
+    public async Task<CourseInformation[]> GetCoursesFromDatabaseAsync()
+    {
+        while (_courseDatabase is null)
+        {
+            await LoadCoursesFromDatabaseAsync().ConfigureAwait(false);
+        }
+
+        return _courseDatabase;
+    }
+
+    private async Task LoadCoursesFromDatabaseAsync()
+    {
+        var stream = ResourceUtils.GetResource("CourseDatabase.json");
+        _courseDatabase = await SerializationService.DeserializeAsync<CourseInformation[]>(stream).ConfigureAwait(false);
+        Logger.Information("Course database loaded");
+    }
 }

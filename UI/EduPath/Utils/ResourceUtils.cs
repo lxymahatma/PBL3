@@ -4,5 +4,5 @@ namespace EduPath.Utils;
 
 public static class ResourceUtils
 {
-    public static Stream GetResource(string loc) => AssetLoader.Open(new Uri(loc));
+    public static Stream GetResource(string fileName) => AssetLoader.Open(new Uri($"avares://{nameof(EduPath)}/Assets/{fileName}"));
 }
