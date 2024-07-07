@@ -3,8 +3,11 @@
 public sealed partial class AccountPageViewModel : ViewModelBase, IAccountPageViewModel
 {
     [RelayCommand]
-    private void ResetPassword()
+    private async Task ResetPassword()
     {
+        UserService.ResetPassword();
+        await MessageBoxService.SuccessAsync("Password has been successfully reset!\r\nPlease login again!").ConfigureAwait(true);
+        await DialogService.ShowAsync(LoginDialogViewModel).ConfigureAwait(false);
     }
 
     [RelayCommand]
