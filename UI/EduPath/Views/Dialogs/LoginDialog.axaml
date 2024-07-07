@@ -75,22 +75,21 @@
                 Command="{Binding LoginCommand, Mode=OneWay}"
                 Content="Login" />
 
-        <StackPanel Grid.Row="7"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Orientation="Horizontal">
+        <Panel Grid.Row="7"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center">
 
-            <TextBlock Margin="10,0,0,0"
+            <TextBlock Margin="0,0,125,0"
                        HorizontalAlignment="Center"
                        FontSize="14"
                        Text="New to EduPath?" />
 
-            <ui:HyperlinkButton Margin="20,0,0,0"
+            <ui:HyperlinkButton Margin="125,0,0,0"
                                 HorizontalAlignment="Center"
                                 Command="{Binding SwitchToRegisterCommand, Mode=OneWay}"
                                 Content="Create an account"
                                 FontSize="14" />
-        </StackPanel>
+        </Panel>
 
     </Grid>
 </UserControl>

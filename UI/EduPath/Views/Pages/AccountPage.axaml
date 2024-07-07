@@ -18,8 +18,14 @@
     </Design.DataContext>
 
     <Grid ColumnDefinitions="*, 450, *" RowDefinitions="150, 50, Auto, Auto, Auto, Auto">
+        <Grid.Styles>
+            <Style Selector="ui|CommandBarButton">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+            </Style>
+        </Grid.Styles>
 
         <Image Grid.Row="0" Grid.Column="1"
+               Width="100"
                Height="100"
                VerticalAlignment="Bottom"
                Source="/Assets/Account.ico" />
@@ -32,38 +38,28 @@
                    Text="Account Page" />
 
         <ui:SettingsExpander Grid.Row="2" Grid.Column="1"
-                             Header="Username">
-            <ui:SettingsExpander.Footer>
-                <TextBlock Text="{Binding User.UserName}" />
-            </ui:SettingsExpander.Footer>
-            <!--     <ui:SettingsExpanderItem Content="{Binding User.UserName}" Description="Username" /> -->
-            <!-- <ui:SettingsExpanderItem Content="{Binding User.Password}" Description="Password" /> -->
-            <!-- <ui:SettingsExpanderItem Content="{Binding User.Email}" Description="Email" /> -->
-        </ui:SettingsExpander>
+                             Footer="{Binding User.UserName, Mode=OneWay}"
+                             Header="Username" />
 
         <ui:SettingsExpander Grid.Row="3" Grid.Column="1"
-                             Header="Email">
-            <ui:SettingsExpander.Footer>
-                <TextBlock Text="{Binding User.Email}" />
-            </ui:SettingsExpander.Footer>
-        </ui:SettingsExpander>
+                             Footer="{Binding User.Email, Mode=OneWay}"
+                             Header="Email" />
 
         <ui:SettingsExpander Grid.Row="4" Grid.Column="1"
-                             Header="Password">
-            <ui:SettingsExpander.Footer>
-                <TextBlock Text="{Binding User.Password}" />
-            </ui:SettingsExpander.Footer>
-        </ui:SettingsExpander>
+                             Footer="{Binding User.Password, Mode=OneWay}"
+                             Header="Password" />
 
-        <ui:CommandBarButton Grid.Row="5" Grid.Column="1"
-                             Margin="70,0,0,0"
-                             HorizontalAlignment="Center"
-                             IconSource="{StaticResource ResetPassword}"
-                             Label="Reset Password" />
-        <ui:CommandBarButton Grid.Row="5" Grid.Column="1"
-                             Margin="0,0,70,0"
-                             HorizontalAlignment="Center"
-                             IconSource="{StaticResource DeleteAccount}"
-                             Label="Delete Account" />
+        <Panel Grid.Row="5" Grid.Column="1">
+            <ui:CommandBarButton Margin="70,0,0,0"
+                                 Command="{Binding ResetPasswordCommand, Mode=OneWay}"
+                                 IconSource="{StaticResource ResetPassword}"
+                                 Label="Reset Password" />
+
+            <ui:CommandBarButton Margin="0,0,70,0"
+                                 Command="{Binding DeleteAccountCommand, Mode=OneWay}"
+                                 IconSource="{StaticResource DeleteAccount}"
+                                 Label="Delete Account" />
+        </Panel>
+
     </Grid>
 </UserControl>
