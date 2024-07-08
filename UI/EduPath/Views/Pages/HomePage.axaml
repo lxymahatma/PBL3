@@ -28,7 +28,7 @@
         <page:HomePageViewModel />
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="800,*"
+    <Grid ColumnDefinitions="*,175"
           RowDefinitions="Auto,*"
           ShowGridLines="True">
 
@@ -64,7 +64,7 @@
                     <DataTemplate x:DataType="model:CourseInformation">
                         <Expander Header="{Binding Name, Mode=OneTime}">
                             <Expander.Styles>
-                                <Style Selector="StackPanel>StackPanel">
+                                <Style Selector="StackPanel&gt;StackPanel">
                                     <Setter Property="Orientation" Value="Horizontal" />
                                 </Style>
                             </Expander.Styles>

@@ -9,7 +9,7 @@
              x:DataType="dialogs:RegisterDialogViewModel"
              DataContext="{ext:DependencyInjection Type=contract:IRegisterDialogViewModel}"
              Width="250"
-             Height="400"
+             Height="450"
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="500">
@@ -20,7 +20,7 @@
 
     <Grid RowDefinitions="40, Auto, Auto, Auto, Auto, *">
         <Grid.Styles>
-            <Style Selector="StackPanel > TextBlock">
+            <Style Selector="StackPanel &gt; TextBlock">
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="FontFamily" Value="Times New Roman" />
                 <Setter Property="Margin" Value="0,0,0,8" />
@@ -38,7 +38,7 @@
             </Style>
             <Style Selector="StackPanel">
                 <Setter Property="Orientation" Value="Vertical" />
-                <Setter Property="Margin" Value="0,10" />
+                <Setter Property="Margin" Value="0,0" />
             </Style>
         </Grid.Styles>
         <TextBlock Grid.Row="0"
