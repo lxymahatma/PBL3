@@ -50,7 +50,7 @@ jobs:
 
       - name: Test Project
         run: |
-          dotnet test UI/EduPath.sln --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }}
+          dotnet test UI/EduPath.sln --configuration=${{ matrix.build-type }}
 
       - name: List Result
         working-directory: ./
