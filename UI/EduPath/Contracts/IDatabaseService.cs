@@ -3,7 +3,7 @@
 public interface IDatabaseService
 {
     Task<CourseInformation[]> GetCoursesFromDatabaseAsync();
-    Task GetUsersFromDatabase();
+    Dictionary<string,User> GetUsersFromDatabase();
     bool RegisterUser(User user);
 
     User? GetUserFromKey(string key);

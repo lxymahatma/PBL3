@@ -48,6 +48,10 @@ jobs:
         run: |
           dotnet publish UI/EduPath.sln --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }} --self-contained=${{ matrix.self-contained }}
 
+      - name: Test Project
+        run: |
+          dotnet test UI/EduPath.sln --configuration=${{ matrix.build-type }} --arch=${{ matrix.target-arch }}
+
       - name: List Result
         working-directory: ./
         run: |

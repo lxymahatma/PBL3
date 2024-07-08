@@ -16,7 +16,7 @@ public sealed class DatabaseService : IDatabaseService
     [UsedImplicitly]
     public ISerializationService SerializationService { get; init; } = null!;
 
-    public Task GetUsersFromDatabase() => throw new NotImplementedException();
+    public Dictionary<string, User> GetUsersFromDatabase() => _userDatabase;
 
     public bool RegisterUser(User user)
     {
@@ -33,7 +33,7 @@ public sealed class DatabaseService : IDatabaseService
         return true;
     }
 
-    public User? GetUserFromKey(string key) => _userDatabase.GetValueOrDefault(key);
+    public User? GetUserFromKey(string key) => GetUsersFromDatabase().GetValueOrDefault(key);
 
     public async Task<CourseInformation[]> GetCoursesFromDatabaseAsync()
     {
@@ -45,17 +45,17 @@ public sealed class DatabaseService : IDatabaseService
         return _courseDatabase;
     }
 
+    public void DeleteUserFromDatabase(User user)
+    {
+        _userDatabase.Remove(user.UserName!);
+        _userDatabase.Remove(user.Email!);
+        Logger.Information("User {UserName} with email {Email} deleted", user.UserName, user.Email);
+    }
+
     private async Task LoadCoursesFromDatabaseAsync()
     {
         var stream = ResourceUtils.GetResource("CourseDatabase.json");
         _courseDatabase = await SerializationService.DeserializeAsync<CourseInformation[]>(stream).ConfigureAwait(false);
         Logger.Information("Course database loaded");
-    }
-
-    public void DeleteUserFromDatabase(User user)
-    {
-        _userDatabase.Remove(user.UserName!);
-        _userDatabase.Remove(user.Email!);
-        Logger.Information("User {UserName} with email {Email} deleted", user.UserName,user.Email);
     }
 }

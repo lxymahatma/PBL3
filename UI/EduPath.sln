@@ -9,6 +9,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71BB7110-AE92-4B18-8E3A-8A8A1E3A7F24}"
 	ProjectSection(SolutionItems) = preProject
 		Settings.XamlStyler = Settings.XamlStyler
+		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
 Global
