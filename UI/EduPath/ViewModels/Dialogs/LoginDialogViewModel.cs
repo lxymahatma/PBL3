@@ -34,7 +34,8 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
         }
 
         DialogService.CloseCurrentDialog();
-        await MessageBoxService.SuccessAsync("Login successful").ConfigureAwait(false);
+        await MessageBoxService.SuccessAsync("Login successful").ConfigureAwait(true);
+        NavigationService.NavigateTo<HomePage>();
     }
 
     [RelayCommand]

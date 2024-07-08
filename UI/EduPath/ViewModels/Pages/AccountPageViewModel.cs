@@ -16,6 +16,7 @@ public sealed partial class AccountPageViewModel : ViewModelBase, IAccountPageVi
         Logger.Information("Request for deleting current user...");
         UserService.DeleteCurrentUser();
         await MessageBoxService.SuccessAsync("User has been successfully deleted!").ConfigureAwait(true);
+        NavigationService.NavigateToNull();
         await DialogService.ShowAsync(LoginDialogViewModel).ConfigureAwait(false);
     }
 
@@ -25,19 +26,22 @@ public sealed partial class AccountPageViewModel : ViewModelBase, IAccountPageVi
     public User User { get; init; } = null!;
 
     [UsedImplicitly]
+    public IDialogService DialogService { get; init; } = null!;
+
+    [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
 
     [UsedImplicitly]
-    public IUserService UserService { get; init; } = null!;
+    public ILoginDialogViewModel LoginDialogViewModel { get; init; } = null!;
 
     [UsedImplicitly]
     public IMessageBoxService MessageBoxService { get; init; } = null!;
 
     [UsedImplicitly]
-    public IDialogService DialogService { get; init; } = null!;
+    public INavigationService NavigationService { get; init; } = null!;
 
     [UsedImplicitly]
-    public ILoginDialogViewModel LoginDialogViewModel { get; init; } = null!;
+    public IUserService UserService { get; init; } = null!;
 
     #endregion
 }

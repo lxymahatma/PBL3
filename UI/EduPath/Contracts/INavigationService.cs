@@ -4,5 +4,6 @@ public interface INavigationService
 {
     Frame ContentFrame { get; }
     void NavigateTo<T>();
-    void NavigateTo(Type pageType);
+    void NavigateToNull();
+    void NavigateToWithoutNotify<T>();
 }
