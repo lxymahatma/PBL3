@@ -6,6 +6,7 @@ public sealed partial class AccountPageViewModel : ViewModelBase, IAccountPageVi
     private async Task ResetPassword()
     {
         UserService.ResetPassword();
+        NavigationService.NavigateToNull();
         await MessageBoxService.SuccessAsync("Password has been successfully reset!\r\nPlease login again!").ConfigureAwait(true);
         await DialogService.ShowAsync(LoginDialogViewModel).ConfigureAwait(false);
     }
@@ -15,8 +16,8 @@ public sealed partial class AccountPageViewModel : ViewModelBase, IAccountPageVi
     {
         Logger.Information("Request for deleting current user...");
         UserService.DeleteCurrentUser();
-        await MessageBoxService.SuccessAsync("User has been successfully deleted!").ConfigureAwait(true);
         NavigationService.NavigateToNull();
+        await MessageBoxService.SuccessAsync("User has been successfully deleted!").ConfigureAwait(true);
         await DialogService.ShowAsync(LoginDialogViewModel).ConfigureAwait(false);
     }
 
