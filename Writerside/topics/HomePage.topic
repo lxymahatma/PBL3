@@ -22,13 +22,13 @@
             <a href="Project-Proposal.md" summary="Project Proposal for our application"/>
             <a href="Requirements-Specification-Document.md" summary="Requirements Specification Document for our application"/>
             <a href="System-Design-Diagrams.md" summary="System Design Diagrams for our application"/>
-            <a href="System-Architecture-Documentation.md"/>
+            <a href="System-Architecture-Documentation.md" summary="System Architecture Documentation for our application"/>
         </primary>
 
         <secondary>
             <title>Working Set</title>
-            <a href="Requirements-Specification-Document.md"/>
             <a href="System-Design-Diagrams.md"/>
+            <a href="System-Architecture-Documentation.md"/>
         </secondary>
 
         <misc>
