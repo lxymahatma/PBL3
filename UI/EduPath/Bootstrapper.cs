@@ -42,7 +42,9 @@ internal static class Bootstrapper
         _builder.RegisterType<DatabaseService>().As<IDatabaseService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<DialogService>().As<IDialogService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<MessageBoxService>().As<IMessageBoxService>().SingleInstance();
-        _builder.RegisterType<NavigationService>().As<INavigationService>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<NavigationService>().As<INavigationService>()
+            .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies)
+            .SingleInstance();
         _builder.RegisterType<OpenAIService>().As<IOpenAIService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<SerializationService>().As<ISerializationService>().PropertiesAutowired().SingleInstance();
         _builder.RegisterType<UserService>().As<IUserService>().PropertiesAutowired().SingleInstance();
@@ -58,7 +60,9 @@ internal static class Bootstrapper
         _builder.RegisterType<LoginDialogViewModel>().As<ILoginDialogViewModel>()
             .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies)
             .SingleInstance();
-        _builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().PropertiesAutowired().SingleInstance();
+        _builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>()
+            .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies)
+            .SingleInstance();
         _builder.RegisterType<RegisterDialogViewModel>().As<IRegisterDialogViewModel>()
             .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies)
             .SingleInstance();

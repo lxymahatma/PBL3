@@ -51,4 +51,11 @@ public sealed class DatabaseService : IDatabaseService
         _courseDatabase = await SerializationService.DeserializeAsync<CourseInformation[]>(stream).ConfigureAwait(false);
         Logger.Information("Course database loaded");
     }
+
+    public void DeleteUserFromDatabase(User user)
+    {
+        _userDatabase.Remove(user.UserName!);
+        _userDatabase.Remove(user.Email!);
+        Logger.Information("User {UserName} with email {Email} deleted", user.UserName,user.Email);
+    }
 }

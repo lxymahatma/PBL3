@@ -32,13 +32,8 @@
                        Content="{Binding ContentFrame, Mode=TwoWay}"
                        IsSettingsVisible="False"
                        PaneDisplayMode="Left"
+                       MenuItemsSource="{Binding MenuItems,Mode=OneTime}"
                        SelectedItem="{Binding Selected, Mode=TwoWay}">
-
-        <ui:NavigationView.MenuItems>
-            <ui:NavigationViewItem Content="Home" IconSource="{StaticResource Home}" />
-            <ui:NavigationViewItem Content="Account" IconSource="{StaticResource Account}" />
-        </ui:NavigationView.MenuItems>
-
     </ui:NavigationView>
 
 </Window>

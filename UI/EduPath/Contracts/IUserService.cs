@@ -6,4 +6,6 @@ public interface IUserService
     bool IsRegistered { get; }
     void Login(string key, string password);
     void Register(User user);
+    void DeleteCurrentUser();
+    void ResetPassword();
 }

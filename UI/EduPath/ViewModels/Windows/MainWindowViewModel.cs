@@ -5,20 +5,28 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     [ObservableProperty]
     private NavigationViewItem _selected = null!;
 
+    public NavigationViewItem[] MenuItems { get; } =
+    [
+        new NavigationViewItem { Content = "Home", IconSource = new SymbolIconSource { Symbol = Symbol.Home } },
+        new NavigationViewItem { Content = "Account", IconSource = new SymbolIconSource { Symbol = Symbol.OtherUser } }
+    ];
+
     public Frame ContentFrame => NavigationService.ContentFrame;
 
+    public void SwitchItem(int index) => Selected = MenuItems[index];
+
     [RelayCommand]
-    private Task OpenLoginPageAsync() => DialogService.ShowAsync(LoginDialogViewModel, () => UserService.IsLoggedIn);
+    private Task OpenLoginPageAsync() => DialogService.ShowAsync(LoginDialogViewModel);
 
     partial void OnSelectedChanged(NavigationViewItem value)
     {
         switch (value.Content)
         {
             case "Home":
-                NavigationService.NavigateTo<HomePage>();
+                NavigationService.NavigateToWithoutNotify<HomePage>();
                 break;
             case "Account":
-                NavigationService.NavigateTo<AccountPage>();
+                NavigationService.NavigateToWithoutNotify<AccountPage>();
                 break;
         }
     }

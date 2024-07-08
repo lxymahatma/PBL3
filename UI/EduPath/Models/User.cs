@@ -1,11 +1,17 @@
 namespace EduPath.Models;
 
-public class User
+public sealed partial class User : ObservableObject
 {
-    public string? UserName { get; set; }
+    [ObservableProperty]
+    private string? _email;
+
+    [ObservableProperty]
+    private int? _studentId;
+
+    [ObservableProperty]
+    private string? _userName;
+
     public string? Password { get; set; }
-    public string? Email { get; set; }
-    public int? StudentId { get; set; }
     public bool IsStudent => StudentId is not null;
 
     public void CopyFrom(User user)

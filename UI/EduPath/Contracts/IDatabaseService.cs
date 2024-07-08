@@ -7,4 +7,5 @@ public interface IDatabaseService
     bool RegisterUser(User user);
 
     User? GetUserFromKey(string key);
+    void DeleteUserFromDatabase(User user);
 }
