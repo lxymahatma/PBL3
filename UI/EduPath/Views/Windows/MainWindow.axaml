@@ -28,6 +28,7 @@
     </Design.DataContext>
 
     <ui:NavigationView AlwaysShowHeader="False"
+                       Background="#DAE8FC"
                        Content="{Binding ContentFrame, Mode=TwoWay}"
                        IsSettingsVisible="False"
                        PaneDisplayMode="Left"
