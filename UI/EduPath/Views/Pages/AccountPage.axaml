@@ -45,10 +45,6 @@
                              Footer="{Binding User.Email, Mode=OneWay}"
                              Header="Email" />
 
-        <!--  <ui:SettingsExpander Grid.Row="4" Grid.Column="1"  -->
-        <!--  Footer="{Binding User.Password, Mode=OneWay}"  -->
-        <!--  Header="Password" />  -->
-
         <Panel Grid.Row="5" Grid.Column="1">
             <ui:CommandBarButton Margin="70,0,0,0"
                                  Command="{Binding DeleteAccountCommand, Mode=OneWay}"
