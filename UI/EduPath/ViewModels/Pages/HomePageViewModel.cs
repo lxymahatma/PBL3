@@ -13,6 +13,32 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
 
     [ObservableProperty]
     private string _searchText = string.Empty;
+    
+    [ObservableProperty]
+    private string _normalSearchText = string.Empty;
+    
+    [ObservableProperty]
+    private string _advancedSearchText = string.Empty;
+
+    [ObservableProperty]
+    private string _watermark = "Search for courses by name...";
+
+    partial void OnIsAdvancedSearchChanged(bool value)
+    {
+        if (value)
+        {
+            Watermark = "Search course recommendations by preference...";
+            NormalSearchText = SearchText;
+            SearchText = AdvancedSearchText;
+            return;
+        }
+        else
+        {
+            Watermark = "Search for courses by name...";
+            AdvancedSearchText = SearchText;
+            SearchText = NormalSearchText;
+        }
+    }
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
