@@ -30,7 +30,7 @@ internal static class Bootstrapper
     private static void RegisterComponents()
     {
         _builder.RegisterInstance(Log.Logger).As<ILogger>().SingleInstance();
-        // _builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
+        _builder.RegisterInstance(new OpenAIClient(LoadFromFile())).SingleInstance();
         _builder.RegisterType<User>().SingleInstance();
     }
 
@@ -73,5 +73,13 @@ internal static class Bootstrapper
         DependencyInjectionExtension.Resolver = type => _container.Resolve(type!);
     }
 
-    private static string LoadFromFile(string path = "OpenAIKey.txt") => File.ReadAllText(path);
+    private static string LoadFromFile(string path = "OpenAIKey.txt")
+    {
+        if (!File.Exists(path))
+        {
+            throw new FileNotFoundException("OpenAIKey.txt not found");
+        }
+
+        return File.ReadAllText(path);
+    }
 }
