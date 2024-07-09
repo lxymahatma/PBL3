@@ -2446,7 +2446,7 @@
     "WeekDay": 0,
     "Period": 1,
     "Semester": "Spring",
-    "Course Category": "Global Studies",
+    "CourseCategory": "Global Studies",
     "MinimumGrade": "General"
   },
   {
@@ -2460,7 +2460,7 @@
     "WeekDay": 0,
     "Period": 1,
     "Semester": "Spring",
-    "Course Category": "Psychology and Education",
+    "CourseCategory": "Psychology and Education",
     "MinimumGrade": "General"
   },
   {
@@ -2474,7 +2474,7 @@
     "WeekDay": 0,
     "Period": 1,
     "Semester": "Spring",
-    "Course Category": "Sports and Fitness",
+    "CourseCategory": "Sports and Fitness",
     "MinimumGrade": "General"
   },
   {
@@ -2600,7 +2600,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Law and Politics",
+    "CourseCategory": "Law and Politics",
     "MinimumGrade": "General"
   },
   {
@@ -2614,7 +2614,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Psychology and Education",
+    "CourseCategory": "Psychology and Education",
     "MinimumGrade": "General"
   },
   {
@@ -2628,7 +2628,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Global Studies",
+    "CourseCategory": "Global Studies",
     "MinimumGrade": "General"
   },
   {
@@ -2642,7 +2642,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Global Studies",
+    "CourseCategory": "Global Studies",
     "MinimumGrade": "General"
   },
   {
@@ -2656,7 +2656,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Art and Design",
+    "CourseCategory": "Art and Design",
     "MinimumGrade": "General"
   },
   {
@@ -2670,7 +2670,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Sports and Fitness",
+    "CourseCategory": "Sports and Fitness",
     "MinimumGrade": "General"
   },
   {
@@ -2824,7 +2824,7 @@
     "WeekDay": 0,
     "Period": 4,
     "Semester": "Spring",
-    "Course Category": 3,
+    "CourseCategory": 3,
     "MinimumGrade": "3rd Year"
   },
   {
@@ -2838,7 +2838,7 @@
     "WeekDay": 0,
     "Period": 4,
     "Semester": "Spring",
-    "Course Category": 3,
+    "CourseCategory": 3,
     "MinimumGrade": "2nd Year"
   },
   {
@@ -2852,7 +2852,7 @@
     "WeekDay": 0,
     "Period": 5,
     "Semester": "Spring",
-    "Course Category": "Health Sciences",
+    "CourseCategory": "Health Sciences",
     "MinimumGrade": "General"
   },
   {
@@ -2866,7 +2866,7 @@
     "WeekDay": 0,
     "Period": 5,
     "Semester": "Spring",
-    "Course Category": "Social Sciences",
+    "CourseCategory": "Social Sciences",
     "MinimumGrade": "1st Year"
   },
   {
@@ -2908,7 +2908,7 @@
     "WeekDay": 0,
     "Period": 6,
     "Semester": "Spring",
-    "Course Category": 2,
+    "CourseCategory": 2,
     "MinimumGrade": "General"
   },
   {
@@ -2922,7 +2922,7 @@
     "WeekDay": 0,
     "Period": 6,
     "Semester": "Spring",
-    "Course Category": 3,
+    "CourseCategory": 3,
     "MinimumGrade": "3rd Year"
   },
   {
@@ -2936,7 +2936,7 @@
     "WeekDay": 0,
     "Period": 6,
     "Semester": "Spring",
-    "Course Category": 2,
+    "CourseCategory": 2,
     "MinimumGrade": "1st Year"
   },
   {
@@ -3034,7 +3034,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": 3,
+    "CourseCategory": 3,
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3062,7 +3062,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Sports",
+    "CourseCategory": "Sports",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3076,7 +3076,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Language",
+    "CourseCategory": "Language",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3090,7 +3090,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Language",
+    "CourseCategory": "Language",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3118,7 +3118,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Database Systems",
+    "CourseCategory": "Database Systems",
     "MinimumGrade": "3rd Year"
   },
   {
@@ -3132,7 +3132,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Security and Networks",
+    "CourseCategory": "Security and Networks",
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3146,7 +3146,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Security and Networks",
+    "CourseCategory": "Security and Networks",
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3160,7 +3160,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Information Processing",
+    "CourseCategory": "Information Processing",
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3174,7 +3174,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Information Processing",
+    "CourseCategory": "Information Processing",
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3216,7 +3216,7 @@
     "WeekDay": 0,
     "Period": 4,
     "Semester": "Spring",
-    "Course Category": "Mathematics",
+    "CourseCategory": "Mathematics",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3230,7 +3230,7 @@
     "WeekDay": 0,
     "Period": 4,
     "Semester": "Spring",
-    "Course Category": "Mathematics",
+    "CourseCategory": "Mathematics",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3258,7 +3258,7 @@
     "WeekDay": 0,
     "Period": 4,
     "Semester": "Spring",
-    "Course Category": 3,
+    "CourseCategory": 3,
     "MinimumGrade": "3rd Year"
   },
   {
@@ -3272,7 +3272,7 @@
     "WeekDay": 0,
     "Period": 5,
     "Semester": "Spring",
-    "Course Category": "Programming",
+    "CourseCategory": "Programming",
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3286,7 +3286,7 @@
     "WeekDay": 0,
     "Period": 5,
     "Semester": "Spring",
-    "Course Category": "Programming",
+    "CourseCategory": "Programming",
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3300,7 +3300,7 @@
     "WeekDay": 0,
     "Period": 5,
     "Semester": "Spring",
-    "Course Category": 2,
+    "CourseCategory": 2,
     "MinimumGrade": "General"
   },
   {
@@ -3328,7 +3328,7 @@
     "WeekDay": 0,
     "Period": 5,
     "Semester": "Spring",
-    "Course Category": 2,
+    "CourseCategory": 2,
     "MinimumGrade": "General"
   },
   {
@@ -3356,7 +3356,7 @@
     "WeekDay": 0,
     "Period": 1,
     "Semester": "Spring",
-    "Course Category": "System Design",
+    "CourseCategory": "System Design",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3370,7 +3370,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": 2,
+    "CourseCategory": 2,
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3384,7 +3384,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Project Management",
+    "CourseCategory": "Project Management",
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3398,7 +3398,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Programming",
+    "CourseCategory": "Programming",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3412,7 +3412,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Programming",
+    "CourseCategory": "Programming",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3426,7 +3426,7 @@
     "WeekDay": 0,
     "Period": 2,
     "Semester": "Spring",
-    "Course Category": "Sports",
+    "CourseCategory": "Sports",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3440,7 +3440,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Mathematics",
+    "CourseCategory": "Mathematics",
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3454,7 +3454,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Programming",
+    "CourseCategory": "Programming",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3468,7 +3468,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": "Programming",
+    "CourseCategory": "Programming",
     "MinimumGrade": "1st Year"
   },
   {
@@ -3482,7 +3482,7 @@
     "WeekDay": 0,
     "Period": 3,
     "Semester": "Spring",
-    "Course Category": 3,
+    "CourseCategory": 3,
     "MinimumGrade": "3rd Year"
   },
   {
@@ -3496,7 +3496,7 @@
     "WeekDay": 0,
     "Period": 4,
     "Semester": "Spring",
-    "Course Category": "Programming",
+    "CourseCategory": "Programming",
     "MinimumGrade": "2nd Year"
   },
   {
@@ -3510,7 +3510,7 @@
     "WeekDay": 0,
     "Period": 5,
     "Semester": "Spring",
-    "Course Category": "Liberal Arts",
+    "CourseCategory": "Liberal Arts",
     "MinimumGrade": "General"
   },
   {
@@ -3524,7 +3524,7 @@
     "WeekDay": 0,
     "Period": 5,
     "Semester": "Spring",
-    "Course Category": "Math",
+    "CourseCategory": "Math",
     "MinimumGrade": "2nd Year"
   }
 ]
