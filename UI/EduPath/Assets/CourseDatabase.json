@@ -1,8 +1,6 @@
 [
   {
     "CourseId": 31461,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解103",
     "Lecturer": "竹本 義樹",
@@ -15,8 +13,6 @@
   },
   {
     "CourseId": 31462,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解103",
     "Lecturer": "平川 尚子",
@@ -29,8 +25,6 @@
   },
   {
     "CourseId": 31477,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解105",
     "Lecturer": "谷村 清",
@@ -43,8 +37,6 @@
   },
   {
     "CourseId": 31478,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解105",
     "Lecturer": "林 宏敏",
@@ -57,8 +49,6 @@
   },
   {
     "CourseId": 31506,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解107",
     "Lecturer": "彩野 菜緒",
@@ -71,8 +61,6 @@
   },
   {
     "CourseId": 31507,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解107",
     "Lecturer": "金 明姫",
@@ -85,8 +73,6 @@
   },
   {
     "CourseId": 31539,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解109",
     "Lecturer": "PETERSON SUNG HO",
@@ -99,8 +85,6 @@
   },
   {
     "CourseId": 31540,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解109",
     "Lecturer": "CONDON BARRY",
@@ -113,8 +97,6 @@
   },
   {
     "CourseId": 31579,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Academic Literacy 302",
     "Lecturer": "BALL SIMON MICHAEL",
@@ -127,8 +109,6 @@
   },
   {
     "CourseId": 31582,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Academic Literacy 302",
     "Lecturer": "WHITE JEREMY STEWART",
@@ -141,8 +121,6 @@
   },
   {
     "CourseId": 31744,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Elective",
     "CourseName": "音声言語情報処理2",
     "Lecturer": "宮前 敏也 他",
@@ -155,8 +133,6 @@
   },
   {
     "CourseId": 51781,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "音声言語情報処理2",
     "Lecturer": "小池 和幸",
@@ -169,8 +145,6 @@
   },
   {
     "CourseId": 31465,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解103",
     "Lecturer": "竹本 義樹",
@@ -183,8 +157,6 @@
   },
   {
     "CourseId": 31466,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解103",
     "Lecturer": "平川 尚子",
@@ -197,8 +169,6 @@
   },
   {
     "CourseId": 31484,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解105",
     "Lecturer": "谷村 清",
@@ -211,8 +181,6 @@
   },
   {
     "CourseId": 31485,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解105",
     "Lecturer": "林 宏敏",
@@ -225,8 +193,6 @@
   },
   {
     "CourseId": 31513,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解107",
     "Lecturer": "彩野 菜緒",
@@ -239,8 +205,6 @@
   },
   {
     "CourseId": 31514,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解107",
     "Lecturer": "金 明姫",
@@ -253,8 +217,6 @@
   },
   {
     "CourseId": 31539,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解109",
     "Lecturer": "PETERSON SUNG HO",
@@ -267,8 +229,6 @@
   },
   {
     "CourseId": 31540,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解109",
     "Lecturer": "CONDON BARRY",
@@ -281,8 +241,6 @@
   },
   {
     "CourseId": 31583,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Academic Literacy 302",
     "Lecturer": "BALL SIMON MICHAEL",
@@ -295,8 +253,6 @@
   },
   {
     "CourseId": 31586,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Academic Literacy 302",
     "Lecturer": "WHITE JEREMY STEWART",
@@ -309,8 +265,6 @@
   },
   {
     "CourseId": 31602,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "基礎数学1",
     "Lecturer": "加藤 正輝",
@@ -323,8 +277,6 @@
   },
   {
     "CourseId": 31611,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "基礎数学演習1",
     "Lecturer": "村田 学",
@@ -337,8 +289,6 @@
   },
   {
     "CourseId": 31612,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "基礎数学演習1",
     "Lecturer": "亀田 尚弥",
@@ -351,8 +301,6 @@
   },
   {
     "CourseId": 31644,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Engineering Mathematics 1",
     "Lecturer": "劉 文献",
@@ -365,8 +313,6 @@
   },
   {
     "CourseId": 31645,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Computing Mathematics",
     "Lecturer": "劉 文献",
@@ -379,8 +325,6 @@
   },
   {
     "CourseId": 31720,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "コンピュータビジョン工学",
     "Lecturer": "小川 博也",
@@ -393,8 +337,6 @@
   },
   {
     "CourseId": 31738,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "ワイヤレス通信システム",
     "Lecturer": "錦見 勝彦",
@@ -407,8 +349,6 @@
   },
   {
     "CourseId": 31753,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "音声言語情報処理2",
     "Lecturer": "小池 和幸",
@@ -421,8 +361,6 @@
   },
   {
     "CourseId": 35778,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "東アジア史蹟学",
     "Lecturer": "勢島 聡",
@@ -435,8 +373,6 @@
   },
   {
     "CourseId": 51733,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "30",
     "CourseType": "Elective",
     "CourseName": "エンジニアとビデオインテラシティ",
     "Lecturer": "福島 真澄",
@@ -449,8 +385,6 @@
   },
   {
     "CourseId": 53186,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "25",
     "CourseType": "Elective",
     "CourseName": "Academic Skills 2",
     "Lecturer": "KANDUBODA P. B. B",
@@ -463,8 +397,6 @@
   },
   {
     "CourseId": 53187,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "25",
     "CourseType": "Elective",
     "CourseName": "Intermediate Academic Skills",
     "Lecturer": "KANDUBODA P. B. B",
@@ -477,8 +409,6 @@
   },
   {
     "CourseId": 14917,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "30",
     "CourseType": "Teaching Seminar",
     "CourseName": "教養セミナー",
     "Lecturer": "長平 彰夫",
@@ -491,8 +421,6 @@
   },
   {
     "CourseId": 31441,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解101",
     "Lecturer": "平川 由希子",
@@ -505,8 +433,6 @@
   },
   {
     "CourseId": 31442,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解101",
     "Lecturer": "杉野 直樹",
@@ -519,8 +445,6 @@
   },
   {
     "CourseId": 31475,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解105",
     "Lecturer": "杉本 直樹",
@@ -533,8 +457,6 @@
   },
   {
     "CourseId": 31476,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解105",
     "Lecturer": "谷村 清",
@@ -547,8 +469,6 @@
   },
   {
     "CourseId": 31503,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語読解109",
     "Lecturer": "DAUER HARRY",
@@ -561,8 +481,6 @@
   },
   {
     "CourseId": 31533,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級109",
     "Lecturer": "WHITE JEREMY STEWART",
@@ -575,8 +493,6 @@
   },
   {
     "CourseId": 31534,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級109",
     "Lecturer": "金 明姫",
@@ -589,8 +505,6 @@
   },
   {
     "CourseId": 31535,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級109",
     "Lecturer": "BALL SIMON MICHAEL",
@@ -603,8 +517,6 @@
   },
   {
     "CourseId": 31537,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級109",
     "Lecturer": "PETERSON SUNG HO",
@@ -617,8 +529,6 @@
   },
   {
     "CourseId": 31538,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級109",
     "Lecturer": "CONDON BARRY",
@@ -631,8 +541,6 @@
   },
   {
     "CourseId": 31600,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学1",
     "Lecturer": "平岡 範高",
@@ -645,8 +553,6 @@
   },
   {
     "CourseId": 31601,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学1",
     "Lecturer": "吉田 尚矢",
@@ -659,8 +565,6 @@
   },
   {
     "CourseId": 31619,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "平岡 範高",
@@ -673,8 +577,6 @@
   },
   {
     "CourseId": 31639,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "平岡 範高",
@@ -687,8 +589,6 @@
   },
   {
     "CourseId": 31673,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Introduction to Differential Equations",
     "Lecturer": "SVININ MIKHAIL",
@@ -701,8 +601,6 @@
   },
   {
     "CourseId": 31705,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "プログラミング演習2",
     "Lecturer": "田中 賢一郎",
@@ -715,8 +613,6 @@
   },
   {
     "CourseId": 31707,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "プログラミング演習2",
     "Lecturer": "劉 家駿 他",
@@ -729,8 +625,6 @@
   },
   {
     "CourseId": 31712,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "データ構造とアルゴリズム",
     "Lecturer": "吉田 剛裕",
@@ -743,8 +637,6 @@
   },
   {
     "CourseId": 31755,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "オブジェクト指向論",
     "Lecturer": "服部 亮充",
@@ -757,8 +649,6 @@
   },
   {
     "CourseId": 31811,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Web Information Engineering",
     "Lecturer": "PITUXCOOSUVARN M.",
@@ -771,8 +661,6 @@
   },
   {
     "CourseId": 35798,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Core",
     "CourseName": "科学と技術の歴史",
     "Lecturer": "山崎 文哉",
@@ -785,8 +673,6 @@
   },
   {
     "CourseId": 31445,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語初級101",
     "Lecturer": "鈴木 ともこ",
@@ -799,8 +685,6 @@
   },
   {
     "CourseId": 31446,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語初級101",
     "Lecturer": "杉野 直樹",
@@ -813,8 +697,6 @@
   },
   {
     "CourseId": 31478,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級105",
     "Lecturer": "谷村 緑",
@@ -827,8 +709,6 @@
   },
   {
     "CourseId": 31483,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級105",
     "Lecturer": "DAUER HARRY",
@@ -841,8 +721,6 @@
   },
   {
     "CourseId": 31454,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級109",
     "Lecturer": "PETERSON SUNG HO",
@@ -855,8 +733,6 @@
   },
   {
     "CourseId": 31457,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級109",
     "Lecturer": "BALL SIMON MICHAEL",
@@ -869,8 +745,6 @@
   },
   {
     "CourseId": 31588,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Professional Communication 303",
     "Lecturer": "WHITE JEREMY STEWART",
@@ -883,8 +757,6 @@
   },
   {
     "CourseId": 31589,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Professional Communication 109",
     "Lecturer": "CONDON BARRY",
@@ -897,8 +769,6 @@
   },
   {
     "CourseId": 31590,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Professional Communication 303",
     "Lecturer": "金 明現",
@@ -911,8 +781,6 @@
   },
   {
     "CourseId": 31597,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学1",
     "Lecturer": "加藤 正輝",
@@ -925,8 +793,6 @@
   },
   {
     "CourseId": 31598,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学1",
     "Lecturer": "吉田 尚矢",
@@ -939,8 +805,6 @@
   },
   {
     "CourseId": 31613,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "村田 学",
@@ -953,8 +817,6 @@
   },
   {
     "CourseId": 31614,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "村田 学",
@@ -967,8 +829,6 @@
   },
   {
     "CourseId": 31697,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "プログラミング演習2",
     "Lecturer": "横原 絵里奈",
@@ -981,8 +841,6 @@
   },
   {
     "CourseId": 31758,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "ヒューマンインタフェース",
     "Lecturer": "泉 朋子 他",
@@ -995,8 +853,6 @@
   },
   {
     "CourseId": 51798,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Core",
     "CourseName": "現代の世界経済",
     "Lecturer": "杉本 良雄",
@@ -1009,8 +865,6 @@
   },
   {
     "CourseId": 51858,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Core",
     "CourseName": "スポーツのサイエンス",
     "Lecturer": "徳武 岳",
@@ -1023,8 +877,6 @@
   },
   {
     "CourseId": 31517,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級107",
     "Lecturer": "鈴木 ともこ",
@@ -1037,8 +889,6 @@
   },
   {
     "CourseId": 31693,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "50",
     "CourseType": "Common Specialized",
     "CourseName": "Information Science in Action",
     "Lecturer": "VALENTINUS ROBY H.",
@@ -1051,8 +901,6 @@
   },
   {
     "CourseId": 31778,
-    "RegistrationType": "Elective",
-    "EnrollmentLimit": "",
     "CourseType": "Major Specialized",
     "CourseName": "パターン認識",
     "Lecturer": "山下 洋一",
@@ -1065,8 +913,6 @@
   },
   {
     "CourseId": 51730,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Teaching",
     "CourseName": "日本の近現代と立命館",
     "Lecturer": "桐川 浩敏 他",
@@ -1079,8 +925,6 @@
   },
   {
     "CourseId": 51789,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "80",
     "CourseType": "Teaching",
     "CourseName": "映像メディア実践入門",
     "Lecturer": "瀧川 元気",
@@ -1093,8 +937,6 @@
   },
   {
     "CourseId": 51790,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "80",
     "CourseType": "Teaching",
     "CourseName": "特殊講義 (映像メディア実践入門)",
     "Lecturer": "瀧川 元気",
@@ -1107,8 +949,6 @@
   },
   {
     "CourseId": 14777,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "98",
     "CourseType": "Teaching",
     "CourseName": "Foundations of Data Science and AI",
     "Lecturer": "西門 秀人",
@@ -1121,8 +961,6 @@
   },
   {
     "CourseId": 35811,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "400",
     "CourseType": "Teaching",
     "CourseName": "データサイエンス・AI基礎",
     "Lecturer": "西門 秀人",
@@ -1135,8 +973,6 @@
   },
   {
     "CourseId": 31433,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語入門091",
     "Lecturer": "桐原 雅子",
@@ -1149,8 +985,6 @@
   },
   {
     "CourseId": 31434,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語入門091",
     "Lecturer": "杉野 直樹",
@@ -1163,8 +997,6 @@
   },
   {
     "CourseId": 31454,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語初級102",
     "Lecturer": "早川 尚子",
@@ -1177,8 +1009,6 @@
   },
   {
     "CourseId": 31455,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語初級102",
     "Lecturer": "野野 亜也子",
@@ -1191,8 +1021,6 @@
   },
   {
     "CourseId": 31560,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級110",
     "Lecturer": "CONDON BARRY",
@@ -1205,8 +1033,6 @@
   },
   {
     "CourseId": 31561,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級110",
     "Lecturer": "HOLT NEIL ADRIAN",
@@ -1219,8 +1045,6 @@
   },
   {
     "CourseId": 31625,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "200",
     "CourseType": "Core",
     "CourseName": "数学1",
     "Lecturer": "村井 幸彦",
@@ -1233,8 +1057,6 @@
   },
   {
     "CourseId": 31686,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "デジタル信号処理",
     "Lecturer": "桐 眞庭",
@@ -1247,8 +1069,6 @@
   },
   {
     "CourseId": 31687,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "デジタル信号処理",
     "Lecturer": "田中 賢一郎 他",
@@ -1261,8 +1081,6 @@
   },
   {
     "CourseId": 31688,
-    "RegistrationType": "Elective",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "デジタル信号処理",
     "Lecturer": "柵田 智弘",
@@ -1275,8 +1093,6 @@
   },
   {
     "CourseId": 31803,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Distributed Systems",
     "Lecturer": "SALAMA SHADY",
@@ -1289,8 +1105,6 @@
   },
   {
     "CourseId": 51864,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "50",
     "CourseType": "Teaching",
     "CourseName": "スポーツ方法実習 I（B）",
     "Lecturer": "徳武 岳",
@@ -1303,8 +1117,6 @@
   },
   {
     "CourseId": 31430,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語入門091",
     "Lecturer": "桐原 雅子",
@@ -1317,8 +1129,6 @@
   },
   {
     "CourseId": 31431,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語入門091",
     "Lecturer": "杉野 直樹",
@@ -1331,8 +1141,6 @@
   },
   {
     "CourseId": 31451,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語初級102",
     "Lecturer": "早川 尚子",
@@ -1345,8 +1153,6 @@
   },
   {
     "CourseId": 31553,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級110",
     "Lecturer": "CONDON BARRY",
@@ -1359,8 +1165,6 @@
   },
   {
     "CourseId": 31554,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級110",
     "Lecturer": "HOLT NEIL ADRIAN",
@@ -1373,8 +1177,6 @@
   },
   {
     "CourseId": 31607,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学3",
     "Lecturer": "平岡 範夫",
@@ -1387,8 +1189,6 @@
   },
   {
     "CourseId": 31608,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学3",
     "Lecturer": "村田 学",
@@ -1401,8 +1201,6 @@
   },
   {
     "CourseId": 31615,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "平岡 範高",
@@ -1415,8 +1213,6 @@
   },
   {
     "CourseId": 31616,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "加藤 正輝",
@@ -1429,8 +1225,6 @@
   },
   {
     "CourseId": 31626,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "200",
     "CourseType": "Core",
     "CourseName": "物理1",
     "Lecturer": "村井 幸彦",
@@ -1443,8 +1237,6 @@
   },
   {
     "CourseId": 31684,
-    "RegistrationType": "ISSE",
-    "EnrollmentLimit": "",
     "CourseType": "Common Specialized",
     "CourseName": "デジタル信号処理",
     "Lecturer": "CHANDLER DAMON M.",
@@ -1457,8 +1249,6 @@
   },
   {
     "CourseId": 31769,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Major Specialized",
     "CourseName": "実世界情報演習3",
     "Lecturer": "木村 朝子 他",
@@ -1471,8 +1261,6 @@
   },
   {
     "CourseId": 31775,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Major Specialized",
     "CourseName": "メディアプロジェクト演習2",
     "Lecturer": "耿 敏庭 他",
@@ -1485,8 +1273,6 @@
   },
   {
     "CourseId": 31804,
-    "RegistrationType": "ISSE",
-    "EnrollmentLimit": "",
     "CourseType": "Major Specialized",
     "CourseName": "Systems Ergonomics",
     "Lecturer": "COOPER ERIC WALLACE",
@@ -1499,8 +1285,6 @@
   },
   {
     "CourseId": 31805,
-    "RegistrationType": "ISSE",
-    "EnrollmentLimit": "",
     "CourseType": "Major Specialized",
     "CourseName": "Ergonomics and Affective Engineering",
     "Lecturer": "COOPER ERIC WALLACE",
@@ -1513,8 +1297,6 @@
   },
   {
     "CourseId": 35723,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Teaching",
     "CourseName": "世界と日本の食文化",
     "Lecturer": "工藤 さくら",
@@ -1527,8 +1309,6 @@
   },
   {
     "CourseId": 35884,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "300",
     "CourseType": "Teaching",
     "CourseName": "現代人とヘルスケア",
     "Lecturer": "岡本 嘉高",
@@ -1541,8 +1321,6 @@
   },
   {
     "CourseId": 51758,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Teaching",
     "CourseName": "宗教と社会",
     "Lecturer": "中島 毎子",
@@ -1555,8 +1333,6 @@
   },
   {
     "CourseId": 51839,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Teaching",
     "CourseName": "Introduction to Global Justice",
     "Lecturer": "安西 富美",
@@ -1569,8 +1345,6 @@
   },
   {
     "CourseId": 51847,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "100",
     "CourseType": "Teaching",
     "CourseName": "現代社会とボランティア",
     "Lecturer": "秋吉 恵",
@@ -1583,8 +1357,6 @@
   },
   {
     "CourseId": 51855,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Teaching",
     "CourseName": "スポーツと現代社会",
     "Lecturer": "塩見 一矢",
@@ -1597,8 +1369,6 @@
   },
   {
     "CourseId": 51858,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Teaching",
     "CourseName": "スポーツ方法実習Ⅰ(D)",
     "Lecturer": "徳武 岳",
@@ -1611,8 +1381,6 @@
   },
   {
     "CourseId": 53196,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "",
     "CourseType": "Teaching",
     "CourseName": "Cross-cultural Encounters 1",
     "Lecturer": "糸井 貴之",
@@ -1625,8 +1393,6 @@
   },
   {
     "CourseId": 53197,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "35",
     "CourseType": "Teaching",
     "CourseName": "Cross-cultural Encounters",
     "Lecturer": "糸井 貴之",
@@ -1639,8 +1405,6 @@
   },
   {
     "CourseId": 31469,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語初級104",
     "Lecturer": "野澤 和映",
@@ -1653,8 +1417,6 @@
   },
   {
     "CourseId": 31470,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語初級104",
     "Lecturer": "金 明現",
@@ -1667,8 +1429,6 @@
   },
   {
     "CourseId": 31491,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級106",
     "Lecturer": "早川 尚子",
@@ -1681,8 +1441,6 @@
   },
   {
     "CourseId": 31492,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級106",
     "Lecturer": "桐原 雅子",
@@ -1695,8 +1453,6 @@
   },
   {
     "CourseId": 31521,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級108",
     "Lecturer": "DURRANT BRIAN JAMES",
@@ -1709,8 +1465,6 @@
   },
   {
     "CourseId": 31522,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級108",
     "Lecturer": "MASTERS Seth Demian",
@@ -1723,8 +1477,6 @@
   },
   {
     "CourseId": 31555,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級110",
     "Lecturer": "CONDON BARRY",
@@ -1737,8 +1489,6 @@
   },
   {
     "CourseId": 31556,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級110",
     "Lecturer": "HOLT NEIL ADRIAN",
@@ -1751,8 +1501,6 @@
   },
   {
     "CourseId": 31570,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Professional Communication 301",
     "Lecturer": "DAUER HARRY",
@@ -1765,8 +1513,6 @@
   },
   {
     "CourseId": 31571,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Professional Communication 301",
     "Lecturer": "BALL SIMON MICHAEL",
@@ -1779,8 +1525,6 @@
   },
   {
     "CourseId": 31604,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学3",
     "Lecturer": "内海 和樹",
@@ -1793,8 +1537,6 @@
   },
   {
     "CourseId": 31605,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学3",
     "Lecturer": "吉田 尚矢",
@@ -1807,8 +1549,6 @@
   },
   {
     "CourseId": 31609,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "加藤 正輝",
@@ -1821,8 +1561,6 @@
   },
   {
     "CourseId": 31610,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "平岡 範高",
@@ -1835,8 +1573,6 @@
   },
   {
     "CourseId": 31621,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "化学1",
     "Lecturer": "北沢 剛一郎",
@@ -1849,8 +1585,6 @@
   },
   {
     "CourseId": 31622,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "化学1",
     "Lecturer": "北沢 剛一郎",
@@ -1863,8 +1597,6 @@
   },
   {
     "CourseId": 31788,
-    "RegistrationType": "Elective",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "最適化数学",
     "Lecturer": "國田 耕平",
@@ -1877,8 +1609,6 @@
   },
   {
     "CourseId": 35799,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Teaching",
     "CourseName": "科学と技術の歴史",
     "Lecturer": "花木 克清",
@@ -1891,8 +1621,6 @@
   },
   {
     "CourseId": 51861,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "60",
     "CourseType": "Teaching",
     "CourseName": "スポーツ方法実習Ⅰ(A)",
     "Lecturer": "徳武 岳",
@@ -1905,8 +1633,6 @@
   },
   {
     "CourseId": 14735,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Teaching",
     "CourseName": "宇宙科学",
     "Lecturer": "横山 修一",
@@ -1919,8 +1645,6 @@
   },
   {
     "CourseId": 31473,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語初級104",
     "Lecturer": "野澤 和映",
@@ -1933,8 +1657,6 @@
   },
   {
     "CourseId": 31474,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語初級104",
     "Lecturer": "金 明現",
@@ -1947,8 +1669,6 @@
   },
   {
     "CourseId": 31498,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級106",
     "Lecturer": "桐原 雅子",
@@ -1961,8 +1681,6 @@
   },
   {
     "CourseId": 31499,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級106",
     "Lecturer": "早川 尚子",
@@ -1975,8 +1693,6 @@
   },
   {
     "CourseId": 31528,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級108",
     "Lecturer": "DURRANT BRIAN JAMES",
@@ -1989,8 +1705,6 @@
   },
   {
     "CourseId": 31529,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級108",
     "Lecturer": "MASTERS Seth Demian",
@@ -2003,8 +1717,6 @@
   },
   {
     "CourseId": 31562,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級110",
     "Lecturer": "CONDON BARRY",
@@ -2017,8 +1729,6 @@
   },
   {
     "CourseId": 31563,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語上級110",
     "Lecturer": "HOLT NEIL ADRIAN",
@@ -2031,8 +1741,6 @@
   },
   {
     "CourseId": 31572,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Professional Communication 301",
     "Lecturer": "DAUER HARRY",
@@ -2045,8 +1753,6 @@
   },
   {
     "CourseId": 31575,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "Professional Communication 301",
     "Lecturer": "BALL SIMON MICHAEL",
@@ -2059,8 +1765,6 @@
   },
   {
     "CourseId": 31603,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学3",
     "Lecturer": "原森 晋",
@@ -2073,8 +1777,6 @@
   },
   {
     "CourseId": 31606,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学3",
     "Lecturer": "村田 学",
@@ -2087,8 +1789,6 @@
   },
   {
     "CourseId": 31617,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "平岡 範高",
@@ -2101,8 +1801,6 @@
   },
   {
     "CourseId": 31618,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "数学演習1",
     "Lecturer": "加藤 正輝",
@@ -2115,8 +1813,6 @@
   },
   {
     "CourseId": 31665,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Common Specialized",
     "CourseName": "Introduction to Information Systems Engineering",
     "Lecturer": "VALENTINUS ROBY H.",
@@ -2129,8 +1825,6 @@
   },
   {
     "CourseId": 31727,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Major Specialized",
     "CourseName": "ソフトウェア仕様化技法",
     "Lecturer": "大西 淳",
@@ -2143,8 +1837,6 @@
   },
   {
     "CourseId": 31752,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Major Specialized",
     "CourseName": "認知工学",
     "Lecturer": "泉 朋子",
@@ -2157,8 +1849,6 @@
   },
   {
     "CourseId": 32001,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "150",
     "CourseType": "Global & Career Development",
     "CourseName": "日本語表現技術",
     "Lecturer": "南里 一郎",
@@ -2171,8 +1861,6 @@
   },
   {
     "CourseId": 51845,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Teaching",
     "CourseName": "地域参加学習入門",
     "Lecturer": "秋吉 恵",
@@ -2185,8 +1873,6 @@
   },
   {
     "CourseId": 31532,
-    "RegistrationType": "Office",
-    "EnrollmentLimit": "",
     "CourseType": "Core",
     "CourseName": "英語中級108",
     "Lecturer": "金 明現",
@@ -2199,8 +1885,6 @@
   },
   {
     "CourseId": 32003,
-    "RegistrationType": "Special Application",
-    "EnrollmentLimit": "",
     "CourseType": "Global & Career Development",
     "CourseName": "情報技術実践1",
     "Lecturer": "西川 郁子",
@@ -2213,8 +1897,6 @@
   },
   {
     "CourseId": 35746,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "Teaching",
     "CourseName": "経済と社会",
     "Lecturer": "三喜 憲一",
@@ -2227,8 +1909,6 @@
   },
   {
     "CourseId": 35850,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "100",
     "CourseType": "Teaching",
     "CourseName": "Non-verbal Communication",
     "Lecturer": "野澤 和映",
@@ -2241,8 +1921,6 @@
   },
   {
     "CourseId": 51844,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "200",
     "CourseType": "Teaching",
     "CourseName": "仕事とキャリア",
     "Lecturer": "長田 尚子",
@@ -2255,8 +1933,6 @@
   },
   {
     "CourseId": 51887,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "20",
     "CourseType": "Teaching",
     "CourseName": "教養セミナール",
     "Lecturer": "中田 友貴",
@@ -2269,8 +1945,6 @@
   },
   {
     "CourseId": 32003,
-    "RegistrationType": "Special Application",
-    "EnrollmentLimit": "",
     "CourseType": "Global & Career Development",
     "CourseName": "情報技術実践1",
     "Lecturer": "西川 郁子",
@@ -2283,8 +1957,6 @@
   },
   {
     "CourseId": 31653,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "情報工学総論習",
     "Lecturer": "丸山 勝久",
@@ -2297,8 +1969,6 @@
   },
   {
     "CourseId": 31654,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "情報工学総論習",
     "Lecturer": "李 周浩",
@@ -2311,8 +1981,6 @@
   },
   {
     "CourseId": 31655,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "情報工学総論習",
     "Lecturer": "野口 拓",
@@ -2325,8 +1993,6 @@
   },
   {
     "CourseId": 31656,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "情報工学総論習",
     "Lecturer": "福本 淳一",
@@ -2339,8 +2005,6 @@
   },
   {
     "CourseId": 31657,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "情報工学総論習",
     "Lecturer": "西浦 敬信",
@@ -2353,8 +2017,6 @@
   },
   {
     "CourseId": 31658,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "情報工学総論習",
     "Lecturer": "服部 宏充",
@@ -2367,8 +2029,6 @@
   },
   {
     "CourseId": 31659,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "情報工学総論習",
     "Lecturer": "THAWONMAS RUCK",
@@ -2381,8 +2041,6 @@
   },
   {
     "CourseId": 31681,
-    "RegistrationType": "SA SN",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "コンピュータネットワーク",
     "Lecturer": "山本 寛",
@@ -2395,8 +2053,6 @@
   },
   {
     "CourseId": 31682,
-    "RegistrationType": "FSD メ",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "コンピュータネットワーク",
     "Lecturer": "西村 俊和",
@@ -2409,8 +2065,6 @@
   },
   {
     "CourseId": 31683,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year and 3rd Year",
     "CourseName": "コンピュータネットワーク",
     "Lecturer": "島田 伸敬",
@@ -2423,8 +2077,6 @@
   },
   {
     "CourseId": 31743,
-    "RegistrationType": "SA SN",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "システムセキュリティ",
     "Lecturer": "上原 哲太郎",
@@ -2437,8 +2089,6 @@
   },
   {
     "CourseId": 35754,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "350",
     "CourseType": "General",
     "CourseName": "現代の国際関係と日本",
     "Lecturer": "金 容賛",
@@ -2451,8 +2101,6 @@
   },
   {
     "CourseId": 51731,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "100",
     "CourseType": "General",
     "CourseName": "ピア・サポート論",
     "Lecturer": "中島 英博",
@@ -2465,8 +2113,6 @@
   },
   {
     "CourseId": 51867,
-    "RegistrationType": "Lottery",
-    "EnrollmentLimit": "30",
     "CourseType": "General",
     "CourseName": "スポーツ方法実習 I (C)",
     "Lecturer": "徳武 岳",
@@ -2479,8 +2125,6 @@
   },
   {
     "CourseId": 31646,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "Introduction to Experimentation",
     "Lecturer": "中田 慧",
@@ -2493,8 +2137,6 @@
   },
   {
     "CourseId": 31647,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "Experimentation 1",
     "Lecturer": "松井 翔平",
@@ -2507,8 +2149,6 @@
   },
   {
     "CourseId": 31677,
-    "RegistrationType": "SA SN",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "ソフトウェア工学",
     "Lecturer": "丸山 勝久",
@@ -2521,8 +2161,6 @@
   },
   {
     "CourseId": 31678,
-    "RegistrationType": "FSD メ",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "ソフトウェア工学",
     "Lecturer": "小平 タツヤ",
@@ -2535,8 +2173,6 @@
   },
   {
     "CourseId": 31703,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "プログラミング言語2",
     "Lecturer": "森田 義之",
@@ -2549,8 +2185,6 @@
   },
   {
     "CourseId": 31704,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "プログラミング言語2",
     "Lecturer": "TRAN DINH TUAN",
@@ -2563,8 +2197,6 @@
   },
   {
     "CourseId": 31736,
-    "RegistrationType": "SN",
-    "EnrollmentLimit": "40",
     "CourseType": "3rd Year",
     "CourseName": "セキュアシステム開発実習",
     "Lecturer": "三利 ハーベイ",
@@ -2577,8 +2209,6 @@
   },
   {
     "CourseId": 31809,
-    "RegistrationType": "ISSE",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "Image Processing",
     "Lecturer": "結城 浩",
@@ -2591,8 +2221,6 @@
   },
   {
     "CourseId": 35668,
-    "RegistrationType": "250",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "日本国憲法",
     "Lecturer": "上出 浩",
@@ -2605,8 +2233,6 @@
   },
   {
     "CourseId": 51732,
-    "RegistrationType": "100",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "ピア・サポート論",
     "Lecturer": "中島 英博",
@@ -2619,8 +2245,6 @@
   },
   {
     "CourseId": 51771,
-    "RegistrationType": "350",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "世界の言語と文化",
     "Lecturer": "伊井 拓哉",
@@ -2633,8 +2257,6 @@
   },
   {
     "CourseId": 51772,
-    "RegistrationType": "350",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "世界の言語と文化",
     "Lecturer": "金 智根",
@@ -2647,8 +2269,6 @@
   },
   {
     "CourseId": 51837,
-    "RegistrationType": "General",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "Understanding Visual Culture",
     "Lecturer": "永田 薫子",
@@ -2661,8 +2281,6 @@
   },
   {
     "CourseId": 51871,
-    "RegistrationType": "50",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "スポーツ方法実習 I (D)",
     "Lecturer": "徳武 岳",
@@ -2675,8 +2293,6 @@
   },
   {
     "CourseId": 31641,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "計算機科学概論",
     "Lecturer": "森 和彦",
@@ -2689,8 +2305,6 @@
   },
   {
     "CourseId": 31642,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "計算機科学概論",
     "Lecturer": "藤井 隆広",
@@ -2703,8 +2317,6 @@
   },
   {
     "CourseId": 31643,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "計算機科学概論",
     "Lecturer": "川上 洋平",
@@ -2717,8 +2329,6 @@
   },
   {
     "CourseId": 31715,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "データ構造とアルゴリズム",
     "Lecturer": "森田 義之",
@@ -2731,8 +2341,6 @@
   },
   {
     "CourseId": 31719,
-    "RegistrationType": "SA",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "システムデータベース導入",
     "Lecturer": "山下 秀樹",
@@ -2745,8 +2353,6 @@
   },
   {
     "CourseId": 31741,
-    "RegistrationType": "SN",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "セキュリティ・ネットワーク実験3",
     "Lecturer": "山田 空也",
@@ -2759,8 +2365,6 @@
   },
   {
     "CourseId": 31742,
-    "RegistrationType": "SN",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "セキュリティ・ネットワーク実験3",
     "Lecturer": "上原 桜太郎",
@@ -2773,8 +2377,6 @@
   },
   {
     "CourseId": 31745,
-    "RegistrationType": "FSD",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "先端科学テクノロジー研究1",
     "Lecturer": "足立 朝志",
@@ -2787,8 +2389,6 @@
   },
   {
     "CourseId": 31770,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "実世界情報処理3",
     "Lecturer": "柏田 徹也",
@@ -2801,8 +2401,6 @@
   },
   {
     "CourseId": 31771,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "実世界情報処理3",
     "Lecturer": "柏田 徹也",
@@ -2815,8 +2413,6 @@
   },
   {
     "CourseId": 31747,
-    "RegistrationType": "FSD",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "Webアプリケーション",
     "Lecturer": "森 和彦",
@@ -2829,8 +2425,6 @@
   },
   {
     "CourseId": 31764,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "機械工学概論",
     "Lecturer": "瀬間 康博",
@@ -2843,8 +2437,6 @@
   },
   {
     "CourseId": 35704,
-    "RegistrationType": "350",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "メンタルヘルス",
     "Lecturer": "森田 道子",
@@ -2857,8 +2449,6 @@
   },
   {
     "CourseId": 35794,
-    "RegistrationType": "350",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "情報社会と倫理",
     "Lecturer": "小坂 和郎",
@@ -2871,8 +2461,6 @@
   },
   {
     "CourseId": 53192,
-    "RegistrationType": "35",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "Cross-cultural Encounters 1",
     "Lecturer": "鈴木 雄介",
@@ -2885,8 +2473,6 @@
   },
   {
     "CourseId": 53193,
-    "RegistrationType": "35",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "Cross-cultural Encounters 1",
     "Lecturer": "鈴木 雄介",
@@ -2899,8 +2485,6 @@
   },
   {
     "CourseId": 14678,
-    "RegistrationType": "350",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "国際法概論",
     "Lecturer": "栗田 雄一",
@@ -2913,8 +2497,6 @@
   },
   {
     "CourseId": 32004,
-    "RegistrationType": "ISSE",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "ITを活用した視覚文化入門",
     "Lecturer": "西川 輝昭",
@@ -2927,8 +2509,6 @@
   },
   {
     "CourseId": 35700,
-    "RegistrationType": "350",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "科学技術と倫理",
     "Lecturer": "堀内 秀嗣",
@@ -2941,8 +2521,6 @@
   },
   {
     "CourseId": 31623,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "化学",
     "Lecturer": "高山 卓也",
@@ -2955,8 +2533,6 @@
   },
   {
     "CourseId": 31624,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "化学1",
     "Lecturer": "高山 卓也",
@@ -2969,8 +2545,6 @@
   },
   {
     "CourseId": 31628,
-    "RegistrationType": "350",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "生物学基礎",
     "Lecturer": "櫻井 春樹",
@@ -2983,8 +2557,6 @@
   },
   {
     "CourseId": 31629,
-    "RegistrationType": "350",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "生物学基礎1",
     "Lecturer": "櫻井 春樹",
@@ -2997,8 +2569,6 @@
   },
   {
     "CourseId": 31630,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "Physics",
     "Lecturer": "SVININ MIKHAIL",
@@ -3011,8 +2581,6 @@
   },
   {
     "CourseId": 31631,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "Physics for Computer Science",
     "Lecturer": "SVININ MIKHAIL",
@@ -3025,8 +2593,6 @@
   },
   {
     "CourseId": 31717,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "データ構造とアルゴリズム",
     "Lecturer": "森田 義之",
@@ -3039,8 +2605,6 @@
   },
   {
     "CourseId": 31728,
-    "RegistrationType": "SA SN",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "テータセンシング",
     "Lecturer": "福田 好也",
@@ -3053,8 +2617,6 @@
   },
   {
     "CourseId": 51786,
-    "RegistrationType": "50",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "スポーツ方法実習 I (C)",
     "Lecturer": "中田 慧",
@@ -3067,8 +2629,6 @@
   },
   {
     "CourseId": 31438,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "ロシア語Ⅱ",
     "Lecturer": "鈴木 ともこ",
@@ -3081,8 +2641,6 @@
   },
   {
     "CourseId": 31439,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "ロシア語Ⅱ",
     "Lecturer": "野川 知子",
@@ -3095,8 +2653,6 @@
   },
   {
     "CourseId": 31525,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "物理化学Ⅱ",
     "Lecturer": "桑原 久",
@@ -3109,8 +2665,6 @@
   },
   {
     "CourseId": 31722,
-    "RegistrationType": "SA",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "システムデータベース導入",
     "Lecturer": "藤田 隆之",
@@ -3123,8 +2677,6 @@
   },
   {
     "CourseId": 31733,
-    "RegistrationType": "SN",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "セキュリティ・ネットワーク導入",
     "Lecturer": "福山 治郎",
@@ -3137,8 +2689,6 @@
   },
   {
     "CourseId": 31734,
-    "RegistrationType": "SN",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "セキュリティ・ネットワーク導入",
     "Lecturer": "田中 隆",
@@ -3151,8 +2701,6 @@
   },
   {
     "CourseId": 31762,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "実世界情報処理導入1",
     "Lecturer": "山田 元",
@@ -3165,8 +2713,6 @@
   },
   {
     "CourseId": 31763,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "実世界情報処理導入1",
     "Lecturer": "中村 文彦",
@@ -3179,8 +2725,6 @@
   },
   {
     "CourseId": 53194,
-    "RegistrationType": "35",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "Cross-cultural Encounters 1",
     "Lecturer": "鈴木 貴子",
@@ -3193,8 +2737,6 @@
   },
   {
     "CourseId": 53195,
-    "RegistrationType": "35",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "Cross-cultural Encounters 1",
     "Lecturer": "鈴木 貴子",
@@ -3207,8 +2749,6 @@
   },
   {
     "CourseId": 31467,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "基礎数学 104",
     "Lecturer": "鈴木 ともこ",
@@ -3221,8 +2761,6 @@
   },
   {
     "CourseId": 31468,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "基礎数学 104",
     "Lecturer": "堀江 慎介",
@@ -3235,8 +2773,6 @@
   },
   {
     "CourseId": 31841,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "物理学2",
     "Lecturer": "中谷 仁",
@@ -3249,8 +2785,6 @@
   },
   {
     "CourseId": 31862,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "Optimization and Control Theory",
     "Lecturer": "SVININ MIKHAIL",
@@ -3263,8 +2797,6 @@
   },
   {
     "CourseId": 31941,
-    "RegistrationType": "FSD",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "実践プログラミング導入",
     "Lecturer": "鈴木 和広",
@@ -3277,8 +2809,6 @@
   },
   {
     "CourseId": 31942,
-    "RegistrationType": "FSD",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "実践プログラミング導入",
     "Lecturer": "大津 理",
@@ -3291,8 +2821,6 @@
   },
   {
     "CourseId": 35664,
-    "RegistrationType": "100",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "ピア・サポート論",
     "Lecturer": "鈴木 康平",
@@ -3305,8 +2833,6 @@
   },
   {
     "CourseId": 53204,
-    "RegistrationType": "35",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "Cross-cultural Encounters 2",
     "Lecturer": "木村 きよ子",
@@ -3319,8 +2845,6 @@
   },
   {
     "CourseId": 53205,
-    "RegistrationType": "35",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "Basic Communication Skills",
     "Lecturer": "木村 きよ子",
@@ -3333,8 +2857,6 @@
   },
   {
     "CourseId": 31837,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "化学2",
     "Lecturer": "瀬尾 敬太郎",
@@ -3347,8 +2869,6 @@
   },
   {
     "CourseId": 31839,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "システムデザイン",
     "Lecturer": "近藤 誠",
@@ -3361,8 +2881,6 @@
   },
   {
     "CourseId": 31885,
-    "RegistrationType": "SA:2 SN FSD:3",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "システムプロジェクト",
     "Lecturer": "濱田 恵",
@@ -3375,8 +2893,6 @@
   },
   {
     "CourseId": 31887,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "システムプロジェクト",
     "Lecturer": "瀬尾 晃",
@@ -3389,8 +2905,6 @@
   },
   {
     "CourseId": 31888,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "プログラミング基礎",
     "Lecturer": "斉藤 真人",
@@ -3403,8 +2917,6 @@
   },
   {
     "CourseId": 31900,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "プログラミング基礎",
     "Lecturer": "斉藤 真人",
@@ -3417,8 +2929,6 @@
   },
   {
     "CourseId": 51883,
-    "RegistrationType": "25",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "スポーツ方法実習Ⅱ (C)",
     "Lecturer": "島村 伸和",
@@ -3431,8 +2941,6 @@
   },
   {
     "CourseId": 31859,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "数値解析",
     "Lecturer": "新田 恵一",
@@ -3445,8 +2953,6 @@
   },
   {
     "CourseId": 31895,
-    "RegistrationType": "SA SN FSD",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "プログラミング導入1",
     "Lecturer": "松山 誠",
@@ -3459,8 +2965,6 @@
   },
   {
     "CourseId": 31908,
-    "RegistrationType": "SSD",
-    "EnrollmentLimit": "",
     "CourseType": "1st Year",
     "CourseName": "プログラミング導入1",
     "Lecturer": "西原 照子",
@@ -3473,8 +2977,6 @@
   },
   {
     "CourseId": 31998,
-    "RegistrationType": "ISSE",
-    "EnrollmentLimit": "",
     "CourseType": "3rd Year",
     "CourseName": "Pattern Recognition and Machine Learning",
     "Lecturer": "THAWONMAS RUCK",
@@ -3487,8 +2989,6 @@
   },
   {
     "CourseId": 31991,
-    "RegistrationType": "ISSE",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "Imperative Programming Practice",
     "Lecturer": "CALIUYA NIKO REGINO",
@@ -3501,8 +3001,6 @@
   },
   {
     "CourseId": 32000,
-    "RegistrationType": "100",
-    "EnrollmentLimit": "",
     "CourseType": "General",
     "CourseName": "Digital Archives: Applications of ICT to the Humanities",
     "Lecturer": "田中 愛",
@@ -3515,8 +3013,6 @@
   },
   {
     "CourseId": 31864,
-    "RegistrationType": "Office Registration",
-    "EnrollmentLimit": "",
     "CourseType": "2nd Year",
     "CourseName": "Statistical Analysis, Simulation, and Modeling 2",
     "Lecturer": "KRYSSANOVO VICTOR",
