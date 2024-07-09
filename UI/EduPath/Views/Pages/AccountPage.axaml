@@ -17,7 +17,7 @@
         <page:AccountPageViewModel />
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="*, 450, *" RowDefinitions="150, 50, Auto, Auto, Auto, Auto">
+    <Grid ColumnDefinitions="*, 450, *" RowDefinitions="150, 50, Auto, Auto, Auto">
         <Grid.Styles>
             <Style Selector="ui|CommandBarButton">
                 <Setter Property="HorizontalAlignment" Value="Center" />
@@ -45,17 +45,13 @@
                              Footer="{Binding User.Email, Mode=OneWay}"
                              Header="Email" />
 
-        <Panel Grid.Row="5" Grid.Column="1">
-            <ui:CommandBarButton Margin="70,0,0,0"
-                                 Command="{Binding DeleteAccountCommand, Mode=OneWay}"
-                                 IconSource="{StaticResource DeleteAccount}"
-                                 Label="Delete Account" />
+        <ui:CommandBarButton Grid.Row="4" Grid.Column="1"
+                             HorizontalAlignment="Center"
+                             Margin="70,0,0,0"
+                             Command="{Binding DeleteAccountCommand, Mode=OneWay}"
+                             IconSource="{StaticResource DeleteAccount}"
+                             Label="Delete Account" />
 
-            <ui:CommandBarButton Margin="0,0,70,0"
-                                 Command="{Binding ResetPasswordCommand, Mode=OneWay}"
-                                 IconSource="{StaticResource ResetPassword}"
-                                 Label="Reset Password" />
-        </Panel>
 
     </Grid>
 </UserControl>

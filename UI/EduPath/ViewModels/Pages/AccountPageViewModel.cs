@@ -3,15 +3,6 @@
 public sealed partial class AccountPageViewModel : ViewModelBase, IAccountPageViewModel
 {
     [RelayCommand]
-    private async Task ResetPassword()
-    {
-        UserService.ResetPassword();
-        NavigationService.NavigateToNull();
-        await MessageBoxService.SuccessAsync("Password has been successfully reset!\r\nPlease login again!").ConfigureAwait(true);
-        await DialogService.ShowAsync(LoginDialogViewModel).ConfigureAwait(false);
-    }
-
-    [RelayCommand]
     private async Task DeleteAccountAsync()
     {
         Logger.Information("Request for deleting current user...");

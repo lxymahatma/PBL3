@@ -7,5 +7,4 @@ public interface IUserService
     void Login(string key, string password);
     void Register(User user);
     void DeleteCurrentUser();
-    void ResetPassword();
 }
