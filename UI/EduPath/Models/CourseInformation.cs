@@ -17,9 +17,6 @@ public sealed class CourseInformation
     [JsonPropertyName("Classroom")]
     public string ClassRoom { get; set; } = string.Empty;
 
-    [JsonPropertyName("RegistrationType")]
-    public string? RegistrationType { get; set; }
-
     [JsonPropertyName("CourseCategory")]
     public CourseCategory Category { get; set; }
 
@@ -34,16 +31,4 @@ public sealed class CourseInformation
 
     [JsonPropertyName("Semester")]
     public string Semester { get; set; } = string.Empty;
-
-    [JsonPropertyName("Prerequisites")]
-    public CourseInformation[]? Prerequisites { get; set; }
-
-    [JsonIgnore]
-    public string? Description { get; set; }
-
-    [JsonIgnore]
-    public CourseRating Rating { get; set; }
-
-    [JsonIgnore]
-    public Thread? Thread { get; set; }
 }
