@@ -62,9 +62,9 @@
             <ItemsRepeater ItemsSource="{Binding Courses, Mode=TwoWay}">
                 <ItemsRepeater.ItemTemplate>
                     <DataTemplate x:DataType="model:CourseInformation">
-                        <Expander Header="{Binding Name, Mode=OneTime}">
+                        <Expander Header="{Binding Name, Mode=OneWay}">
                             <Expander.Styles>
-                                <Style Selector="StackPanel&gt;StackPanel">
+                                <Style Selector="StackPanel>StackPanel">
                                     <Setter Property="Orientation" Value="Horizontal" />
                                 </Style>
                             </Expander.Styles>

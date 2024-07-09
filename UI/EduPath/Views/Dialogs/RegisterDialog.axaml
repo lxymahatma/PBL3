@@ -20,7 +20,7 @@
 
     <Grid RowDefinitions="40, Auto, Auto, Auto, Auto, *">
         <Grid.Styles>
-            <Style Selector="StackPanel &gt; TextBlock">
+            <Style Selector="StackPanel>TextBlock">
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="FontFamily" Value="Times New Roman" />
                 <Setter Property="Margin" Value="0,0,0,8" />
