@@ -20,3 +20,4 @@ global using EduPath.ViewModels.Pages;
 global using EduPath.ViewModels.Windows;
 global using EduPath.Views.Pages;
 global using EduPath.Views.Windows;
+global using OpenAI;
