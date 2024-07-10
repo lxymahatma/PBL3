@@ -15,6 +15,22 @@
              d:DesignHeight="450"
              d:DesignWidth="800">
 
+    <UserControl.Styles>
+        <Style Selector="ToggleButton PathIcon.eye-on">
+            <Setter Property="IsVisible" Value="False" />
+        </Style>
+        <Style Selector="ToggleButton:checked PathIcon.eye-on">
+            <Setter Property="IsVisible" Value="True" />
+        </Style>
+        <Style Selector="ToggleButton PathIcon.eye-off">
+            <Setter Property="IsVisible" Value="True" />
+        </Style>
+        <Style Selector="ToggleButton:checked PathIcon.eye-off">
+            <Setter Property="IsVisible" Value="False" />
+        </Style>
+    </UserControl.Styles>
+
+    <!--  For loading user data when window loaded  -->
     <Interaction.Behaviors>
         <EventTriggerBehavior EventName="Loaded">
             <InvokeCommandAction Command="{Binding InitializeUserDatabaseCommand, Mode=OneTime}" />
@@ -72,8 +88,23 @@
                    Text="Password" />
 
         <TextBox Grid.Row="5"
+                 PasswordChar="*"
+                 RevealPassword="{Binding IsRevealPassword, Mode=TwoWay}"
                  Text="{Binding Password, Mode=TwoWay}"
-                 Watermark="123456789" />
+                 Watermark="123456789">
+
+            <TextBox.InnerRightContent>
+                <ToggleButton BorderBrush="White"
+                              BorderThickness="0"
+                              IsChecked="{Binding IsRevealPassword, Mode=TwoWay}">
+                    <Panel>
+                        <PathIcon Classes="eye-on" Data="{StaticResource Eye}" />
+                        <PathIcon Classes="eye-off" Data="{StaticResource Eye-Off}" />
+                    </Panel>
+                </ToggleButton>
+            </TextBox.InnerRightContent>
+
+        </TextBox>
 
         <Button Grid.Row="6"
                 Width="125"

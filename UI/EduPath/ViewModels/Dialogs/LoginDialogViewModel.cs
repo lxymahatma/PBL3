@@ -3,6 +3,9 @@ namespace EduPath.ViewModels.Dialogs;
 public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogViewModel
 {
     [ObservableProperty]
+    private bool _isRevealPassword;
+
+    [ObservableProperty]
     [Required(ErrorMessage = "UserName or Email is required")]
     [MinLength(3, ErrorMessage = "UserName or Email must be at least 3 characters long")]
     private string? _key;
