@@ -1,9 +1,23 @@
 ﻿[
   {
     "UserId": "4e08bdce-1395-404b-9fa4-7938737f81d8",
-    "UserName": "Genki",
+    "UserName": "genki",
     "Email": "genkimatsu@gmail.com",
     "Password": "genki123",
     "StudentId": "26002301234"
+  },
+  {
+    "UserId": "bf4b0e4e-f49e-4bc2-a22e-6b8105f0f2db",
+    "UserName": "lxy",
+    "Email": "lxy@gmail.com",
+    "Password": "lxy123",
+    "StudentId": "26002301255"
+  },
+  {
+    "UserId": "0c9e825b-ae36-4884-b8b3-c45e8a411de4",
+    "UserName": "nezumi",
+    "Email": "nezumi@fc.ritsumei.ac.jp",
+    "Password": "nezumi123",
+    "StudentId": null
   }
 ]
