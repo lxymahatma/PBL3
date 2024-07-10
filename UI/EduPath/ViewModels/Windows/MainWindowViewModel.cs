@@ -40,13 +40,7 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     public ILoginDialogViewModel LoginDialogViewModel { get; init; } = null!;
 
     [UsedImplicitly]
-    public ILogger Logger { get; init; } = null!;
-
-    [UsedImplicitly]
     public INavigationService NavigationService { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IUserService UserService { get; init; } = null!;
 
     #endregion
 }

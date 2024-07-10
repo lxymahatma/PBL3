@@ -16,6 +16,9 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     public ContentDialog DialogSettings => new() { Content = this };
 
     [RelayCommand]
+    private Task InitializeUserDatabaseAsync() => DatabaseService.InitializeUserDatabaseAsync();
+
+    [RelayCommand]
     private async Task LoginAsync()
     {
         ValidateAllProperties();
@@ -42,6 +45,9 @@ public sealed partial class LoginDialogViewModel : ViewModelBase, ILoginDialogVi
     private Task SwitchToRegisterAsync() => DialogService.SwitchDialogAsync(RegisterDialogViewModel);
 
     #region Services
+
+    [UsedImplicitly]
+    public IDatabaseService DatabaseService { get; init; } = null!;
 
     [UsedImplicitly]
     public IDialogService DialogService { get; init; } = null!;

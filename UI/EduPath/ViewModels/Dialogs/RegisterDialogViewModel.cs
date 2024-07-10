@@ -19,7 +19,7 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
     [ObservableProperty]
     [MinLength(11, ErrorMessage = "Student ID must be exactly 11 characters long")]
     [MaxLength(11, ErrorMessage = "Student ID must be exactly 11 characters long")]
-    private int? _studentId;
+    private string? _studentId;
 
     [ObservableProperty]
     [Required]

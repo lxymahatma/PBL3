@@ -2,11 +2,9 @@
 
 public sealed class DatabaseService : IDatabaseService
 {
-    private static readonly Dictionary<string, User> _userDatabase = new()
-    {
-        ["user1"] = new User { UserName = "user1", Password = "password1", Email = "aa@gmail.com" },
-        ["user2"] = new User { UserName = "user2", Password = "password2", Email = "bb@gmail.com" }
-    };
+    private static readonly Dictionary<Guid, User> _userDatabase = new();
+    private static readonly Dictionary<string, Guid> _emailToId = new();
+    private static readonly Dictionary<string, Guid> _usernameToId = new();
 
     private CourseInformation[]? _courseDatabase;
 
@@ -16,39 +14,61 @@ public sealed class DatabaseService : IDatabaseService
     [UsedImplicitly]
     public ISerializationService SerializationService { get; init; } = null!;
 
-    public Dictionary<string, User> GetUsersFromDatabase() => _userDatabase;
+    public async Task InitializeUserDatabaseAsync()
+    {
+        var stream = ResourceUtils.GetResource("UserDatabase.json");
+        var users = await SerializationService.DeserializeAsync<User[]>(stream).ConfigureAwait(false);
+        foreach (var user in users!)
+        {
+            _userDatabase[user.UserId] = user;
+            _usernameToId[user.UserName!] = user.UserId;
+            _emailToId[user.Email!] = user.UserId;
+        }
+    }
 
     public bool RegisterUser(User user)
     {
-        if (_userDatabase.ContainsKey(user.UserName!) || _userDatabase.ContainsKey(user.Email!))
+        if (_usernameToId.ContainsKey(user.UserName!) || _emailToId.ContainsKey(user.Email!))
         {
             Logger.Error("User {UserName} with Email {Email} already exists", user.UserName, user.Email);
             return false;
         }
 
-        _userDatabase[user.UserName!] = user;
-        _userDatabase[user.Email!] = user;
-        Logger.Information("User {UserName} added with Email {Email} and Password {Password}",
+        user.UserId = Guid.NewGuid();
+        _userDatabase[user.UserId] = user;
+        _usernameToId[user.UserName!] = user.UserId;
+        _emailToId[user.Email!] = user.UserId;
+        Logger.Information("User {UserName} registered with Email {Email} and Password {Password}",
             user.UserName, user.Email, user.Password);
         return true;
     }
 
-    public User? GetUserFromKey(string key) => GetUsersFromDatabase().GetValueOrDefault(key);
+    public User? GetUserFromKey(string key)
+    {
+        Guid userId;
+        if (_usernameToId.TryGetValue(key, out userId) || _emailToId.TryGetValue(key, out userId))
+        {
+            return _userDatabase[userId];
+        }
+
+        return null;
+    }
 
     public async Task<CourseInformation[]> GetCoursesFromDatabaseAsync()
     {
-        while (_courseDatabase is null)
+        if (_courseDatabase is null)
         {
             await LoadCoursesFromDatabaseAsync().ConfigureAwait(false);
         }
 
-        return _courseDatabase;
+        return _courseDatabase!;
     }
 
     public void DeleteUserFromDatabase(User user)
     {
-        _userDatabase.Remove(user.UserName!);
-        _userDatabase.Remove(user.Email!);
+        _userDatabase.Remove(user.UserId);
+        _usernameToId.Remove(user.UserName!);
+        _emailToId.Remove(user.Email!);
         Logger.Information("User {UserName} with email {Email} deleted", user.UserName, user.Email);
     }
 
