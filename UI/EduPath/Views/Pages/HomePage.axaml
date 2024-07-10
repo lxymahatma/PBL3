@@ -30,13 +30,13 @@
 
     <Grid ColumnDefinitions="*,175"
           RowDefinitions="Auto,*"
-          ShowGridLines="True">
+          ShowGridLines="False">
 
         <TextBox Grid.Row="0" Grid.Column="0"
                  HorizontalAlignment="Stretch"
                  VerticalContentAlignment="Center"
                  Text="{Binding SearchText, Mode=TwoWay}"
-                 Watermark="{Binding Watermark}">
+                 Watermark="{Binding Watermark, Mode=OneWay}">
 
             <TextBox.InnerRightContent>
                 <Button BorderBrush="White"
@@ -51,39 +51,70 @@
 
         <ToggleSwitch Grid.Row="0" Grid.Column="1"
                       Margin="10,0,0,0"
-                      IsChecked="{Binding IsAdvancedSearch}"
+                      IsChecked="{Binding IsAdvancedSearch, Mode=TwoWay}"
                       OffContent="Normal Search"
                       OnContent="Advanced Search" />
 
         <ScrollViewer Grid.Row="1" Grid.Column="0"
+                      Margin="0,5,0,0"
                       HorizontalAlignment="Stretch"
                       VerticalAlignment="Stretch"
-                      IsVisible="{Binding !IsAdvancedSearch}">
+                      IsVisible="{Binding !IsAdvancedSearch, Mode=OneWay}">
 
-            <ItemsRepeater ItemsSource="{Binding Courses, Mode=TwoWay}">
+            <ItemsRepeater ItemsSource="{Binding Courses, Mode=OneWay}">
+
+                <ItemsRepeater.Layout>
+                    <StackLayout Orientation="Vertical" Spacing="2" />
+                </ItemsRepeater.Layout>
+
                 <ItemsRepeater.ItemTemplate>
                     <DataTemplate x:DataType="model:CourseInformation">
                         <Expander Header="{Binding Name, Mode=OneWay}">
                             <Expander.Styles>
-                                <Style Selector="StackPanel&gt;StackPanel">
+                                <Style Selector="StackPanel>StackPanel">
                                     <Setter Property="Orientation" Value="Horizontal" />
                                 </Style>
                             </Expander.Styles>
 
                             <StackPanel Orientation="Vertical">
                                 <StackPanel>
-                                    <TextBlock Text="Lecturer: " />
-                                    <TextBlock Text="{Binding Lecturer, Mode=OneTime}" />
+                                    <TextBlock Text="Course Code: " />
+                                    <TextBlock Text="{Binding Id, Mode=OneWay}" />
                                 </StackPanel>
 
                                 <StackPanel>
-                                    <TextBlock Text="Class Room: " />
-                                    <TextBlock Text="{Binding Classroom, Mode=OneTime}" />
+                                    <TextBlock Text="Lecturer: " />
+                                    <TextBlock Text="{Binding Lecturer, Mode=OneWay}" />
+                                </StackPanel>
+
+                                <StackPanel>
+                                    <TextBlock Text="Classroom: " />
+                                    <TextBlock Text="{Binding Classroom, Mode=OneWay}" />
+                                </StackPanel>
+
+                                <StackPanel>
+                                    <TextBlock Text="Day: " />
+                                    <TextBlock Text="{Binding Day, Mode=OneWay}" />
                                 </StackPanel>
 
                                 <StackPanel>
                                     <TextBlock Text="Period: " />
-                                    <TextBlock Text="{Binding Period, Mode=OneTime}" />
+                                    <TextBlock Text="{Binding Period, Mode=OneWay}" />
+                                </StackPanel>
+
+                                <StackPanel>
+                                    <TextBlock Text="Semester: " />
+                                    <TextBlock Text="{Binding Semester, Mode=OneWay}" />
+                                </StackPanel>
+
+                                <StackPanel>
+                                    <TextBlock Text="Course Category: " />
+                                    <TextBlock Text="{Binding Category, Mode=OneWay}" />
+                                </StackPanel>
+
+                                <StackPanel>
+                                    <TextBlock Text="Class Year: " />
+                                    <TextBlock Text="{Binding Semester, Mode=OneWay}" />
                                 </StackPanel>
                             </StackPanel>
 

@@ -17,7 +17,7 @@
         <page:AccountPageViewModel />
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="*, 450, *" RowDefinitions="150, 50, Auto, Auto, Auto">
+    <Grid ColumnDefinitions="*, 450, *" RowDefinitions="150, 50, Auto, Auto, Auto, Auto">
         <Grid.Styles>
             <Style Selector="ui|CommandBarButton">
                 <Setter Property="HorizontalAlignment" Value="Center" />
@@ -45,7 +45,12 @@
                              Footer="{Binding User.Email, Mode=OneWay}"
                              Header="Email" />
 
-        <ui:CommandBarButton Grid.Row="4" Grid.Column="1"
+        <ui:SettingsExpander Grid.Row="4" Grid.Column="1"
+                             Footer="{Binding User.StudentId, Mode=OneWay}"
+                             Header="Student ID"
+                             IsVisible="{Binding User.IsStudent, Mode=OneWay}" />
+
+        <ui:CommandBarButton Grid.Row="5" Grid.Column="1"
                              Margin="0,0,0,0"
                              HorizontalAlignment="Center"
                              Command="{Binding DeleteAccountCommand, Mode=OneWay}"
