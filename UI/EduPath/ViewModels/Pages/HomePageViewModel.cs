@@ -11,34 +11,13 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
     [ObservableProperty]
     private bool _isAdvancedSearch;
 
+    private string _previousSearchText = string.Empty;
+
     [ObservableProperty]
     private string _searchText = string.Empty;
-    
-    [ObservableProperty]
-    private string _normalSearchText = string.Empty;
-    
-    [ObservableProperty]
-    private string _advancedSearchText = string.Empty;
 
     [ObservableProperty]
     private string _watermark = "Search for courses by name...";
-
-    partial void OnIsAdvancedSearchChanged(bool value)
-    {
-        if (value)
-        {
-            Watermark = "Search course recommendations by preference...";
-            NormalSearchText = SearchText;
-            SearchText = AdvancedSearchText;
-            return;
-        }
-        else
-        {
-            Watermark = "Search for courses by name...";
-            AdvancedSearchText = SearchText;
-            SearchText = NormalSearchText;
-        }
-    }
 
     [UsedImplicitly]
     public ILogger Logger { get; init; } = null!;
@@ -61,6 +40,19 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
             .Subscribe();
     }
 
+    partial void OnIsAdvancedSearchChanged(bool value)
+    {
+        (SearchText, _previousSearchText) = (_previousSearchText, SearchText);
+
+        if (value)
+        {
+            Watermark = "Search course recommendations by preference...";
+            return;
+        }
+
+        Watermark = "Search for courses by name...";
+    }
+
     [RelayCommand]
     private async Task GetCoursesAsync()
     {
@@ -79,6 +71,7 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
             return;
         }
 
+        Logger.Information("Advanced Searching for {SearchText}", SearchText);
         await AdvancedSearchAsync().ConfigureAwait(false);
     }
 
