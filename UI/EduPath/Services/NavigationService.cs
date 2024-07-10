@@ -22,10 +22,7 @@ public sealed class NavigationService : ObservableObject, INavigationService
         MainWindowViewModel.SwitchItem(_pageIndexes[pageType]);
     }
 
-    public void NavigateToNull()
-    {
-        ContentFrame.Content = null;
-    }
+    public void NavigateToNull() => ContentFrame.Content = null;
 
     public void NavigateToWithoutNotify<T>()
     {

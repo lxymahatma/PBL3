@@ -2,5 +2,5 @@ namespace EduPath.Contracts;
 
 public interface IOpenAIService
 {
-    Task RecommendCourseByRequest(string request);
+    Task<string> RecommendCourseByRequestAsync(string request);
 }

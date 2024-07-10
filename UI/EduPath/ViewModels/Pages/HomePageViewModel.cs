@@ -14,19 +14,13 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
     private string _previousSearchText = string.Empty;
 
     [ObservableProperty]
+    private string _responseText = string.Empty;
+
+    [ObservableProperty]
     private string _searchText = string.Empty;
 
     [ObservableProperty]
     private string _watermark = "Search for courses by name...";
-
-    [UsedImplicitly]
-    public ILogger Logger { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IOpenAIService OpenAIService { get; init; } = null!;
-
-    [UsedImplicitly]
-    public IDatabaseService DatabaseService { get; init; } = null!;
 
     public ReadOnlyObservableCollection<CourseInformation> Courses => _courses;
 
@@ -75,5 +69,21 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
         await AdvancedSearchAsync().ConfigureAwait(false);
     }
 
-    private Task AdvancedSearchAsync() => OpenAIService.RecommendCourseByRequest(SearchText);
+    private async Task AdvancedSearchAsync() => ResponseText = $"AI Assistant: {await OpenAIService.RecommendCourseByRequestAsync(SearchText)}";
+
+    #region Services
+
+    [UsedImplicitly]
+    public User User { get; init; } = null!;
+
+    [UsedImplicitly]
+    public ILogger Logger { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IOpenAIService OpenAIService { get; init; } = null!;
+
+    [UsedImplicitly]
+    public IDatabaseService DatabaseService { get; init; } = null!;
+
+    #endregion
 }
