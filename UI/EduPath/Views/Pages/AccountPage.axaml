@@ -46,8 +46,8 @@
                              Header="Email" />
 
         <ui:CommandBarButton Grid.Row="4" Grid.Column="1"
+                             Margin="0,0,0,0"
                              HorizontalAlignment="Center"
-                             Margin="70,0,0,0"
                              Command="{Binding DeleteAccountCommand, Mode=OneWay}"
                              IconSource="{StaticResource DeleteAccount}"
                              Label="Delete Account" />
