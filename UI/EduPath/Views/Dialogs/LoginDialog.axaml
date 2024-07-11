@@ -76,7 +76,7 @@
         <TextBlock Grid.Row="2"
                    FontSize="16"
                    FontWeight="Bold"
-                   Text="UserName or Email" />
+                   Text="Username or Email" />
 
         <TextBox Grid.Row="3"
                  Text="{Binding Key, Mode=TwoWay}"

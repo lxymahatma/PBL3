@@ -20,6 +20,10 @@ public sealed partial class User : ObservableObject
     [JsonPropertyOrder(3)]
     public string? Password { get; set; }
 
+    [JsonPropertyOrder(5)]
+    [ObservableProperty]
+    public int? _grade;
+
     [JsonIgnore]
     public bool IsStudent => StudentId is not null;
 
@@ -29,5 +33,6 @@ public sealed partial class User : ObservableObject
         Password = user.Password;
         Email = user.Email;
         StudentId = user.StudentId;
+        Grade = user.Grade;
     }
 }
