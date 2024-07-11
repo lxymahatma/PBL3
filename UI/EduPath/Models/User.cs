@@ -12,6 +12,8 @@ public sealed partial class User : ObservableObject
     private string? _userName;
 
     public string? Password { get; set; }
+    
+    public string? Grade { get; set; }
     public bool IsStudent => StudentId is not null;
 
     public void CopyFrom(User user)
@@ -20,5 +22,6 @@ public sealed partial class User : ObservableObject
         Password = user.Password;
         Email = user.Email;
         StudentId = user.StudentId;
+        Grade = user.Grade;
     }
 }

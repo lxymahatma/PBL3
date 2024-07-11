@@ -4,8 +4,8 @@ public sealed class DatabaseService : IDatabaseService
 {
     private static readonly Dictionary<string, User> _userDatabase = new()
     {
-        ["user1"] = new User { UserName = "user1", Password = "password1", Email = "aa@gmail.com" },
-        ["user2"] = new User { UserName = "user2", Password = "password2", Email = "bb@gmail.com" }
+        ["user1"] = new User { UserName = "user1", Password = "password1", Email = "aa@gmail.com", Grade = "2"},
+        ["user2"] = new User { UserName = "user2", Password = "password2", Email = "bb@gmail.com", Grade = "1" }
     };
 
     private CourseInformation[]? _courseDatabase;
