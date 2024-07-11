@@ -90,7 +90,7 @@
                 <TextBlock Margin="20,0,0,0"
                            FontFamily="Georgia"
                            FontSize="13"
-                           IsVisible="{Binding User.IsStudent, Mode=OneWay}"
+                           IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
                            Text="{Binding User.StudentId, Mode=OneWay}" />
             </StackPanel>
         </Border>
@@ -108,7 +108,7 @@
                                FontFamily="Georgia"
                                FontSize="13"
                                Increment="1"
-                               IsVisible="{Binding User.IsStudent, Mode=OneWay}"
+                               IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
                                Maximum="4"
                                Minimum="1"
                                Value="{Binding User.Grade, Mode=TwoWay}" />

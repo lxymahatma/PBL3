@@ -55,7 +55,7 @@
         <ToggleSwitch Grid.Row="0" Grid.Column="1"
                       Margin="10,0,0,0"
                       IsChecked="{Binding IsAdvancedSearch, Mode=TwoWay}"
-                      IsVisible="{Binding User.IsStudent, Mode=OneWay}"
+                      IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
                       OffContent="Normal Search"
                       OnContent="Advanced Search" />
 

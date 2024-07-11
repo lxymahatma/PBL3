@@ -33,7 +33,6 @@
                        IsSettingsVisible="False"
                        PaneDisplayMode="Left"
                        MenuItemsSource="{Binding MenuItems,Mode=OneTime}"
-                       SelectedItem="{Binding Selected, Mode=TwoWay}">
-    </ui:NavigationView>
+                       SelectedItem="{Binding Selected, Mode=TwoWay}" />
 
 </Window>

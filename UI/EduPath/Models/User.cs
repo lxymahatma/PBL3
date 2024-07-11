@@ -19,13 +19,10 @@ public sealed partial class User : ObservableObject
 
     [JsonPropertyOrder(3)]
     public string? Password { get; set; }
-
+    
     [JsonPropertyOrder(5)]
     [ObservableProperty]
     public int? _grade;
-
-    [JsonIgnore]
-    public bool IsStudent => StudentId is not null;
 
     public void CopyFrom(User user)
     {
