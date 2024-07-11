@@ -38,8 +38,9 @@
             </Style>
 
             <Style Selector="StackPanel>TextBlock">
-                <Setter Property="FontFamily" Value="Georgia" />
+                <Setter Property="FontFamily" Value="DM Sans" />
                 <Setter Property="FontSize" Value="13" />
+                <Setter Property="FontWeight" Value="Bold" />
             </Style>
         </Grid.Styles>
 
@@ -50,10 +51,9 @@
                Source="/Assets/Account.ico" />
 
         <TextBlock Grid.Row="1" Grid.Column="1"
-                   Margin="0,0,0,20"
                    FontFamily="Times New Roman"
-                   FontSize="17"
-                   FontWeight="Bold"
+                   FontSize="20"
+                   FontWeight="ExtraBold"
                    Text="Account Page" />
 
         <Border Grid.Row="2" Grid.Column="1">
@@ -87,8 +87,9 @@
                                HorizontalAlignment="Center"
                                HorizontalContentAlignment="Center"
                                VerticalContentAlignment="Center"
-                               FontFamily="Georgia"
+                               FontFamily="DM Sans"
                                FontSize="13"
+                               FontWeight="Bold"
                                Increment="1"
                                Maximum="4"
                                Minimum="1"
