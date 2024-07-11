@@ -19,7 +19,7 @@
         <Style Selector="ToggleButton ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="White" />
         </Style>
-        <Style Selector="ToggleButton>PathIcon">
+        <Style Selector="Panel>PathIcon">
             <Setter Property="Foreground" Value="Black" />
         </Style>
         <Style Selector="ToggleButton PathIcon.eye-on">
@@ -104,12 +104,8 @@
                               BorderThickness="0"
                               IsChecked="{Binding IsRevealPassword, Mode=TwoWay}">
                     <Panel>
-                        <PathIcon Classes="eye-on"
-                                  Data="{StaticResource Eye}"
-                                  Foreground="Black" />
-                        <PathIcon Classes="eye-off"
-                                  Data="{StaticResource Eye-Off}"
-                                  Foreground="Black" />
+                        <PathIcon Classes="eye-on" Data="{StaticResource Eye}" />
+                        <PathIcon Classes="eye-off" Data="{StaticResource Eye-Off}" />
                     </Panel>
                 </ToggleButton>
             </TextBox.InnerRightContent>
