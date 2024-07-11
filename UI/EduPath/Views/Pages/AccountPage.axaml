@@ -70,16 +70,16 @@
             </StackPanel>
         </Border>
 
-        <Border Grid.Row="4" Grid.Column="1">
+        <Border Grid.Row="4" Grid.Column="1"
+                IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
             <StackPanel>
                 <TextBlock Margin="15,0,0,0" Text="Student ID" />
-                <TextBlock Margin="20,0,0,0"
-                           IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
-                           Text="{Binding User.StudentId, Mode=OneWay}" />
+                <TextBlock Margin="20,0,0,0" Text="{Binding User.StudentId, Mode=OneWay}" />
             </StackPanel>
         </Border>
 
-        <Border Grid.Row="5" Grid.Column="1">
+        <Border Grid.Row="5" Grid.Column="1"
+                IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
             <StackPanel>
                 <TextBlock Margin="15,0,0,0" Text="Grade" />
 
@@ -90,7 +90,6 @@
                                FontFamily="Georgia"
                                FontSize="13"
                                Increment="1"
-                               IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
                                Maximum="4"
                                Minimum="1"
                                Value="{Binding User.Grade, Mode=TwoWay}" />
