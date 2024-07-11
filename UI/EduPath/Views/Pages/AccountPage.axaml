@@ -19,10 +19,6 @@
 
     <Grid ColumnDefinitions="*, 450, *" RowDefinitions="150, 50, Auto, Auto, Auto, Auto, Auto">
         <Grid.Styles>
-            <Style Selector="ui|CommandBarButton">
-                <Setter Property="HorizontalAlignment" Value="Center" />
-            </Style>
-
             <Style Selector="TextBlock">
                 <Setter Property="HorizontalAlignment" Value="Center" />
                 <Setter Property="VerticalAlignment" Value="Center" />
@@ -37,8 +33,13 @@
                 <Setter Property="Margin" Value="0, 3, 0, 0" />
             </Style>
 
-            <Style Selector="StackPanel">
+            <Style Selector="Border>StackPanel">
                 <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+
+            <Style Selector="StackPanel>TextBlock">
+                <Setter Property="FontFamily" Value="Georgia" />
+                <Setter Property="FontSize" Value="13" />
             </Style>
         </Grid.Styles>
 
@@ -50,46 +51,29 @@
 
         <TextBlock Grid.Row="1" Grid.Column="1"
                    Margin="0,0,0,20"
-                   HorizontalAlignment="Center"
-                   FontFamily="times new roman"
+                   FontFamily="Times New Roman"
                    FontSize="17"
                    FontWeight="Bold"
                    Text="Account Page" />
 
         <Border Grid.Row="2" Grid.Column="1">
             <StackPanel>
-                <TextBlock Margin="15,0,0,0"
-                           FontFamily="Georgia"
-                           FontSize="13"
-                           Text="Username" />
-                <TextBlock Margin="25,0,0,0"
-                           FontFamily="Georgia"
-                           FontSize="13"
-                           Text="{Binding User.UserName, Mode=OneWay}" />
+                <TextBlock Margin="15,0,0,0" Text="Username" />
+                <TextBlock Margin="25,0,0,0" Text="{Binding User.UserName, Mode=OneWay}" />
             </StackPanel>
         </Border>
+
         <Border Grid.Row="3" Grid.Column="1">
             <StackPanel>
-                <TextBlock Margin="15,0,0,0"
-                           FontFamily="Georgia"
-                           FontSize="13"
-                           Text="Email" />
-                <TextBlock Margin="50,0,0,0"
-                           FontFamily="Georgia"
-                           FontSize="13"
-                           Text="{Binding User.Email, Mode=OneWay}" />
+                <TextBlock Margin="15,0,0,0" Text="Email" />
+                <TextBlock Margin="50,0,0,0" Text="{Binding User.Email, Mode=OneWay}" />
             </StackPanel>
         </Border>
 
         <Border Grid.Row="4" Grid.Column="1">
             <StackPanel>
-                <TextBlock Margin="15,0,0,0"
-                           FontFamily="Georgia"
-                           FontSize="13"
-                           Text="Student ID" />
+                <TextBlock Margin="15,0,0,0" Text="Student ID" />
                 <TextBlock Margin="20,0,0,0"
-                           FontFamily="Georgia"
-                           FontSize="13"
                            IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
                            Text="{Binding User.StudentId, Mode=OneWay}" />
             </StackPanel>
@@ -97,10 +81,8 @@
 
         <Border Grid.Row="5" Grid.Column="1">
             <StackPanel>
-                <TextBlock Margin="15,0,0,0"
-                           FontFamily="Georgia"
-                           FontSize="13"
-                           Text="Grade" />
+                <TextBlock Margin="15,0,0,0" Text="Grade" />
+
                 <NumericUpDown Width="170"
                                HorizontalAlignment="Center"
                                HorizontalContentAlignment="Center"
@@ -121,7 +103,6 @@
                              Command="{Binding DeleteAccountCommand, Mode=OneWay}"
                              IconSource="{StaticResource DeleteAccount}"
                              Label="Delete Account" />
-
 
     </Grid>
 </UserControl>

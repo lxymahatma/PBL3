@@ -6,6 +6,10 @@ public sealed partial class User : ObservableObject
     [ObservableProperty]
     private string? _email;
 
+    [JsonPropertyOrder(5)]
+    [ObservableProperty]
+    private int? _grade;
+
     [JsonPropertyOrder(4)]
     [ObservableProperty]
     private string? _studentId;
@@ -19,10 +23,6 @@ public sealed partial class User : ObservableObject
 
     [JsonPropertyOrder(3)]
     public string? Password { get; set; }
-    
-    [JsonPropertyOrder(5)]
-    [ObservableProperty]
-    public int? _grade;
 
     public void CopyFrom(User user)
     {
