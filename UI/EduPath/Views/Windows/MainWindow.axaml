@@ -21,6 +21,7 @@
     <!--  For opening login page when main window opened  -->
     <Interaction.Behaviors>
         <EventTriggerBehavior EventName="Opened">
+            <InvokeCommandAction Command="{Binding InitializeUserDatabaseCommand, Mode=OneTime}" />
             <InvokeCommandAction Command="{Binding OpenLoginPageCommand, Mode=OneTime}" />
         </EventTriggerBehavior>
     </Interaction.Behaviors>

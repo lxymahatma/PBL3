@@ -36,13 +36,6 @@
         </Style>
     </UserControl.Styles>
 
-    <!--  For loading user data when window loaded  -->
-    <Interaction.Behaviors>
-        <EventTriggerBehavior EventName="Loaded">
-            <InvokeCommandAction Command="{Binding InitializeUserDatabaseCommand, Mode=OneTime}" />
-        </EventTriggerBehavior>
-    </Interaction.Behaviors>
-
     <UserControl.KeyBindings>
         <KeyBinding Command="{Binding LoginCommand, Mode=OneWay}" Gesture="Enter" />
     </UserControl.KeyBindings>

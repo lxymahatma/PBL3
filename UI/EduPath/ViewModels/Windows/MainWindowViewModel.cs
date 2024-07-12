@@ -22,6 +22,9 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     public void SwitchItem(int index) => Selected = MenuItems[index];
 
     [RelayCommand]
+    private Task InitializeUserDatabaseAsync() => DatabaseService.InitializeUserDatabaseAsync();
+
+    [RelayCommand]
     private Task OpenLoginPageAsync() => DialogService.ShowAsync(LoginDialogViewModel);
 
     partial void OnSelectedChanged(NavigationViewItem value)
@@ -46,6 +49,9 @@ public sealed partial class MainWindowViewModel : ViewModelBase, IMainWindowView
     }
 
     #region Services
+
+    [UsedImplicitly]
+    public IDatabaseService DatabaseService { get; init; } = null!;
 
     [UsedImplicitly]
     public IDialogService DialogService { get; init; } = null!;

@@ -24,6 +24,8 @@ public sealed class DatabaseService : IDatabaseService
             _usernameToId[user.UserName!] = user.UserId;
             _emailToId[user.Email!] = user.UserId;
         }
+
+        Logger.Information("User database loaded");
     }
 
     public bool RegisterUser(User user)
