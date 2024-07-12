@@ -63,6 +63,7 @@
                 Width="150"
                 Margin="8,0,0,0"
                 Content="View Analytics"
+                IsEnabled="False"
                 IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNullOrEmpty}}" />
 
         <ScrollViewer Grid.Row="1" Grid.Column="0"
