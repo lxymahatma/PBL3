@@ -40,7 +40,7 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
 
         if (value)
         {
-            Watermark = "Search course recommendations by preference...";
+            Watermark = "Ask AI for course recommendations...";
             return;
         }
 
