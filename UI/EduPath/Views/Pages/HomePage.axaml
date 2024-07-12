@@ -126,7 +126,7 @@
 
                                 <StackPanel>
                                     <TextBlock Text="Class Year: " />
-                                    <TextBlock Text="{Binding Semester, Mode=OneWay}" />
+                                    <TextBlock Text="{Binding MinimumGrade, Mode=OneWay}" />
                                 </StackPanel>
                             </StackPanel>
 
