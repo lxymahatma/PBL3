@@ -59,6 +59,12 @@
                       OffContent="Normal Search"
                       OnContent="Advanced Search" />
 
+        <Button Grid.Row="0" Grid.Column="1"
+                Width="150"
+                Margin="8,0,0,0"
+                Content="View Analytics"
+                IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNullOrEmpty}}" />
+
         <ScrollViewer Grid.Row="1" Grid.Column="0"
                       Margin="5"
                       HorizontalAlignment="Stretch"
