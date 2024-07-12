@@ -143,7 +143,8 @@
                  IsReadOnly="True"
                  IsVisible="{Binding IsAdvancedSearch, Mode=OneWay}"
                  LineHeight="30"
-                 Text="{Binding ResponseText, Mode=OneWay}" />
+                 Text="{Binding ResponseText, Mode=OneWay}"
+                 TextWrapping="WrapWithOverflow" />
 
     </Grid>
 

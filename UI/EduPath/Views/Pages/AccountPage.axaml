@@ -34,11 +34,11 @@
                 <Setter Property="Margin" Value="0, 3, 0, 0" />
             </Style>
 
-            <Style Selector="Border&gt;StackPanel">
+            <Style Selector="Border>StackPanel">
                 <Setter Property="Orientation" Value="Horizontal" />
             </Style>
 
-            <Style Selector="StackPanel&gt;TextBlock">
+            <Style Selector="StackPanel>TextBlock">
                 <Setter Property="FontFamily" Value="DM Sans" />
                 <Setter Property="FontSize" Value="13" />
                 <Setter Property="FontWeight" Value="Bold" />
