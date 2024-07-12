@@ -82,8 +82,9 @@
                     <DataTemplate x:DataType="model:CourseInformation">
                         <Expander Header="{Binding Name, Mode=OneWay}">
                             <Expander.Styles>
-                                <Style Selector="StackPanel&gt;StackPanel">
+                                <Style Selector="StackPanel>StackPanel">
                                     <Setter Property="Orientation" Value="Horizontal" />
+                                    <Setter Property="Margin" Value="0,5" />
                                 </Style>
                             </Expander.Styles>
 
