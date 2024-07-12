@@ -55,7 +55,7 @@
         <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="HotAvalonia"/>
         <PackageReference Include="HotAvalonia.Extensions"/>
     </ItemGroup>
-    
+
     <ItemGroup>
         <None Update="OpenAIKey.txt">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

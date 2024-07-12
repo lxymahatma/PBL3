@@ -11,7 +11,7 @@
     <Grid HorizontalAlignment="Center"
           VerticalAlignment="Center"
           RowDefinitions="300, 50">
-        
+
         <Image Grid.Row="0"
                Height="200"
                HorizontalAlignment="Center"
