@@ -53,7 +53,7 @@
         </TextBox>
 
         <ToggleSwitch Grid.Row="0" Grid.Column="1"
-                      Margin="10,0,0,0"
+                      Margin="8,0,0,0"
                       IsChecked="{Binding IsAdvancedSearch, Mode=TwoWay}"
                       IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
                       OffContent="Normal Search"
@@ -75,7 +75,7 @@
                     <DataTemplate x:DataType="model:CourseInformation">
                         <Expander Header="{Binding Name, Mode=OneWay}">
                             <Expander.Styles>
-                                <Style Selector="StackPanel>StackPanel">
+                                <Style Selector="StackPanel&gt;StackPanel">
                                     <Setter Property="Orientation" Value="Horizontal" />
                                 </Style>
                             </Expander.Styles>
