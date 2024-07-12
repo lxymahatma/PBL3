@@ -12,6 +12,8 @@
         Title="EduPath"
         Icon="/Assets/icon.ico"
         WindowStartupLocation="CenterScreen"
+        Height="600"
+        Width="1100"
         mc:Ignorable="d"
         d:DesignHeight="450"
         d:DesignWidth="800">
