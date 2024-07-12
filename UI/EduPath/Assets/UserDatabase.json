@@ -22,5 +22,14 @@
     "Password": "nezume123",
     "StudentId": null,
     "Grade": null
+  },
+  {
+    "UserId": "3f342394-0c4e-45fb-92d2-edd6b583357d",
+    "UserName": "matekovacs",
+    "Email": "kovacsm@fc.ritsumei.ac.jp",
+    "Password": "mate123",
+    "StudentId": null,
+    "Grade": null
+    
   }
 ]
