@@ -69,7 +69,7 @@ public sealed partial class HomePageViewModel : ViewModelBase, IHomePageViewMode
         await AdvancedSearchAsync().ConfigureAwait(false);
     }
 
-    private async Task AdvancedSearchAsync() => ResponseText = $"AI Assistant: {await OpenAIService.RecommendCourseByRequestAsync(SearchText)}";
+    private async Task AdvancedSearchAsync() => ResponseText = await OpenAIService.RecommendCourseByRequestAsync(SearchText);
 
     #region Services
 

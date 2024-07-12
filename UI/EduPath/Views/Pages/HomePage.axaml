@@ -138,9 +138,11 @@
 
         <TextBox Grid.Row="1" Grid.Column="0"
                  Margin="5"
-                 FontSize="20"
+                 FontFamily="Arial"
+                 FontSize="17"
                  IsReadOnly="True"
                  IsVisible="{Binding IsAdvancedSearch, Mode=OneWay}"
+                 LineHeight="30"
                  Text="{Binding ResponseText, Mode=OneWay}" />
 
     </Grid>
