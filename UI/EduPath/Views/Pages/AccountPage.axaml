@@ -34,11 +34,7 @@
                 <Setter Property="Margin" Value="0, 3, 0, 0" />
             </Style>
 
-            <Style Selector="Border>StackPanel">
-                <Setter Property="Orientation" Value="Horizontal" />
-            </Style>
-
-            <Style Selector="StackPanel>TextBlock">
+            <Style Selector="Grid.info>TextBlock">
                 <Setter Property="FontFamily" Value="DM Sans" />
                 <Setter Property="FontSize" Value="13" />
                 <Setter Property="FontWeight" Value="Bold" />
@@ -58,33 +54,34 @@
                    Text="Account Page" />
 
         <Border Grid.Row="2" Grid.Column="1">
-            <StackPanel>
-                <TextBlock Margin="15,0,0,0" Text="Username" />
-                <TextBlock Margin="25,0,0,0" Text="{Binding User.UserName, Mode=OneWay}" />
-            </StackPanel>
+            <Grid Classes="info" ColumnDefinitions="100,*">
+                <TextBlock Grid.Column="0" Text="Username" />
+                <TextBlock Grid.Column="1" Text="{Binding User.UserName, Mode=OneWay}" />
+            </Grid>
         </Border>
 
         <Border Grid.Row="3" Grid.Column="1">
-            <StackPanel>
-                <TextBlock Margin="15,0,0,0" Text="Email" />
-                <TextBlock Margin="50,0,0,0" Text="{Binding User.Email, Mode=OneWay}" />
-            </StackPanel>
+            <Grid Classes="info" ColumnDefinitions="100,*">
+                <TextBlock Grid.Column="0" Text="Email" />
+                <TextBlock Grid.Column="1" Text="{Binding User.Email, Mode=OneWay}" />
+            </Grid>
         </Border>
 
         <Border Grid.Row="4" Grid.Column="1"
                 IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
-            <StackPanel>
-                <TextBlock Margin="15,0,0,0" Text="Student ID" />
-                <TextBlock Margin="20,0,0,0" Text="{Binding User.StudentId, Mode=OneWay}" />
-            </StackPanel>
+            <Grid Classes="info" ColumnDefinitions="100,*">
+                <TextBlock Grid.Column="0" Text="Student ID" />
+                <TextBlock Grid.Column="1" Text="{Binding User.StudentId, Mode=OneWay}" />
+            </Grid>
         </Border>
 
         <Border Grid.Row="5" Grid.Column="1"
                 IsVisible="{Binding User.StudentId, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}">
-            <StackPanel>
-                <TextBlock Margin="15,0,0,0" Text="Grade" />
+            <Grid Classes="info" ColumnDefinitions="100,*">
+                <TextBlock Grid.Column="0" Text="Grade" />
 
-                <NumericUpDown Width="170"
+                <NumericUpDown Grid.Column="1"
+                               Width="170"
                                HorizontalAlignment="Center"
                                HorizontalContentAlignment="Center"
                                VerticalContentAlignment="Center"
@@ -95,7 +92,7 @@
                                Maximum="4"
                                Minimum="1"
                                Value="{Binding User.Grade, Mode=TwoWay}" />
-            </StackPanel>
+            </Grid>
         </Border>
 
         <ui:CommandBarButton Grid.Row="6" Grid.Column="1"
