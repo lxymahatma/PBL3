@@ -69,6 +69,7 @@ public sealed partial class RegisterDialogViewModel : ViewModelBase, IRegisterDi
             return;
         }
 
+        await MessageBoxService.SuccessAsync("Register successful! Switching to Login Page").ConfigureAwait(true);
         await SwitchToLoginAsync().ConfigureAwait(false);
     }
 
