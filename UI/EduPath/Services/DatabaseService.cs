@@ -2,9 +2,9 @@
 
 public sealed class DatabaseService : IDatabaseService
 {
-    private readonly Dictionary<string, Guid> _emailToId = new();
-    private readonly Dictionary<Guid, User> _userDatabase = new();
-    private readonly Dictionary<string, Guid> _usernameToId = new();
+    private readonly Dictionary<string, Guid> _emailToId = [];
+    private readonly Dictionary<Guid, User> _userDatabase = [];
+    private readonly Dictionary<string, Guid> _usernameToId = [];
 
     private CourseInformation[]? _courseDatabase;
 
