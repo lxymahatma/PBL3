@@ -2192,6 +2192,28 @@
     "MinimumGrade": "1st Year"
   },
   {
+    "CourseId": 31676,
+    "CourseName": "Software Engineering",
+    "Lecturer": "KOVACS MATE",
+    "Classroom": "H323",
+    "WeekDay": 2,
+    "Period": 3,
+    "Semester": "Spring",
+    "CourseCategory": 1,
+    "MinimumGrade": "2nd Year"
+  },
+  {
+    "CourseId": 31680,
+    "CourseName": "Computer Networks",
+    "Lecturer": "KOVACS MATE",
+    "Classroom": "H321",
+    "WeekDay": 2,
+    "Period": 5,
+    "Semester": "Spring",
+    "CourseCategory": 1,
+    "MinimumGrade": "2nd Year"
+  },
+  {
     "CourseId": 31642,
     "CourseName": "計算機科学概論",
     "Lecturer": "藤井 隆広",
